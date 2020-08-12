@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>夜猫君</title>
+  <title>Spring框架学习（三）(Spring的AOP介绍、基于XML的AOP开发、基于注解的AOP开发) | 夜猫君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="夜猫君">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="主要学习Spring的AOP介绍、基于XML的AOP开发、基于注解的AOP开发。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring框架学习（三）(Spring的AOP介绍、基于XML的AOP开发、基于注解的AOP开发)">
+<meta property="og:url" content="http://yoursite.com/2020/08/11/Spring%E6%A1%86%E6%9E%B6/Spring%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/index.html">
 <meta property="og:site_name" content="夜猫君">
+<meta property="og:description" content="主要学习Spring的AOP介绍、基于XML的AOP开发、基于注解的AOP开发。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-11T03:07:01.000Z">
+<meta property="article:modified_time" content="2020-08-11T17:33:07.323Z">
 <meta property="article:author" content="夜猫君">
 <meta name="twitter:card" content="summary">
   
@@ -162,35 +166,360 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-hexo博客使用过程中的问题汇总/hexo博客使用问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-Spring框架/Spring框架学习（三）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/30/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/">hexo迁移方法</a>
+    <h1 class="article-title" itemprop="name">
+      Spring框架学习（三）(Spring的AOP介绍、基于XML的AOP开发、基于注解的AOP开发)
     </h1>
   
 
         
-        <a href="/2020/07/30/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-07-30T10:29:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-30</time>
+        <a href="/2020/08/11/Spring%E6%A1%86%E6%9E%B6/Spring%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-08-11T03:07:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近换了一台设备，为了能继续使用hexo博客所以对原先设备上的hexo博客进行了迁移，但在迁移过程中出现了很多问题，所以为了防止以后再出现类似的问题，我在这里总结下正确的迁移步骤。等真的做下来才发现是真的简单</p>
-        
-          <a class="article-more-a" href="/2020/07/30/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/#more">more >></a>
-        
+        <p>主要学习Spring的AOP介绍、基于XML的AOP开发、基于注解的AOP开发。</p>
+<a id="more"></a>
+
+<center><h1>Spring AOP的简介</h1></center>
+
+<h2 id="一、AOP的基本概念"><a href="#一、AOP的基本概念" class="headerlink" title="一、AOP的基本概念"></a>一、AOP的基本概念</h2><h3 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h3><p>AOP是Aspect    Oriented    Programming的缩写，意思是面向切面编程，是通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。</p>
+<p>AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生泛型。利用AOP可以对业务的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
+<p><strong>动态代理：</strong></p>
+<ul>
+<li><strong>优点：</strong>在不修改源码的基础上对目标方法进行相应的增强。</li>
+<li><strong>作用：</strong>完成程序功能间的松耦合。</li>
+</ul>
+<br>
+
+<h3 id="2、AOP的作用与优势"><a href="#2、AOP的作用与优势" class="headerlink" title="2、AOP的作用与优势"></a>2、AOP的作用与优势</h3><p><strong>（1）作用：</strong>在程序运行期间，在不修改源码的情况下对方法进行功能增强。</p>
+<p><strong>（2）优势：</strong>减少重复代码，提高开发效率，并且便于维护。</p>
+<br>
+
+<h3 id="3、AOP的底层实现"><a href="#3、AOP的底层实现" class="headerlink" title="3、AOP的底层实现"></a>3、AOP的底层实现</h3><p>实际上，AOP的底层是通过Spring提供的动态代理技术实现的。在运行期间，Spring通过动态代理技术动态的生成代理对象，代理对象方法执行时进行增强功能介入，在去调用目标对象的方法，从而完成功能的增强。</p>
+<p><strong>常用的动态代理技术：</strong></p>
+<ul>
+<li><strong>JDK代理：</strong>基于接口的动态代理技术</li>
+<li><strong>cglib代理：</strong>基于父类的动态代理技术</li>
+</ul>
+<br>
+
+<h3 id="4、JDK的代理实现"><a href="#4、JDK的代理实现" class="headerlink" title="4、JDK的代理实现"></a>4、JDK的代理实现</h3><p><strong>（1）</strong>创建目标接口和目标类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//目标接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//目标类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Target</span> <span class="keyword">implements</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"save..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>（2）</strong>创建增强类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Advice</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturning</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"后置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）</strong>编写测试增强方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//目标对象</span></span><br><span class="line">        <span class="keyword">final</span> Target target = <span class="keyword">new</span> Target();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//增强对象</span></span><br><span class="line">        <span class="keyword">final</span> Advice advice = <span class="keyword">new</span> Advice();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//返回值就是动态生成的代理对象</span></span><br><span class="line">        <span class="comment">//但是由于生成的代理对象与被代理的对象的是兄弟类型的所以无法使用Target类型转换</span></span><br><span class="line">        TargetInterface proxy = (TargetInterface) Proxy.newProxyInstance(</span><br><span class="line">                target.getClass().getClassLoader(),<span class="comment">//目标对象类加载器</span></span><br><span class="line">                target.getClass().getInterfaces(),<span class="comment">//目标对象相同的接口字节码对象数组</span></span><br><span class="line">                <span class="keyword">new</span> InvocationHandler() &#123;</span><br><span class="line">                    <span class="comment">//调用代理对象的任何方法   实质执行的都是invoke方法</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">                        advice.before();<span class="comment">//前置增强方法</span></span><br><span class="line">                        Object invoke = method.invoke(target, args);<span class="comment">//执行目标方法</span></span><br><span class="line">                        advice.afterReturning();<span class="comment">//后置增强方法</span></span><br><span class="line">                        <span class="keyword">return</span> invoke;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">//调用代理对象的方法</span></span><br><span class="line">        proxy.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	运行结果：</span></span><br><span class="line"><span class="comment">	前置增强...</span></span><br><span class="line"><span class="comment">	save...</span></span><br><span class="line"><span class="comment">	后置增强...</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="5、cglib代理实现"><a href="#5、cglib代理实现" class="headerlink" title="5、cglib代理实现"></a>5、cglib代理实现</h3><p>（1）创建代理对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"save..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（2）创建增强类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Advice</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturning</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"后置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（3）创建测试增强方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProxyTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//目标对象</span></span><br><span class="line">        <span class="keyword">final</span> Target target = <span class="keyword">new</span> Target();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//增强对象</span></span><br><span class="line">        <span class="keyword">final</span> Advice advice = <span class="keyword">new</span> Advice();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//返回值就是动态生成的代理对象    基于cglib</span></span><br><span class="line">        <span class="comment">//1、创建增强器</span></span><br><span class="line">        Enhancer enhancer = <span class="keyword">new</span> Enhancer();</span><br><span class="line">        <span class="comment">//2、设置父类（目标）</span></span><br><span class="line">        enhancer.setSuperclass(Target<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">//3、设置回调</span></span><br><span class="line">        enhancer.setCallback(<span class="keyword">new</span> MethodInterceptor() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> Object <span class="title">intercept</span><span class="params">(Object o, Method method, Object[] objects, MethodProxy methodProxy)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">                advice.before();<span class="comment">//前置增强</span></span><br><span class="line">                Object invoke = method.invoke(target, objects);<span class="comment">//执行目标</span></span><br><span class="line">                advice.afterReturning();<span class="comment">//后置增强</span></span><br><span class="line">                <span class="keyword">return</span> invoke;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//4、创建代理对象</span></span><br><span class="line">        Target proxy = (Target) enhancer.create();</span><br><span class="line">        </span><br><span class="line">        proxy.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	运行结果：</span></span><br><span class="line"><span class="comment">	前置增强...</span></span><br><span class="line"><span class="comment">	save...</span></span><br><span class="line"><span class="comment">	后置增强...</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="二、AOP的相关术语"><a href="#二、AOP的相关术语" class="headerlink" title="二、AOP的相关术语"></a>二、AOP的相关术语</h2><p>Spring的AOP实现底层就是对上面的动态代理的代码进行了封装，feng’zhuang’zhi’ho我们只需要对需要关注的部分进行代码编写，并通过配置的方式完成指定目标的方法增强。</p>
+<p>在AOP操作之前，需要先了解AOP的常用术语，常用相关术语如下：</p>
+<ul>
+<li><strong>Target（目标对象）：</strong>代理的目标对象</li>
+<li><strong>Proxy（代理）：</strong>一个类被AOP织入增强后，就会产生一个结果代理类</li>
+<li><strong>Joinpoint（连接点）：</strong>所谓连接点是指那些被拦截到的点。在Spring中，这些点指的是方法，因为Spring只支持方法类型的连接点（可以理解为可以被增强的方法）</li>
+<li><strong>Pointcut（切入点）：</strong>所谓切入点是指我们要对哪些Joinpoint进行拦截的定义（可以理解为实际被增强的方法）</li>
+<li><strong>Advice（通知/增强）：</strong>所谓通知是指拦截到Joinpoint之后所要做的事情就是通知（增强的逻辑/过程）</li>
+<li><strong>Aspect（切面）：</strong>是切入点和通知（引介）的结合</li>
+<li><strong>Weaving（织入）：</strong>是指把增强应用到目标对象来创建新的代理对象的过程。Spring采用动态代理织入，而Aspectj采用编译期织入和类装载期织入（将切点和增强结合的过程即为织入的过程）</li>
+</ul>
+<br>
+
+<br>
+
+<h2 id="三、AOP开发明确的事项"><a href="#三、AOP开发明确的事项" class="headerlink" title="三、AOP开发明确的事项"></a>三、AOP开发明确的事项</h2><h3 id="1、需要编写的内容"><a href="#1、需要编写的内容" class="headerlink" title="1、需要编写的内容"></a>1、需要编写的内容</h3><p>（1）编写核心业务代码（目标类的目标方法）</p>
+<p>（2）编写切面类，切面类中有通知（增强功能方法）</p>
+<p>（3）在配置文件中，配置织入关系，即将哪些通知与哪些连接点进行结合</p>
+<br>
+
+<h3 id="2、AOP技术实现的内容"><a href="#2、AOP技术实现的内容" class="headerlink" title="2、AOP技术实现的内容"></a>2、AOP技术实现的内容</h3><p>Spring框架监控切入点方法的执行。一旦监控到切入点方法被运行，使用代理机制，动态创建目标对象的代理对象，根据通知类别，在代理对象的对应位置，将通知对应的功能织入，完成完整的代码逻辑运行。</p>
+<br>
+
+<h3 id="3、AOP底层使用哪种代理方式"><a href="#3、AOP底层使用哪种代理方式" class="headerlink" title="3、AOP底层使用哪种代理方式"></a>3、AOP底层使用哪种代理方式</h3><p>在Spring中，框架会根据目标类是否实现了接口来决定采用哪种动态代理的方式。</p>
+<br>
+
+<br>
+
+<h2 id="四、知识要点"><a href="#四、知识要点" class="headerlink" title="四、知识要点"></a>四、知识要点</h2><p><strong>（1）AOP：</strong>面向切面编程</p>
+<p><strong>（2）AOP底层实现：</strong>基于JDK的动态代理和基于Cglib的动态代理</p>
+<p><strong>（3）AOP的中带你概念：</strong></p>
+<p>​                <strong>Pointcut（切入点：</strong>）被增强的方法</p>
+<p>​                <strong>Advice（通知/增强）：</strong>封装增强业务逻辑的方法</p>
+<p>​                <strong>Aspect（切面）：</strong>切点 + 通知</p>
+<p>​                <strong>Weaving（织入）：</strong>将切点与通知结合的过程</p>
+<p><strong>（4）开发明确事项：</strong></p>
+<p>​                谁是切点（切点表达式配置）</p>
+<p>​                谁是通知（切面类中的增强方法）</p>
+<p>​                将切点和通知进行织入配置</p>
+<br>
+
+<hr>
+<br>
+
+<br>
+
+<center><h1>基于XML的AOP开发</h1></center>
+
+<h2 id="一、基于XML开发的快速入门"><a href="#一、基于XML开发的快速入门" class="headerlink" title="一、基于XML开发的快速入门"></a>一、基于XML开发的快速入门</h2><p>1、导入AOP相关坐标；</p>
+<p>2、创建目标接口和目标类（内部有切点）；</p>
+<p>3、创建切面类（内部有增强方法）；</p>
+<p>4、将目标类和切面类的对象创建权交给Spring</p>
+<p>5、在applicationContext.xml中配置织入关系</p>
+<p>6、测试代码</p>
+<br>
+
+<br>
+
+<h2 id="二、基于XML开发的代码实现"><a href="#二、基于XML开发的代码实现" class="headerlink" title="二、基于XML开发的代码实现"></a>二、基于XML开发的代码实现</h2><h3 id="1、配置接口和目标类"><a href="#1、配置接口和目标类" class="headerlink" title="1、配置接口和目标类"></a>1、配置接口和目标类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//目标类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Target</span> <span class="keyword">implements</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"save..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2、配置（通知-增强）"><a href="#2、配置（通知-增强）" class="headerlink" title="2、配置（通知/增强）"></a>2、配置（通知/增强）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspect</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="3、配置xml文件"><a href="#3、配置xml文件" class="headerlink" title="3、配置xml文件"></a>3、配置xml文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--目标对象--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"target"</span> <span class="attr">class</span>=<span class="string">"aop.Target"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--切面对象--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myAspect"</span> <span class="attr">class</span>=<span class="string">"aop.MyAspect"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--配置织入：告诉Spring框架 哪些方法（切点）需要进行哪些增强（前置、后置...）--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--声明切面--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"myAspect"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--切面：切点 + 通知--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"before"</span> <span class="attr">pointcut</span>=<span class="string">"execution(public void aop.Target.save())"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="4、配置测试类"><a href="#4、配置测试类" class="headerlink" title="4、配置测试类"></a>4、配置测试类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line">@ContextConfiguration("classpath:applicationContext.xml")</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AopTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TargetInterface targetInterface;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">aopTest</span><span class="params">()</span></span>&#123;</span><br><span class="line">        targetInterface.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	运行结果：</span></span><br><span class="line"><span class="comment">	前置增强...</span></span><br><span class="line"><span class="comment">	save...</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="三、切点表达式的写法"><a href="#三、切点表达式的写法" class="headerlink" title="三、切点表达式的写法"></a>三、切点表达式的写法</h2><h3 id="1、全通配写法"><a href="#1、全通配写法" class="headerlink" title="1、全通配写法"></a>1、全通配写法</h3><p><strong>*  * ..*.*(..)</strong></p>
+<p>返回值可以使用通配符，表示任意返回值</p>
+<p>* aop.Target.save()</p>
+<p>包名可以使用通配符，表示任意包。但是有几级包，就需要写几个*.</p>
+<p>例如：假设上面的save()方法前面有四个包就需要写成：</p>
+<p>* *.*.*.*.Target.save()</p>
+<p>但包名还可以简写为..表示当前包及其子包</p>
+<p>* *..*.Target.save()</p>
+<p>类名和方法名都可以使用*来实现通配</p>
+<p>即：* *..*.*.*()</p>
+<p>参数列表可以使用..来通配，但也可以直接使用数据类型</p>
+<p>基本数据类型直接写名称</p>
+<p>应用类型写包名.类名的方式</p>
+<br>
+
+<h3 id="2、实际开发中切入点表达式的通常写法"><a href="#2、实际开发中切入点表达式的通常写法" class="headerlink" title="2、实际开发中切入点表达式的通常写法"></a>2、实际开发中切入点表达式的通常写法</h3><p>切到业务层表现类下的所有方法</p>
+<p>例：    *    aop.*.*(..)</p>
+<br>
+
+<h3 id="3、切点表达式的抽取"><a href="#3、切点表达式的抽取" class="headerlink" title="3、切点表达式的抽取"></a>3、切点表达式的抽取</h3><p>在配置文件的过程中，切点表达式会有很多重复的部分，所以可以将重复的部分抽取出来，便于维护。</p>
+<p>在增强中使用pointcut-ref属性代替pointcut属性来引用抽取后的切点表达式。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--声明切面--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"myAspect"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--抽取切点表达式--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">"myPointcut"</span> <span class="attr">expression</span>=<span class="string">"execution(* aop.*.*(..))"</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--切面：切点 + 通知--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"before"</span> <span class="attr">pointcut-ref</span>=<span class="string">"myPointcut"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"afterRunning"</span> <span class="attr">pointcut-ref</span>=<span class="string">"myPointcut"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:around</span> <span class="attr">method</span>=<span class="string">"around"</span> <span class="attr">pointcut-ref</span>=<span class="string">"myPointcut"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"afterThrowing"</span> <span class="attr">pointcut-ref</span>=<span class="string">"myPointcut"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"after"</span> <span class="attr">pointcut-ref</span>=<span class="string">"myPointcut"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="四、AOP的通知种类"><a href="#四、AOP的通知种类" class="headerlink" title="四、AOP的通知种类"></a>四、AOP的通知种类</h2><h3 id="1、通知的类型"><a href="#1、通知的类型" class="headerlink" title="1、通知的类型"></a>1、通知的类型</h3><p><strong>通知的配置语法：</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:通知类型</span>	<span class="attr">method</span>=<span class="string">"切面类中方法名"</span>	<span class="attr">pointcut</span>=<span class="string">"切点表达式"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:通知类型</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">标签</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">前置通知</td>
+<td align="center">&lt;aop:before&gt;</td>
+<td align="center">用于配置前置通知，指定增强的方法在切入点方法之前执行</td>
+</tr>
+<tr>
+<td align="center">后置通知</td>
+<td align="center">&lt;aop:after-returning&gt;</td>
+<td align="center">用于配置后置通知。指定增强的方法在切入点方法之后执行</td>
+</tr>
+<tr>
+<td align="center">环绕通知</td>
+<td align="center">&lt;aop:around&gt;</td>
+<td align="center">用于配置环绕通知。指定增强的方法在切入点方法之前和之后都执行</td>
+</tr>
+<tr>
+<td align="center">异常抛出通知</td>
+<td align="center">&lt;aop:throwing&gt;</td>
+<td align="center">用于配置异常抛出通知。指定增强的方法在出现异常时执行</td>
+</tr>
+<tr>
+<td align="center">最终通知</td>
+<td align="center">&lt;aop:after&gt;</td>
+<td align="center">用于配置最终通知。无论增强方式执行是否有异常都会执行</td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="2、代码演示"><a href="#2、代码演示" class="headerlink" title="2、代码演示"></a>2、代码演示</h3><p>（1）配置增强类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspect</span> </span>&#123;</span><br><span class="line">    <span class="comment">/** 前置增强</span></span><br><span class="line"><span class="comment">     *  在切入点方法执行之前执行的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** 后置增强</span></span><br><span class="line"><span class="comment">     *  在切入点方法执行之后执行</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterRunning</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"后置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** 环绕增强</span></span><br><span class="line"><span class="comment">     *  在切入点之前和之后都执行的方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pjp</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Throwable</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//ProceedingJoinPoint：正在执行的连接点（切点）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">around</span><span class="params">(ProceedingJoinPoint pjp)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"环绕前增强..."</span>);</span><br><span class="line">        <span class="comment">//切点方法</span></span><br><span class="line">        Object proceed = pjp.proceed();</span><br><span class="line">        System.out.println(<span class="string">"环绕后增强..."</span>);</span><br><span class="line">        <span class="keyword">return</span> proceed;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** 异常抛出增强</span></span><br><span class="line"><span class="comment">     *  抛出异常时执行</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"异常抛出增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** 最终增强</span></span><br><span class="line"><span class="comment">     *  不管怎么样都一定会执行</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"最终增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（2）配置目标类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Target</span> <span class="keyword">implements</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//        int i = 1 / 0;</span></span><br><span class="line">        System.out.println(<span class="string">"save..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（3）配置xml文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--目标对象--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"target"</span> <span class="attr">class</span>=<span class="string">"aop.Target"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--切面对象--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myAspect"</span> <span class="attr">class</span>=<span class="string">"aop.MyAspect"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--配置织入：告诉Spring框架 哪些方法（切点）需要进行哪些增强（前置、后置...）--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--声明切面--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"myAspect"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--切面：切点 + 通知--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"before"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* aop.*.*(..))"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"afterRunning"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* aop.*.*(..))"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:around</span> <span class="attr">method</span>=<span class="string">"around"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* aop.*.*(..))"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"afterThrowing"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* aop.*.*(..))"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"after"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* aop.*.*(..))"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>（4）编写测试类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line">@ContextConfiguration("classpath:applicationContext.xml")</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AopTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TargetInterface targetInterface;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">aopTest</span><span class="params">()</span></span>&#123;</span><br><span class="line">        targetInterface.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	运行结果（未抛异常时）：</span></span><br><span class="line"><span class="comment">	前置增强...</span></span><br><span class="line"><span class="comment">	环绕前增强...</span></span><br><span class="line"><span class="comment">	save...</span></span><br><span class="line"><span class="comment">	最终增强...</span></span><br><span class="line"><span class="comment">	环绕后增强...</span></span><br><span class="line"><span class="comment">	后置增强...</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	运行结果（抛异常时）：</span></span><br><span class="line"><span class="comment">	前置增强...</span></span><br><span class="line"><span class="comment">	环绕前增强...</span></span><br><span class="line"><span class="comment">	最终增强...</span></span><br><span class="line"><span class="comment">	异常抛出增强...</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="五、知识要点、"><a href="#五、知识要点、" class="headerlink" title="五、知识要点、"></a>五、知识要点、</h2><h3 id="1、AOP织入的配置"><a href="#1、AOP织入的配置" class="headerlink" title="1、AOP织入的配置"></a>1、AOP织入的配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"切面类"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"通知方法名称"</span> <span class="attr">pointcut</span>=<span class="string">"切点表达式"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2、通知的类型"><a href="#2、通知的类型" class="headerlink" title="2、通知的类型"></a>2、通知的类型</h3><p>前置通知、后置通知、环绕通知、异常抛出通知、最终通知</p>
+<br>
+
+<h3 id="3、切点表达式的写法"><a href="#3、切点表达式的写法" class="headerlink" title="3、切点表达式的写法"></a>3、切点表达式的写法</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">execution([修饰符] 返回值类型 包名.类名.方法名(参数))</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<br>
+
+<center><h1>基于注解的AOP开发</h1></center>
+
+<h2 id="一、基于注解的AOP开发快速入门"><a href="#一、基于注解的AOP开发快速入门" class="headerlink" title="一、基于注解的AOP开发快速入门"></a>一、基于注解的AOP开发快速入门</h2><h3 id="1、基于注解的AOP开发的步骤"><a href="#1、基于注解的AOP开发的步骤" class="headerlink" title="1、基于注解的AOP开发的步骤"></a>1、基于注解的AOP开发的步骤</h3><p>（1）创建目标接口和目标类（内部有切点）</p>
+<p>（2）创建切面类（内部有增强方法）</p>
+<p>（3）将目标类和切面类的对象创建权交给Spring</p>
+<p>（4）在切面类中使用注解配置织入关系</p>
+<p>（5）在配置文件中开启组件扫描和AOP的自动代理</p>
+<p>（6）测试</p>
+<br>
+
+<h3 id="2、基于注解的AOP开发的代码演示"><a href="#2、基于注解的AOP开发的代码演示" class="headerlink" title="2、基于注解的AOP开发的代码演示"></a>2、基于注解的AOP开发的代码演示</h3><h4 id="（1）创建目标接口和目标类（内部有切点）"><a href="#（1）创建目标接口和目标类（内部有切点）" class="headerlink" title="（1）创建目标接口和目标类（内部有切点）"></a>（1）创建目标接口和目标类（内部有切点）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//目标类</span></span><br><span class="line"><span class="meta">@Component</span>(<span class="string">"target"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Target</span> <span class="keyword">implements</span> <span class="title">TargetInterface</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"save..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）创建切面类（内部有增强方法）"><a href="#（2）创建切面类（内部有增强方法）" class="headerlink" title="（2）创建切面类（内部有增强方法）"></a>（2）创建切面类（内部有增强方法）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(<span class="string">"myAspect"</span>)</span><br><span class="line"><span class="meta">@Aspect</span><span class="comment">//当前的MyAspect是一个切面类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspect</span> </span>&#123;</span><br><span class="line">    <span class="comment">/** 前置增强</span></span><br><span class="line"><span class="comment">     *  在切入点方法执行之前执行的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Before</span>(<span class="string">"execution(* anno.*.*(..))"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）在配置文件中开启组件扫描和AOP的自动代理"><a href="#（3）在配置文件中开启组件扫描和AOP的自动代理" class="headerlink" title="（3）在配置文件中开启组件扫描和AOP的自动代理"></a>（3）在配置文件中开启组件扫描和AOP的自动代理</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--开启组件扫描--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"anno"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--aop的自动代理--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="（4）测试"><a href="#（4）测试" class="headerlink" title="（4）测试"></a>（4）测试</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line">@ContextConfiguration("classpath:applicationContext-anno.xml")</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnoTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TargetInterface targetInterface;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">aopTest</span><span class="params">()</span></span>&#123;</span><br><span class="line">        targetInterface.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="二、注解配置AOP的类型"><a href="#二、注解配置AOP的类型" class="headerlink" title="二、注解配置AOP的类型"></a>二、注解配置AOP的类型</h2><p>通知的配置语法：@通知注解（”切点表达式“）</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">注解</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">前置通知</td>
+<td align="center">@Before</td>
+<td align="center">用于配置前置通知，指定增强的方法在切入点方法之前执行</td>
+</tr>
+<tr>
+<td align="center">后置通知</td>
+<td align="center">@AfterReturning</td>
+<td align="center">用于配置后置通知，指定增强的方法在切入点方法之后执行</td>
+</tr>
+<tr>
+<td align="center">环绕通知</td>
+<td align="center">@Around</td>
+<td align="center">用于配置环绕通知，指定增强的方法在切入点方法之前和之后都执行</td>
+</tr>
+<tr>
+<td align="center">异常抛出通知</td>
+<td align="center">@AfterThrowing</td>
+<td align="center">用于配置异常抛出通知，指定增强的方法在出现异常时执行</td>
+</tr>
+<tr>
+<td align="center">最终通知</td>
+<td align="center">@After</td>
+<td align="center">用于配置最终通知，无论增强方式执行是否有异常都会执行</td>
+</tr>
+</tbody></table>
+<br>
+
+<br>
+
+<h2 id="三、切点表达式的抽取"><a href="#三、切点表达式的抽取" class="headerlink" title="三、切点表达式的抽取"></a>三、切点表达式的抽取</h2><p>和XMl配置AOP一样，可以将切点表达式抽取，抽取方式实在切面内定义方法，在该方法上使用@Pointcut注解定义切点表达式，然后再在增强注解中进行引用。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(<span class="string">"myAspect"</span>)</span><br><span class="line"><span class="meta">@Aspect</span><span class="comment">//当前的MyAspect是一个切面类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspect</span> </span>&#123;</span><br><span class="line">    <span class="comment">//抽取切点表达式</span></span><br><span class="line">    <span class="meta">@Pointcut</span>(<span class="string">"execution(* anno.*.*(..))"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">myPoint</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/** 前置增强</span></span><br><span class="line"><span class="comment">     *  在切入点方法执行之前执行的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"><span class="comment">//    @Before("MyAspect.myPoint()")</span></span><br><span class="line">    <span class="meta">@Before</span>(<span class="string">"myPoint()"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<h2 id="四、基于注解开发的知识要点"><a href="#四、基于注解开发的知识要点" class="headerlink" title="四、基于注解开发的知识要点"></a>四、基于注解开发的知识要点</h2><h3 id="1、注解AOP开发步骤"><a href="#1、注解AOP开发步骤" class="headerlink" title="1、注解AOP开发步骤"></a>1、注解AOP开发步骤</h3><p>（1）使用<strong>@Aspect</strong>标注切面类</p>
+<p>（2）使用<strong>@通知注解</strong>标注通知方法</p>
+<p>（3）在配置文件中配置组件扫描和AOP自动代理</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p>参考资料：<a href="https://www.bilibili.com/video/BV1xV41167ay?p=21" target="_blank" rel="noopener">2020年 最新版 传智黑马Java SSM 阶段 采用IDEA教学</a></p>
+
       
 
 
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -202,7 +531,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/hexo博客//" class="article-tag-list-link color2">hexo博客</a>
+        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
@@ -210,16 +539,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/30/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.io2020/08/11/Spring%E6%A1%86%E6%9E%B6/Spring%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/11/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/Spring%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0%EF%BC%88ExceptionInInitializerError%E5%BC%82%E5%B8%B8%E5%8E%9F%E5%9B%A0%E4%B8%8E%E5%A4%84%E7%90%86%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring框架学习（ExceptionInInitializerError异常原因与处理）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -234,652 +622,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/30/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-30T10:21:31.448Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        
-          <a class="article-more-a" href="/2020/07/30/hello-world/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/30/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Spring AOP的简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、AOP的基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">一、AOP的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、定义"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、AOP的作用与优势"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、AOP的作用与优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、AOP的底层实现"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、AOP的底层实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、JDK的代理实现"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、JDK的代理实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、cglib代理实现"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、cglib代理实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、AOP的相关术语"><span class="toc-number">1.2.</span> <span class="toc-text">二、AOP的相关术语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、AOP开发明确的事项"><span class="toc-number">1.3.</span> <span class="toc-text">三、AOP开发明确的事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、需要编写的内容"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、需要编写的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、AOP技术实现的内容"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、AOP技术实现的内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、AOP底层使用哪种代理方式"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、AOP底层使用哪种代理方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、知识要点"><span class="toc-number">1.4.</span> <span class="toc-text">四、知识要点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">基于XML的AOP开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基于XML开发的快速入门"><span class="toc-number">2.1.</span> <span class="toc-text">一、基于XML开发的快速入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、基于XML开发的代码实现"><span class="toc-number">2.2.</span> <span class="toc-text">二、基于XML开发的代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、配置接口和目标类"><span class="toc-number">2.2.1.</span> <span class="toc-text">1、配置接口和目标类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、配置（通知-增强）"><span class="toc-number">2.2.2.</span> <span class="toc-text">2、配置（通知&#x2F;增强）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、配置xml文件"><span class="toc-number">2.2.3.</span> <span class="toc-text">3、配置xml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、配置测试类"><span class="toc-number">2.2.4.</span> <span class="toc-text">4、配置测试类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、切点表达式的写法"><span class="toc-number">2.3.</span> <span class="toc-text">三、切点表达式的写法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、全通配写法"><span class="toc-number">2.3.1.</span> <span class="toc-text">1、全通配写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、实际开发中切入点表达式的通常写法"><span class="toc-number">2.3.2.</span> <span class="toc-text">2、实际开发中切入点表达式的通常写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、切点表达式的抽取"><span class="toc-number">2.3.3.</span> <span class="toc-text">3、切点表达式的抽取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、AOP的通知种类"><span class="toc-number">2.4.</span> <span class="toc-text">四、AOP的通知种类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、通知的类型"><span class="toc-number">2.4.1.</span> <span class="toc-text">1、通知的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、代码演示"><span class="toc-number">2.4.2.</span> <span class="toc-text">2、代码演示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、知识要点、"><span class="toc-number">2.5.</span> <span class="toc-text">五、知识要点、</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、AOP织入的配置"><span class="toc-number">2.5.1.</span> <span class="toc-text">1、AOP织入的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、通知的类型"><span class="toc-number">2.5.2.</span> <span class="toc-text">2、通知的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、切点表达式的写法"><span class="toc-number">2.5.3.</span> <span class="toc-text">3、切点表达式的写法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">基于注解的AOP开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基于注解的AOP开发快速入门"><span class="toc-number">3.1.</span> <span class="toc-text">一、基于注解的AOP开发快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、基于注解的AOP开发的步骤"><span class="toc-number">3.1.1.</span> <span class="toc-text">1、基于注解的AOP开发的步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、基于注解的AOP开发的代码演示"><span class="toc-number">3.1.2.</span> <span class="toc-text">2、基于注解的AOP开发的代码演示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）创建目标接口和目标类（内部有切点）"><span class="toc-number">3.1.2.1.</span> <span class="toc-text">（1）创建目标接口和目标类（内部有切点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）创建切面类（内部有增强方法）"><span class="toc-number">3.1.2.2.</span> <span class="toc-text">（2）创建切面类（内部有增强方法）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）在配置文件中开启组件扫描和AOP的自动代理"><span class="toc-number">3.1.2.3.</span> <span class="toc-text">（3）在配置文件中开启组件扫描和AOP的自动代理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）测试"><span class="toc-number">3.1.2.4.</span> <span class="toc-text">（4）测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、注解配置AOP的类型"><span class="toc-number">3.2.</span> <span class="toc-text">二、注解配置AOP的类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、切点表达式的抽取"><span class="toc-number">3.3.</span> <span class="toc-text">三、切点表达式的抽取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、基于注解开发的知识要点"><span class="toc-number">3.4.</span> <span class="toc-text">四、基于注解开发的知识要点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、注解AOP开发步骤"><span class="toc-number">3.4.1.</span> <span class="toc-text">1、注解AOP开发步骤</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-问题收集/字符串值传递问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/29/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/">字符串值传递问题</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/29/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-07-29T02:01:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>同一个坑掉进去两次的问题，对于String类型的字符串时不能修改的问题还是没有记住！</p>
-        
-          <a class="article-more-a" href="/2020/07/29/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/问题收集//" class="article-tag-list-link color5">问题收集</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/29/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%80%BC%E4%BC%A0%E9%80%92%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据结构/数据结构（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%89%EF%BC%89/">数据结构（三）栈、</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-07-27T11:29:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本章学习栈</p>
-        
-          <a class="article-more-a" href="/2020/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%89%EF%BC%89/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%89%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java复习笔记/java复习笔记（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/27/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/">java复习笔记（二）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/27/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-07-27T09:12:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本节主要复习了java中的顺序结构、循环语句、跳转控制语句以及数组和方法的基本知识</p>
-        
-          <a class="article-more-a" href="/2020/07/27/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java基础笔记//" class="article-tag-list-link color4">java基础笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/27/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据结构/数据结构（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89/">数据结构（二）链表、双向循环链表</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-07-24T09:30:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日复习数据结构的单链表和双向循环链表的知识。</p>
-        
-          <a class="article-more-a" href="/2020/07/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据结构/数据结构（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89/">数据结构（一）基本概念、稀疏数组、队列</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-07-23T00:57:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日开始总结数据结构相关的知识，本章复习了数据结构的基本知识点、稀疏数组和队列相关的知识。</p>
-        
-          <a class="article-more-a" href="/2020/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%80%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-集合底层原理总结/集合底层原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/22/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%80%BB%E7%BB%93/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/">集合底层原理（ArrayList和LinkedList）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/22/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%80%BB%E7%BB%93/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-07-22T01:18:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本次的笔记主要记录了集合的底层实现原理的基本概念。先总结了List集合中的ArrayList集合和LinkedList集合的底层数据结构实现和源码分析。</p>
-        
-          <a class="article-more-a" href="/2020/07/22/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%80%BB%E7%BB%93/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/集合底层原理//" class="article-tag-list-link color2">集合底层原理</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/22/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%80%BB%E7%BB%93/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-07-06T07:38:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第一篇博文"><a href="#第一篇博文" class="headerlink" title="第一篇博文"></a>第一篇博文</h1>
-        
-          <a class="article-more-a" href="/2020/07/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
-        
-      
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -902,8 +670,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
