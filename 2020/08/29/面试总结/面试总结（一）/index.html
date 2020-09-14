@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>分类 | 夜猫君</title>
+  <title>面试总结（一） | 夜猫君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="主要用来记录面试过程中遇到的问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试总结（一）">
+<meta property="og:url" content="http://yoursite.com/2020/08/29/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="夜猫君">
+<meta property="og:description" content="主要用来记录面试过程中遇到的问题。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-22T08:03:53.000Z">
-<meta property="article:modified_time" content="2020-07-22T08:09:28.000Z">
+<meta property="article:published_time" content="2020-08-29T01:42:56.000Z">
+<meta property="article:modified_time" content="2020-09-14T15:26:59.214Z">
 <meta property="article:author" content="夜猫君">
 <meta name="twitter:card" content="summary">
   
@@ -163,41 +165,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="categories-" class="article article-type-categories " itemscope itemprop="blogPost">
+            
+<article id="post-面试总结/面试总结（一）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      分类
+      面试总结（一）
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2020-07-22T08:03:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
+        <a href="/2020/08/29/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-08-29T01:42:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>主要用来记录面试过程中遇到的问题。</p>
+<a id="more"></a>
+
+<h1 id="一、java语言的缺点"><a href="#一、java语言的缺点" class="headerlink" title="一、java语言的缺点"></a>一、java语言的缺点</h1><h3 id="1、运行速度慢"><a href="#1、运行速度慢" class="headerlink" title="1、运行速度慢"></a>1、运行速度慢</h3><p>Java的运行依赖于java虚拟机（JVM），所以相比于（汇编、C、C++）再电脑上的运行速度慢，因为它不是直接执行机器码。</p>
+<br>
+
+<h3 id="2、无法操作操作系统的底层"><a href="#2、无法操作操作系统的底层" class="headerlink" title="2、无法操作操作系统的底层"></a>2、无法操作操作系统的底层</h3><p>由于java要考虑跨平台特性。所以java不能像汇编语言、C语言那样更加接近操作系统。也就不能和操作系统的底层打交道。但可以通过java的JNI（即java的本地接口。也就是利用java语言调用，当前系统上其他程序语言“汇编语言或C语言”等所编写的程序）技术，解决这一问题，但也只是解决了一部分问题。</p>
+<br>
+
+<br>
+
+<h1 id="二、数据结构的排序算法中，哪些是稳定的排序算法"><a href="#二、数据结构的排序算法中，哪些是稳定的排序算法" class="headerlink" title="二、数据结构的排序算法中，哪些是稳定的排序算法"></a>二、数据结构的排序算法中，哪些是稳定的排序算法</h1><p>快速排序、希尔排序、堆排序、直接选择排序不是稳定的排序算法。</p>
+<p>基数排序、冒泡排序、直接插入排序、折半插入排序、归并排序是稳定的排序算法。</p>
+<p>首先，排序算法的稳定性大家应该都知道，通俗地讲就是能保证排序前2个相等的数其在序列的前后位置顺序和排序后它们两个的前后位置顺序相同。在简单形式化一下，如果Ai = Aj, Ai原来在位置前，排序后Ai还是要在Aj位置前。</p>
+<p>其次，说一下稳定性的好处。排序算法如果是稳定的，那么从一个键上排序，然后再从另一个键上排序，第一个键排序的结果可以为第二个键排序所用。基数排序就 是这样，先按低位排序，逐次按高位排序，低位相同的元素其顺序再高位也相同时是不会改变的。</p>
+<h3 id="1冒泡排序"><a href="#1冒泡排序" class="headerlink" title="1冒泡排序"></a><strong>1冒泡排序</strong></h3><p>冒泡排序就是把小的元素往前调或者把大的元素往后调。比较是相邻的两个元素比较，交换也发生在这两个元素之间。所以，如果两个元素相等，我想你是不会再无聊地把他们俩交换一下的；如果两个相等的元素没有相邻，那么即使通过前面的两两交换把两个相邻起来，这时候也不会交换，所以相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。</p>
+<h3 id="2选择排序"><a href="#2选择排序" class="headerlink" title="2选择排序"></a><strong>2选择排序</strong></h3><p>选择排序是给每个位置选择当前元素最小的，比如给第一个位置选择最小的，在剩余元素里面给第二个元素选择第二小的，依次类推，直到第n-1个元素，第n个 元素不用选择了，因为只剩下它一个最大的元素了。那么，在一趟选择，如果当前元素比一个元素小，而该小的元素又出现在一个和当前元素相等的元素后面，那么 交换后稳定性就被破坏了。比较拗口，举个例子，序列5 8 5 2 9， 我们知道第一遍选择第1个元素5会和2交换，那么原序列中2个5的相对前后顺序就被破坏了，所以选择排序不是一个稳定的排序算法。</p>
+<h3 id="3插入排序"><a href="#3插入排序" class="headerlink" title="3插入排序"></a><strong>3插入排序</strong></h3><p>插入排序是在一个已经有序的小序列的基础上，一次插入一个元素。当然，刚开始这个有序的小序列只有1个元素，就是第一个元素。比较是从有序序列的末尾开始，也就是想要插入的元素和已经有序的最大者开始比起，如果比它大则直接插入在其后面，否则一直往前找直到找到它该插入的位置。如果碰见一个和插入元素相 等的，那么插入元素把想插入的元素放在相等元素的后面。所以，相等元素的前后顺序没有改变，从原无序序列出去的顺序就是排好序后的顺序，所以插入排序是稳 定的。</p>
+<h3 id="4快速排序"><a href="#4快速排序" class="headerlink" title="4快速排序"></a><strong>4快速排序</strong></h3><p>快速排序有两个方向，左边的i下标一直往右走，当a[i] &lt;= a[center_index]，其中center_index是中枢元素的数组下标，一般取为数组第0个元素。而右边的j下标一直往左走，当a[j] &gt; a[center_index]。如果i和j都走不动了，i &lt;= j, 交换a[i]和a[j],重复上面的过程，直到i&gt;j。 交换a[j]和a[center_index]，完成一趟快速排序。在中枢元素和a[j]交换的时候，很有可能把前面的元素的稳定性打乱，比如序列为 5 3 3 4 3 8 9 10 11， 现在中枢元素5和3(第5个元素，下标从1开始计)交换就会把元素3的稳定性打乱，所以快速排序是一个不稳定的排序算法，不稳定发生在中枢元素和a[j] 交换的时刻。</p>
+<h3 id="5归并排序"><a href="#5归并排序" class="headerlink" title="5归并排序"></a><strong>5归并排序</strong></h3><p>归并排序是把序列递归地分成短序列，递归出口是短序列只有1个元素(认为直接有序)或者2个元素(1次比较和交换),然后把各个有序的段序列合并成一个有 序的长序列，不断合并直到原序列全部排好序。可以发现，在1个或2个元素时，1个元素不会交换，2个元素如果大小相等也没有人故意交换，这不会破坏稳定 性。那么，在短的有序序列合并的过程中，稳定是否受到破坏？没有，合并过程中我们可以保证如果两个当前元素相等时，我们把处在前面的序列的元素保存在结 果序列的前面，这样就保证了稳定性。所以，归并排序也是稳定的排序算法。</p>
+<h3 id="6基数排序"><a href="#6基数排序" class="headerlink" title="6基数排序"></a><strong>6基数排序</strong></h3><p>基数排序是按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优 先级排序，最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前。基数排序基于分别排序，分别收集，所以其是稳定的排序算法。</p>
+<h3 id="7希尔排序-shell"><a href="#7希尔排序-shell" class="headerlink" title="7希尔排序(shell)"></a>7希尔排序(shell)</h3><p>希尔排序是按照不同步长对元素进行插入排序，当刚开始元素很无序的时候，步长最大，所以插入排序的元素个数很少，速度很快；当元素基本有序了，步长很小， 插入排序对于有序的序列效率很高。所以，希尔排序的时间复杂度会比o(n^2)好一些。由于多次插入排序，我们知道一次插入排序是稳定的，不会改变相同元 素的相对顺序，但在不同的插入排序过程中，相同的元素可能在各自的插入排序中移动，最后其稳定性就会被打乱，所以shell排序是不稳定的。</p>
+<h3 id="8堆排序"><a href="#8堆排序" class="headerlink" title="8堆排序"></a><strong>8堆排序</strong></h3><p>我们知道堆的结构是节点i的孩子为2<em>i和2</em>i+1节点，大顶堆要求父节点大于等于其2个子节点，小顶堆要求父节点小于等于其2个子节点。在一个长为n 的序列，堆排序的过程是从第n/2开始和其子节点共3个值选择最大(大顶堆)或者最小(小顶堆),这3个元素之间的选择当然不会破坏稳定性。但当为n /2-1, n/2-2, …1这些个父节点选择元素时，就会破坏稳定性。有可能第n/2个父节点交换把后面一个元素交换过去了，而第n/2-1个父节点把后面一个相同的元素没 有交换，那么这2个相同的元素之间的稳定性就被破坏了。所以，堆排序不是稳定的排序算法。</p>
+<br>
+
+<p>以上内容摘自：<a href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%A8%B3%E5%AE%9A%E6%80%A7/9763250?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<br>
+
+<br>
+
+<h1 id="三、解决哈希冲突的方法"><a href="#三、解决哈希冲突的方法" class="headerlink" title="三、解决哈希冲突的方法"></a>三、解决哈希冲突的方法</h1><h3 id="1、拉链法（链地址法）"><a href="#1、拉链法（链地址法）" class="headerlink" title="1、拉链法（链地址法）"></a>1、拉链法（链地址法）</h3><h4 id="（1）拉链法解决Hash冲突的方法"><a href="#（1）拉链法解决Hash冲突的方法" class="headerlink" title="（1）拉链法解决Hash冲突的方法"></a><strong>（1）拉链法解决Hash冲突的方法</strong></h4><p>拉链法解决Hash冲突的做法是：将所有关键字为同义词的节点链接在同一个单链表中。若选定的散列列表长度为m，则可将散列表定义为一个由m个头指针组成的指针数组T[0….m-1]。凡是散列地址为i的节点，均插入到以T[i]为头指针的单链表中。T中各分量的初值均应为空指针。在拉链法中，装填因子α可以大于一，但一般均取α ≤ 1.</p>
+<br>
+
+<h4 id="（2）拉链法的优点"><a href="#（2）拉链法的优点" class="headerlink" title="（2）拉链法的优点"></a><strong>（2）拉链法的优点</strong></h4><p>与开放地址法相比，拉链法的优点</p>
+<p>（1）拉链发处理冲突简单，且无堆积现象，即非同义词绝不会发生冲突，因此平均查找长度较短；</p>
+<p>（2）由于拉链法中各链表上的节点空间是动态申请的，所以它更适合于造表之前无法确定表长的情况；</p>
+<p>（3）开放地址法为减少冲突，要求装填因子α较小，所以当节点规模较大时会浪费很多空间。而拉链法中可取α ≥ 1，且节点较大时，拉链法中增加的指针域可忽略不计，因此节省空间；</p>
+<p>（4）在用拉链法构造的散列表中，删除结点的操作易于实现。只要简单地删去链表上相应的结点即可。而对开放地址法构造的散列表，删除结点不能简单地将被删结 点的空间置为空，否则将截断在它之后填人散列表的同义词结点的查找路径。这是因为各种开放地址法中，空地址单元(即开放地址)都是查找失败的条件。因此在 用开放地址法处理冲突的散列表上执行删除操作，只能在被删结点上做删除标记，而不能真正删除结点。</p>
+<br>
+
+<h4 id="（3）拉链法的缺点"><a href="#（3）拉链法的缺点" class="headerlink" title="（3）拉链法的缺点"></a><strong>（3）拉链法的缺点</strong></h4><p>指针需要额外的空间，所以当节点规模较小时，开放地址法更加的节省空间。</p>
+<br>
+
+<h3 id="2、开放地址法"><a href="#2、开放地址法" class="headerlink" title="2、开放地址法"></a>2、开放地址法</h3><h4 id="（1）开放地址法解决哈希冲突的方法"><a href="#（1）开放地址法解决哈希冲突的方法" class="headerlink" title="（1）开放地址法解决哈希冲突的方法"></a><strong>（1）开放地址法解决哈希冲突的方法</strong></h4><p>当冲突发生时，使用某种探查（亦称探测）技术在散列表中形成一个探查序列。沿此序列逐个单元地查找，直到找到给定的关键字，或者碰到一个开发的地址（即该地址的单元为空）为止（若要插入，在探查到开放的地址，则可将待插入的新结点存人该地址单元）。查找时探查到开放的地址则表明表中无待查的关键字，即查找失败。</p>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>用开放定址法建立散列表时，建表前须将表中所有单元(更严格地说，是指单元中存储的关键字)置空。</li>
+<li>空单元的表示与具体的应用相关。</li>
+</ul>
+<br>
+
+<h4 id="（2）开放地址法分类"><a href="#（2）开放地址法分类" class="headerlink" title="（2）开放地址法分类"></a>（2）开放地址法分类</h4><p><strong>① 线性探查法(Linear Probing)</strong></p>
+<p><strong>基本思想：</strong></p>
+<p>将散列表T[0…m-1]看成是一个循环向量，若依次探查的地址为d（即h(key) = d），则最长的探查序列为：</p>
+<p>d、d + 1、d + 2、…、m - 1、0、1、…、d - 1</p>
+<p>即探查时从地址d开始，首先探查T[d]，然后依次探查T[d + 1]，…，直到T[m - 1]，此后又次循环到T[0]，T[1]，…，直到探查到T[d - 1]为止。探测终止于以下三种情况：</p>
+<ul>
+<li>若当前探查的单元为空，则表示查找失败（若是插入则将key写入其中）；</li>
+<li>若探查的单元中含有key，则查找成功，但对于插入意味着失败；</li>
+<li>若探查到T[d - 1]时仍未发现空单元也未找到key，则无论是查找还是插入均意味着失败（此时表满）。</li>
+</ul>
+<p><strong>利用开放地址法的一般形式，线性探查法的探查序列为：</strong></p>
+<center>hi=(h(key)+i)％m 0≤i≤m-1 //即di=i</center>
+
+<p><strong>线性探查法缺点：</strong></p>
+<ul>
+<li>处理溢出需另编程序。一般可另外设立一个溢出表，专门用来存放上述哈希表中放不下的记录。此溢出表最简单的结构是顺序表，查找方法可用顺序查找。</li>
+<li>按上述算法建立起来的哈希表，删除工作非常困难。假如要从哈希表 HT 中删除一个记录，按理应将这个记录所在位置置为空，但我们不能这样做，而只能标上已被删除的标记，否则，将会影响以后的查找。</li>
+<li>线性探测法很容易产生堆聚现象。所谓堆聚现象，就是存入哈希表的记录在表中连成一片。按照线性探测法处理冲突，如果生成哈希地址的连续序列愈长 ( 即不同关键字值的哈希地址相邻在一起愈长 ) ，则当新的记录加入该表时，与这个序列发生冲突的可能性愈大。因此，哈希地址的较长连续序列比较短连续序列生长得快，这就意味着，一旦出现堆聚 ( 伴随着冲突 ) ，就将引起进一步的堆聚。</li>
+</ul>
+<br>
+
+<p><strong>② 线性补偿探测法</strong></p>
+<p><strong>线性补偿探测法的基本思想：</strong></p>
+<p>将线性探测的步长从 1 改为 Q ，即将上述算法中的 j ＝ (j ＋ 1) % m 改为： j ＝ (j ＋ Q) % m ，而且要求 Q 与 m 是互质的，以便能探测到哈希表中的所有单元。</p>
+<p>【例】 PDP-11 小型计算机中的汇编程序所用的符合表，就采用此方法来解决冲突，所用表长 m ＝ 1321 ，选用 Q ＝ 25 。</p>
+<br>
+
+<p><strong>③随机探测</strong></p>
+<p><strong>随机探测的基本思想：</strong></p>
+<p>将线性探测的步长从常数改为随机数，即令： j ＝ (j ＋ RN) % m ，其中 RN 是一个随机数。在实际程序中应预先用随机数发生器产生一个随机序列，将此序列作为依次探测的步长。这样就能使不同的关键字具有不同的探测次序，从而可以避免或减少堆聚。基于与线性探测法相同的理由，在线性补偿探测法和随机探测法中，删除一个记录后也要打上删除标记。</p>
+<br>
+
+<br>
+
+<h1 id="四、Spring和SpringBoot的区别"><a href="#四、Spring和SpringBoot的区别" class="headerlink" title="四、Spring和SpringBoot的区别"></a>四、Spring和SpringBoot的区别</h1><p><a href="https://blog.csdn.net/qq_29229567/article/details/89209719" target="_blank" rel="noopener">SpringBoot：简述SpringBoot和Spring的区别</a></p>
+<p><a href="https://blog.csdn.net/weixin_34177064/article/details/93029720" target="_blank" rel="noopener">Spring和SpringBoot比较，解惑区别</a></p>
+<p>Spring Boot只是Spring本身的扩展，使开发，测试和部署更加方便。</p>
+<br>
+
+<br>
+
+<h1 id="五、类与接口的区别"><a href="#五、类与接口的区别" class="headerlink" title="五、类与接口的区别"></a>五、类与接口的区别</h1><h3 id="1、成员不同"><a href="#1、成员不同" class="headerlink" title="1、成员不同"></a>1、成员不同</h3><p><strong>类中的成员可分为：</strong>成员变量、成员常量、成员方法（可以有抽象方法、静态方法、普通的方法）</p>
+<p><strong>接口中的成员可分为：</strong>只有常量（由public static final）和抽象方法（由public abstract static修饰）</p>
+<p>注意事项：接口中没有构造器，但类中可以由构造器</p>
+<h3 id="2、类与接口之间的关系不同"><a href="#2、类与接口之间的关系不同" class="headerlink" title="2、类与接口之间的关系不同"></a>2、类与接口之间的关系不同</h3><p><strong>类与类的关系：</strong>单继承与多层继承（extends）</p>
+<p><strong>类与接口的关系：</strong>类可以实现接口（implements）</p>
+<p><strong>接口与接口的关系：</strong>单继承与多层继承</p>
+<h3 id="3、设计理念的区别"><a href="#3、设计理念的区别" class="headerlink" title="3、设计理念的区别"></a>3、设计理念的区别</h3><p><strong>抽象类：</strong>对类的抽象，包括属性和行为</p>
+<p><strong>接口：</strong>对行为的抽象，主要是行为</p>
+<h1 id="六、面向对象的六大原则"><a href="#六、面向对象的六大原则" class="headerlink" title="六、面向对象的六大原则"></a>六、面向对象的六大原则</h1><h3 id="1、单一原则"><a href="#1、单一原则" class="headerlink" title="1、单一原则"></a>1、单一原则</h3><p>一个类应该有且只有一个变化的原因。单一职责原则将不同的职责分离到单独的类，每一个职责都是一个变化的中心。需求变化时，将通过更改职责相关的类来体现。如果一个类拥有多于一个的职责，则多个职责耦合在一起，会有多于一个原因来导致这个类发生变化。一个职责的变化可能会影响到其他的职责，另外，把多个职责耦合在一起，影响复用性。</p>
+<h3 id="2、里氏替换原则"><a href="#2、里氏替换原则" class="headerlink" title="2、里氏替换原则"></a>2、里氏替换原则</h3><p>就是要求继承是严格的is-a关系。所有引用基类的地方必须能透明地使用其子类的对象。在软件中将一个基类对象替换成它的子类对象，程序将不会产生任何错误和异常，反过来则不成立，如果一个软件实体使用的是一个子类对象的话，那么它不一定能够使用基类对象。例如：我喜欢动物，那我一定喜欢狗，因为狗是动物的子类；但是我喜欢狗，不能据此断定我喜欢动物，因为我并不喜欢老鼠，虽然它也是动物。</p>
+<h3 id="3、依赖倒置原则"><a href="#3、依赖倒置原则" class="headerlink" title="3、依赖倒置原则"></a>3、依赖倒置原则</h3><p>依赖倒置原则的核心就是要我们面向接口编程，理解了面向接口编程，也就理解了依赖倒置。低层模块尽量都要有抽象类或接口，或者两者都有。变量的声明类型尽量是抽象类或接口。</p>
+<h3 id="4、接口分离原则"><a href="#4、接口分离原则" class="headerlink" title="4、接口分离原则"></a>4、接口分离原则</h3><p>一个类对另一个类的依赖应该建立在最小的接口上,通俗的讲就是需要什么就提供什么，不需要的就不要提供。接口中的方法应该尽量少，不要使接口过于臃肿，不要有很多不相关的逻辑方法。</p>
+<h3 id="5、多用组合"><a href="#5、多用组合" class="headerlink" title="5、多用组合"></a>5、多用组合</h3><p>如果新对象的某些功能在别的已经创建好的对象里面已经实现，那么应当尽量使用别的对象提供的功能，使之成为新对象的一部分，而不要再重新创建。可以降低类与类之间的耦合程度。</p>
+<h3 id="6、开闭原则"><a href="#6、开闭原则" class="headerlink" title="6、开闭原则"></a>6、开闭原则</h3><p>对修改关闭，对扩展开放。在软件的生命周期内，因为变化，升级和维护等原因需要对软件原有代码进行修改，可能会给旧代码引入错误，也有可能会使我们不得不对整个功能进行重构，并且需要原有代码经过重新测试。解决方案：当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现。不过这要求，我们要对需求的变更有前瞻性和预见性。其实只要遵循前面5中设计模式，设计出来的软件就是符合开闭原则的。</p>
+<h1 id="七、死锁的原因"><a href="#七、死锁的原因" class="headerlink" title="七、死锁的原因"></a>七、死锁的原因</h1><h3 id="1、竞争资源引起进程死锁"><a href="#1、竞争资源引起进程死锁" class="headerlink" title="1、竞争资源引起进程死锁"></a>1、竞争资源引起进程死锁</h3><p>当系统中供多个进程共享的资源如打印机、公用队列的等，其数目不足以满足诸进程的需要时，会引起诸进程对资源的竞争而产生死锁。</p>
+<h3 id="2、可剥夺资源和不可剥夺资源"><a href="#2、可剥夺资源和不可剥夺资源" class="headerlink" title="2、可剥夺资源和不可剥夺资源"></a>2、可剥夺资源和不可剥夺资源</h3><p>系统中的资源可以分为两类，一类是可剥夺资源，是指某进程在获得这类资源后，该资源可以再被其他进程或系统剥夺。例如，优先权高的进程可以剥夺优先权低的进程的<a href="https://baike.baidu.com/item/处理机" target="_blank" rel="noopener">处理机</a>。又如，内存区可由<a href="https://baike.baidu.com/item/存储器管理" target="_blank" rel="noopener">存储器管理</a>程序，把一个进程从一个存储区移到另一个存储区，此即剥夺了该进程原来占有的存储区，甚至可将一进程从内存调到外存上，可见，<a href="https://baike.baidu.com/item/CPU" target="_blank" rel="noopener">CPU</a>和<a href="https://baike.baidu.com/item/主存" target="_blank" rel="noopener">主存</a>均属于可剥夺性资源。另一类资源是不可剥夺资源，当系统把这类资源分配给某进程后，再不能强行收回，只能在进程用完后自行释放，如<a href="https://baike.baidu.com/item/磁带机" target="_blank" rel="noopener">磁带机</a>、打印机等。</p>
+<h3 id="3、竞争不可剥夺资源"><a href="#3、竞争不可剥夺资源" class="headerlink" title="3、竞争不可剥夺资源"></a>3、竞争不可剥夺资源</h3><p>在系统中所配置的不可剥夺资源，由于它们的数量不能满足诸进程运行的需要，会使进程在运行过程中，因争夺这些资源而陷于僵局。例如，系统中只有一台打印机R1和一台<a href="https://baike.baidu.com/item/磁带机" target="_blank" rel="noopener">磁带机</a>R2，可供进程P1和P2共享。假定PI已占用了打印机R1，P2已占用了磁带机R2，若P2继续要求打印机R1，P2将阻塞；P1若又要求磁带机，P1也将阻塞。于是，在P1和P2之间就形成了僵局，两个进程都在等待对方释放自己所需要的资源，但是它们又都因不能继续获得自己所需要的资源而不能继续推进，从而也不能释放自己所占有的资源，以致进入死锁状态。</p>
+<h3 id="4、竞争临时资源"><a href="#4、竞争临时资源" class="headerlink" title="4、竞争临时资源"></a>4、竞争临时资源</h3><p>上面所说的打印机资源属于可顺序重复使用型资源，称为永久资源。还有一种所谓的临时资源，这是指由一个进程产生，被另一个进程使用，短时间后便无用的资源，故也称为消耗性资源，如<a href="https://baike.baidu.com/item/硬件中断" target="_blank" rel="noopener">硬件中断</a>、信号、消息、<a href="https://baike.baidu.com/item/缓冲区" target="_blank" rel="noopener">缓冲区</a>内的消息等，它也可能引起死锁。例如，SI，S2，S3是临时性资源，进程P1产生消息S1，又要求从P3接收消息S3；进程P3产生消息S3，又要求从进程P2处接收消息S2；进程P2产生消息S2，又要求从P1处接收产生的消息S1。</p>
+<h1 id="八、死锁的产生条件和排除方法"><a href="#八、死锁的产生条件和排除方法" class="headerlink" title="八、死锁的产生条件和排除方法"></a>八、死锁的产生条件和排除方法</h1><h3 id="1、产生条件"><a href="#1、产生条件" class="headerlink" title="1、产生条件"></a>1、产生条件</h3><h4 id="（1）互斥条件"><a href="#（1）互斥条件" class="headerlink" title="（1）互斥条件"></a>（1）互斥条件</h4><p>指进程对所分配到的资源进行排它性使用，即在一段时间内某资源只由一个进程占用。如果此时还有其它进程请求资源，则请求者只能等待，直至占有资源的进程用毕释放。</p>
+<h4 id="（2）请求和保持条件"><a href="#（2）请求和保持条件" class="headerlink" title="（2）请求和保持条件"></a>（2）<strong>请求和保持条件</strong></h4><p>指进程已经保持至少一个资源，但又提出了新的资源请求，而该资源已被其它进程占有，此时请求进程阻塞，但又对自己已获得的其它资源保持不放。</p>
+<h4 id="（3）不剥夺条件"><a href="#（3）不剥夺条件" class="headerlink" title="（3）不剥夺条件"></a>（3）<strong>不剥夺条件</strong></h4><p>指进程已获得的资源，在未使用完之前，不能被剥夺，只能在使用完时由自己释放。</p>
+<h4 id="（4）环路等待条件"><a href="#（4）环路等待条件" class="headerlink" title="（4）环路等待条件"></a>（4）<strong>环路等待条件</strong></h4><p>指在发生死锁时，必然存在一个进程——资源的环形链，即进程集合{P0，P1，P2，···，Pn}中的P0正在等待一个P1占用的资源；P1正在等待P2占用的资源，……，Pn正在等待已被P0占用的资源。</p>
+<h3 id="2、排除方法"><a href="#2、排除方法" class="headerlink" title="2、排除方法"></a>2、排除方法</h3><ul>
+<li>撤消陷于死锁的全部进程</li>
+<li>逐个撤消陷于死锁的进程，直到死锁不存在</li>
+<li>从陷于死锁的进程中逐个强迫放弃所占用的资源，直至死锁消失</li>
+<li>从另外一些进程那里强行剥夺足够数量的资源分配给死锁进程，以解除死锁状态</li>
+</ul>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p>参考资料：<a href="https://www.cnblogs.com/zhangbing12304/p/7997980.html" target="_blank" rel="noopener">解决哈希（HASH）冲突的主要方法</a></p>
+
       
 
-
- 
-  <div class="category-all-page">
-    <div class="category-all-title">
-    TOTAL : 12
-    </div>
- 
-    <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">IDEA快捷键</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mybatis/">Mybatis</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringMVC/">SpringMVC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2/">hexo博客</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">java基础笔记</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E6%96%87/">杂文</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AF%95/">笔试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/">问题收集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/">集合底层原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/">面试问题</a><span class="category-list-count">1</span></li></ul>
-    </div>
- 
-  </div>
 
 
       
@@ -227,6 +347,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/面试问题//" class="article-tag-list-link color5">面试问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -276,7 +407,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.iocategories/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.io2020/08/29/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,6 +419,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/09/05/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          IDEA快捷键总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">笔试知识总结（网络基础、java）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -309,7 +459,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、java语言的缺点"><span class="toc-number">1.</span> <span class="toc-text">一、java语言的缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、运行速度慢"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、运行速度慢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、无法操作操作系统的底层"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、无法操作操作系统的底层</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、数据结构的排序算法中，哪些是稳定的排序算法"><span class="toc-number">2.</span> <span class="toc-text">二、数据结构的排序算法中，哪些是稳定的排序算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1冒泡排序"><span class="toc-number">2.0.1.</span> <span class="toc-text">1冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2选择排序"><span class="toc-number">2.0.2.</span> <span class="toc-text">2选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3插入排序"><span class="toc-number">2.0.3.</span> <span class="toc-text">3插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4快速排序"><span class="toc-number">2.0.4.</span> <span class="toc-text">4快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5归并排序"><span class="toc-number">2.0.5.</span> <span class="toc-text">5归并排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6基数排序"><span class="toc-number">2.0.6.</span> <span class="toc-text">6基数排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7希尔排序-shell"><span class="toc-number">2.0.7.</span> <span class="toc-text">7希尔排序(shell)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8堆排序"><span class="toc-number">2.0.8.</span> <span class="toc-text">8堆排序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、解决哈希冲突的方法"><span class="toc-number">3.</span> <span class="toc-text">三、解决哈希冲突的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、拉链法（链地址法）"><span class="toc-number">3.0.1.</span> <span class="toc-text">1、拉链法（链地址法）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）拉链法解决Hash冲突的方法"><span class="toc-number">3.0.1.1.</span> <span class="toc-text">（1）拉链法解决Hash冲突的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）拉链法的优点"><span class="toc-number">3.0.1.2.</span> <span class="toc-text">（2）拉链法的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）拉链法的缺点"><span class="toc-number">3.0.1.3.</span> <span class="toc-text">（3）拉链法的缺点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开放地址法"><span class="toc-number">3.0.2.</span> <span class="toc-text">2、开放地址法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）开放地址法解决哈希冲突的方法"><span class="toc-number">3.0.2.1.</span> <span class="toc-text">（1）开放地址法解决哈希冲突的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）开放地址法分类"><span class="toc-number">3.0.2.2.</span> <span class="toc-text">（2）开放地址法分类</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、Spring和SpringBoot的区别"><span class="toc-number">4.</span> <span class="toc-text">四、Spring和SpringBoot的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、类与接口的区别"><span class="toc-number">5.</span> <span class="toc-text">五、类与接口的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、成员不同"><span class="toc-number">5.0.1.</span> <span class="toc-text">1、成员不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、类与接口之间的关系不同"><span class="toc-number">5.0.2.</span> <span class="toc-text">2、类与接口之间的关系不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、设计理念的区别"><span class="toc-number">5.0.3.</span> <span class="toc-text">3、设计理念的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、面向对象的六大原则"><span class="toc-number">6.</span> <span class="toc-text">六、面向对象的六大原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单一原则"><span class="toc-number">6.0.1.</span> <span class="toc-text">1、单一原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、里氏替换原则"><span class="toc-number">6.0.2.</span> <span class="toc-text">2、里氏替换原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、依赖倒置原则"><span class="toc-number">6.0.3.</span> <span class="toc-text">3、依赖倒置原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、接口分离原则"><span class="toc-number">6.0.4.</span> <span class="toc-text">4、接口分离原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、多用组合"><span class="toc-number">6.0.5.</span> <span class="toc-text">5、多用组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、开闭原则"><span class="toc-number">6.0.6.</span> <span class="toc-text">6、开闭原则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、死锁的原因"><span class="toc-number">7.</span> <span class="toc-text">七、死锁的原因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、竞争资源引起进程死锁"><span class="toc-number">7.0.1.</span> <span class="toc-text">1、竞争资源引起进程死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、可剥夺资源和不可剥夺资源"><span class="toc-number">7.0.2.</span> <span class="toc-text">2、可剥夺资源和不可剥夺资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、竞争不可剥夺资源"><span class="toc-number">7.0.3.</span> <span class="toc-text">3、竞争不可剥夺资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、竞争临时资源"><span class="toc-number">7.0.4.</span> <span class="toc-text">4、竞争临时资源</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、死锁的产生条件和排除方法"><span class="toc-number">8.</span> <span class="toc-text">八、死锁的产生条件和排除方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、产生条件"><span class="toc-number">8.0.1.</span> <span class="toc-text">1、产生条件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）互斥条件"><span class="toc-number">8.0.1.1.</span> <span class="toc-text">（1）互斥条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）请求和保持条件"><span class="toc-number">8.0.1.2.</span> <span class="toc-text">（2）请求和保持条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）不剥夺条件"><span class="toc-number">8.0.1.3.</span> <span class="toc-text">（3）不剥夺条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）环路等待条件"><span class="toc-number">8.0.1.4.</span> <span class="toc-text">（4）环路等待条件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、排除方法"><span class="toc-number">8.0.2.</span> <span class="toc-text">2、排除方法</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -319,6 +469,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -341,7 +501,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

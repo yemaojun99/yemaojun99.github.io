@@ -6,17 +6,45 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>分类 | 夜猫君</title>
+  <title>笔试知识总结（网络基础、java） | 夜猫君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="全双工、DNS、Ping与ICMP、香农定理、Qos服务质量、PPP信息帧格式、集合框架、java线程状态转换、垃圾回收标准、HashMap与HashTable的区别、布尔类型在if语句中的赋值使用、优化Hibernate所鼓励的7大措施、类加载器、处理流与节点流。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔试知识总结（网络基础、java）">
+<meta property="og:url" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="夜猫君">
+<meta property="og:description" content="全双工、DNS、Ping与ICMP、香农定理、Qos服务质量、PPP信息帧格式、集合框架、java线程状态转换、垃圾回收标准、HashMap与HashTable的区别、布尔类型在if语句中的赋值使用、优化Hibernate所鼓励的7大措施、类加载器、处理流与节点流。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-22T08:03:53.000Z">
-<meta property="article:modified_time" content="2020-07-22T08:09:28.000Z">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/01.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/03.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/ping.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/ICMP.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/04.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/05.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/06.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/07.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/%E9%9B%86%E5%90%88.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/%E9%9B%86%E5%90%88.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/09.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/10.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/11.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%8Eclass%E6%96%87%E4%BB%B6.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/12.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/12%E8%A7%A3%E9%87%8A.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/13.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/14.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/15.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/16.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/17.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/18.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/19.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/20.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/21.JPG">
+<meta property="article:published_time" content="2020-08-28T14:06:49.000Z">
+<meta property="article:modified_time" content="2020-08-29T06:41:44.380Z">
 <meta property="article:author" content="夜猫君">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/01.JPG">
   
     <link rel="alternative" href="/atom.xml" title="夜猫君" type="application/atom+xml">
   
@@ -163,41 +191,300 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="categories-" class="article article-type-categories " itemscope itemprop="blogPost">
+            
+<article id="post-笔试知识总结/笔试知识总结（一）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      分类
+      笔试知识总结（网络基础、java）
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2020-07-22T08:03:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
+        <a href="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-08-28T14:06:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>全双工、DNS、Ping与ICMP、香农定理、Qos服务质量、PPP信息帧格式、集合框架、java线程状态转换、垃圾回收标准、HashMap与HashTable的区别、布尔类型在if语句中的赋值使用、优化Hibernate所鼓励的7大措施、类加载器、处理流与节点流。</p>
+<a id="more"></a>
+
+<h1 id="一、单工模式、半双工模式、全双工模式"><a href="#一、单工模式、半双工模式、全双工模式" class="headerlink" title="一、单工模式、半双工模式、全双工模式"></a>一、单工模式、半双工模式、全双工模式</h1><h3 id="1、单工模式"><a href="#1、单工模式" class="headerlink" title="1、单工模式"></a>1、单工模式</h3><p>A发送请求，B接收请求，但B并不能发送请求。</p>
+<br>
+
+<h3 id="2、半双工模式"><a href="#2、半双工模式" class="headerlink" title="2、半双工模式"></a>2、半双工模式</h3><p>A发送请求过程中B不可以发送请求，当B发送请求时，A不能发送请求。</p>
+<br>
+
+<h3 id="3、全双工模式"><a href="#3、全双工模式" class="headerlink" title="3、全双工模式"></a>3、全双工模式</h3><p>A和B可以同时发送请求，同时接受请求。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/01.JPG" alt="01" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="二、DNS的作用"><a href="#二、DNS的作用" class="headerlink" title="二、DNS的作用"></a>二、DNS的作用</h1><h3 id="1、作用"><a href="#1、作用" class="headerlink" title="1、作用"></a>1、作用</h3><p>（1）将主机名翻译到指定的IP地址；</p>
+<p>（2）将IP地址反解成主机名；</p>
+<p>（3）解析特定类型的服务的地址，如MX，NS；</p>
+<br>
+
+<h3 id="2、补充知识"><a href="#2、补充知识" class="headerlink" title="2、补充知识"></a>2、补充知识</h3><p>（1）DNS是域名解析协议；</p>
+<p>（2）IP地址转为MAC地址是ARP协议的作用，RARP协议的作用刚好相反；</p>
+<p>（3）DNS解析域名到IP地址为双向的，此外还可以解析特定类型的服务的地址；</p>
+<p>（4）DNS查询是双向，递归，迭代，多功能的有直接IP解析，别名解析，记录解析等等。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/03.JPG" alt="03" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="三、Ping与ICMP"><a href="#三、Ping与ICMP" class="headerlink" title="三、Ping与ICMP"></a>三、Ping与ICMP</h1><p><strong>ping用来测试网络可达性。</strong></p>
+<p>主机A通过ping建立一个固定格式的ICMP请求包逐层包装传递给主机B，主机B收到数据帧处理后构建一个ICMP发送给主机A。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/ping.jpg" alt="ping" style="zoom:80%;">
+
+<p><strong>ICMP就是一个“错误侦测与回报机制”</strong>，其目的就是让我们能够检测网络的连线情况，也能确保连线的准确性。其ICMP类型中包含各种代码以及对应的响应报告（Ping通以及Ping不同的差错报告）。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/ICMP.jpg" alt="ICMP" style="zoom:80%;">
+
+<br>
+
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/04.JPG" alt="04" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="四、香农定理"><a href="#四、香农定理" class="headerlink" title="四、香农定理"></a>四、香农定理</h1><p>C = Blb（1 + S / N）</p>
+<p>其中：C是信道支持的最大速度或者叫信道容量；B是信道的带宽；S是平均信号功率；N是平均噪声功率；S/N即信噪比。</p>
+<p>信噪比越高，数据传输率也越高。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/05.JPG" alt="05" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="五、QoS服务质量"><a href="#五、QoS服务质量" class="headerlink" title="五、QoS服务质量"></a>五、QoS服务质量</h1><p>QoS（Quality of Service），中文名为“服务质量”。它是指网络提供更高优先服务的一种能力，包括专用带宽、抖动控制和延迟（用于实时和交互式流量情形）、丢包率的改进以及不同WAN、LAN和MAN技术下的指定网络流量等，同时确保为每种流量提供的优先权不会阻碍其它流量的进程只要涉及到带宽分配和对业务服务质量有要求的地方，就会有QoS设计。<strong>QoS技术多应用于广域网络和语音、视频等媒体业务系统。</strong></p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/06.JPG" alt="06" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="六、PPP信息帧格式"><a href="#六、PPP信息帧格式" class="headerlink" title="六、PPP信息帧格式"></a>六、PPP信息帧格式</h1><p>A： 信息字段的长度是可变的，不超过1500字节；</p>
+<p>B、PPP帧的首部和尾部分别为四个字段和两个字段 ；首部：标志字段F、地址字段A、控制字段C、协议字段  尾部：帧校验序列 FCS、标志字段 F；</p>
+<p>C、D: 首部第一个字段和尾部第二个字段都是标志字段F 规定为0x7E 标志字段表示一个帧的开始或结束。因此标志字段就是PPP帧的定界符。<strong>首部的地址字段A规定为0xFF,控制字段C规定为0x03 这两个字段实际上并没有携带PPP帧的信息。</strong></p>
+<p>D：PPP首部的第四个字段是2字节的协议字段。当协议字段为0x0021时，PPP帧的信息字段就是IP数据报 </p>
+<p>   当协议字段为0xC021，则信息字段是PPP链路控制协议LCP的数据，而0x8021表示网络层的控制数据。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/07.JPG" alt="07" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="七、集合框架"><a href="#七、集合框架" class="headerlink" title="七、集合框架"></a>七、集合框架</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/集合.png" alt="集合" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="八、java线程状态的转换"><a href="#八、java线程状态的转换" class="headerlink" title="八、java线程状态的转换"></a>八、java线程状态的转换</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/集合.png" alt="集合" style="zoom:80%;">
+
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/09.JPG" alt="09" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="九、垃圾回收器收集的标准"><a href="#九、垃圾回收器收集的标准" class="headerlink" title="九、垃圾回收器收集的标准"></a>九、垃圾回收器收集的标准</h1><p>java中，判断一块内存空间是否符合垃圾收集器收集标准的标准为：</p>
+<p>1、给对象赋值为null，以下没有调用过；</p>
+<p>2、给对象赋了新的值，重新分配了内存空间。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/10.JPG" alt="10" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="十、类、接口与-class文件的关系"><a href="#十、类、接口与-class文件的关系" class="headerlink" title="十、类、接口与.class文件的关系"></a>十、类、接口与.class文件的关系</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/11.JPG" alt="11" style="zoom:80%;">
+
+
+
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/类、接口与class文件.png" alt="类、接口与class文件" style="zoom:80%;">
+
+<p>一个.java文件中定义多个类：</p>
+<p>注意一下几点：</p>
+<p>(1) public权限类只能有一个（也可以一个都没有，但最多只有一个）；</p>
+<p>(2)这个.java文件名只能是public 权限的类的类名；</p>
+<p>(3)倘若这个文件中没有public 类，则它的.java文件的名字是随便的一个类名；</p>
+<p>(4)当用javac命令生成编译这个.java 文件的时候，则会针对每一个类生成一个.class文件。</p>
+<br>
+
+<br>
+
+<h1 id="十一、字符串创建对象"><a href="#十一、字符串创建对象" class="headerlink" title="十一、字符串创建对象"></a>十一、字符串创建对象</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/12.JPG" alt="12" style="zoom:80%;">
+
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/12解释.JPG" alt="12解释" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="十二、布尔类型在if语句中的赋值运算"><a href="#十二、布尔类型在if语句中的赋值运算" class="headerlink" title="十二、布尔类型在if语句中的赋值运算"></a>十二、布尔类型在if语句中的赋值运算</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/13.JPG" alt="13" style="zoom:80%;">
+
+<p>注意的是上面的if语句中是赋值语句，if的语句比较，除boolean外的其他类型都不能使用赋值语句，否则会提示无法转成布尔值。</p>
+<br>
+
+<br>
+
+<h1 id="十三、线程安全的map集合讲解"><a href="#十三、线程安全的map集合讲解" class="headerlink" title="十三、线程安全的map集合讲解"></a>十三、线程安全的map集合讲解</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/14.JPG" alt="14" style="zoom:80%;">
+
+<ol>
+<li><p>HashMap,TreeMap 未进行同步考虑，是线程不安全的。</p>
+</li>
+<li><p>HashTable 和 ConcurrentHashMap 都是线程安全的。区别在于他们对加锁的范围不同，HashTable 对整张Hash表进行加锁，而ConcurrentHashMap将Hash表分为16桶(segment)，每次只对需要的桶进行加锁。</p>
+</li>
+<li><p>Collections 类提供了synchronizedXxx()方法，可以将指定的集合包装成线程同步的集合。比如，</p>
+<p>List  list = Collections.synchronizedList(new ArrayList());</p>
+<p>Set  set = Collections.synchronizedSet(new HashSet());</p>
+</li>
+</ol>
+<br>
+
+<br>
+
+<h1 id="十四、java中的数组"><a href="#十四、java中的数组" class="headerlink" title="十四、java中的数组"></a>十四、java中的数组</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/15.JPG" alt="15" style="zoom:80%;">
+
+<p> 数组是一种引用数据类型，那么他肯定是继承Object类的，所以里面有equals() 方法，但是肯定没有重写过， 因为他并不是比较数组内的内容。使用Arrays.equals() 是比较两个数组中的内容。</p>
+<br>
+
+<br>
+
+<h1 id="十五、HashTable和HashMap区别"><a href="#十五、HashTable和HashMap区别" class="headerlink" title="十五、HashTable和HashMap区别"></a>十五、HashTable和HashMap区别</h1><h3 id="1、继承不同"><a href="#1、继承不同" class="headerlink" title="1、继承不同"></a>1、继承不同</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hashtable</span> <span class="keyword">extends</span> <span class="title">Dictionary</span> <span class="keyword">implements</span> <span class="title">Map</span> </span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">HashMap</span> <span class="keyword">extends</span> <span class="title">AbstractMap</span> <span class="keyword">implements</span> <span class="title">Map</span></span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2、线程安全性不同"><a href="#2、线程安全性不同" class="headerlink" title="2、线程安全性不同"></a>2、线程安全性不同</h3><p>Hashtable 中的方法是同步的，而HashMap中的方法在缺省情况下是非同步的。在多线程并发的环境下，可以直接使用Hashtable，但是要使用HashMap的话就要自己增加同步处理了。</p>
+<br>
+
+<h3 id="3、Hashtable中，key和value都不允许出现null值"><a href="#3、Hashtable中，key和value都不允许出现null值" class="headerlink" title="3、Hashtable中，key和value都不允许出现null值"></a>3、Hashtable中，key和value都不允许出现null值</h3><p>在HashMap中，null可以作为键，这样的键只有一个；可以有一个或多个键所对应的值为null。当get()方法返回null值时，即可以表示 HashMap中没有该键，也可以表示该键所对应的值为null。因此，在HashMap中不能由get()方法来判断HashMap中是否存在某个键， 而应该用containsKey()方法来判断。</p>
+<br>
+
+<h3 id="4、两个遍历方式的内部实现上不同"><a href="#4、两个遍历方式的内部实现上不同" class="headerlink" title="4、两个遍历方式的内部实现上不同"></a>4、两个遍历方式的内部实现上不同</h3><p>Hashtable、HashMap都使用了 Iterator。而由于历史原因，Hashtable还使用了Enumeration的方式 。</p>
+<br>
+
+<h3 id="5、哈希值的使用不同"><a href="#5、哈希值的使用不同" class="headerlink" title="5、哈希值的使用不同"></a>5、哈希值的使用不同</h3><p>HashTable直接使用对象的hashCode。而HashMap重新计算hash值。</p>
+<br>
+
+<h3 id="6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式"><a href="#6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式" class="headerlink" title="6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式"></a>6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式</h3><p>HashTable中hash数组默认大小是11，增加的方式是 old*2+1。HashMap中hash数组的默认大小是16，而且一定是2的指数。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/16.JPG" alt="16" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="十六、接口中的成员"><a href="#十六、接口中的成员" class="headerlink" title="十六、接口中的成员"></a>十六、接口中的成员</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/17.JPG" alt="17" style="zoom:80%;">
+
+<p>接口，比抽象类还要抽象的类。</p>
+<ol>
+<li>接口中每一个方法也是隐式抽象的,接口中的方<strong><em>被隐式的指定为 *</em>public abstract</strong> （只能是 public abstract，其他修饰符都会报错）。</li>
+<li>接口中可以含有变量，但是接口中的变量会被隐式的指定为 <strong>public static final</strong>  变量（并且只能是 public，用 private 修饰会报编译错误。）</li>
+<li>接口中的方法是不能在接口中实现的，只能由实现接口的类来实现接口中的方法。</li>
+</ol>
+<p>注：</p>
+<p>接口是隐式抽象的，当声明一个接口的时候，不必使用abstract关键字。</p>
+<p>接口中每一个方法也是隐式抽象的，声明时同样不需要abstract关键字。</p>
+<p>接口中的方法都是公有的。public</p>
+<br>
+
+<br>
+
+<h1 id="十七、优化Hibernate所鼓励的7大措施"><a href="#十七、优化Hibernate所鼓励的7大措施" class="headerlink" title="十七、优化Hibernate所鼓励的7大措施"></a>十七、优化Hibernate所鼓励的7大措施</h1><p>1、尽量使用many-to-one，避免使用单项one-to-many；</p>
+<p>2、灵活使用单向one-to-many；</p>
+<p>3、不用一对一，使用多对一代替一对一；</p>
+<p>4、配置对象缓存，不使用集合缓存；</p>
+<p>5、一对多使用Bag，多对一使用Set；</p>
+<p>6、继承使用显示多态 HQL:from object polymorphism=”exlicit” 避免查处所有对象；</p>
+<p>7、消除大表，使用二级缓存。</p>
+<img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/18.JPG" alt="18" style="zoom:80%;">
+
+<br>
+
+<br>
+
+<h1 id="十八、io流"><a href="#十八、io流" class="headerlink" title="十八、io流"></a>十八、io流</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/19.JPG" alt="19" style="zoom:80%;">
+
+<p>java采用的uincode编码，两个字节表示一个字符，因此 char型在java中占两个字节，而int型占四个字节，故总共占六个字节。</p>
+<p><strong>补充：</strong></p>
+<ol>
+<li>byte 1个字节</li>
+<li>short 2个字节</li>
+<li>int 4个字节</li>
+<li>long 8个字节</li>
+<li>float 4个字节</li>
+<li>double 8个字节</li>
+<li>char 2个字节</li>
+<li>boolean 1个字节或4个字节，在java规范2中，如果boolean用于声明一个基本类型变量时占4个字节，如果声明一个数组类型的时候，那么数组中的每个元素占1个字节</li>
+</ol>
+<br>
+
+<br>
+
+<h1 id="十九、类加载器"><a href="#十九、类加载器" class="headerlink" title="十九、类加载器"></a>十九、类加载器</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/20.JPG" alt="20" style="zoom:80%;">
+
+<p>类的加载是由类加载器完成的，类加载器包括：根加载器（ BootStrap ）、扩展加载器（ Extension ）、系统加载器（ System ）和用户自定义类加载器（ java.lang.ClassLoader 的子类）。从 Java 2 （ JDK 1.2 ）开始，类加载过程采取了父亲委托机制（ PDM ）。 PDM 更好的保证了 Java 平台的安全性，在该机制中， JVM 自带的 Bootstrap 是根加载器，其他的加载器都有且仅有一个父类加载器。类的加载首先请求父类加载器加载，父类加载器无能为力时才由其子类加载器自行加载。 JVM 不会向 Java 程序提供对 Bootstrap 的引用。下面是关于几个类加载器的说明：</p>
+<ul>
+<li><p>Bootstrap ：一般用本地代码实现，负责加载 JVM 基础核心类库（ rt.jar ）；</p>
+</li>
+<li><p>Extension ：从 java.ext.dirs 系统属性所指定的目录中加载类库，它的父加载器是 Bootstrap ；</p>
+</li>
+<li><p>system class loader ：又叫应用类加载器，其父类是 Extension 。它是应用最广泛的类加载器。它从环境变量 classpath 或者系统属性 java.class.path 所指定的目录中记载类，是用户自定义加载器的默认父加载器。</p>
+</li>
+<li><p>用户自定义类加载器： java.lang.ClassLoader 的子类</p>
+<p>父类委托机制是可以修改的，有些服务器就是自定义类加载器优先的。</p>
+</li>
+</ul>
+<br>
+
+<br>
+
+<h1 id="二十、处理流与节点流"><a href="#二十、处理流与节点流" class="headerlink" title="二十、处理流与节点流"></a>二十、处理流与节点流</h1><img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/21.JPG" alt="21" style="zoom:80%;">
+
+<p>按照流是否直接与特定的地方（如磁盘、内存、设备等）相连，分为<strong>节点流</strong>和<strong>处理流</strong>两类。</p>
+<ul>
+<li>节点流：可以从或向一个特定的地方（节点）读写数据。如FileReader.</li>
+<li>处理流：是对一个已存在的流的连接和封装，通过所封装的流的功能调用实现数据读写。如BufferedReader.处理流的构造方法总是要带一个其他的流对象做参数。一个流对象经过其他流的多次包装，称为流的链接。</li>
+</ul>
+<p><strong>JAVA常用的节点流：</strong></p>
+<ul>
+<li>文 件 FileInputStream FileOutputStrean FileReader FileWriter 文件进行处理的节点流。</li>
+<li>字符串 StringReader StringWriter 对字符串进行处理的节点流。</li>
+<li>数 组 ByteArrayInputStream ByteArrayOutputStreamCharArrayReader CharArrayWriter 对数组进行处理的节点流（对应的不再是文件，而是内存中的一个数组）。</li>
+<li>管 道 PipedInputStream PipedOutputStream PipedReaderPipedWriter对管道进行处理的节点流。</li>
+</ul>
+<p><strong>常用处理流（关闭处理流使用关闭里面的节点流）</strong></p>
+<ul>
+<li><p>缓冲流：BufferedInputStrean BufferedOutputStream BufferedReader BufferedWriter 增加缓冲功能，避免频繁读写硬盘。</p>
+</li>
+<li><p>转换流：InputStreamReader OutputStreamReader 实现字节流和字符流之间的转换。</p>
+</li>
+<li><p>数据流 DataInputStream DataOutputStream 等-提供将基础数据类型写入到文件中，或者读取出来.</p>
+</li>
+</ul>
+<p><strong>流的关闭顺序</strong></p>
+<ol>
+<li>一般情况下是：先打开的后关闭，后打开的先关闭</li>
+<li>另一种情况：看依赖关系，如果流a依赖流b，应该先关闭流a，再关闭流b。例如，处理流a依赖节点流b，应该先关闭处理流a，再关闭节点流b</li>
+<li>可以只关闭处理流，不用关闭节点流。处理流关闭的时候，会调用其处理的节点流的关闭方法。</li>
+</ol>
+<p><strong>简单来说，处理流就是需要传入节点流对节点流进行封装的流。</strong></p>
+<br>
+
+<br>
       
 
-
- 
-  <div class="category-all-page">
-    <div class="category-all-title">
-    TOTAL : 12
-    </div>
- 
-    <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">IDEA快捷键</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mybatis/">Mybatis</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringMVC/">SpringMVC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2/">hexo博客</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">java基础笔记</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E6%96%87/">杂文</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AF%95/">笔试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/">问题收集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/">集合底层原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/">面试问题</a><span class="category-list-count">1</span></li></ul>
-    </div>
- 
-  </div>
 
 
       
@@ -227,6 +514,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/笔试//" class="article-tag-list-link color3">笔试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -276,7 +574,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.iocategories/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.io2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,6 +586,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/08/29/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          面试总结（一）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E5%9B%9B%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构（四）前缀、中缀、后缀表达式（逆波兰表达式）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -309,7 +626,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、单工模式、半双工模式、全双工模式"><span class="toc-number">1.</span> <span class="toc-text">一、单工模式、半双工模式、全双工模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单工模式"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、单工模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、半双工模式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、半双工模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、全双工模式"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、全双工模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、DNS的作用"><span class="toc-number">2.</span> <span class="toc-text">二、DNS的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、作用"><span class="toc-number">2.0.1.</span> <span class="toc-text">1、作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、补充知识"><span class="toc-number">2.0.2.</span> <span class="toc-text">2、补充知识</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Ping与ICMP"><span class="toc-number">3.</span> <span class="toc-text">三、Ping与ICMP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、香农定理"><span class="toc-number">4.</span> <span class="toc-text">四、香农定理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、QoS服务质量"><span class="toc-number">5.</span> <span class="toc-text">五、QoS服务质量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、PPP信息帧格式"><span class="toc-number">6.</span> <span class="toc-text">六、PPP信息帧格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、集合框架"><span class="toc-number">7.</span> <span class="toc-text">七、集合框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、java线程状态的转换"><span class="toc-number">8.</span> <span class="toc-text">八、java线程状态的转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、垃圾回收器收集的标准"><span class="toc-number">9.</span> <span class="toc-text">九、垃圾回收器收集的标准</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、类、接口与-class文件的关系"><span class="toc-number">10.</span> <span class="toc-text">十、类、接口与.class文件的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、字符串创建对象"><span class="toc-number">11.</span> <span class="toc-text">十一、字符串创建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十二、布尔类型在if语句中的赋值运算"><span class="toc-number">12.</span> <span class="toc-text">十二、布尔类型在if语句中的赋值运算</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十三、线程安全的map集合讲解"><span class="toc-number">13.</span> <span class="toc-text">十三、线程安全的map集合讲解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十四、java中的数组"><span class="toc-number">14.</span> <span class="toc-text">十四、java中的数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十五、HashTable和HashMap区别"><span class="toc-number">15.</span> <span class="toc-text">十五、HashTable和HashMap区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、继承不同"><span class="toc-number">15.0.1.</span> <span class="toc-text">1、继承不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、线程安全性不同"><span class="toc-number">15.0.2.</span> <span class="toc-text">2、线程安全性不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Hashtable中，key和value都不允许出现null值"><span class="toc-number">15.0.3.</span> <span class="toc-text">3、Hashtable中，key和value都不允许出现null值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、两个遍历方式的内部实现上不同"><span class="toc-number">15.0.4.</span> <span class="toc-text">4、两个遍历方式的内部实现上不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、哈希值的使用不同"><span class="toc-number">15.0.5.</span> <span class="toc-text">5、哈希值的使用不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式"><span class="toc-number">15.0.6.</span> <span class="toc-text">6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十六、接口中的成员"><span class="toc-number">16.</span> <span class="toc-text">十六、接口中的成员</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十七、优化Hibernate所鼓励的7大措施"><span class="toc-number">17.</span> <span class="toc-text">十七、优化Hibernate所鼓励的7大措施</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十八、io流"><span class="toc-number">18.</span> <span class="toc-text">十八、io流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十九、类加载器"><span class="toc-number">19.</span> <span class="toc-text">十九、类加载器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二十、处理流与节点流"><span class="toc-number">20.</span> <span class="toc-text">二十、处理流与节点流</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -319,6 +636,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -341,7 +668,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
