@@ -16,7 +16,7 @@
 <meta property="og:description" content="接着上一篇继续写容器相关的内容，主要介绍了五种容器类型（自定义容器、对话框容器、Docking容器、拆分容器和细拆分容器）与其相关的特性。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-23T13:17:18.000Z">
-<meta property="article:modified_time" content="2023-02-23T14:09:51.741Z">
+<meta property="article:modified_time" content="2023-02-23T15:26:27.531Z">
 <meta property="article:author" content="夜猫君">
 <meta property="article:tag" content="ABAP">
 <meta name="twitter:card" content="summary">
@@ -229,102 +229,102 @@
 <p>此外还有一个类，名字叫做容器类，是上面这些容器类的父类（<strong>CL_GUI_CONTAINER</strong>）。</p>
 <h3 id="二、注意事项"><a href="#二、注意事项" class="headerlink" title="二、注意事项"></a>二、注意事项</h3><p>本次主要介绍容器相关的内容，而这部分的内容主要是在第一章《OOALV 基础知识》的初始化屏幕Model Initial_0100的 From “Create_Container_ALV”中的逻辑。其余部分没有变化。所以主要介绍创建容器From中的内容。其余内容不再复述。</p>
 <p>现将公共TOP中的内容展示如下：</p>
-<p>![5.容器可见共用常量（TOP）](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\5.容器可见共用常量（TOP）.png)</p>
-<p>![6.容器可见共用变量（TOP）](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\6.容器可见共用变量（TOP）.png)</p>
-<p>![7.容器可见共用结构体（TOP）](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\7.容器可见共用结构体（TOP）.png)</p>
-<p>![8.容器可见共用内表（TOP）](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\8.容器可见共用内表（TOP）.png)</p>
-<p>![9.容器可见共用对象（TOP）](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\9.容器可见共用对象（TOP）.png)</p>
+<p>![5.容器可见共用常量（TOP）](OOALV 容器图片/5.容器可见共用常量（TOP）.png)</p>
+<p>![6.容器可见共用变量（TOP）](OOALV 容器图片/6.容器可见共用变量（TOP）.png)</p>
+<p>![7.容器可见共用结构体（TOP）](OOALV 容器图片\7.容器可见共用结构体（TOP）.png)</p>
+<p>![8.容器可见共用内表（TOP）](OOALV 容器图片\8.容器可见共用内表（TOP）.png)</p>
+<p>![9.容器可见共用对象（TOP）](OOALV 容器图片\9.容器可见共用对象（TOP）.png)</p>
 <h3 id="三、自定义容器"><a href="#三、自定义容器" class="headerlink" title="三、自定义容器"></a>三、自定义容器</h3><h5 id="1-容器类"><a href="#1-容器类" class="headerlink" title="1.容器类"></a>1.容器类</h5><p><strong>CL_GUI_CUSTOM_CONTAINER</strong></p>
 <h5 id="2-使用过程"><a href="#2-使用过程" class="headerlink" title="2.使用过程"></a>2.使用过程</h5><h6 id="（1）创建屏幕0100"><a href="#（1）创建屏幕0100" class="headerlink" title="（1）创建屏幕0100"></a>（1）创建屏幕0100</h6><p>此过程在前一章《OOALV基础知识》有介绍，此处就不再赘述</p>
 <h6 id="（2）定义容器所需要的变量"><a href="#（2）定义容器所需要的变量" class="headerlink" title="（2）定义容器所需要的变量"></a>（2）定义容器所需要的变量</h6><ul>
 <li>自定义容器对象变量定义</li>
 </ul>
 <p>因为该变量在代码层面只在ALV Grid对象创建时使用，所以写在了局部Form中 “Create_Container_ALV”</p>
-<p>![4.自定义容器容器变量定义位置](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\4.自定义容器容器变量定义位置.png)</p>
-<p>![3.自定义容器容器变量定义](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\3.自定义容器容器变量定义.png)</p>
+<p>![4.自定义容器容器变量定义位置](OOALV 容器图片\4.自定义容器容器变量定义位置.png)</p>
+<p>![3.自定义容器容器变量定义](OOALV 容器图片\3.自定义容器容器变量定义.png)</p>
 <h6 id="（3）屏幕绘制容器"><a href="#（3）屏幕绘制容器" class="headerlink" title="（3）屏幕绘制容器"></a>（3）屏幕绘制容器</h6><p>创建好屏幕后点击Layout按钮打开屏幕的绘制界面</p>
-<p>![1自定义容器屏幕绘制](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\1自定义容器屏幕绘制.png)</p>
+<p>![1自定义容器屏幕绘制](OOALV 容器图片\1自定义容器屏幕绘制.png)</p>
 <p>选择红框选中的按钮，在屏幕上画出一个区域，该区域就是你在屏幕上的容器区域。</p>
-<p>![2.自定义容器屏幕划定容器](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\2.自定义容器屏幕划定容器.png)</p>
+<p>![2.自定义容器屏幕划定容器](OOALV 容器图片\2.自定义容器屏幕划定容器.png)</p>
 <p>在画玩容器区域之后双击你所画的容器，为其起一个名字，这个名字在后面要作为关联的Key使用。</p>
-<p>![10.自定义容器的容器名称](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\10.自定义容器的容器名称.png)</p>
+<p>![10.自定义容器的容器名称](OOALV 容器图片\10.自定义容器的容器名称.png)</p>
 <h6 id="（4）自定义容器对象的创建"><a href="#（4）自定义容器对象的创建" class="headerlink" title="（4）自定义容器对象的创建"></a>（4）自定义容器对象的创建</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&quot;自定义容器对象定义</span><br><span class="line">DATA:</span><br><span class="line">  LO_CCONTAINER 				TYPE REF TO CL_GUI_CUSTOM_CONTAINER.</span><br><span class="line">&quot;自定义容器创建</span><br><span class="line">CREATE OBJECT LO_CCONTAINER</span><br><span class="line">  EXPORTING</span><br><span class="line">    CONTAINER_NAME			&#x3D; &#39;CONTAINER&#39;.</span><br><span class="line">ASSIGN LO_CCONTAINER TO &lt;FO_CONTAINER&gt;.</span><br><span class="line"></span><br><span class="line">CHECK &lt;FO_CONTAINER&gt; IS ASSIGNED.</span><br><span class="line">CREATE OBJECT GO_ALV</span><br><span class="line">  EXPORTING</span><br><span class="line">    I_PARENT				&#x3D; &lt;FO_CONTAINER&gt;.</span><br></pre></td></tr></table></figure>
 
-<h6 id="（5）效果展示"><a href="#（5）效果展示" class="headerlink" title="（5）效果展示"></a>（5）效果展示</h6><p>![11.自定义容器展示选择屏幕](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\11.自定义容器展示选择屏幕.png)</p>
-<p>![12.自定义容器展示展示界面](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\12.自定义容器展示展示界面.png)</p>
+<h6 id="（5）效果展示"><a href="#（5）效果展示" class="headerlink" title="（5）效果展示"></a>（5）效果展示</h6><p>![11.自定义容器展示选择屏幕](OOALV 容器图片\11.自定义容器展示选择屏幕.png)</p>
+<p>![12.自定义容器展示展示界面](OOALV 容器图片\12.自定义容器展示展示界面.png)</p>
 <h3 id="四、自适应容器"><a href="#四、自适应容器" class="headerlink" title="四、自适应容器"></a>四、自适应容器</h3><h5 id="1-容器类-1"><a href="#1-容器类-1" class="headerlink" title="1.容器类"></a>1.容器类</h5><p><strong>CL_GUI_DOCKING_CONTAINER</strong></p>
 <h5 id="2-使用过程-1"><a href="#2-使用过程-1" class="headerlink" title="2.使用过程"></a>2.使用过程</h5><h6 id="（1）创建自适应容器对象"><a href="#（1）创建自适应容器对象" class="headerlink" title="（1）创建自适应容器对象"></a>（1）创建自适应容器对象</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DATA:</span><br><span class="line">  LO_DCONTAINER				TYPE REF TO CL_GUI_DOCKING_CONTAINER.</span><br><span class="line">  </span><br><span class="line">CREATE OBJECT LO_DCONTAINER</span><br><span class="line">  EXPORTING</span><br><span class="line">    REPID			&#x3D; SY-REPID	&#x2F;&#x2F; 当前程序名</span><br><span class="line">    DYNNR			&#x3D; SY-DYNNR	&#x2F;&#x2F; 当前屏幕号</span><br><span class="line">    EXTENSION       &#x3D; 2000.		&#x2F;&#x2F; 当前长宽</span><br><span class="line"></span><br><span class="line">ASSIGN LO_DCONTAINER TO &lt;FO_CONTAINER&gt;.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
-<h6 id="（2）效果展示"><a href="#（2）效果展示" class="headerlink" title="（2）效果展示"></a>（2）效果展示</h6><p>![13.自定义容器展示选择屏幕](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\13.自适应容器展示选择屏幕.png)</p>
-<p>![14.自适应容器展示展示界面](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\14.自适应容器展示展示界面.png)</p>
+<h6 id="（2）效果展示"><a href="#（2）效果展示" class="headerlink" title="（2）效果展示"></a>（2）效果展示</h6><p>![13.自定义容器展示选择屏幕](OOALV 容器图片\13.自适应容器展示选择屏幕.png)</p>
+<p>![14.自适应容器展示展示界面](OOALV 容器图片\14.自适应容器展示展示界面.png)</p>
 <h3 id="五、对话框容器"><a href="#五、对话框容器" class="headerlink" title="五、对话框容器"></a>五、对话框容器</h3><h5 id="1-容器类-2"><a href="#1-容器类-2" class="headerlink" title="1.容器类"></a>1.容器类</h5><p><strong>CL_GUI_DIALOGBOX_CONTAINER</strong></p>
 <h5 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2.注意事项"></a>2.注意事项</h5><p>该容器和上面介绍的两种容器有一定的区别。首先通过名称可以知道该容器是弹出框式的容器。并且没办法绑定GUI Status。在使用过程中也可以不创建屏幕，使用容器父类的静态属性屏幕。这也就是说他所能添加的按钮只能通过事件实现。而且该容器虽然创建出来是一个弹框，但是退出容器的逻辑却需要自己通过事件实现。</p>
 <h5 id="3-使用过程"><a href="#3-使用过程" class="headerlink" title="3.使用过程"></a>3.使用过程</h5><h6 id="（1）创建对话框容器对象"><a href="#（1）创建对话框容器对象" class="headerlink" title="（1）创建对话框容器对象"></a>（1）创建对话框容器对象</h6><p>因为要通过事件实现退出逻辑，所以将其定义为一个全局对象在TOP中。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">DATA:</span><br><span class="line">  GO_ACONTAINER				TYPE REF TO CL_GUI_DIALOGBOX_CONTAINER.</span><br><span class="line">CREATE OBJECT GO_ACONTAINER</span><br><span class="line">  EXPORTING</span><br><span class="line">    PARENT		&#x3D; CL_GUI_CONTAINER&#x3D;&gt;SCREEN0	&quot; 容器父类的屏幕静态属性</span><br><span class="line">    CAPTION		&#x3D; &#39;TITLE&#39;					&quot; 标题</span><br><span class="line">    REPID		&#x3D; SY-REPID					&quot; 当前程序名</span><br><span class="line">    DYNNR		&#x3D; SY-DYNNR					&quot; 当前屏幕号</span><br><span class="line">    WIDTH		&#x3D; 600						&quot; 对话框的宽度</span><br><span class="line">    HEIGHT		&#x3D; 200						&quot; 对话框的高度 </span><br><span class="line">    TOP			&#x3D; 60						&quot; 距离顶上的距离</span><br><span class="line">    LEFT		&#x3D; 500.						&quot; 距离左边的距离</span><br><span class="line"></span><br><span class="line">ASSIGN GO_ACONTAINER TO &lt;FO_CONTAINER&gt;.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
-<h6 id="（2）退出事件的实现"><a href="#（2）退出事件的实现" class="headerlink" title="（2）退出事件的实现"></a>（2）退出事件的实现</h6><p>![15.对话框容器退出事件的定义](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\15.对话框容器退出事件的定义.png)</p>
-<p>![16.对话框容器退出事件的实现](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\16.对话框容器退出事件的实现.png)</p>
-<h6 id="（3）事件注册"><a href="#（3）事件注册" class="headerlink" title="（3）事件注册"></a>（3）事件注册</h6><p>![17.对话框容器退出事件的注册](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\17.对话框容器退出事件的注册.png)</p>
-<h6 id="（4）效果展示"><a href="#（4）效果展示" class="headerlink" title="（4）效果展示"></a>（4）效果展示</h6><p>![18.对话框容器展示选择屏幕](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\18.对话框容器展示选择屏幕.png)</p>
-<p>![19.对话框容器展示展示界面](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\19.对话框容器展示展示界面.png)</p>
+<h6 id="（2）退出事件的实现"><a href="#（2）退出事件的实现" class="headerlink" title="（2）退出事件的实现"></a>（2）退出事件的实现</h6><p>![15.对话框容器退出事件的定义](OOALV 容器图片\15.对话框容器退出事件的定义.png)</p>
+<p>![16.对话框容器退出事件的实现](OOALV 容器图片\16.对话框容器退出事件的实现.png)</p>
+<h6 id="（3）事件注册"><a href="#（3）事件注册" class="headerlink" title="（3）事件注册"></a>（3）事件注册</h6><p>![17.对话框容器退出事件的注册](OOALV 容器图片\17.对话框容器退出事件的注册.png)</p>
+<h6 id="（4）效果展示"><a href="#（4）效果展示" class="headerlink" title="（4）效果展示"></a>（4）效果展示</h6><p>![18.对话框容器展示选择屏幕](OOALV 容器图片\18.对话框容器展示选择屏幕.png)</p>
+<p>![19.对话框容器展示展示界面](OOALV 容器图片\19.对话框容器展示展示界面.png)</p>
 <h3 id="六、拆分容器"><a href="#六、拆分容器" class="headerlink" title="六、拆分容器"></a>六、拆分容器</h3><h5 id="1-容器类-3"><a href="#1-容器类-3" class="headerlink" title="1.容器类"></a>1.容器类</h5><p><strong>CL_GUI_SPLITTER_CONTAINER</strong></p>
 <h5 id="2-注意事项-1"><a href="#2-注意事项-1" class="headerlink" title="2.注意事项"></a>2.注意事项</h5><p>拆分容器无法单独创建，必须存在可以分割的容器才可以创建。而允许被分割的容器就是上面讲述的三种容器。必须先创建好上面的三种容器才可以继续使用和创建拆分容器。</p>
 <p>本次在使用拆分容器时，将容器分割为两部分。上部分的容器用于实现了TOP_OF_PAGE事件。下面的容器实现了ALV Grid。所以在此处简单的提一下TOP_OF_PAGE事件。</p>
-<h5 id="3-使用过程-1"><a href="#3-使用过程-1" class="headerlink" title="3.使用过程"></a>3.使用过程</h5><h6 id="（1）创建拆分容器的对象"><a href="#（1）创建拆分容器的对象" class="headerlink" title="（1）创建拆分容器的对象"></a>（1）创建拆分容器的对象</h6><p>![20.拆分容器对象定义](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\20.拆分容器对象定义.png)</p>
-<h6 id="（2）拆分容器的创建"><a href="#（2）拆分容器的创建" class="headerlink" title="（2）拆分容器的创建"></a>（2）拆分容器的创建</h6><p>![21.拆分容器对象创建1](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\21.拆分容器对象创建1.png)</p>
-<p>![22.拆分容器对象创建2](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\22.拆分容器对象创建2.png)</p>
+<h5 id="3-使用过程-1"><a href="#3-使用过程-1" class="headerlink" title="3.使用过程"></a>3.使用过程</h5><h6 id="（1）创建拆分容器的对象"><a href="#（1）创建拆分容器的对象" class="headerlink" title="（1）创建拆分容器的对象"></a>（1）创建拆分容器的对象</h6><p>![20.拆分容器对象定义](OOALV 容器图片\20.拆分容器对象定义.png)</p>
+<h6 id="（2）拆分容器的创建"><a href="#（2）拆分容器的创建" class="headerlink" title="（2）拆分容器的创建"></a>（2）拆分容器的创建</h6><p>![21.拆分容器对象创建1](OOALV 容器图片\21.拆分容器对象创建1.png)</p>
+<p>![22.拆分容器对象创建2](OOALV 容器图片\22.拆分容器对象创建2.png)</p>
 <h6 id="（3）TOP-OF-PAGE事件的实现"><a href="#（3）TOP-OF-PAGE事件的实现" class="headerlink" title="（3）TOP OF PAGE事件的实现"></a>（3）TOP OF PAGE事件的实现</h6><ul>
 <li>定义TOP OF PAGE事件需要使用的容器和变量</li>
 </ul>
-<p>![23.拆分容器TOP_OF_PAGE事件的前期准备](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\23.拆分容器TOP_OF_PAGE事件的前期准备.png)</p>
+<p>![23.拆分容器TOP_OF_PAGE事件的前期准备](OOALV 容器图片\23.拆分容器TOP_OF_PAGE事件的前期准备.png)</p>
 <ul>
 <li>TOP_OF_PAGE事件的定义与实现</li>
 </ul>
-<p>![24.拆分容器TOP_OF_PAGE事件类的定义](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\24.拆分容器TOP_OF_PAGE事件类的定义.png)</p>
-<p>![25.拆分容器TOP_OF_PAGE事件类的实现1](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\25.拆分容器TOP_OF_PAGE事件类的实现1.png)</p>
-<p>![26.拆分容器TOP_OF_PAGE事件类的实现2](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\26.拆分容器TOP_OF_PAGE事件类的实现2.png)</p>
+<p>![24.拆分容器TOP_OF_PAGE事件类的定义](OOALV 容器图片\24.拆分容器TOP_OF_PAGE事件类的定义.png)</p>
+<p>![25.拆分容器TOP_OF_PAGE事件类的实现1](OOALV 容器图片\25.拆分容器TOP_OF_PAGE事件类的实现1.png)</p>
+<p>![26.拆分容器TOP_OF_PAGE事件类的实现2](OOALV 容器图片\26.拆分容器TOP_OF_PAGE事件类的实现2.png)</p>
 <ul>
 <li><p>将谵语展示TOP OF PAGE事件的容器分配好，该过程就是上面使用分割容器进行拆分的过程</p>
 </li>
 <li><p>注册TOP OF PAGE事件</p>
 </li>
 </ul>
-<p>![29.拆分容器TOP_OF_PAGE事件类的注册3](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\29.拆分容器TOP_OF_PAGE事件类的注册3.png)</p>
-<p>![27.拆分容器TOP_OF_PAGE事件类的注册1](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\27.拆分容器TOP_OF_PAGE事件类的注册1.png)</p>
-<p>![28.拆分容器TOP_OF_PAGE事件类的注册2](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\28.拆分容器TOP_OF_PAGE事件类的注册2.png)</p>
+<p>![29.拆分容器TOP_OF_PAGE事件类的注册3](OOALV 容器图片\29.拆分容器TOP_OF_PAGE事件类的注册3.png)</p>
+<p>![27.拆分容器TOP_OF_PAGE事件类的注册1](OOALV 容器图片\27.拆分容器TOP_OF_PAGE事件类的注册1.png)</p>
+<p>![28.拆分容器TOP_OF_PAGE事件类的注册2](OOALV 容器图片\28.拆分容器TOP_OF_PAGE事件类的注册2.png)</p>
 <h6 id="（4）效果展示-1"><a href="#（4）效果展示-1" class="headerlink" title="（4）效果展示"></a>（4）效果展示</h6><ul>
 <li>自定义容器</li>
 </ul>
-<p>![30.拆分容器展示选择屏幕自定义](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\30.拆分容器展示选择屏幕自定义.png)</p>
-<p>![30.拆分容器展示展示屏幕自定义](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\31.拆分容器展示展示屏幕自定义.png)</p>
+<p>![30.拆分容器展示选择屏幕自定义](OOALV 容器图片\30.拆分容器展示选择屏幕自定义.png)</p>
+<p>![30.拆分容器展示展示屏幕自定义](OOALV 容器图片\31.拆分容器展示展示屏幕自定义.png)</p>
 <ul>
 <li>自适应容器</li>
 </ul>
-<p>![32.拆分容器展示选择屏幕自适应](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\32.拆分容器展示选择屏幕自适应.png)</p>
-<p>![33.拆分容器展示展示屏幕自适应](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\33.拆分容器展示展示屏幕自适应.png)</p>
+<p>![32.拆分容器展示选择屏幕自适应](OOALV 容器图片\32.拆分容器展示选择屏幕自适应.png)</p>
+<p>![33.拆分容器展示展示屏幕自适应](OOALV 容器图片\33.拆分容器展示展示屏幕自适应.png)</p>
 <ul>
 <li>对话框容器</li>
 </ul>
-<p>![34.拆分容器展示选择屏幕对话框](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\34.拆分容器展示选择屏幕对话框.png)</p>
-<p>![35.拆分容器展示展示屏幕对话框](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\35.拆分容器展示展示屏幕对话框.png)</p>
+<p>![34.拆分容器展示选择屏幕对话框](OOALV 容器图片\34.拆分容器展示选择屏幕对话框.png)</p>
+<p>![35.拆分容器展示展示屏幕对话框](OOALV 容器图片\35.拆分容器展示展示屏幕对话框.png)</p>
 <h3 id="七、细拆分容器"><a href="#七、细拆分容器" class="headerlink" title="七、细拆分容器"></a>七、细拆分容器</h3><h5 id="1-容器类-4"><a href="#1-容器类-4" class="headerlink" title="1.容器类"></a>1.容器类</h5><p><strong>CL_GUI_EASY_SPLITTER_CONTAINER</strong></p>
 <h5 id="2-注意事项-2"><a href="#2-注意事项-2" class="headerlink" title="2.注意事项"></a>2.注意事项</h5><p>在实际开发过程中，一般拆分容器就已经够用了。所以细拆分容器使用的次数很少。</p>
 <p>在我的理解中，细拆分容器是作用在拆分容器上的。但最后经过测试发现细拆分容器也可以作用在其他的容器上。所以具体两者的区别是什么可以作为课下去了解的内容进行探究。</p>
 <h5 id="3-使用过程-2"><a href="#3-使用过程-2" class="headerlink" title="3.使用过程"></a>3.使用过程</h5><h6 id="（1）细拆分对象的创建"><a href="#（1）细拆分对象的创建" class="headerlink" title="（1）细拆分对象的创建"></a>（1）细拆分对象的创建</h6><p>在上面拆分容器中我们拆分出来了用于展示TOP OF PAGE的容器，所以我们此次就直接拆分该容器。</p>
-<p>![36.细拆分容器对象创建](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\36.细拆分容器对象创建.png)</p>
-<h6 id="（2）效果展示-1"><a href="#（2）效果展示-1" class="headerlink" title="（2）效果展示"></a>（2）效果展示</h6><p>![37.细拆分容器展示选择屏幕](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\37.细拆分容器展示选择屏幕.png)</p>
-<p>![38.细拆分容器展示展示屏幕](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\38.细拆分容器展示展示屏幕.png)</p>
+<p>![36.细拆分容器对象创建](OOALV 容器图片\36.细拆分容器对象创建.png)</p>
+<h6 id="（2）效果展示-1"><a href="#（2）效果展示-1" class="headerlink" title="（2）效果展示"></a>（2）效果展示</h6><p>![37.细拆分容器展示选择屏幕](OOALV 容器图片\37.细拆分容器展示选择屏幕.png)</p>
+<p>![38.细拆分容器展示展示屏幕](OOALV 容器图片\38.细拆分容器展示展示屏幕.png)</p>
 <h3 id="八、代码参考部分"><a href="#八、代码参考部分" class="headerlink" title="八、代码参考部分"></a>八、代码参考部分</h3><p>程序名：YTEST_OOALV_CYH  (BIO)</p>
-<h5 id="1-选择屏幕"><a href="#1-选择屏幕" class="headerlink" title="1.选择屏幕"></a>1.选择屏幕</h5><p>![39.代码参考选择屏幕1](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\39.代码参考选择屏幕1.png)</p>
-<p>![40.代码参考选择屏幕2](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\40.代码参考选择屏幕2.png)</p>
-<h5 id="2-主程序"><a href="#2-主程序" class="headerlink" title="2.主程序"></a>2.主程序</h5><p>![41.代码参考主程序1](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\41.代码参考主程序1.png)</p>
-<p>![42.代码参考主程序2](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\42.代码参考主程序2.png)</p>
-<h5 id="3-自定义屏幕的PBO部分"><a href="#3-自定义屏幕的PBO部分" class="headerlink" title="3.自定义屏幕的PBO部分"></a>3.自定义屏幕的PBO部分</h5><p>![43.代码参考PBO](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\43.代码参考PBO.png)</p>
-<h5 id="4-自定义屏幕的PAI部分"><a href="#4-自定义屏幕的PAI部分" class="headerlink" title="4.自定义屏幕的PAI部分"></a>4.自定义屏幕的PAI部分</h5><p>![44.代码参考PAI](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\44.代码参考PAI.png)</p>
-<h5 id="5-容器创建From"><a href="#5-容器创建From" class="headerlink" title="5.容器创建From"></a>5.容器创建From</h5><p>![45.代码参考容器创建1](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\45.代码参考容器创建1.png)</p>
-<p>![46.代码参考容器创建2](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\46.代码参考容器创建2.png)</p>
-<p>![47.代码参考容器创建3](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\47.代码参考容器创建3.png)</p>
-<p>![48.代码参考容器创建4](C:\Users\Administrator\Desktop\ABAP\ABAP OOALV 培训课件\OOALV 容器\OOALV 容器图片\48.代码参考容器创建4.png)</p>
+<h5 id="1-选择屏幕"><a href="#1-选择屏幕" class="headerlink" title="1.选择屏幕"></a>1.选择屏幕</h5><p>![39.代码参考选择屏幕1](OOALV 容器图片\39.代码参考选择屏幕1.png)</p>
+<p>![40.代码参考选择屏幕2](OOALV 容器图片\40.代码参考选择屏幕2.png)</p>
+<h5 id="2-主程序"><a href="#2-主程序" class="headerlink" title="2.主程序"></a>2.主程序</h5><p>![41.代码参考主程序1](OOALV 容器图片\41.代码参考主程序1.png)</p>
+<p>![42.代码参考主程序2](OOALV 容器图片\42.代码参考主程序2.png)</p>
+<h5 id="3-自定义屏幕的PBO部分"><a href="#3-自定义屏幕的PBO部分" class="headerlink" title="3.自定义屏幕的PBO部分"></a>3.自定义屏幕的PBO部分</h5><p>![43.代码参考PBO](OOALV 容器图片\43.代码参考PBO.png)</p>
+<h5 id="4-自定义屏幕的PAI部分"><a href="#4-自定义屏幕的PAI部分" class="headerlink" title="4.自定义屏幕的PAI部分"></a>4.自定义屏幕的PAI部分</h5><p>![44.代码参考PAI](OOALV 容器图片\44.代码参考PAI.png)</p>
+<h5 id="5-容器创建From"><a href="#5-容器创建From" class="headerlink" title="5.容器创建From"></a>5.容器创建From</h5><p>![45.代码参考容器创建1](OOALV 容器图片\45.代码参考容器创建1.png)</p>
+<p>![46.代码参考容器创建2](OOALV 容器图片\46.代码参考容器创建2.png)</p>
+<p>![47.代码参考容器创建3](OOALV 容器图片\47.代码参考容器创建3.png)</p>
+<p>![48.代码参考容器创建4](OOALV 容器图片\48.代码参考容器创建4.png)</p>
 
       
 
