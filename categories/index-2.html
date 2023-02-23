@@ -6,21 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JVM初始 | 夜猫君</title>
+  <title>ABAP基础 | 夜猫君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本章是学JVM基本概念所记笔记。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JVM初始">
-<meta property="og:url" content="http://yoursite.com/2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="ABAP基础">
+<meta property="og:url" content="http://yoursite.com/categories/index-2.html">
 <meta property="og:site_name" content="夜猫君">
-<meta property="og:description" content="本章是学JVM基本概念所记笔记。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B%EF%BC%88%E4%B8%80%EF%BC%89/image-20201122210035230.png">
-<meta property="article:published_time" content="2020-11-22T08:06:04.000Z">
-<meta property="article:modified_time" content="2020-11-22T16:48:45.411Z">
+<meta property="article:published_time" content="2023-02-23T13:59:37.000Z">
+<meta property="article:modified_time" content="2023-02-23T13:59:57.049Z">
 <meta property="article:author" content="夜猫君">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B%EF%BC%88%E4%B8%80%EF%BC%89/image-20201122210035230.png">
   
     <link rel="alternative" href="/atom.xml" title="夜猫君" type="application/atom+xml">
   
@@ -167,96 +163,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-<article id="post-JVM/JVM初始（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="categories-" class="article article-type-categories " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JVM初始
+      ABAP基础
     </h1>
   
 
         
-        <a href="/2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-11-22T08:06:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-22</time>
+        <a href="/categories/index-2.html" class="archive-article-date">
+  	<time datetime="2023-02-23T13:59:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本章是学JVM基本概念所记笔记。</p>
-<a id="more"></a>
-
-<h2 id="一、JVM初始"><a href="#一、JVM初始" class="headerlink" title="一、JVM初始"></a>一、JVM初始</h2><h3 id="1、基本概念"><a href="#1、基本概念" class="headerlink" title="1、基本概念"></a>1、基本概念</h3><p>JVM（java虚拟机）是可运行java代码的虚拟计算机，包括一套字节码指令集，一组寄存器、一个栈、一个垃圾回收、堆和一个存储方法域。JVM是运行在操作系统之上的，它与硬件没有直接的交互。所以java代码在执行时的速度相较于C语言要慢一些。</p>
-<br>
-
-<h3 id="2、运行过程"><a href="#2、运行过程" class="headerlink" title="2、运行过程"></a>2、运行过程</h3><p>java的源文件先通过编译器，编译成相应的字节码文件（.class）文件。而字节码文件又通过Java虚拟机中的解释器被编译成特定机器上的机器码。</p>
-<p>简化说明：</p>
-<ul>
-<li>java源代码——&gt;编译器——&gt;字节码文件</li>
-<li>字节码文件——&gt;解释器——&gt;相应平台的机器码文件</li>
-</ul>
-<br>
-
-<h3 id="3、java跨平台的原因"><a href="#3、java跨平台的原因" class="headerlink" title="3、java跨平台的原因"></a>3、java跨平台的原因</h3><p>每一种平台的解释器是不同的，但实现的虚拟机是相同的，所以java就通过不同的解释器将编译器编译好的字节码文件再编译成相应平台的机器码文件，如此就可以实现跨平台的能力。</p>
-<p>当一个程序开始运行，这是虚拟机就开始实例化，多个线程启动就会存在多个多个虚拟机实例。程序退出或者关闭则虚拟机实例消亡，多个虚拟机实例之间数据不能共享。</p>
-<br>
-
-<h3 id="4、线程"><a href="#4、线程" class="headerlink" title="4、线程"></a>4、线程</h3><p>线程指在执行过程中的一个线程实体。JVM允许一个应用并发执行多个线程。</p>
-<p>Hotspot JVM中的Java线程与原生操作系统有直接的映射关系。当线程本地存储、缓冲区分配、同步对象、栈、程序计数器等准备好之后就会创建一个操作系统原生线程。</p>
-<p>Java线程结束，原生线程随之被回收。操作系统负责调度所有线程，并把它们分配到任何可用的CPU上。当原生线程初始化完毕就会调用java线程的run（）方法。当线程结束时，会释放原生线程和Java线程的所有资源。</p>
-<p><img src="/2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B%EF%BC%88%E4%B8%80%EF%BC%89/image-20201122210035230.png" alt="image-20201122210035230"></p>
-<br>
-
-<p>Hotspot JVM后台运行的系统线程主要有以下几个：</p>
-<table>
-<thead>
-<tr>
-<th align="center">虚拟机线程</th>
-<th align="center">这个线程等待JVM到达安全点操作出现。这些操作必须要在独立的线程里执行，因为当堆修改无法进行时，线程都需要JVM位于安全点。这些操作的类型有：stop-the-world垃圾回收、线程栈dump、线程暂停、线程偏向锁解除。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>周期性任务线程</strong></td>
-<td align="center"><strong>这些线程负责定时器事件（中断），用来调度周期性操作的执行</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>GC线程</strong></td>
-<td align="center"><strong>这些线程支持JVM中不同的垃圾回收活动</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>编译器线程</strong></td>
-<td align="center"><strong>这些线程在运行时将字节码动态编译成本地平台相关的机器码。</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>信号分发线程</strong></td>
-<td align="center"><strong>这些线程接收发送到JVM的信号并调用适当的JVM方法处理</strong></td>
-</tr>
-</tbody></table>
-<br>
-
-<br>
-
-<h2 id="二、JVM内存区域"><a href="#二、JVM内存区域" class="headerlink" title="二、JVM内存区域"></a>二、JVM内存区域</h2><h3 id="1、分类"><a href="#1、分类" class="headerlink" title="1、分类"></a>1、分类</h3><ul>
-<li><strong>线程私有区域：</strong>程序计数器、虚拟机栈、本地方法区</li>
-<li><strong>线程共享区：</strong>Java堆、方法区</li>
-<li><strong>直接内存</strong></li>
-</ul>
-<br>
-
-<h3 id="2、线程私有区域"><a href="#2、线程私有区域" class="headerlink" title="2、线程私有区域"></a>2、线程私有区域</h3><p>线程私有数据区域生命周期与线程相同，依赖用户线程的启动/结束而创建/销毁在Hotspot VM（虚拟机栈）内，每个线程都与操作系统的本地线程直接映射，因此这部分内存区域的存/否跟随本地线程的生/死对应。</p>
-<br>
-
-<h3 id="3、线程共享区域"><a href="#3、线程共享区域" class="headerlink" title="3、线程共享区域"></a>3、线程共享区域</h3><p>线程共享区域随虚拟机的启动/关闭而创建/销毁。</p>
-<br>
-
-<h3 id="4、直接内存"><a href="#4、直接内存" class="headerlink" title="4、直接内存"></a>4、直接内存</h3>
+        
       
 
+
+ 
+  <div class="category-all-page">
+    <div class="category-all-title">
+    TOTAL : 19
+    </div>
+ 
+    <div class="category-all">
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ABAP%E5%9F%BA%E7%A1%80/">ABAP基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/IDEA%E5%BF%AB%E6%8D%B7%E9%94%AE/">IDEA快捷键</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mybatis/">Mybatis</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OOALV/">OOALV</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SAP%E5%A2%9E%E5%BC%BA/">SAP增强</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SpringMVC/">SpringMVC</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo%E5%8D%9A%E5%AE%A2/">hexo博客</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">java基础笔记</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E5%87%BA%E5%8F%A3%E5%A2%9E%E5%BC%BA/">搜索帮助出口增强</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E6%96%87/">杂文</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AF%95/">笔试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">计算机操作系统</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/">问题收集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9B%86%E5%90%88%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/">集合底层原理</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/">面试问题</a><span class="category-list-count">1</span></li></ul>
+    </div>
+ 
+  </div>
 
 
       
@@ -286,17 +227,6 @@
       
       
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JVM//" class="article-tag-list-link color4">JVM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -346,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.io2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.iocategories/index-2.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -358,25 +288,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2021/03/17/ABAP/ABAP%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ABAP数据类型
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/11/22/JVM/JVM%E5%88%9D%E5%A7%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JVM初始</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -398,7 +309,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、JVM初始"><span class="toc-number">1.</span> <span class="toc-text">一、JVM初始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">1、基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、运行过程"><span class="toc-number">1.2.</span> <span class="toc-text">2、运行过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、java跨平台的原因"><span class="toc-number">1.3.</span> <span class="toc-text">3、java跨平台的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、线程"><span class="toc-number">1.4.</span> <span class="toc-text">4、线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、JVM内存区域"><span class="toc-number">2.</span> <span class="toc-text">二、JVM内存区域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、分类"><span class="toc-number">2.1.</span> <span class="toc-text">1、分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、线程私有区域"><span class="toc-number">2.2.</span> <span class="toc-text">2、线程私有区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、线程共享区域"><span class="toc-number">2.3.</span> <span class="toc-text">3、线程共享区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、直接内存"><span class="toc-number">2.4.</span> <span class="toc-text">4、直接内存</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -427,7 +338,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 夜猫君
+    		&copy; 2023 夜猫君
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -440,7 +351,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -511,6 +422,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ABAP</a>
               </li>
             
             <div class="clearfix"></div>
