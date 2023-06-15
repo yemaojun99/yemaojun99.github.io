@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>F4搜索帮助自定义列名 | 夜猫君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前在进行正是开发时，碰到客户需求想要自定义搜索帮助显示">
+  <meta name="description" content="之前在进行正是开发时，碰到客户需求想要自定义搜索帮助显示的字段名称。现将设置方法记录如下。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="F4搜索帮助自定义列名">
 <meta property="og:url" content="http://yoursite.com/2023/05/31/ABAP/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/index.html">
 <meta property="og:site_name" content="夜猫君">
-<meta property="og:description" content="之前在进行正是开发时，碰到客户需求想要自定义搜索帮助显示">
+<meta property="og:description" content="之前在进行正是开发时，碰到客户需求想要自定义搜索帮助显示的字段名称。现将设置方法记录如下。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-31T00:26:14.000Z">
-<meta property="article:modified_time" content="2023-05-31T06:52:36.169Z">
+<meta property="article:modified_time" content="2023-06-15T01:54:35.798Z">
 <meta property="article:author" content="夜猫君">
 <meta property="article:tag" content="ABAP">
 <meta name="twitter:card" content="summary">
@@ -187,8 +187,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前在进行正是开发时，碰到客户需求想要自定义搜索帮助显示</p>
+        <p>之前在进行正是开发时，碰到客户需求想要自定义搜索帮助显示的字段名称。现将设置方法记录如下。</p>
+<a id="more"></a>
 
+<center><h1>搜索帮助自定义列名</h1></center>
+
+<h3 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h3><p>在正式开发过程中有时会有客户要求修改搜索帮助列名的需求，现在将具体的实现步骤记录如下。</p>
+<h3 id="二、实现步骤"><a href="#二、实现步骤" class="headerlink" title="二、实现步骤"></a>二、实现步骤</h3><h4 id="1-获取搜索帮助的字段目录"><a href="#1-获取搜索帮助的字段目录" class="headerlink" title="1.获取搜索帮助的字段目录"></a>1.获取搜索帮助的字段目录</h4><p>使用<strong>Function DDIF_FIELDINFO_GET</strong>获取搜索帮助字段目录内表的值，需要注意的是搜索帮助字段目录的内表属性和参数需要设置全，即最好使用这个Function获取字段目录属性，不然可能会发生Dump。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">DATA:</span><br><span class="line">  LS_FIELD			TYPE DFIES.</span><br><span class="line">CALL FUNCTION &#39;DDIF_FIELDINFO_GET&#39;</span><br><span class="line">  EXPORTING</span><br><span class="line">    TABNAME			&#x3D; &quot;数据库表名称</span><br><span class="line">    FIELDNAME		&#x3D; &quot;数据库表中字段的名称</span><br><span class="line">    LFIELDNAME		&#x3D; &quot;数据库表中字段的名称</span><br><span class="line">  IMPORTING</span><br><span class="line">    DFIES_WA		&#x3D; LS_FIELD</span><br><span class="line">  EXCEPTIONS</span><br><span class="line">    NOT_FOUND		&#x3D; 1</span><br><span class="line">    INTERNAL_ERRPR  &#x3D; 2</span><br><span class="line">    OTHERS			&#x3D; 3.</span><br><span class="line">    </span><br><span class="line">LS_FIELD-POSITION &#x3D; 0.</span><br><span class="line">LS_FIELD-REPTEXT &#x3D; &quot;字段名称</span><br><span class="line">LS_FIELD-SCRTEXT_S &#x3D; &quot;字段名称</span><br><span class="line">LS_FIELD-SCRTEXT_M &#x3D; &quot;字段名称</span><br><span class="line">LS_FIELD-SCRTEXT_L &#x3D; &quot;字段名称</span><br><span class="line">APPEND LS_FIELD TO LT_FIELD.</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-设置搜索帮助展示的值"><a href="#2-设置搜索帮助展示的值" class="headerlink" title="2.设置搜索帮助展示的值"></a>2.设置搜索帮助展示的值</h4><p>设置该值时，和传统使用的搜索帮助参数传递不一样，对于需要显示在搜索帮助界面的数据不再是以往的那样一个随意结构的内表即可，而是需要将内表的值按照行列顺序放到一个单字段内表中。例如接下来演示的搜索帮助需要展示两个字段的值和字段名，则用于存值的内表LT_TABLE与LT_DATA之间的赋值如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">DATA:</span><br><span class="line">  BEGIN OF LS_DATA,</span><br><span class="line">    DATA			TYPE C LENGTH 255,</span><br><span class="line">  END OF LS_DATA,</span><br><span class="line">  LT_DATA 			LIKE TABLE OF LS_DATA.</span><br><span class="line">  </span><br><span class="line">SELECT CARRID, CONNID </span><br><span class="line">  FROM SFLIGHT</span><br><span class="line">  INTO TABLE @DATA(LT_TABLE).</span><br><span class="line"></span><br><span class="line">LOOP AT LT_TABLE INTO LS_TABLE.</span><br><span class="line">  LS_DATA-DATA &#x3D; LS_TABLE-CARRID.</span><br><span class="line">  APPEND LS_DATA TO LT_DATA.</span><br><span class="line">  </span><br><span class="line">  LS_DATA-DATA &#x3D; LS_TABLE-CONNID.</span><br><span class="line">  APPEND LS_DATA TO LT_DATA.</span><br><span class="line">  CLEAR: LS_TABLE.</span><br><span class="line">ENDLOOP.</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-调用F4搜索帮助Function"><a href="#3-调用F4搜索帮助Function" class="headerlink" title="3.调用F4搜索帮助Function"></a>3.调用F4搜索帮助Function</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">CALL FUNCTION &#39;F4IF_INT_TABLE_VALUE_REQUEST&#39;</span><br><span class="line">  EXPORTING</span><br><span class="line">    RETFIELD			&#x3D; &#39;CARRID&#39;  &quot;字段名称</span><br><span class="line">    DYNPPROG			&#x3D; SY-REPID</span><br><span class="line">    DYNPNR				&#x3D; SY-DYNNR</span><br><span class="line">    VALUE_ORG			&#x3D; &#39;C&#39;</span><br><span class="line">  TABLES</span><br><span class="line">    FIELD_TAB			&#x3D; LT_FIELD</span><br><span class="line">    VALUE_TAB			&#x3D; LT_DATA</span><br><span class="line">    RETURN_TAB			&#x3D; DATA(LT_RETURN)</span><br><span class="line">  EXCEPTIONS</span><br><span class="line">    PARAMETER_ERROR		&#x3D; 1</span><br><span class="line">    NO_VALUE_FOUND		&#x3D; 2</span><br><span class="line">    OTHERS				&#x3D; 3.</span><br><span class="line"></span><br><span class="line">CHECK LT_RETURN IS NOT INITIAL.</span><br><span class="line">READ TABLE LT_RETURN INTO DATA(LS_RETURN) INDEX 1.</span><br><span class="line"></span><br><span class="line">CHECK SY-SUBRC EQ 0.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
       
 
 
@@ -347,7 +362,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">搜索帮助自定义列名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、介绍"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、实现步骤"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、实现步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-获取搜索帮助的字段目录"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">1.获取搜索帮助的字段目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-设置搜索帮助展示的值"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.设置搜索帮助展示的值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-调用F4搜索帮助Function"><span class="toc-number">1.0.2.3.</span> <span class="toc-text">3.调用F4搜索帮助Function</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
