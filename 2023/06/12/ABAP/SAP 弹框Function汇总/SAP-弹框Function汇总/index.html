@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/11.1%20ADA_POPUP_WITH_TABLE%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
 <meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/12.1%20TERM_CONTROL_EDIT%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
 <meta property="article:published_time" content="2023-06-12T05:55:07.000Z">
-<meta property="article:modified_time" content="2023-06-13T11:26:53.399Z">
+<meta property="article:modified_time" content="2023-06-15T01:47:53.219Z">
 <meta property="article:author" content="夜猫君">
 <meta property="article:tag" content="ABAP">
 <meta name="twitter:card" content="summary">
@@ -216,7 +216,7 @@
 
 <h2 id="一、报表弹框Function"><a href="#一、报表弹框Function" class="headerlink" title="一、报表弹框Function"></a>一、报表弹框Function</h2><h3 id="1-ALV-报表Function"><a href="#1-ALV-报表Function" class="headerlink" title="1.ALV 报表Function"></a>1.ALV 报表Function</h3><h4 id="（1）方法名"><a href="#（1）方法名" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>G_DISPLAY_SELECTION_DYNPRO</strong></p>
 <h4 id="（2）介绍"><a href="#（2）介绍" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function可以将你传入的内表数据通过ALV报表的形式展示出来，而且还可以返回你在报表中光标最后放置的位置的数据索引或双击选中的数据索引。然后根据该索引查找到选择的数据。效果和搜索帮助类似。</p>
-<p>在设置报表名称时相对于搜索帮助的字段目录和属性设置要简洁的多。但是有一个注意事项是报表的标题结构和输出内表的结构大体类似，即输出内表中有几个字段，则LS_Header中存在几个用于设置列名的字段结构体。详细的内容可惨遭下面的源码部分。</p>
+<p>在设置报表名称时相对于搜索帮助的字段目录和属性设置要简洁的多。但是有一个注意事项是报表的标题结构和输出内表的结构大体类似，即输出内表中有几个字段，则LS_Header中存在几个用于设置列名的字段结构体。详细的内容可参照下面的源码部分。</p>
 <h4 id="（3）图示"><a href="#（3）图示" class="headerlink" title="（3）图示"></a>（3）图示</h4> <img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.1 G_DISPLAY_SELECTION_DYNPRO ALV报表Function.png" alt="1.1 G_DISPLAY_SELECTION_DYNPRO ALV报表Function" style="zoom: 80%;">
 
 <br>
