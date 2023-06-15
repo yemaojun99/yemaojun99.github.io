@@ -6,15 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: ABAP | 夜猫君</title>
+  <title>SAP 弹框Function汇总 | 夜猫君</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="夜猫君">
-<meta property="og:url" content="http://yoursite.com/tags/ABAP/index.html">
+  <meta name="description" content="在日常开发中经常会使用很多的弹框Function，而这些Function在某些时候可以显著提高编程的效率，所以这篇文章对这些Function进行记录，日后需要参考可以从此处快速查找和使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SAP 弹框Function汇总">
+<meta property="og:url" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="夜猫君">
+<meta property="og:description" content="在日常开发中经常会使用很多的弹框Function，而这些Function在某些时候可以显著提高编程的效率，所以这篇文章对这些Function进行记录，日后需要参考可以从此处快速查找和使用。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.1%20G_DISPLAY_SELECTION_DYNPRO%20ALV%E6%8A%A5%E8%A1%A8Function.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.2%20G_DISPLAY_SELECTION_DYNPRO%20%E9%80%89%E4%B8%AD%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.3%20G_DISPLAY_SELECTION_DYNPRO%20%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/2.1%20REUSE_ALV_POPUP_TO_SELECT%20%E6%8A%A5%E8%A1%A8%E5%A4%8D%E9%80%89%E6%A1%86.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/2.2%20REUSE_ALV_POPUP_TO_SELECT%20%E9%80%89%E6%8B%A9%E5%A4%8D%E6%95%B0%E6%9D%A1%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/2.3%20REUSE_ALV_POPUP_TO_SELECT%20%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/3.1%20POPUP_WITH_TABLE_DISPLAY_OK%20%E5%AE%9E%E9%99%85%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/3.2%20POPUP_WITH_TABLE_DISPLAY_OK%20%E5%B1%95%E7%A4%BA%E6%95%88%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/4.1%20BKK_POPUP_DISPLAY_LIST%20%E5%B1%95%E7%A4%BA%E6%95%88%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/5.1%20POPUP_TO_CONFIRM_WITH_MESSAGE%20%E5%B1%95%E7%A4%BA%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/6.1%20POPUP_TO_DISPLAY_TEXT%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/7.1%20POPUP_TO_CONFIRM%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/8.1%20POPUP_TO_DECIDE%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/9.1%20POPUP_GET_VALUES%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/9.2%20POPUP_GET_VALUES%20%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE%E5%8F%82%E8%80%83.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.1.1%20F4_DATE%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.2.1%20POPUP_TO_SELECT_MONTH%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.1.1%20F4_DATE%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.4.1%20ISU_EDM_DATE_CONTROL_POPUP%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/11.1%20ADA_POPUP_WITH_TABLE%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/12.1%20TERM_CONTROL_EDIT%20%E5%B1%95%E7%A4%BA%E7%95%8C%E9%9D%A2.png">
+<meta property="article:published_time" content="2023-06-12T05:55:07.000Z">
+<meta property="article:modified_time" content="2023-06-13T11:26:53.399Z">
 <meta property="article:author" content="夜猫君">
+<meta property="article:tag" content="ABAP">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.1%20G_DISPLAY_SELECTION_DYNPRO%20ALV%E6%8A%A5%E8%A1%A8Function.png">
   
     <link rel="alternative" href="/atom.xml" title="夜猫君" type="application/atom+xml">
   
@@ -162,35 +189,299 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-ABAP/SAP 弹框Function汇总/SAP-弹框Function汇总" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/" class="archive-article-date">
-  	<time datetime="2023-06-12T05:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/">SAP 弹框Function汇总</a>
+    <h1 class="article-title" itemprop="name">
+      SAP 弹框Function汇总
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/" class="archive-article-date">
+  	<time datetime="2023-06-12T05:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在日常开发中经常会使用很多的弹框Function，而这些Function在某些时候可以显著提高编程的效率，所以这篇文章对这些Function进行记录，日后需要参考可以从此处快速查找和使用。</p>
+<a id="more"></a>
+
+<center><h1>SAP 弹框Function汇总</h1></center>
+
+<h2 id="一、报表弹框Function"><a href="#一、报表弹框Function" class="headerlink" title="一、报表弹框Function"></a>一、报表弹框Function</h2><h3 id="1-ALV-报表Function"><a href="#1-ALV-报表Function" class="headerlink" title="1.ALV 报表Function"></a>1.ALV 报表Function</h3><h4 id="（1）方法名"><a href="#（1）方法名" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>G_DISPLAY_SELECTION_DYNPRO</strong></p>
+<h4 id="（2）介绍"><a href="#（2）介绍" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function可以将你传入的内表数据通过ALV报表的形式展示出来，而且还可以返回你在报表中光标最后放置的位置的数据索引或双击选中的数据索引。然后根据该索引查找到选择的数据。效果和搜索帮助类似。</p>
+<p>在设置报表名称时相对于搜索帮助的字段目录和属性设置要简洁的多。但是有一个注意事项是报表的标题结构和输出内表的结构大体类似，即输出内表中有几个字段，则LS_Header中存在几个用于设置列名的字段结构体。详细的内容可惨遭下面的源码部分。</p>
+<h4 id="（3）图示"><a href="#（3）图示" class="headerlink" title="（3）图示"></a>（3）图示</h4> <img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.1 G_DISPLAY_SELECTION_DYNPRO ALV报表Function.png" alt="1.1 G_DISPLAY_SELECTION_DYNPRO ALV报表Function" style="zoom: 80%;">
+
+<br>
+
+<h4 id="（4）源码参考"><a href="#（4）源码参考" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">*全局变量结构</span><br><span class="line">DATA:</span><br><span class="line">  BEGIN OF GS_SFLIGHT_S,</span><br><span class="line">    CARRID          LIKE SFLIGHT-CARRID,</span><br><span class="line">    CONNID          LIKE SFLIGHT-CONNID,</span><br><span class="line">    FLDATE          LIKE SFLIGHT-FLDATE,</span><br><span class="line">  END OF GS_SFLIGHT_S,</span><br><span class="line">  GT_SFLIGHT_S		LIKE TABLE OF GS_SFLIGHT_S.</span><br><span class="line"></span><br><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    BEGIN OF LS_HEADER,</span><br><span class="line">      CARTEXT       TYPE CHAR12 VALUE &#39;Airline Code&#39;,</span><br><span class="line">      CONTEXT       TYPE CHAR17 VALUE &#39;Connection Number&#39;,</span><br><span class="line">      FLDTEXT       TYPE CHAR11 VALUE &#39;Flight date&#39;,</span><br><span class="line">    END   OF LS_HEADER.</span><br><span class="line">  DATA:</span><br><span class="line">    LV_TABIX        TYPE SY-TABIX,</span><br><span class="line">    LV_HEADER       TYPE RGSEL-SEL_TITLE1,</span><br><span class="line">    LV_TITLE        TYPE RGSEL-DYNP_TITLE VALUE &#39;ALV Report Popup&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CHECK GT_SFLIGHT IS NOT INITIAL.</span><br><span class="line">  MOVE-CORRESPONDING GT_SFLIGHT TO GT_SFLIGHT_S.</span><br><span class="line">  SORT GT_SFLIGHT BY CARRID.</span><br><span class="line"></span><br><span class="line">  CALL FUNCTION &#39;G_DISPLAY_SELECTION_DYNPRO&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      ALLOW_PRINT                &#x3D; &#39; &#39;       &quot;X : 是否允许打印</span><br><span class="line">      DYNP_TITLE                 &#x3D; LV_TITLE  &quot;弹框标题</span><br><span class="line">*     EXTENDED_DISPLAY           &#x3D; &#39; &#39;       &quot;X : 是否显示详细信息</span><br><span class="line">*     FIRST_INDEX                &#x3D; 1         &quot;是否显示行索引</span><br><span class="line">*     KEY_COLUMNS                &#x3D; 1         &quot;主键字段列</span><br><span class="line">      NUMBER_OF_ROWS             &#x3D; 30        &quot;弹出框中展示的行数</span><br><span class="line">*     SEL_DEFAULT                &#x3D; 0         &quot;索引行</span><br><span class="line">      SEL_TITLE1                 &#x3D; LS_HEADER &quot;列表的第一个标题</span><br><span class="line">*     SEL_TITLE2                 &#x3D; &#39; &#39;       &quot;列表的第二个标题</span><br><span class="line">      SHOW_ALSO_1                &#x3D; &#39;X&#39;       &quot;同时显示带有1个条目的列表</span><br><span class="line">      START_COLUMN               &#x3D; 1         &quot;开始的列</span><br><span class="line">*     START_ROW                  &#x3D; 3         &quot;开始的行</span><br><span class="line">      WIDTH_OF_TITLES            &#x3D; &#39;X&#39;       &quot;输出宽度考虑标题长度</span><br><span class="line">*     WITHOUT_SELECTION          &#x3D; &#39; &#39;       &quot;无选择选项（X&#x3D;无）</span><br><span class="line">*     MULTIPLE_SELECTION         &#x3D; &#39; &#39;       &quot;</span><br><span class="line">*     ALLOW_SORT                 &#x3D; &#39;X&#39;       &quot;</span><br><span class="line">    IMPORTING</span><br><span class="line">*     FIRST_INDEX                &#x3D;           &quot;最上面显示的行的索引</span><br><span class="line">      SEL_INDEX                  &#x3D; SY-TABIX  &quot;光标最后所在的行索引</span><br><span class="line">*     EXT_DISPLAY_SELECTED       &#x3D;           &quot;&#x3D;“X”，如果要求显示详细信息</span><br><span class="line">    TABLES</span><br><span class="line">      SEL_TABLE                  &#x3D; GT_SFLIGHT_S &quot;输出表</span><br><span class="line">*     SEL_LINES                  &#x3D;              &quot;内部表中的当前条目编号</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      NO_LINES                   &#x3D; 1</span><br><span class="line">      NO_LINE_PICKED             &#x3D; 2</span><br><span class="line">      OTHERS                     &#x3D; 3.</span><br><span class="line">  IF SY-SUBRC EQ 0.</span><br><span class="line">    READ TABLE GT_SFLIGHT_S INTO GS_SFLIGHT_S INDEX SY-TABIX.</span><br><span class="line">    CHECK SY-SUBRC EQ 0.</span><br><span class="line">    WRITE: &#x2F; &#39;CARRID:&#39;, GS_SFLIGHT_S-CARRID,</span><br><span class="line">           &#x2F; &#39;CONNID:&#39;, GS_SFLIGHT_S-CONNID,</span><br><span class="line">           &#x2F; &#39;FLDATE:&#39;, GS_SFLIGHT_S-FLDATE.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<p>选择上面第一条数据，无论是双击或者点击一下点击下方的对勾按钮效果是一样的。</p>
+<img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.2 G_DISPLAY_SELECTION_DYNPRO 选中数据.png" alt="1.2 G_DISPLAY_SELECTION_DYNPRO 选中数据">
+
+<img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/1.3 G_DISPLAY_SELECTION_DYNPRO 输出结果.png" alt="1.3 G_DISPLAY_SELECTION_DYNPRO 输出结果">
+
+<br>
+
+<h3 id="2-报表复选框"><a href="#2-报表复选框" class="headerlink" title="2.报表复选框"></a>2.报表复选框</h3><h4 id="（1）方法名-1"><a href="#（1）方法名-1" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>REUSE_ALV_POPUP_TO_SELECT</strong></p>
+<h4 id="（2）介绍-1"><a href="#（2）介绍-1" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function和上面的ALV报表Function界面类似，但是该Function的弹框中多了一个复选框的字段，使得其可以选择多条数据。使用的形式类似于搜索帮助的多选形式。此外该Function还可以传入Form名称用以添加按钮的响应逻辑。但是该Function设置字段目录的操作较为麻烦，但是可以考虑使用Function <strong>REUSE_ALV_FIELDCATALOG_MERGE</strong>来快速获取字段目录，但是该Function不允许代码中存在超过72列的代码存在，一旦出现会导致程序Dump。</p>
+<h4 id="（3）图示-1"><a href="#（3）图示-1" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/2.1 REUSE_ALV_POPUP_TO_SELECT 报表复选框.png" alt="2.1 REUSE_ALV_POPUP_TO_SELECT 报表复选框">
+
+<br>
+
+<h4 id="（4）源码参考-1"><a href="#（4）源码参考-1" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_C            TYPE C LENGTH 1    VALUE &#39;C&#39;,</span><br><span class="line">    LC_SEL          TYPE C LENGTH 3    VALUE &#39;SEL&#39;,</span><br><span class="line">    LC_TABNAME      TYPE DD02L-TABNAME VALUE &#39;SFLIGHT&#39;.</span><br><span class="line"></span><br><span class="line">  DATA:</span><br><span class="line">    BEGIN OF LS_SFLIGHT,</span><br><span class="line">      SEL           TYPE C,</span><br><span class="line">      CARRID        TYPE SFLIGHT-CARRID,</span><br><span class="line">      CONNID        TYPE SFLIGHT-CONNID,</span><br><span class="line">      FLDATE        TYPE SFLIGHT-FLDATE,</span><br><span class="line">    END   OF LS_SFLIGHT,</span><br><span class="line">    LT_SFLIGHT      LIKE TABLE OF LS_SFLIGHT.</span><br><span class="line"></span><br><span class="line">  DATA:</span><br><span class="line">    LT_FIELDCAT     TYPE SLIS_T_FIELDCAT_ALV,</span><br><span class="line">    LS_FIELDCAT     LIKE LINE OF LT_FIELDCAT.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CHECK GT_SFLIGHT IS NOT INITIAL.</span><br><span class="line">  &quot;Get Selected Data</span><br><span class="line">  MOVE-CORRESPONDING GT_SFLIGHT TO LT_SFLIGHT.</span><br><span class="line">  SORT LT_SFLIGHT BY CARRID.</span><br><span class="line"></span><br><span class="line">  &quot;Set Fieldcatalog</span><br><span class="line">  CALL FUNCTION &#39;REUSE_ALV_FIELDCATALOG_MERGE&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      I_PROGRAM_NAME               &#x3D; SY-REPID</span><br><span class="line">      I_STRUCTURE_NAME             &#x3D; LC_TABNAME</span><br><span class="line">      I_INCLNAME                   &#x3D; SY-REPID</span><br><span class="line">      I_BYPASSING_BUFFER           &#x3D; GC_X</span><br><span class="line">    CHANGING</span><br><span class="line">      CT_FIELDCAT                  &#x3D; LT_FIELDCAT</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      INCONSISTENT_INTERFACE       &#x3D; 1</span><br><span class="line">      PROGRAM_ERROR                &#x3D; 2</span><br><span class="line">      OTHERS                       &#x3D; 3.</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">*   Gets The field directory exception</span><br><span class="line">    MESSAGE TEXT-E02 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">    EXIT.</span><br><span class="line">  ENDIF.</span><br><span class="line"></span><br><span class="line">  DELETE LT_FIELDCAT WHERE</span><br><span class="line">    FIELDNAME NE &#39;CARRID&#39; AND</span><br><span class="line">    FIELDNAME NE &#39;CONNID&#39; AND</span><br><span class="line">    FIELDNAME NE &#39;FLDATE&#39;.</span><br><span class="line"></span><br><span class="line">  LOOP AT LT_FIELDCAT INTO LS_FIELDCAT.</span><br><span class="line">    LS_FIELDCAT-KEY       &#x3D; GC_NULL.</span><br><span class="line">    LS_FIELDCAT-OUTPUTLEN &#x3D; 15.</span><br><span class="line">    CASE LS_FIELDCAT-FIELDNAME.</span><br><span class="line">      WHEN &#39;CARRID&#39;.</span><br><span class="line">        LS_FIELDCAT-JUST      &#x3D; LC_C.</span><br><span class="line">        LS_FIELDCAT-SELTEXT_L &#x3D; &#39;Airline Code&#39;.</span><br><span class="line">      WHEN &#39;CONNID&#39;.</span><br><span class="line">        LS_FIELDCAT-JUST      &#x3D; LC_C.</span><br><span class="line">        LS_FIELDCAT-SELTEXT_L &#x3D; &#39;Connection Number&#39;.</span><br><span class="line">      WHEN &#39;FLDATE&#39;.</span><br><span class="line">        LS_FIELDCAT-JUST      &#x3D; LC_C.</span><br><span class="line">        LS_FIELDCAT-SELTEXT_L &#x3D; &#39;Flight date&#39;.</span><br><span class="line">      WHEN OTHERS.</span><br><span class="line">    ENDCASE.</span><br><span class="line">    MODIFY LT_FIELDCAT FROM LS_FIELDCAT</span><br><span class="line">      TRANSPORTING KEY SELTEXT_L JUST OUTPUTLEN.</span><br><span class="line">    CLEAR: LS_FIELDCAT.</span><br><span class="line">  ENDLOOP.</span><br><span class="line"></span><br><span class="line">  &quot;Call Check Box Function</span><br><span class="line">  CALL FUNCTION &#39;REUSE_ALV_POPUP_TO_SELECT&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      I_TITLE                       &#x3D; &#39;ALV Repory Check Box&#39;</span><br><span class="line">*     I_SELECTION                   &#x3D; &#39;X&#39;  &quot;X:允许选择 SPACE:不允许选择</span><br><span class="line">*     I_ALLOW_NO_SELECTION          &#x3D;      &quot;允许在未选择任何内容的情况下进行复制</span><br><span class="line">      I_ZEBRA                       &#x3D; &#39;X&#39;  &quot;斑马线</span><br><span class="line">*     I_SCREEN_START_COLUMN         &#x3D; 0    &quot;展示开始列</span><br><span class="line">*     I_SCREEN_START_LINE           &#x3D; 0    &quot;展示开始行</span><br><span class="line">*     I_SCREEN_END_COLUMN           &#x3D; 0    &quot;展示结束列</span><br><span class="line">*     I_SCREEN_END_LINE             &#x3D; 0    &quot;展示结束行</span><br><span class="line">      I_CHECKBOX_FIELDNAME          &#x3D; LC_SEL &quot;在结构中作为复选框的字段名</span><br><span class="line">*     I_LINEMARK_FIELDNAME          &#x3D;        &quot;行选择颜色信息字段名称</span><br><span class="line">*     I_SCROLL_TO_SEL_LINE          &#x3D; &#39;X&#39;    &quot;</span><br><span class="line">      I_TABNAME                     &#x3D; &#39;LT_SFLIGHT&#39; &quot;输出内表名称</span><br><span class="line">*     I_STRUCTURE_NAME              &#x3D;              &quot;滚动至默认选择</span><br><span class="line">      IT_FIELDCAT                   &#x3D; LT_FIELDCAT  &quot;输出内表字段目录</span><br><span class="line">*     IT_EXCLUDING                  &#x3D;              &quot;Function Code表</span><br><span class="line">*     I_CALLBACK_PROGRAM            &#x3D;              &quot;调用程序的名称</span><br><span class="line">*     I_CALLBACK_USER_COMMAND       &#x3D;        &quot;响应Function Code逻辑Form名称</span><br><span class="line">*     IS_PRIVATE                    &#x3D;</span><br><span class="line">*   IMPORTING</span><br><span class="line">*     ES_SELFIELD                   &#x3D;              &quot;选择的数据信息</span><br><span class="line">*     E_EXIT                        &#x3D;              &quot;X：用户关闭弹框标记</span><br><span class="line">    TABLES</span><br><span class="line">      T_OUTTAB                      &#x3D; LT_SFLIGHT   &quot;输出内表</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      PROGRAM_ERROR                 &#x3D; 1</span><br><span class="line">      OTHERS                        &#x3D; 2.</span><br><span class="line">  IF SY-SUBRC EQ 0.</span><br><span class="line">    SORT LT_SFLIGHT BY SEL DESCENDING.</span><br><span class="line">    LOOP AT LT_SFLIGHT INTO LS_SFLIGHT GROUP BY (</span><br><span class="line">       INDEX &#x3D; GROUP INDEX</span><br><span class="line">       SIZE  &#x3D; GROUP SIZE</span><br><span class="line">       SEL   &#x3D; LS_SFLIGHT-SEL ) ASSIGNING FIELD-SYMBOL(&lt;FT_GROUP&gt;).</span><br><span class="line">      IF &lt;FT_GROUP&gt;-SEL EQ GC_X.</span><br><span class="line">        WRITE: &#x2F; &#39;总共选中了&#39;,&lt;FT_GROUP&gt;-SIZE,&#39;条数据。&#39;.</span><br><span class="line">      ENDIF.</span><br><span class="line">    ENDLOOP.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<p>选择五条数据执行后效果如下：</p>
+<img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/2.2 REUSE_ALV_POPUP_TO_SELECT 选择复数条数据.png" alt="2.2 REUSE_ALV_POPUP_TO_SELECT 选择复数条数据">
+
+<img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/2.3 REUSE_ALV_POPUP_TO_SELECT 输出结果.png" alt="2.3 REUSE_ALV_POPUP_TO_SELECT 输出结果">
+
+<br>
+
+<h2 id="二、普通弹框Function"><a href="#二、普通弹框Function" class="headerlink" title="二、普通弹框Function"></a>二、普通弹框Function</h2><h3 id="1-长文本弹框"><a href="#1-长文本弹框" class="headerlink" title="1.长文本弹框"></a>1.长文本弹框</h3><h4 id="（1）方法名-2"><a href="#（1）方法名-2" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>POPUP_WITH_TABLE_DISPLAY_OK</strong></p>
+<h4 id="（2）介绍-2"><a href="#（2）介绍-2" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function只用于将内表中的内容展示出来，但是无法设置其样式而且会自动去除掉内表中用于换行的空行数据，使数据杂糅在一起。但是该Function在使用时十分简洁而且还自带有打印的功能，参数也很简单，若只是展示数据且不考虑样式等信息可以考虑使用该Function。</p>
+<p>实际的长文本内容如下：</p>
+<img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/3.1 POPUP_WITH_TABLE_DISPLAY_OK 实际文本内容.png" alt="3.1 POPUP_WITH_TABLE_DISPLAY_OK 实际文本内容">
+
+<br>
+
+<h4 id="（3）图示-2"><a href="#（3）图示-2" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/3.2 POPUP_WITH_TABLE_DISPLAY_OK 展示效果.png" alt="3.2 POPUP_WITH_TABLE_DISPLAY_OK 展示效果">
+
+<br>
+
+<h4 id="（4）源码参考-2"><a href="#（4）源码参考-2" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">*全局变量结构</span><br><span class="line">  DATA:</span><br><span class="line">    BEGIN OF GS_TEXT,</span><br><span class="line">      TDLINE          TYPE CHAR255,</span><br><span class="line">    END   OF GS_TEXT,</span><br><span class="line">    GT_TEXT			  LIKE TABLE OF GS_TEXT.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CHECK GT_TEXT IS NOT INITIAL.</span><br><span class="line"></span><br><span class="line">  &quot;Call Display Text Value Function</span><br><span class="line">  CALL FUNCTION &#39;POPUP_WITH_TABLE_DISPLAY_OK&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      ENDPOS_COL         &#x3D; 72                   &quot;结束列</span><br><span class="line">      ENDPOS_ROW         &#x3D; 20                   &quot;结束行</span><br><span class="line">      STARTPOS_COL       &#x3D; 1                    &quot;开始列</span><br><span class="line">      STARTPOS_ROW       &#x3D; 1                    &quot;开始行</span><br><span class="line">      TITLETEXT          &#x3D; &#39;Display Text Value&#39; &quot;弹框标题</span><br><span class="line">*   IMPORTING</span><br><span class="line">*     CHOISE             &#x3D;                      &quot;表条目数</span><br><span class="line">    TABLES</span><br><span class="line">      VALUETAB           &#x3D; GT_TEXT              &quot;展示内容的内表</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      BREAK_OFF          &#x3D; 1</span><br><span class="line">      OTHERS             &#x3D; 2.</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2-Form设置的弹框内容"><a href="#2-Form设置的弹框内容" class="headerlink" title="2.Form设置的弹框内容"></a>2.Form设置的弹框内容</h3><h4 id="（1）方法名-3"><a href="#（1）方法名-3" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>BKK_POPUP_DISPLAY_LIST</strong></p>
+<h4 id="（2）介绍-3"><a href="#（2）介绍-3" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function的使用和Function ALV的Function类似，是通过传入Form，然后通过Form中的输出逻辑在弹框中展示文本内容。此外该Function还可以传入自定义按钮，然后通过点击按钮返回按钮的Function Code来进行其他的逻辑处理。</p>
+<p>但是该弹框无法输出空行和换行，具体的样式和上面的Function样式类似。</p>
+<h4 id="（3）图示-3"><a href="#（3）图示-3" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/4.1 BKK_POPUP_DISPLAY_LIST 展示效果.png" alt="4.1 BKK_POPUP_DISPLAY_LIST 展示效果">
+
+<br>
+
+<h4 id="（4）源码参考-3"><a href="#（4）源码参考-3" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">*&amp; Form FORM_SET_TEXT_VALUE</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">*&amp; text</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">*&amp; --&gt;  p1        text</span><br><span class="line">*&amp; &lt;--  p2        text</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">FORM FORM_SET_TEXT_VALUE .</span><br><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_TITLE        TYPE SYTITLE VALUE &#39;Text Edit Dialog&#39;,</span><br><span class="line">    LC_FORMNAME     TYPE SLIS_FORMNAME VALUE &#39;WRITE_TEXT_VALUE&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CALL FUNCTION &#39;BKK_POPUP_DISPLAY_LIST&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      I_CALLBACK_PROGRAM            &#x3D; SY-REPID    &quot;程序名称</span><br><span class="line">      I_CALLBACK_WRITE_FORM         &#x3D; LC_FORMNAME &quot;输出Form名称</span><br><span class="line">      I_TITLE                       &#x3D; LC_TITLE    &quot;弹框标题</span><br><span class="line">      I_START_COLUMN                &#x3D; 1           &quot;开始列</span><br><span class="line">      I_START_ROW                   &#x3D; 1           &quot;开始行</span><br><span class="line">      I_END_COLUMN                  &#x3D; 72          &quot;结束列</span><br><span class="line">      I_END_ROW                     &#x3D; 15          &quot;结束行</span><br><span class="line">*     I_DISPLAY_OK_BUTTON           &#x3D; &#39;X&#39;         &quot;显示OK按钮的开关</span><br><span class="line">*     I_DISPLAY_CANCEL_BUTTON       &#x3D; &#39;X&#39;         &quot;显示取消按钮的开关</span><br><span class="line">*   IMPORTING</span><br><span class="line">*     ANSWER                        &#x3D;             &quot;Ok Code</span><br><span class="line">*   TABLES</span><br><span class="line">*     USER_BUTTONS                  &#x3D;             &quot;按钮表</span><br><span class="line">            .</span><br><span class="line">  &quot;按钮内表类型：SMP_DYNTXT</span><br><span class="line">  IF SY-SUBRC NE 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br><span class="line">ENDFORM.</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">*&amp; Form WRITE_TEXT_VALUE</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">*&amp; text</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">*&amp; --&gt;  p1        text</span><br><span class="line">*&amp; &lt;--  p2        text</span><br><span class="line">*&amp;---------------------------------------------------------------------*</span><br><span class="line">FORM WRITE_TEXT_VALUE .</span><br><span class="line">  CHECK GT_TEXT IS NOT INITIAL.</span><br><span class="line"></span><br><span class="line">  LOOP AT GT_TEXT INTO GS_TEXT.</span><br><span class="line">    WRITE:&#x2F; GS_TEXT-TDLINE.</span><br><span class="line">    CLEAR: GS_TEXT.</span><br><span class="line">  ENDLOOP.</span><br><span class="line">ENDFORM.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="3-两段5行文本弹框"><a href="#3-两段5行文本弹框" class="headerlink" title="3.两段5行文本弹框"></a>3.两段5行文本弹框</h3><h4 id="（1）方法名-4"><a href="#（1）方法名-4" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>POPUP_TO_CONFIRM_WITH_MESSAGE</strong></p>
+<h4 id="（2）介绍-4"><a href="#（2）介绍-4" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function只是用来展示部分短文本或提问信息使用的，并没有其他的功能可以自定义添加。但是该Function可以隐藏关闭按钮。然后弹框只能展示五行文本，上面三行下面两行，中间换了一行。所以可以理解为该Function是5行两段的弹框。</p>
+<p>点击三个按钮的ANSWER返回值如下：</p>
+<ul>
+<li>YES：1（字符型）</li>
+<li>NO：2（字符型）</li>
+<li>Cancel：A</li>
+</ul>
+<h4 id="（3）图示-4"><a href="#（3）图示-4" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/5.1 POPUP_TO_CONFIRM_WITH_MESSAGE 展示结果.png" alt="5.1 POPUP_TO_CONFIRM_WITH_MESSAGE 展示结果">
+
+<br>
+
+<h4 id="（4）源码参考-4"><a href="#（4）源码参考-4" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_TEXT1        TYPE STRING  VALUE &#39;Msg One&#39;,</span><br><span class="line">    LC_TEXT2        TYPE STRING  VALUE &#39;Msg Two&#39;,</span><br><span class="line">    LC_TEXT3        TYPE STRING  VALUE &#39;Msg Thr&#39;,</span><br><span class="line">    LC_LINE1        TYPE STRING  VALUE &#39;Text One&#39;,</span><br><span class="line">    LC_LINE2        TYPE STRING  VALUE &#39;Text Two&#39;,</span><br><span class="line">    LC_TITLE        TYPE SYTITLE VALUE &#39;Text Edit Dialog&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CALL FUNCTION &#39;POPUP_TO_CONFIRM_WITH_MESSAGE&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      DEFAULTOPTION        &#x3D; &#39;Y&#39;      &quot;回答“是”或“否”时的光标位置</span><br><span class="line">      DIAGNOSETEXT1        &#x3D; LC_TEXT1 &quot;第一段第一行文本</span><br><span class="line">      DIAGNOSETEXT2        &#x3D; LC_TEXT2 &quot;第一段第二行文本</span><br><span class="line">      DIAGNOSETEXT3        &#x3D; LC_TEXT3 &quot;第一段第三行文本</span><br><span class="line">      TEXTLINE1            &#x3D; LC_LINE1 &quot;第二段第一行文本</span><br><span class="line">      TEXTLINE2            &#x3D; LC_LINE2 &quot;第二段第二行文本</span><br><span class="line">      TITEL                &#x3D; LC_TITLE &quot;弹框标题</span><br><span class="line">      START_COLUMN         &#x3D; 25       &quot;开始列</span><br><span class="line">      START_ROW            &#x3D; 6        &quot;开始行</span><br><span class="line">      CANCEL_DISPLAY       &#x3D; &#39;X&#39;      &quot;显示关闭按钮</span><br><span class="line">*   IMPORTING</span><br><span class="line">*     ANSWER               &#x3D;          &quot;用户选择的按钮</span><br><span class="line">            .</span><br><span class="line">  IF SY-SUBRC NE 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="4-无需确认的弹框"><a href="#4-无需确认的弹框" class="headerlink" title="4.无需确认的弹框"></a>4.无需确认的弹框</h3><h4 id="（1）方法名-5"><a href="#（1）方法名-5" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>POPUP_TO_DISPLAY_TEXT</strong></p>
+<h4 id="（2）介绍-5"><a href="#（2）介绍-5" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function只适用于提示信息使用的Function，无其余的功能属性，只能展示文本使用且只有一个按钮。</p>
+<h4 id="（3）图示-5"><a href="#（3）图示-5" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/6.1 POPUP_TO_DISPLAY_TEXT 展示界面.png" alt="6.1 POPUP_TO_DISPLAY_TEXT 展示界面">
+
+<br>
+
+<h4 id="（4）源码参考-5"><a href="#（4）源码参考-5" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_TITLE        TYPE STRING VALUE &#39;Dialog Popup&#39;,</span><br><span class="line">    LC_TEXT1        TYPE STRING VALUE &#39;Text One&#39;,</span><br><span class="line">    LC_TEXT2        TYPE STRING VALUE &#39;Text Two&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CALL FUNCTION &#39;POPUP_TO_DISPLAY_TEXT&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      TITEL              &#x3D; LC_TITLE</span><br><span class="line">      TEXTLINE1          &#x3D; LC_TEXT1</span><br><span class="line">      TEXTLINE2          &#x3D; LC_TEXT2</span><br><span class="line">*     START_COLUMN       &#x3D; 25</span><br><span class="line">*     START_ROW          &#x3D; 6</span><br><span class="line">            .</span><br><span class="line">  IF SY-SUBRC NE 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="5-横板确认弹框"><a href="#5-横板确认弹框" class="headerlink" title="5.横板确认弹框"></a>5.横板确认弹框</h3><h4 id="（1）方法名-6"><a href="#（1）方法名-6" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>POPUP_TO_CONFIRM</strong></p>
+<h4 id="（2）介绍-6"><a href="#（2）介绍-6" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该弹框自带一个绿色的问号图标，且只能展示一段文本。但是弹框中存在三个按钮，可以自定义其中两个按钮的文本和图标内容。以及隐藏关闭按钮。可以用作询问交互使用，例如询问是否要退出程序或删除数据等。</p>
+<p>点击三个按钮的ANSWER返回值如下：</p>
+<ul>
+<li>YES：1（字符型）</li>
+<li>NO：2（字符型）</li>
+<li>Cancel：A</li>
+</ul>
+<h4 id="（3）图示-6"><a href="#（3）图示-6" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/7.1 POPUP_TO_CONFIRM展示界面.png" alt="7.1 POPUP_TO_CONFIRM展示界面">
+
+<br>
+
+<h4 id="（4）源码参考-6"><a href="#（4）源码参考-6" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_TEXT1        TYPE STRING VALUE &#39;Text Content&#39;,</span><br><span class="line">    LC_TITLE        TYPE STRING VALUE &#39;Dialog Popup&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CALL FUNCTION &#39;POPUP_TO_CONFIRM&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      TITLEBAR                    &#x3D; LC_TITLE  &quot;文本标题</span><br><span class="line">*     DIAGNOSE_OBJECT             &#x3D; &#39; &#39;       &quot;maintain via SE61</span><br><span class="line">      TEXT_QUESTION               &#x3D; LC_TEXT1  &quot;文本内容</span><br><span class="line">      TEXT_BUTTON_1               &#x3D; &#39;YES&#39;     &quot;第一个按钮文本</span><br><span class="line">      ICON_BUTTON_1               &#x3D; &#39;ICON_CHECKED&#39; &quot;第一个按钮图标</span><br><span class="line">      TEXT_BUTTON_2               &#x3D; &#39;NO&#39;      &quot;第二个按钮文本</span><br><span class="line">      ICON_BUTTON_2               &#x3D; &#39;ICON_INCOMPLETE&#39;&quot;第二个按钮图标</span><br><span class="line">*     DEFAULT_BUTTON              &#x3D; &#39;1&#39;       &quot;光标位置</span><br><span class="line">*     DISPLAY_CANCEL_BUTTON       &#x3D; &#39;X&#39;       &quot;Cancel按钮的隐藏与显示</span><br><span class="line">*     USERDEFINED_F1_HELP         &#x3D; &#39; &#39;       &quot;用户定义的F1帮助</span><br><span class="line">*     START_COLUMN                &#x3D; 25        &quot;开始列</span><br><span class="line">*     START_ROW                   &#x3D; 6         &quot;开始行</span><br><span class="line">*     POPUP_TYPE                  &#x3D;           &quot;图标类型</span><br><span class="line">*     IV_QUICKINFO_BUTTON_1       &#x3D; &#39; &#39;       &quot;第一个按钮的提示信息</span><br><span class="line">*     IV_QUICKINFO_BUTTON_2       &#x3D; &#39; &#39;       &quot;第二个按钮的提示信息</span><br><span class="line">*   IMPORTING</span><br><span class="line">*     ANSWER                      &#x3D;           &quot;点击按钮返回的Function Code</span><br><span class="line">*   TABLES</span><br><span class="line">*     PARAMETER                   &#x3D;           &quot;文本参数表(SPAR)</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      TEXT_NOT_FOUND              &#x3D; 1</span><br><span class="line">      OTHERS                      &#x3D; 2</span><br><span class="line">            .</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="6-竖版确认弹框"><a href="#6-竖版确认弹框" class="headerlink" title="6.竖版确认弹框"></a>6.竖版确认弹框</h3><h4 id="（1）方法"><a href="#（1）方法" class="headerlink" title="（1）方法"></a>（1）方法</h4><p><strong>POPUP_TO_DECIDE</strong></p>
+<h4 id="（2）介绍-7"><a href="#（2）介绍-7" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>竖版按钮交互弹框，和上面提到的弹框类似，只不过样式不同是竖版的。此外该弹框可以传入三行文本，外加可以设置两个按钮的样式和文本内容。</p>
+<p>点击三个按钮的ANSWER返回值如下：</p>
+<ul>
+<li>Button One：1（字符型）</li>
+<li>Button Two：2（字符型）</li>
+<li>Cancel：A</li>
+</ul>
+<h4 id="（3）图示-7"><a href="#（3）图示-7" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/8.1 POPUP_TO_DECIDE 展示界面.png" alt="8.1 POPUP_TO_DECIDE 展示界面">
+
+<br>
+
+<h4 id="（4）参考源码"><a href="#（4）参考源码" class="headerlink" title="（4）参考源码"></a>（4）参考源码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_BUT01        TYPE STRING VALUE &#39;Button One&#39;,</span><br><span class="line">    LC_BUT02        TYPE STRING VALUE &#39;Button Two&#39;,</span><br><span class="line">    LC_TEXT1        TYPE STRING VALUE &#39;Text Content&#39;,</span><br><span class="line">    LC_TEXT2        TYPE STRING VALUE &#39;Text Content One&#39;,</span><br><span class="line">    LC_TEXT3        TYPE STRING VALUE &#39;Text Content Two&#39;,</span><br><span class="line">    LC_TITLE        TYPE STRING VALUE &#39;Dialog Popup&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CALL FUNCTION &#39;POPUP_TO_DECIDE&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">*     DEFAULTOPTION           &#x3D; &#39;1&#39;       &quot;光标在文本的位置</span><br><span class="line">      TEXTLINE1               &#x3D; LC_TEXT1  &quot;第一行文本内容</span><br><span class="line">      TEXTLINE2               &#x3D; LC_TEXT2  &quot;第二行文本内容</span><br><span class="line">      TEXTLINE3               &#x3D; LC_TEXT3  &quot;第三行文本内容</span><br><span class="line">      TEXT_OPTION1            &#x3D; LC_BUT01  &quot;第一个按钮文本</span><br><span class="line">      TEXT_OPTION2            &#x3D; LC_BUT02  &quot;第二个文本按钮</span><br><span class="line">*     ICON_TEXT_OPTION1       &#x3D; &#39; &#39;       &quot;第一个按钮图标</span><br><span class="line">*     ICON_TEXT_OPTION2       &#x3D; &#39; &#39;       &quot;第二个按钮图标</span><br><span class="line">      TITEL                   &#x3D; LC_TITLE  &quot;弹框标题</span><br><span class="line">      START_COLUMN            &#x3D; 25        &quot;开始列</span><br><span class="line">      START_ROW               &#x3D; 5         &quot;开始行</span><br><span class="line">*     CANCEL_DISPLAY          &#x3D; &#39;X&#39;       &quot;显示或隐藏Cancel按钮</span><br><span class="line">*   IMPORTING</span><br><span class="line">*     ANSWER                  &#x3D;           &quot;点击按钮返回的Function Code</span><br><span class="line">            .</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="三、可输入弹框Function"><a href="#三、可输入弹框Function" class="headerlink" title="三、可输入弹框Function"></a>三、可输入弹框Function</h2><h3 id="1-自定义输入框"><a href="#1-自定义输入框" class="headerlink" title="1.自定义输入框"></a>1.自定义输入框</h3><h4 id="（1）方法名-7"><a href="#（1）方法名-7" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>POPUP_GET_VALUES</strong></p>
+<p><strong>POPUP_GET_VALUES_USER_HELP</strong></p>
+<h4 id="（2）介绍-8"><a href="#（2）介绍-8" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>两个方法基本一致，用户可以自定义输入框的描述，输入类型与搜索帮助等信息的弹框，在获取用户输入值方面十分方便。此外还可以通过FIELDS参数设置输入框字段的样式等信息。</p>
+<p>点击各个按钮返回的RETURNCODE值如下：</p>
+<ul>
+<li>关闭按钮：A</li>
+<li>对勾确认按钮：空</li>
+</ul>
+<h4 id="（3）图示-8"><a href="#（3）图示-8" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/9.1 POPUP_GET_VALUES 展示界面.png" alt="9.1 POPUP_GET_VALUES 展示界面">
+
+<br>
+
+<h4 id="（4）源码参考-7"><a href="#（4）源码参考-7" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  CONSTANTS:</span><br><span class="line">    LC_TITLE        TYPE STRING VALUE &#39;Dialog Popup&#39;.</span><br><span class="line">  DATA:</span><br><span class="line">    LV_RETURN       TYPE C,</span><br><span class="line">    LS_FIELDS       TYPE SVAL,</span><br><span class="line">    LT_FIELDS       TYPE TABLE OF SVAL.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CLEAR: LT_FIELDS.</span><br><span class="line"></span><br><span class="line">  &quot;Set Input Value Field</span><br><span class="line">  LS_FIELDS-TABNAME   &#x3D; &#39;SFLIGHT&#39;.</span><br><span class="line">  LS_FIELDS-FIELDNAME &#x3D; &#39;CARRID&#39;.</span><br><span class="line">  LS_FIELDS-FIELDTEXT &#x3D; &#39;Airline Code&#39;.</span><br><span class="line">  APPEND LS_FIELDS TO LT_FIELDS.</span><br><span class="line"></span><br><span class="line">  LS_FIELDS-TABNAME   &#x3D; &#39;SFLIGHT&#39;.</span><br><span class="line">  LS_FIELDS-FIELDNAME &#x3D; &#39;CONNID&#39;.</span><br><span class="line">  LS_FIELDS-FIELDTEXT &#x3D; &#39;Connection Number&#39;.</span><br><span class="line">  APPEND LS_FIELDS TO LT_FIELDS.</span><br><span class="line"></span><br><span class="line">  LS_FIELDS-TABNAME   &#x3D; &#39;SFLIGHT&#39;.</span><br><span class="line">  LS_FIELDS-FIELDNAME &#x3D; &#39;FLDATE&#39;.</span><br><span class="line">  LS_FIELDS-FIELDTEXT &#x3D; &#39;Flight Date&#39;.</span><br><span class="line">  LS_FIELDS-VALUE     &#x3D; SY-DATUM.</span><br><span class="line">  APPEND LS_FIELDS TO LT_FIELDS.</span><br><span class="line"></span><br><span class="line">  CALL FUNCTION &#39;POPUP_GET_VALUES&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">*     NO_VALUE_CHECK        &#x3D; &#39; &#39;       &quot;执行或不执行数据类型的检测</span><br><span class="line">      POPUP_TITLE           &#x3D; LC_TITLE  &quot;弹框标题</span><br><span class="line">*     START_COLUMN          &#x3D; &#39;5&#39;       &quot;开始列</span><br><span class="line">*     START_ROW             &#x3D; &#39;5&#39;       &quot;开始行</span><br><span class="line">    IMPORTING</span><br><span class="line">      RETURNCODE            &#x3D; LV_RETURN &quot;用户返回值</span><br><span class="line">    TABLES</span><br><span class="line">      FIELDS                &#x3D; LT_FIELDS &quot;文本输入框属性与获取到的值</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      ERROR_IN_FIELDS       &#x3D; 1</span><br><span class="line">      OTHERS                &#x3D; 2</span><br><span class="line">            .</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Text Value Function Error</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="（5）SVAL结构解析"><a href="#（5）SVAL结构解析" class="headerlink" title="（5）SVAL结构解析"></a>（5）SVAL结构解析</h4><table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">TABNAME</td>
+<td>输入框参照数据库表名（SE11中定义的数据库表）</td>
+</tr>
+<tr>
+<td align="center">FIELDNAME</td>
+<td>输入框参照对应的字段名</td>
+</tr>
+<tr>
+<td align="center">VALUE</td>
+<td>用户输入的字段值，也可以在调用前传值视为默认值</td>
+</tr>
+<tr>
+<td align="center">FIELD_ATTR</td>
+<td>字段的外观设置具体属性见下图</td>
+</tr>
+<tr>
+<td align="center">FIELD_OBL</td>
+<td>需要的字段标志</td>
+</tr>
+<tr>
+<td align="center">COMP_CODE</td>
+<td>关系运算符</td>
+</tr>
+<tr>
+<td align="center">FIELDTEXT</td>
+<td>输入框的文本</td>
+</tr>
+<tr>
+<td align="center">COMP_TAB</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">COMP_FIELD</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">NOVALUEHLP</td>
+<td>不显示搜索帮助按钮</td>
+</tr>
+</tbody></table>
+<p>字段外观设置参考</p>
+<img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/9.2 POPUP_GET_VALUES 样式设置参考.png" alt="9.2 POPUP_GET_VALUES 样式设置参考">
+
+<br>
+
+<h3 id="2-年月日-日期输入框"><a href="#2-年月日-日期输入框" class="headerlink" title="2.年月日 日期输入框"></a>2.年月日 日期输入框</h3><h4 id="（1）方法-1"><a href="#（1）方法-1" class="headerlink" title="（1）方法"></a>（1）方法</h4><ul>
+<li><strong>F4_DATE</strong></li>
+<li><strong>POPUP_TO_SELECT_MONTH</strong></li>
+<li><strong>F4_DATE_CONTROL</strong></li>
+<li><strong>ISU_EDM_DATE_CONTROL_POPUP</strong></li>
+</ul>
+<h4 id="（2）介绍-9"><a href="#（2）介绍-9" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><h5 id="①F4-DATE"><a href="#①F4-DATE" class="headerlink" title="①F4_DATE"></a>①F4_DATE</h5><p>只弹出一个小calendar，只显示一个月的日期，但是可以变更年和月。但是似乎是我的主题的原因导致显示有点问题，和默认的日期输入框是一样的。</p>
+<h5 id="②POPUP-TO-SELECT-MONTH"><a href="#②POPUP-TO-SELECT-MONTH" class="headerlink" title="②POPUP_TO_SELECT_MONTH"></a>②POPUP_TO_SELECT_MONTH</h5><p>该弹框只输入年份和月份两个内容，和上面的普通输入框类似，但是两个输入框均为下拉框的形式。</p>
+<h5 id="③F4-DATE-CONTROL"><a href="#③F4-DATE-CONTROL" class="headerlink" title="③F4_DATE_CONTROL"></a>③F4_DATE_CONTROL</h5><p>这种输入框和传统的搜索帮助自带的日期输入形式一致。</p>
+<h5 id="④ISU-EDM-DATE-CONTROL-POPUP"><a href="#④ISU-EDM-DATE-CONTROL-POPUP" class="headerlink" title="④ISU_EDM_DATE_CONTROL_POPUP"></a>④ISU_EDM_DATE_CONTROL_POPUP</h5><p>和上面的输入方式类似，但是这种形式的输入框会将周六和周日使用红色字体标注出来。</p>
+<h4 id="（3）图示-9"><a href="#（3）图示-9" class="headerlink" title="（3）图示"></a>（3）图示</h4><h5 id="①F4-DATE-1"><a href="#①F4-DATE-1" class="headerlink" title="①F4_DATE"></a>①F4_DATE</h5><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.1.1 F4_DATE 展示界面.png" alt="10.1.1 F4_DATE 展示界面">
+
+<h5 id="②POPUP-TO-SELECT-MONTH-1"><a href="#②POPUP-TO-SELECT-MONTH-1" class="headerlink" title="②POPUP_TO_SELECT_MONTH"></a>②POPUP_TO_SELECT_MONTH</h5><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.2.1 POPUP_TO_SELECT_MONTH 展示界面.png" alt="10.2.1 POPUP_TO_SELECT_MONTH 展示界面">
+
+<h5 id="③F4-DATE-CONTROL-1"><a href="#③F4-DATE-CONTROL-1" class="headerlink" title="③F4_DATE_CONTROL"></a>③F4_DATE_CONTROL</h5><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.1.1 F4_DATE 展示界面.png" alt="10.1.1 F4_DATE 展示界面">
+
+<h5 id="④ISU-EDM-DATE-CONTROL-POPUP-1"><a href="#④ISU-EDM-DATE-CONTROL-POPUP-1" class="headerlink" title="④ISU_EDM_DATE_CONTROL_POPUP"></a>④ISU_EDM_DATE_CONTROL_POPUP</h5><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/10.4.1 ISU_EDM_DATE_CONTROL_POPUP 展示界面.png" alt="10.4.1 ISU_EDM_DATE_CONTROL_POPUP 展示界面">
+
+<h4 id="（4）源码参考-8"><a href="#（4）源码参考-8" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><h5 id="①F4-DATE-2"><a href="#①F4-DATE-2" class="headerlink" title="①F4_DATE"></a>①F4_DATE</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">  CLEAR: GV_DATE.</span><br><span class="line">  CALL FUNCTION &#39;F4_DATE&#39;</span><br><span class="line">*   EXPORTING</span><br><span class="line">*     DATE_FOR_FIRST_MONTH               &#x3D; SY-DATUM &quot;用于确定要显示的第一个月</span><br><span class="line">*     DISPLAY                            &#x3D; &#39; &#39;      &quot;X &#x3D; 不允许变更</span><br><span class="line">*     FACTORY_CALENDAR_ID                &#x3D; &#39; &#39;      &quot;时区（数据来源 TFACD）</span><br><span class="line">*     GREGORIAN_CALENDAR_FLAG            &#x3D; &#39; &#39;      &quot;显示公历</span><br><span class="line">*     HOLIDAY_CALENDAR_ID                &#x3D; &#39; &#39;      &quot;公共假日日历(数据来源 THOCI)</span><br><span class="line">*     PROGNAME_FOR_FIRST_MONTH           &#x3D; &#39; &#39;      &quot;程序名称</span><br><span class="line">*     DATE_POSITION                      &#x3D; &#39; &#39;      &quot;所选日期的位置</span><br><span class="line">    IMPORTING                                       &quot;（空格&#x3D;中心，T&#x3D;顶部，B&#x3D;底部）</span><br><span class="line">      SELECT_DATE                        &#x3D; GV_DATE  &quot;返回选中的日期</span><br><span class="line">*     SELECT_WEEK                        &#x3D;          &quot;</span><br><span class="line">*     SELECT_WEEK_BEGIN                  &#x3D;          &quot;</span><br><span class="line">*     SELECT_WEEK_END                    &#x3D;          &quot;</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      CALENDAR_BUFFER_NOT_LOADABLE       &#x3D; 1</span><br><span class="line">      DATE_AFTER_RANGE                   &#x3D; 2</span><br><span class="line">      DATE_BEFORE_RANGE                  &#x3D; 3</span><br><span class="line">      DATE_INVALID                       &#x3D; 4</span><br><span class="line">      FACTORY_CALENDAR_NOT_FOUND         &#x3D; 5</span><br><span class="line">      HOLIDAY_CALENDAR_NOT_FOUND         &#x3D; 6</span><br><span class="line">      PARAMETER_CONFLICT                 &#x3D; 7</span><br><span class="line">      OTHERS                             &#x3D; 8.</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Date pop-up abnormality</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<h5 id="②POPUP-TO-SELECT-MONTH-2"><a href="#②POPUP-TO-SELECT-MONTH-2" class="headerlink" title="②POPUP_TO_SELECT_MONTH"></a>②POPUP_TO_SELECT_MONTH</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  DATA:</span><br><span class="line">    LV_RESULT       TYPE C,</span><br><span class="line">    LV_MONTH        TYPE ISELLIST-MONTH.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CALL FUNCTION &#39;POPUP_TO_SELECT_MONTH&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      ACTUAL_MONTH                     &#x3D; SY-DATUM+0(6) &quot;初始日期</span><br><span class="line">*     FACTORY_CALENDAR                 &#x3D; &#39; &#39;      &quot;时区（数据来源 TFACD）</span><br><span class="line">*     HOLIDAY_CALENDAR                 &#x3D; &#39; &#39;      &quot;公共假日日历(数据来源 THOCI)</span><br><span class="line">*     LANGUAGE                         &#x3D; SY-LANGU &quot;系统语言</span><br><span class="line">*     START_COLUMN                     &#x3D; 8        &quot;开始列</span><br><span class="line">*     START_ROW                        &#x3D; 5        &quot;开始行</span><br><span class="line">    IMPORTING</span><br><span class="line">      SELECTED_MONTH                   &#x3D; LV_MONTH &quot;返回年月</span><br><span class="line">      RETURN_CODE                      &#x3D; LV_RESULT&quot;返回值</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      FACTORY_CALENDAR_NOT_FOUND       &#x3D; 1</span><br><span class="line">      HOLIDAY_CALENDAR_NOT_FOUND       &#x3D; 2</span><br><span class="line">      MONTH_NOT_FOUND                  &#x3D; 3</span><br><span class="line">      OTHERS                           &#x3D; 4.</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Date pop-up abnormality</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br><span class="line"></span><br><span class="line">  CHECK LV_RESULT EQ &#39;1&#39;.</span><br><span class="line">  WRITE:&#x2F; &#39;输入的年月：&#39;,LV_MONTH.</span><br></pre></td></tr></table></figure>
+
+<h5 id="③F4-DATE-CONTROL-2"><a href="#③F4-DATE-CONTROL-2" class="headerlink" title="③F4_DATE_CONTROL"></a>③F4_DATE_CONTROL</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">  CLEAR: GV_DATE.</span><br><span class="line">  CALL FUNCTION &#39;F4_DATE_CONTROL&#39;</span><br><span class="line">*   EXPORTING</span><br><span class="line">*     DATE_FOR_FIRST_MONTH               &#x3D; SY-DATUM &quot;用于确定要显示的第一个月</span><br><span class="line">*     DISPLAY                            &#x3D; &#39; &#39;      &quot;X &#x3D; 不允许变更</span><br><span class="line">*     FACTORY_CALENDAR_ID                &#x3D; &#39; &#39;      &quot;时区（数据来源 TFACD）</span><br><span class="line">*     GREGORIAN_CALENDAR_FLAG            &#x3D; &#39; &#39;      &quot;显示公历</span><br><span class="line">*     HOLIDAY_CALENDAR_ID                &#x3D; &#39; &#39;      &quot;公共假日日历(数据来源 THOCI)</span><br><span class="line">*     HOLIDAY_STYLE                      &#x3D; &#39;6&#39;      &quot;公共假日样式</span><br><span class="line">*     PROGNAME_FOR_FIRST_MONTH           &#x3D; &#39; &#39;      &quot;程序名称</span><br><span class="line">*     WEEK_BEGIN_DAY                     &#x3D; 1</span><br><span class="line">*     SELECT_OPTION_WEEK                 &#x3D; &#39; &#39;</span><br><span class="line">*     SELECT_OPTION_MONTH                &#x3D; &#39; &#39;</span><br><span class="line">*     DATE_POSITION                      &#x3D; &#39; &#39;      &quot;所选日期的位置</span><br><span class="line">    IMPORTING                                       &quot;（空格&#x3D;中心，T&#x3D;顶部，B&#x3D;底部）</span><br><span class="line">      SELECT_DATE                        &#x3D; GV_DATE</span><br><span class="line">*     SELECT_WEEK                        &#x3D;</span><br><span class="line">*     SELECT_BEGIN                       &#x3D;</span><br><span class="line">*     SELECT_END                         &#x3D;</span><br><span class="line">*     SELECT_MONTH                       &#x3D;</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      CALENDAR_BUFFER_NOT_LOADABLE       &#x3D; 1</span><br><span class="line">      DATE_AFTER_RANGE                   &#x3D; 2</span><br><span class="line">      DATE_BEFORE_RANGE                  &#x3D; 3</span><br><span class="line">      DATE_INVALID                       &#x3D; 4</span><br><span class="line">      FACTORY_CALENDAR_NOT_FOUND         &#x3D; 5</span><br><span class="line">      HOLIDAY_CALENDAR_NOT_FOUND         &#x3D; 6</span><br><span class="line">      PARAMETER_CONFLICT                 &#x3D; 7</span><br><span class="line">      OTHERS                             &#x3D; 8.</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Date pop-up abnormality</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<h5 id="④ISU-EDM-DATE-CONTROL-POPUP-2"><a href="#④ISU-EDM-DATE-CONTROL-POPUP-2" class="headerlink" title="④ISU_EDM_DATE_CONTROL_POPUP"></a>④ISU_EDM_DATE_CONTROL_POPUP</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">  CLEAR: GV_DATE.</span><br><span class="line">  CALL FUNCTION &#39;ISU_EDM_DATE_CONTROL_POPUP&#39;</span><br><span class="line">*   EXPORTING</span><br><span class="line">*     X_DATE                  &#x3D; SY-DATUM  &quot;起使日期</span><br><span class="line">*     XT_DAY_INFO             &#x3D;           &quot;表包含颜色和工具提示信息</span><br><span class="line">*     X_DISPLAY               &#x3D; &#39; &#39;       &quot;是否允许输入</span><br><span class="line">*     X_YEAR_BEGIN            &#x3D;           &quot;初始年份</span><br><span class="line">*     X_YEAR_END              &#x3D;           &quot;最终年份</span><br><span class="line">*     X_WEEK_BEGIN_DAY        &#x3D; &#39;1&#39;       &quot;一周开始的日期</span><br><span class="line">*     X_SELECT_WEEK           &#x3D; &#39; &#39;       &quot;是否可以选择一周</span><br><span class="line">*     X_SELECT_MONTH          &#x3D; &#39; &#39;       &quot;是否可以选择月份</span><br><span class="line">*     X_WEEKEND_DAYS          &#x3D; &#39;67&#39;      &quot;定义为周末的日子</span><br><span class="line">*     X_DISP_HOR_VERT         &#x3D; &#39;V&#39;       &quot;&#39;H&#39;水平或&#39;V&#39;水平</span><br><span class="line">    IMPORTING</span><br><span class="line">      Y_DATE_SELECTED         &#x3D; GV_DATE   &quot;返回选中的日期</span><br><span class="line">*     Y_WEEK_SELECTED         &#x3D;</span><br><span class="line">*     Y_MONTH_SELECTED        &#x3D;</span><br><span class="line">*     Y_SELECTION_BEGIN       &#x3D;</span><br><span class="line">*     Y_SELECTION_END         &#x3D;</span><br><span class="line">            .</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0.</span><br><span class="line">    &quot;Date pop-up abnormality</span><br><span class="line">    MESSAGE TEXT-E03 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="四、文本框Function"><a href="#四、文本框Function" class="headerlink" title="四、文本框Function"></a>四、文本框Function</h2><h3 id="1-文本框展示内容"><a href="#1-文本框展示内容" class="headerlink" title="1.文本框展示内容"></a>1.文本框展示内容</h3><h4 id="（1）方法名-8"><a href="#（1）方法名-8" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>ADA_POPUP_WITH_TABLE</strong></p>
+<h4 id="（2）介绍-10"><a href="#（2）介绍-10" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>该Function是使用文本框来查看文本内容的，可以对展示的文本内容进行打印和下载成Excel等操作。在展示文本框方面十分的简洁。</p>
+<h4 id="（3）图示-10"><a href="#（3）图示-10" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/11.1 ADA_POPUP_WITH_TABLE 展示界面.png" alt="11.1 ADA_POPUP_WITH_TABLE 展示界面" style="zoom:80%;">
+
+<br>
+
+<h4 id="（4）源码参考-9"><a href="#（4）源码参考-9" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">*全局变量结构</span><br><span class="line">  DATA:</span><br><span class="line">    BEGIN OF GS_TEXT,</span><br><span class="line">      TDLINE          TYPE CHAR255,</span><br><span class="line">    END   OF GS_TEXT,</span><br><span class="line">    GT_TEXT			  LIKE TABLE OF GS_TEXT.</span><br><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  DATA:</span><br><span class="line">    LV_TITLE        TYPE STRING VALUE &#39;Text Box&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CHECK GT_TEXT IS NOT INITIAL.</span><br><span class="line"></span><br><span class="line">  CALL FUNCTION &#39;ADA_POPUP_WITH_TABLE&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      STARTPOS_COL            &#x3D; 1</span><br><span class="line">      STARTPOS_ROW            &#x3D; 1</span><br><span class="line">*     TITLETEXT               &#x3D; LV_TITLE</span><br><span class="line">*     WORDWRAP_POSITION       &#x3D;</span><br><span class="line">    TABLES</span><br><span class="line">      VALUETAB                &#x3D; GT_TEXT.</span><br><span class="line">  IF SY-SUBRC NE 0.</span><br><span class="line">    &quot;Text pop-up function exception</span><br><span class="line">    MESSAGE TEXT-E04 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="2-文本框编辑内容"><a href="#2-文本框编辑内容" class="headerlink" title="2.文本框编辑内容"></a>2.文本框编辑内容</h3><h4 id="（1）方法名-9"><a href="#（1）方法名-9" class="headerlink" title="（1）方法名"></a>（1）方法名</h4><p><strong>TERM_CONTROL_EDIT</strong></p>
+<h4 id="（2）介绍-11"><a href="#（2）介绍-11" class="headerlink" title="（2）介绍"></a>（2）介绍</h4><p>文本框弹框可以用于编辑，而且也接受通过Excel上传数据，完成之后也可以将页面内容下载成Excel。</p>
+<h4 id="（3）图示-11"><a href="#（3）图示-11" class="headerlink" title="（3）图示"></a>（3）图示</h4><img src="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/12.1 TERM_CONTROL_EDIT 展示界面.png" alt="12.1 TERM_CONTROL_EDIT 展示界面" style="zoom:80%;">
+
+<br>
+
+<h4 id="（4）源码参考-10"><a href="#（4）源码参考-10" class="headerlink" title="（4）源码参考"></a>（4）源码参考</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">*全局变量结构</span><br><span class="line">  DATA:</span><br><span class="line">    BEGIN OF GS_TEXT,</span><br><span class="line">      TDLINE          TYPE CHAR255,</span><br><span class="line">    END   OF GS_TEXT,</span><br><span class="line">    GT_TEXT			  LIKE TABLE OF GS_TEXT.</span><br><span class="line">*--------------------------Variables-----------------------------------*</span><br><span class="line">  DATA:</span><br><span class="line">    LV_TITLE        TYPE STRING VALUE &#39;Text Box&#39;.</span><br><span class="line">*----------------------------Logic-------------------------------------*</span><br><span class="line">  CHECK GT_TEXT IS NOT INITIAL.</span><br><span class="line">  CALL FUNCTION &#39;TERM_CONTROL_EDIT&#39;</span><br><span class="line">    EXPORTING</span><br><span class="line">      TITEL                &#x3D; LV_TITLE</span><br><span class="line">      LANGU                &#x3D; SY-LANGU</span><br><span class="line">    TABLES</span><br><span class="line">      TEXTLINES            &#x3D; GT_TEXT</span><br><span class="line">    EXCEPTIONS</span><br><span class="line">      USER_CANCELLED       &#x3D; 1</span><br><span class="line">      OTHERS               &#x3D; 2.</span><br><span class="line">  IF SY-SUBRC &lt;&gt; 0 AND SY-SUBRC &lt;&gt; 1.</span><br><span class="line">    &quot;Text pop-up function exception</span><br><span class="line">    MESSAGE TEXT-E04 TYPE GC_S DISPLAY LIKE GC_E.</span><br><span class="line">  ENDIF.</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="五、参考资料"><a href="#五、参考资料" class="headerlink" title="五、参考资料"></a>五、参考资料</h2><p><a href="https://blog.csdn.net/weixin_42646630/article/details/110092714" target="_blank" rel="noopener">SAP 中POPUP函数的弹出框汇总</a></p>
+<p><a href="http://www.baidusap.com/abap/function/3719" target="_blank" rel="noopener">弹出选择框函数汇总</a></p>
+<p><a href="http://www.baidusap.com/abap/report/6116" target="_blank" rel="noopener">可输入弹出窗口-[POPUP_GET_VALUES_USER_HELP]</a></p>
+<p><a href="http://www.baidusap.com/abap/report/3683" target="_blank" rel="noopener">选择画面中日期F4输入帮助函数汇总</a></p>
+<p><a href="https://blog.csdn.net/Qunending/article/details/119892258" target="_blank" rel="noopener">SAP-ABAP-ALV弹出窗口供用户输入，获取输入数据</a></p>
+
+      
+
+
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,7 +493,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -219,501 +510,116 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150*150&data=http://yemaojun99.github.io2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/31/ABAP/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/" class="archive-article-date">
-  	<time datetime="2023-05-31T00:26:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/31/ABAP/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">F4搜索帮助自定义列名</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/31/ABAP/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/F4%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E5%90%8D/">F4搜索帮助自定义列名</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/搜索帮助//" class="article-tag-list-link color5">搜索帮助</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">SAP 弹框Function汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、报表弹框Function"><span class="toc-number">1.1.</span> <span class="toc-text">一、报表弹框Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ALV-报表Function"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.ALV 报表Function</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-报表复选框"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.报表复选框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-1"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-1"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-1"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-1"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、普通弹框Function"><span class="toc-number">1.2.</span> <span class="toc-text">二、普通弹框Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-长文本弹框"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.长文本弹框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-2"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-2"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-2"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-2"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Form设置的弹框内容"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Form设置的弹框内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-3"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-3"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-3"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-3"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-两段5行文本弹框"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.两段5行文本弹框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-4"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-4"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-4"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-4"><span class="toc-number">1.2.3.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-无需确认的弹框"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.无需确认的弹框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-5"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-5"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-5"><span class="toc-number">1.2.4.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-5"><span class="toc-number">1.2.4.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-横板确认弹框"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.横板确认弹框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-6"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-6"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-6"><span class="toc-number">1.2.5.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-6"><span class="toc-number">1.2.5.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-竖版确认弹框"><span class="toc-number">1.2.6.</span> <span class="toc-text">6.竖版确认弹框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">（1）方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-7"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-7"><span class="toc-number">1.2.6.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）参考源码"><span class="toc-number">1.2.6.4.</span> <span class="toc-text">（4）参考源码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、可输入弹框Function"><span class="toc-number">1.3.</span> <span class="toc-text">三、可输入弹框Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-自定义输入框"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.自定义输入框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-7"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-8"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-8"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-7"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">（4）源码参考</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（5）SVAL结构解析"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">（5）SVAL结构解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-年月日-日期输入框"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.年月日 日期输入框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法-1"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">（1）方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-9"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">（2）介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#①F4-DATE"><span class="toc-number">1.3.2.2.1.</span> <span class="toc-text">①F4_DATE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#②POPUP-TO-SELECT-MONTH"><span class="toc-number">1.3.2.2.2.</span> <span class="toc-text">②POPUP_TO_SELECT_MONTH</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#③F4-DATE-CONTROL"><span class="toc-number">1.3.2.2.3.</span> <span class="toc-text">③F4_DATE_CONTROL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#④ISU-EDM-DATE-CONTROL-POPUP"><span class="toc-number">1.3.2.2.4.</span> <span class="toc-text">④ISU_EDM_DATE_CONTROL_POPUP</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-9"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">（3）图示</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#①F4-DATE-1"><span class="toc-number">1.3.2.3.1.</span> <span class="toc-text">①F4_DATE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#②POPUP-TO-SELECT-MONTH-1"><span class="toc-number">1.3.2.3.2.</span> <span class="toc-text">②POPUP_TO_SELECT_MONTH</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#③F4-DATE-CONTROL-1"><span class="toc-number">1.3.2.3.3.</span> <span class="toc-text">③F4_DATE_CONTROL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#④ISU-EDM-DATE-CONTROL-POPUP-1"><span class="toc-number">1.3.2.3.4.</span> <span class="toc-text">④ISU_EDM_DATE_CONTROL_POPUP</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-8"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">（4）源码参考</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#①F4-DATE-2"><span class="toc-number">1.3.2.4.1.</span> <span class="toc-text">①F4_DATE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#②POPUP-TO-SELECT-MONTH-2"><span class="toc-number">1.3.2.4.2.</span> <span class="toc-text">②POPUP_TO_SELECT_MONTH</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#③F4-DATE-CONTROL-2"><span class="toc-number">1.3.2.4.3.</span> <span class="toc-text">③F4_DATE_CONTROL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#④ISU-EDM-DATE-CONTROL-POPUP-2"><span class="toc-number">1.3.2.4.4.</span> <span class="toc-text">④ISU_EDM_DATE_CONTROL_POPUP</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、文本框Function"><span class="toc-number">1.4.</span> <span class="toc-text">四、文本框Function</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-文本框展示内容"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.文本框展示内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-8"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-10"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-10"><span class="toc-number">1.4.1.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-9"><span class="toc-number">1.4.1.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文本框编辑内容"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.文本框编辑内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）方法名-9"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">（1）方法名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）介绍-11"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">（2）介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）图示-11"><span class="toc-number">1.4.2.3.</span> <span class="toc-text">（3）图示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）源码参考-10"><span class="toc-number">1.4.2.4.</span> <span class="toc-text">（4）源码参考</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、参考资料"><span class="toc-number">1.5.</span> <span class="toc-text">五、参考资料</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/20/ABAP/Excel-%E4%B8%8A%E4%BC%A0/Excel-%E4%B8%8A%E4%BC%A0/" class="archive-article-date">
-  	<time datetime="2023-05-20T12:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/20/ABAP/Excel-%E4%B8%8A%E4%BC%A0/Excel-%E4%B8%8A%E4%BC%A0/">Excel 上传</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP/Excel-Upload//" class="article-tag-list-link color3">Excel Upload</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/20/ABAP/Excel-%E4%B8%8B%E8%BD%BD/Excel%E4%B8%8B%E8%BD%BD/" class="archive-article-date">
-  	<time datetime="2023-05-20T12:44:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/20/ABAP/Excel-%E4%B8%8B%E8%BD%BD/Excel%E4%B8%8B%E8%BD%BD/">Excel 下载</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP/Excel-Donwload//" class="article-tag-list-link color5">Excel Donwload</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/04/16/ABAP/ABAP%E6%9D%82%E9%A1%B9%E8%AE%B0%E5%BD%95/SAP%20%E5%8A%A8%E6%80%81GUI%E6%8C%89%E9%92%AE%E6%96%87%E6%9C%AC/SAP-GUI-Dynmic-Text/" class="archive-article-date">
-  	<time datetime="2023-04-16T08:30:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/04/16/ABAP/ABAP%E6%9D%82%E9%A1%B9%E8%AE%B0%E5%BD%95/SAP%20%E5%8A%A8%E6%80%81GUI%E6%8C%89%E9%92%AE%E6%96%87%E6%9C%AC/SAP-GUI-Dynmic-Text/">SAP GUI Dynamic Text</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OOALV//" class="article-tag-list-link color1">OOALV</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Dialog//" class="article-tag-list-link color2">Dialog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2023-03-15T12:02:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">OData 学习笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OData//" class="article-tag-list-link color1">OData</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/03/15/ABAP/ABAP%E6%9D%82%E9%A1%B9%E8%AE%B0%E5%BD%95/%E6%9D%82%E9%A1%B9%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86/%E6%9D%82%E9%A1%B9%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86/" class="archive-article-date">
-  	<time datetime="2023-03-15T11:51:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/15/ABAP/ABAP%E6%9D%82%E9%A1%B9%E8%AE%B0%E5%BD%95/%E6%9D%82%E9%A1%B9%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86/%E6%9D%82%E9%A1%B9%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86/">SAP 杂项知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP基础//" class="article-tag-list-link color2">ABAP基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/23/ABAP/OOALV/OOALV%E4%BA%8B%E4%BB%B6%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2023-02-23T13:18:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/23/ABAP/OOALV/OOALV%E4%BA%8B%E4%BB%B6%E7%B1%BB/">OOALV 事件类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OOALV//" class="article-tag-list-link color1">OOALV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/23/ABAP/OOALV/OOALV%E5%AE%B9%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2023-02-23T13:17:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/23/ABAP/OOALV/OOALV%E5%AE%B9%E5%99%A8/">OOALV 容器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OOALV//" class="article-tag-list-link color1">OOALV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2023-02-23T13:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">OOALV 基础知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ABAP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ABAP//" class="article-tag-list-link color5">ABAP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/OOALV//" class="article-tag-list-link color1">OOALV</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/ABAP/page/2/">2</a><a class="extend next" rel="next" href="/tags/ABAP/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -737,9 +643,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
