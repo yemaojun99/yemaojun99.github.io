@@ -42,7 +42,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -53,10 +53,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -116,10 +116,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -193,7 +193,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>第二章ABAP数据类型学习！</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>第二章 数据类型</h1></center>
 
@@ -202,16 +202,16 @@
 </li>
 <li><p><strong>数据变量（Data Variable）</strong>参照数据类型定义的、可以存储值的变量。</p>
 <p>数据类型与数据变量的定义实例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Data TYPE]</span><br><span class="line">TYPES dtype[TYPE type | LIKE dobj]</span><br><span class="line">[Data Variable]</span><br><span class="line">DATA var [TYPE type | LIKE dobj]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Data TYPE]</span><br><span class="line">TYPES dtype[TYPE type | LIKE dobj]</span><br><span class="line">[Data Variable]</span><br><span class="line">DATA var [TYPE type | LIKE dobj]</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h3 id="2-1-1数据类型"><a href="#2-1-1数据类型" class="headerlink" title="2.1.1数据类型"></a>2.1.1数据类型</h3><p>​        数据类型在ABAP程序中用于定义变量类型。数据类型和数据对象是单独声明的，数据对象则参照数据类型定义。在程序中利用TYPES语句声明数据类型，这种数据类型只能在该程序中使用，因此也称为本地数据类型。</p>
-<p>​        本地数据类型参照已有的第二章ABAP数据类型进行声明。从数据类型层面考虑，ABAP程序的特点是可以参照ABAP数据字典自身的数据类型定义变量，这种特征便于开发者编程。</p>
+<h3 id="2-1-1数据类型"><a href="#2-1-1数据类型" class="headerlink" title="2.1.1数据类型"></a>2.1.1数据类型</h3><p>​		数据类型在ABAP程序中用于定义变量类型。数据类型和数据对象是单独声明的，数据对象则参照数据类型定义。在程序中利用TYPES语句声明数据类型，这种数据类型只能在该程序中使用，因此也称为本地数据类型。</p>
+<p>​		本地数据类型参照已有的第二章ABAP数据类型进行声明。从数据类型层面考虑，ABAP程序的特点是可以参照ABAP数据字典自身的数据类型定义变量，这种特征便于开发者编程。</p>
 <br>
 
-<h3 id="2-1-2数据变量"><a href="#2-1-2数据变量" class="headerlink" title="2.1.2数据变量"></a>2.1.2数据变量</h3><p>​        数据变量（Data Variable）是在程序中参照数据类型（Data Type）定义的值。在ABAP程序中最常用的方法是用Data语句定义变量。</p>
-<p>​        <strong>数据对象：</strong>只有在程序执行期间占用内存物理地址，ABAP语句首先利用数据对象名称确认地址，然后根据参照数据类型的字段长度及小数位等信息解析内容。数据对象里存在没有固定名称的类型，如（WRITE‘ABCDE’）、Text Symbol、（WRITE text-001）、Variable（DATA，STATICS，CLASS-DATA，PARAMETERS）、Constants等类型。</p>
+<h3 id="2-1-2数据变量"><a href="#2-1-2数据变量" class="headerlink" title="2.1.2数据变量"></a>2.1.2数据变量</h3><p>​		数据变量（Data Variable）是在程序中参照数据类型（Data Type）定义的值。在ABAP程序中最常用的方法是用Data语句定义变量。</p>
+<p>​		<strong>数据对象：</strong>只有在程序执行期间占用内存物理地址，ABAP语句首先利用数据对象名称确认地址，然后根据参照数据类型的字段长度及小数位等信息解析内容。数据对象里存在没有固定名称的类型，如（WRITE‘ABCDE’）、Text Symbol、（WRITE text-001）、Variable（DATA，STATICS，CLASS-DATA，PARAMETERS）、Constants等类型。</p>
 <br>
 
 <h3 id="2-1-3数据类型的种类"><a href="#2-1-3数据类型的种类" class="headerlink" title="2.1.3数据类型的种类"></a>2.1.3数据类型的种类</h3><p><img src="/2021/03/17/ABAP/ABAP%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E7%AB%A0ABAP%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.JPG" alt="数据类型"></p>
@@ -252,7 +252,7 @@
 <tr>
 <td align="center"><strong>D</strong></td>
 <td align="center">8个字符</td>
-<td align="center">/</td>
+<td align="center">&#x2F;</td>
 <td align="center">“00000000”</td>
 <td align="center">日期类型</td>
 <td align="center">日期格式必须为 YYYYMMDD</td>
@@ -260,7 +260,7 @@
 <tr>
 <td align="center"><strong>T</strong></td>
 <td align="center">6个字符</td>
-<td align="center">/</td>
+<td align="center">&#x2F;</td>
 <td align="center">“000000”</td>
 <td align="center">时间类型</td>
 <td align="center">格式为 24-hour的 HHMMSS</td>
@@ -276,7 +276,7 @@
 <tr>
 <td align="center"><strong>F</strong></td>
 <td align="center">8bytes</td>
-<td align="center">/</td>
+<td align="center">&#x2F;</td>
 <td align="center">0</td>
 <td align="center">浮点类型</td>
 <td align="center">小数位最大可以到17位，即可精确到小数点后17位；如果要求高精度，则不应该使用类型 F 数据。而应代之以类型 P 数据；如果值是小数，则要将值使用引号引起来。</td>
@@ -303,7 +303,7 @@
 
 <p><strong>2.局部数据类型（存在于程序内部）</strong></p>
 <p>在ABAP程序中用ABAP基本数据类型定义局部数据类型。另外，还可以定义包含多个ABAP基本数据类型的结构体（structure）类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPES dtype[TYPE type|LIKE dobj]...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPES dtype[TYPE type|LIKE dobj]...</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -317,19 +317,19 @@
 <br>
 
 <h2 id="2-2-数据类型的声明代码实例"><a href="#2-2-数据类型的声明代码实例" class="headerlink" title="2.2 数据类型的声明代码实例"></a>2.2 数据类型的声明代码实例</h2><p><strong>1、参考基本数据类型定义变量</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE i,</span><br><span class="line">	 gv_deci	TYPE f,</span><br><span class="line">	 gv_data	TYPE d,</span><br><span class="line">	 gv_time	TYPE t,</span><br><span class="line">	 gv_text1	TYPE c,</span><br><span class="line">	 gv_text2(2) TYPE c,</span><br><span class="line">	 gv_longtext TYPE string.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE i,</span><br><span class="line">	 gv_deci	TYPE f,</span><br><span class="line">	 gv_data	TYPE d,</span><br><span class="line">	 gv_time	TYPE t,</span><br><span class="line">	 gv_text1	TYPE c,</span><br><span class="line">	 gv_text2(2) TYPE c,</span><br><span class="line">	 gv_longtext TYPE string.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <p><strong>2、参考局部数据类型定义变量</strong></p>
 <p>将程序中常用的数据及结构声明为一个数据类型，定义变量时可以参照此数据类型定义（C语言中的结构体、java语言中的类只不过没有基本的方法）。此数据类型只能在该程序内部使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	TYPES:BEGIN OF t_struct,&quot;!t_struct为结构体名字</span><br><span class="line">		  co11 TYPE c,</span><br><span class="line">		  col2 TYPE i,</span><br><span class="line">		  col3 TYPE d,</span><br><span class="line">		 END OF t_struct.</span><br><span class="line">&quot;!以上为声明局部变量（结构体）的过程</span><br><span class="line">&quot;！下面为定义数据类型为t_struct的变量的过程</span><br><span class="line">	DATA:gs_struct TYPE t_struct,</span><br><span class="line">		 gv var LIKE gs struct-col1.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	TYPES:BEGIN OF t_struct,&quot;!t_struct为结构体名字</span><br><span class="line">		  co11 TYPE c,</span><br><span class="line">		  col2 TYPE i,</span><br><span class="line">		  col3 TYPE d,</span><br><span class="line">		 END OF t_struct.</span><br><span class="line">&quot;!以上为声明局部变量（结构体）的过程</span><br><span class="line">&quot;！下面为定义数据类型为t_struct的变量的过程</span><br><span class="line">	DATA:gs_struct TYPE t_struct,</span><br><span class="line">		 gv var LIKE gs struct-col1.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <p><strong>3、参照全局数据类型定义变量</strong></p>
 <p>参照全局数据类型定义变量是指利用ABAP数据字典（表、结构体、数据元素等）定义变量的方法，此数据类型在所有程序中都可以使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	DATA:gv_carrid		TYPE s_carr_id,</span><br><span class="line">		 gv_connid		TYPE sflight-carrid,</span><br><span class="line">		 gv_matnr		TYPE mara-matnr.</span><br><span class="line">&quot;!右边的TYPE类型为全局数据类型</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	DATA:gv_carrid		TYPE s_carr_id,</span><br><span class="line">		 gv_connid		TYPE sflight-carrid,</span><br><span class="line">		 gv_matnr		TYPE mara-matnr.</span><br><span class="line">&quot;!右边的TYPE类型为全局数据类型</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -337,28 +337,28 @@
 
 <h2 id="2-3-DATA语句"><a href="#2-3-DATA语句" class="headerlink" title="2.3 DATA语句"></a>2.3 DATA语句</h2><p>DATA数据类型用于定义数据变量。变量名包括”_“，最长可以定义30位。</p>
 <h3 id="1、TYPE-type"><a href="#1、TYPE-type" class="headerlink" title="1、TYPE type"></a>1、TYPE type</h3><p>定义数据类型的类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE i.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE i.</span><br></pre></td></tr></table></figure>
 
 <p>冒号”：“使一个命令从逗号”，“开始执行，遇到句号”.“结束。多次执行相同命令时使用冒号”：“可以避免反复使用相同命令的现象。如声明变量。</p>
 <br>
 
 <h3 id="2、LIKE-num"><a href="#2、LIKE-num" class="headerlink" title="2、LIKE num"></a>2、LIKE num</h3><p>定义与前一个变量相同类型的变量时使用该语句，<strong>num</strong>可以是任何一种数据类型的变量（字段、参数、结构体、系统变量等）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num1	LIKE gv_num2.&quot;!定义与gv_num1相同数据类型的变量名位gv_num2的变量</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num1	LIKE gv_num2.&quot;!定义与gv_num1相同数据类型的变量名位gv_num2的变量</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="3、VALUE-int"><a href="#3、VALUE-int" class="headerlink" title="3、VALUE int"></a>3、VALUE int</h3><p>该语句用于定义变量的初始值，若未赋初始值则会使用声明的数据类型的默认初始值（见2.1概要）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num1	TYPE i		VALUE 123,</span><br><span class="line">	 gv_flag				VALUE &#39;X&#39;,</span><br><span class="line">	 gv_val					VALUE IS INITIAL,&quot;!同变量的默认初始值</span><br><span class="line">	 gv_idx		LIKE sy-tabix	VALUE 45.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num1	TYPE i		VALUE 123,</span><br><span class="line">	 gv_flag				VALUE &#x27;X&#x27;,</span><br><span class="line">	 gv_val					VALUE IS INITIAL,&quot;!同变量的默认初始值</span><br><span class="line">	 gv_idx		LIKE sy-tabix	VALUE 45.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="4、LENGTH-n"><a href="#4、LENGTH-n" class="headerlink" title="4、LENGTH n"></a>4、LENGTH n</h3><p>用于指定字段长度，但只适用于C（字符类型）、N（数字字符类型）、P（包类型）、X（十六进制）类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE n		LENGTH 2.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE n		LENGTH 2.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="5、DECIMALS-n"><a href="#5、DECIMALS-n" class="headerlink" title="5、DECIMALS n"></a>5、DECIMALS n</h3><p>用于指定1~14位小数，只适用于数据类型P。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE p		DECIMALS 3.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num		TYPE p		DECIMALS 3.</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -367,20 +367,20 @@
 <h2 id="2-4-ABAP基本语法（注释）"><a href="#2-4-ABAP基本语法（注释）" class="headerlink" title="2.4 ABAP基本语法（注释）"></a>2.4 ABAP基本语法（注释）</h2><ul>
 <li>ABAP程序使用句号”.“表示一个语句的结束。</li>
 <li>代码的注释有两种<ul>
-<li>符号”<em>“为行注释。如：\</em>This line is comment</li>
+<li>符号”*“为行注释。如：*This line is comment</li>
 <li>符号” “ “为右注释。如：WRITE gv_val.”Part of line is comment.</li>
 </ul>
 </li>
-<li>字符串使用单引号’   ‘显示。如gv_val = ‘Enjoy ABAP’.</li>
+<li>字符串使用单引号’   ‘显示。如gv_val &#x3D; ‘Enjoy ABAP’.</li>
 <li>命令要使用空格分开。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gv_val&#x3D;&#39;Enjoy ABAP&#39;.    &#x3D;&gt;错误写法，&#x3D;与‘之间没有写空格</span><br><span class="line">gv_val &#x3D; &#39;Enjoy ABAP&#39;.  &#x3D;&gt;正确写法</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gv_val=&#x27;Enjoy ABAP&#x27;.    =&gt;错误写法，=与‘之间没有写空格</span><br><span class="line">gv_val = &#x27;Enjoy ABAP&#x27;.  =&gt;正确写法</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <br>
 
-<h2 id="2-5-ABAP命名规则"><a href="#2-5-ABAP命名规则" class="headerlink" title="2.5 ABAP命名规则"></a>2.5 ABAP命名规则</h2><p>（1）SAP规定创建ABAP数据字典的程序及数据对象后命名时，要以Z或Y开头且不能使用如INSERT/APPEND等关键字。</p>
+<h2 id="2-5-ABAP命名规则"><a href="#2-5-ABAP命名规则" class="headerlink" title="2.5 ABAP命名规则"></a>2.5 ABAP命名规则</h2><p>（1）SAP规定创建ABAP数据字典的程序及数据对象后命名时，要以Z或Y开头且不能使用如INSERT&#x2F;APPEND等关键字。</p>
 <p>（2）ABAP程序中允许定义的变量名最大长度为30位，其中包含“_”符号。</p>
 <p><img src="/2021/03/17/ABAP/ABAP%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E7%AB%A0ABAP%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/ABAP%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99.png" alt="ABAP命名规则"></p>
 <br>
@@ -608,7 +608,7 @@
 </ul>
 <br>
 
-<h3 id="2、数字型"><a href="#2、数字型" class="headerlink" title="2、数字型"></a>2、数字型</h3><p>ABAP/4有3种数字类型（数字型）。数字类型的输出方式为靠右对齐。</p>
+<h3 id="2、数字型"><a href="#2、数字型" class="headerlink" title="2、数字型"></a>2、数字型</h3><p>ABAP&#x2F;4有3种数字类型（数字型）。数字类型的输出方式为靠右对齐。</p>
 <p><strong>（1）整数型I</strong></p>
 <ul>
 <li>值范围为-2^31（-2147483648）~2^31-1（2147483647）.</li>
@@ -627,19 +627,19 @@
 <li>可使用关键词LENGTH、DECIMALS进行补充，但值得注意的是P类型在声明时必须使用DECIMALS指定小数位个数。</li>
 <li>可变长度一般是指变量名称之后可指定变量长度（1~16）.</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_p(16) TYPE p</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_p(16) TYPE p</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>若不指定长度则默认长度为8B。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_p TYPE p</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_p TYPE p</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>程序属性设置如下图所示，应选择Fixed point arithmetic。若不选择，类型P就没有意义，与整数类型相同。</li>
 </ul>
 <p><img src="/2021/03/17/ABAP/ABAP%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E7%AB%A0ABAP%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE.JPG" alt="属性设置"></p>
 <p><strong>注意事项：</strong>若在创建程序时不选择上图所示的选框则运行如下代码时会得到结果“231”。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_1 TYPE p DECIMALS 1 VALUE &#39;1.1&#39;.</span><br><span class="line">DATA gv_2 TYPE p DECIMALS 1 VALUE &#39;2.1&#39;.</span><br><span class="line">DATA gv_3 TYPE p.</span><br><span class="line"></span><br><span class="line">gv_3 &#x3D; gv_1 * gv_2.</span><br><span class="line"></span><br><span class="line">WRITE gv_3.&quot;!实际正确结果为2.31，但由于没有设置上面的属性所以小数点消失了</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_1 TYPE p DECIMALS 1 VALUE &#x27;1.1&#x27;.</span><br><span class="line">DATA gv_2 TYPE p DECIMALS 1 VALUE &#x27;2.1&#x27;.</span><br><span class="line">DATA gv_3 TYPE p.</span><br><span class="line"></span><br><span class="line">gv_3 = gv_1 * gv_2.</span><br><span class="line"></span><br><span class="line">WRITE gv_3.&quot;!实际正确结果为2.31，但由于没有设置上面的属性所以小数点消失了</span><br></pre></td></tr></table></figure>
 
 
 
@@ -654,7 +654,7 @@
 <li>数值较大或者不需要进行四舍五入时可以适用类型F（因为在取近似值时使用，因此使用时需注意）。</li>
 <li>因为类型F是以指数形式显示，因此要调用函数“FLTP_CHAR_CONVERSION”把类型转换为其他数据类型后才能输出。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&quot;!输出F类型的举例</span><br><span class="line">DATA:gv_float1 TYPE f VALUE &#39;1.337&#39;.</span><br><span class="line">DATA:gv_float2 TYPE f VALUE &#39;2.7&#39;.</span><br><span class="line">DATA:gv_fresult TYPE f.</span><br><span class="line">DATA:gv_cresult TYPE c LENGTH 16.</span><br><span class="line"></span><br><span class="line">gv_fresult &#x3D; gv_float1 * gv_float2.</span><br><span class="line">WRITE:&#x2F;&#39;5:&#39;,gv_fresult.</span><br><span class="line"></span><br><span class="line">CALL FUNCTION &#39;FLTP_CHAR_CONVERSION&#39;</span><br><span class="line">EXPORTING</span><br><span class="line"> DECIM &#x3D; 2</span><br><span class="line"> INPUT &#x3D; gv_fresult</span><br><span class="line">IMPORTING</span><br><span class="line"> FLSTR &#x3D; gv_cresult.</span><br><span class="line"> </span><br><span class="line"> WRITE:&#x2F;&#39;6:&#39;,gv_cresult.“！&#x2F;代表换行</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&quot;!输出F类型的举例</span><br><span class="line">DATA:gv_float1 TYPE f VALUE &#x27;1.337&#x27;.</span><br><span class="line">DATA:gv_float2 TYPE f VALUE &#x27;2.7&#x27;.</span><br><span class="line">DATA:gv_fresult TYPE f.</span><br><span class="line">DATA:gv_cresult TYPE c LENGTH 16.</span><br><span class="line"></span><br><span class="line">gv_fresult = gv_float1 * gv_float2.</span><br><span class="line">WRITE:/&#x27;5:&#x27;,gv_fresult.</span><br><span class="line"></span><br><span class="line">CALL FUNCTION &#x27;FLTP_CHAR_CONVERSION&#x27;</span><br><span class="line">EXPORTING</span><br><span class="line"> DECIM = 2</span><br><span class="line"> INPUT = gv_fresult</span><br><span class="line">IMPORTING</span><br><span class="line"> FLSTR = gv_cresult.</span><br><span class="line"> </span><br><span class="line"> WRITE:/&#x27;6:&#x27;,gv_cresult.“！/代表换行</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -667,7 +667,7 @@
 <li>指定C类型长度时可以使用关键字LENGTH或在变量后使用符号”（）“，例：DATA：G_char(3) TYPE c.</li>
 <li>若系统只声明了变量单位声明变量类型则默认使用C类型，长度为1位。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_f0.“！此处的gv_f0变量与下面的gv_f1、gv_f2格式等同。</span><br><span class="line">DATA gv_f1 TYPE c.</span><br><span class="line">DATA gv_f2(1) TYPE c.</span><br><span class="line">DATA gv_f3(2) TYPE c.</span><br><span class="line">DATA gv_f4 TYPE c LENGTH 2.</span><br><span class="line">DATA gv_f5(5).</span><br><span class="line">DATA gv_len TYPE i.</span><br><span class="line"></span><br><span class="line">MOVE:&#39;CHINA&#39; TO gv_f0,</span><br><span class="line">  	 &#39;CHINA&#39; TO gv_f1,</span><br><span class="line">  	 &#39;CHINA&#39; TO gv_f2,</span><br><span class="line">  	 &#39;CHINA&#39; TO gv_f3,</span><br><span class="line">  	 &#39;CHINA&#39; TO gv_f4,</span><br><span class="line">  	 &#39;CHINA&#39; TO gv_f5.</span><br><span class="line">  	 </span><br><span class="line">WRITE:&#x2F;gv_f0,</span><br><span class="line">	  &#x2F;gv_f1,</span><br><span class="line">	  &#x2F;gv_f2,</span><br><span class="line">	  &#x2F;gv_f3,</span><br><span class="line">	  &#x2F;gv_f4.</span><br><span class="line">	  </span><br><span class="line">gv_len &#x3D; STRLEN(gv_f5).&quot;!获取当前字符串的字符个数。</span><br><span class="line">WRITR &#x2F;gv_len.</span><br><span class="line"></span><br><span class="line">&quot;!输出结果：</span><br><span class="line">”！C</span><br><span class="line">”！C</span><br><span class="line">”！C</span><br><span class="line">”！CH</span><br><span class="line">”！CH</span><br><span class="line">”！CHINA</span><br><span class="line">”！		5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">DATA gv_f0.“！此处的gv_f0变量与下面的gv_f1、gv_f2格式等同。</span><br><span class="line">DATA gv_f1 TYPE c.</span><br><span class="line">DATA gv_f2(1) TYPE c.</span><br><span class="line">DATA gv_f3(2) TYPE c.</span><br><span class="line">DATA gv_f4 TYPE c LENGTH 2.</span><br><span class="line">DATA gv_f5(5).</span><br><span class="line">DATA gv_len TYPE i.</span><br><span class="line"></span><br><span class="line">MOVE:&#x27;CHINA&#x27; TO gv_f0,</span><br><span class="line">  	 &#x27;CHINA&#x27; TO gv_f1,</span><br><span class="line">  	 &#x27;CHINA&#x27; TO gv_f2,</span><br><span class="line">  	 &#x27;CHINA&#x27; TO gv_f3,</span><br><span class="line">  	 &#x27;CHINA&#x27; TO gv_f4,</span><br><span class="line">  	 &#x27;CHINA&#x27; TO gv_f5.</span><br><span class="line">  	 </span><br><span class="line">WRITE:/gv_f0,</span><br><span class="line">	  /gv_f1,</span><br><span class="line">	  /gv_f2,</span><br><span class="line">	  /gv_f3,</span><br><span class="line">	  /gv_f4.</span><br><span class="line">	  </span><br><span class="line">gv_len = STRLEN(gv_f5).&quot;!获取当前字符串的字符个数。</span><br><span class="line">WRITR /gv_len.</span><br><span class="line"></span><br><span class="line">&quot;!输出结果：</span><br><span class="line">”！C</span><br><span class="line">”！C</span><br><span class="line">”！C</span><br><span class="line">”！CH</span><br><span class="line">”！CH</span><br><span class="line">”！CHINA</span><br><span class="line">”！		5</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -677,7 +677,7 @@
 <li>可变长度为：1~65535。</li>
 <li>定义N类型时，当变量长度不足时，加前导零不足位数的形式输出且以字符串形式显示数值。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num1 TYPE i.</span><br><span class="line">DATA:gv_num2 TYPE n LENGTH 4.</span><br><span class="line"></span><br><span class="line">gv_num1 &#x3D; 89.</span><br><span class="line">WRITE:&#x2F;gv_num1.&quot;!输出结果：89</span><br><span class="line"></span><br><span class="line">gv_num2 &#x3D; 89.</span><br><span class="line">WRITE:&#x2F;gv_num2.&quot;!输出结果：0089</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_num1 TYPE i.</span><br><span class="line">DATA:gv_num2 TYPE n LENGTH 4.</span><br><span class="line"></span><br><span class="line">gv_num1 = 89.</span><br><span class="line">WRITE:/gv_num1.&quot;!输出结果：89</span><br><span class="line"></span><br><span class="line">gv_num2 = 89.</span><br><span class="line">WRITE:/gv_num2.&quot;!输出结果：0089</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -687,7 +687,7 @@
 <li>时间类型T默认长度为6位，格式为”HHMMSS“。</li>
 <li>以上两种类型均可直接用来计算。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">*日期类型计算</span><br><span class="line">DATA:gv_date TYPE d.</span><br><span class="line">gvdate &#x3D; sy-datum.</span><br><span class="line">WRITE:&#x2F;gv_date.&quot;!20210316</span><br><span class="line"></span><br><span class="line">gv_date &#x3D; gv_date + 5.</span><br><span class="line">WRITE:&#x2F;gv_date.&quot;!20210321</span><br><span class="line"></span><br><span class="line">*时间类型计算</span><br><span class="line">DATA:gv_time TYPE t.</span><br><span class="line">gv_time &#x3D; sy-uzeit.</span><br><span class="line">WRITE:&#x2F;gv_time.&quot;!233354</span><br><span class="line"></span><br><span class="line">gv_time &#x3D; gv_time - 60.</span><br><span class="line">WRITE:&#x2F;gv_time.&quot;!233254</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">*日期类型计算</span><br><span class="line">DATA:gv_date TYPE d.</span><br><span class="line">gvdate = sy-datum.</span><br><span class="line">WRITE:/gv_date.&quot;!20210316</span><br><span class="line"></span><br><span class="line">gv_date = gv_date + 5.</span><br><span class="line">WRITE:/gv_date.&quot;!20210321</span><br><span class="line"></span><br><span class="line">*时间类型计算</span><br><span class="line">DATA:gv_time TYPE t.</span><br><span class="line">gv_time = sy-uzeit.</span><br><span class="line">WRITE:/gv_time.&quot;!233354</span><br><span class="line"></span><br><span class="line">gv_time = gv_time - 60.</span><br><span class="line">WRITE:/gv_time.&quot;!233254</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -705,43 +705,43 @@
 <tbody><tr>
 <td align="center">+</td>
 <td align="center">加法</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; + &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; + &lt;m&gt;</td>
 <td align="center">ADD &lt;n&gt; TO &lt;m&gt;</td>
 </tr>
 <tr>
 <td align="center">-</td>
 <td align="center">减法</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; - &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; - &lt;m&gt;</td>
 <td align="center">SUBTRACT &lt;n&gt; FROM &lt;m&gt;</td>
 </tr>
 <tr>
 <td align="center">*</td>
 <td align="center">乘法</td>
-<td align="center">&lt;p&gt; = &lt;m&gt; * &lt;n&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;m&gt; * &lt;n&gt;</td>
 <td align="center">MULTIPLY &lt;m&gt; BY &lt;n&gt;</td>
 </tr>
 <tr>
-<td align="center">/</td>
+<td align="center">&#x2F;</td>
 <td align="center">除法</td>
-<td align="center">&lt;p&gt; = &lt;m&gt; / &lt;n&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;m&gt; &#x2F; &lt;n&gt;</td>
 <td align="center">DIVDE &lt;m&gt; BY &lt;n&gt;</td>
 </tr>
 <tr>
 <td align="center">DIV</td>
 <td align="center">取整</td>
-<td align="center">&lt;p&gt; = &lt;m&gt; DIV &lt;n&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;m&gt; DIV &lt;n&gt;</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">MOD</td>
 <td align="center">取余</td>
-<td align="center">&lt;p&gt; = &lt;m&gt; MOD &lt;n&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;m&gt; MOD &lt;n&gt;</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">**</td>
 <td align="center">乘幂</td>
-<td align="center">&lt;p&gt; = &lt;m&gt; ** &lt;n&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;m&gt; ** &lt;n&gt;</td>
 <td align="center"></td>
 </tr>
 </tbody></table>
@@ -807,7 +807,7 @@
 </tr>
 <tr>
 <td align="center">EXP</td>
-<td align="center">指数函数（e=2.71828）</td>
+<td align="center">指数函数（e&#x3D;2.71828）</td>
 </tr>
 <tr>
 <td align="center">LOG</td>
@@ -854,12 +854,12 @@
 </tr>
 <tr>
 <td align="center">TRNSLATE</td>
-<td align="center">TRNSLTATE c TO LOWER/UPPER CASE.</td>
+<td align="center">TRNSLTATE c TO LOWER&#x2F;UPPER CASE.</td>
 <td align="center">将’c’中的字母进行大小写转换LOWER（小写）</td>
 </tr>
 <tr>
 <td align="center">SHIFT</td>
-<td align="center">SHIFT g LEFT/RIHGHT.</td>
+<td align="center">SHIFT g LEFT&#x2F;RIHGHT.</td>
 <td align="center">对’g’中的内容进行左移或右移</td>
 </tr>
 <tr>
@@ -886,7 +886,7 @@
 <br>
 
 <p>使用实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_str TYPE string,</span><br><span class="line">	 gv_chr(4) TYPE c.</span><br><span class="line">	 </span><br><span class="line">&quot;!FIND查找</span><br><span class="line">gv_str &#x3D; &#39;ABAP&#39;.</span><br><span class="line">gv_chr &#x3D; &#39;B&#39;.</span><br><span class="line">FIND gv_chr IN gv_str.</span><br><span class="line">WRITE sy-subrc.&quot;!0</span><br><span class="line">WRITE:&#x2F;.</span><br><span class="line">&quot;!IF sy-subrc EQ 0.</span><br><span class="line">&quot;!	WRITE &#39;B found&#39;.</span><br><span class="line">&quot;!ENDIF.</span><br><span class="line">   </span><br><span class="line">   &quot;!REPLACE替换</span><br><span class="line">    gv_str &#x3D; &#39;ABAP&#39;.</span><br><span class="line">    gv_chr &#x3D; &#39;BBAP&#39;.</span><br><span class="line">    REPLACE &#39;ABAP&#39; IN gv_str WITH INTO gv_chr.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;!BBAP</span><br><span class="line">    </span><br><span class="line">    &quot;!TRANSLATE大小写转换</span><br><span class="line">    gv_str &#x3D; &#39;ABAP&#39;.</span><br><span class="line">    TRANSLATE gv_str TO LOWER CASE.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;!abap</span><br><span class="line">    </span><br><span class="line">    &quot;!SHIFT移动</span><br><span class="line">    gv_str &#x3D; &#39;ABAP&#39;</span><br><span class="line">    SHIFT gv_str.</span><br><span class="line">    SHIFT gv_str RIGHT.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;! BAP</span><br><span class="line">    </span><br><span class="line">    &quot;!CONDENSE去除空格</span><br><span class="line">    gv_str &#x3D; &#39;  AB AP&#39;.</span><br><span class="line">    CONDENSE gv_str.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;!AB AP</span><br><span class="line">    gv_str &#x3D; &#39;  AB AP&#39;.</span><br><span class="line">    CONDENSE gv_str NO-GAPS.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;!ABAP</span><br><span class="line">    </span><br><span class="line">    &quot;!OVERLAY替换填充</span><br><span class="line">    gv_str &#x3D; &#39; B P&#39;.</span><br><span class="line">    gv_chr &#x3D; &#39;AAAA&#39;.</span><br><span class="line">    OVERLAY gv_str WITH gv_chr.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;!ABAP</span><br><span class="line">    </span><br><span class="line">    &quot;!CONCATENATE字符串拼接</span><br><span class="line">    gv_str &#x3D; &#39;AB&#39;.</span><br><span class="line">    gv_chr &#x3D; &#39;AP&#39;.</span><br><span class="line">    CONCATENATE gv_str gv_chr INTO gv_str.</span><br><span class="line">    WRITE &#x2F;gv_str.&quot;!ABAP</span><br><span class="line">    </span><br><span class="line">    &quot;!SPLIT分割</span><br><span class="line">    gv_str &#x3D; &#39;AB,AP&#39;.</span><br><span class="line">    SPLIT gv_str AT &#39;,&#39; INTO gv_str gv_chr.</span><br><span class="line">    WRITE:&#x2F;gv_str,&quot;!AB</span><br><span class="line">    	   &#x2F;gv_chr.&quot;!AP</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">DATA:gv_str TYPE string,</span><br><span class="line">	 gv_chr(4) TYPE c.</span><br><span class="line">	 </span><br><span class="line">&quot;!FIND查找</span><br><span class="line">gv_str = &#x27;ABAP&#x27;.</span><br><span class="line">gv_chr = &#x27;B&#x27;.</span><br><span class="line">FIND gv_chr IN gv_str.</span><br><span class="line">WRITE sy-subrc.&quot;!0</span><br><span class="line">WRITE:/.</span><br><span class="line">&quot;!IF sy-subrc EQ 0.</span><br><span class="line">&quot;!	WRITE &#x27;B found&#x27;.</span><br><span class="line">&quot;!ENDIF.</span><br><span class="line">   </span><br><span class="line">   &quot;!REPLACE替换</span><br><span class="line">    gv_str = &#x27;ABAP&#x27;.</span><br><span class="line">    gv_chr = &#x27;BBAP&#x27;.</span><br><span class="line">    REPLACE &#x27;ABAP&#x27; IN gv_str WITH INTO gv_chr.</span><br><span class="line">    WRITE /gv_str.&quot;!BBAP</span><br><span class="line">    </span><br><span class="line">    &quot;!TRANSLATE大小写转换</span><br><span class="line">    gv_str = &#x27;ABAP&#x27;.</span><br><span class="line">    TRANSLATE gv_str TO LOWER CASE.</span><br><span class="line">    WRITE /gv_str.&quot;!abap</span><br><span class="line">    </span><br><span class="line">    &quot;!SHIFT移动</span><br><span class="line">    gv_str = &#x27;ABAP&#x27;</span><br><span class="line">    SHIFT gv_str.</span><br><span class="line">    SHIFT gv_str RIGHT.</span><br><span class="line">    WRITE /gv_str.&quot;! BAP</span><br><span class="line">    </span><br><span class="line">    &quot;!CONDENSE去除空格</span><br><span class="line">    gv_str = &#x27;  AB AP&#x27;.</span><br><span class="line">    CONDENSE gv_str.</span><br><span class="line">    WRITE /gv_str.&quot;!AB AP</span><br><span class="line">    gv_str = &#x27;  AB AP&#x27;.</span><br><span class="line">    CONDENSE gv_str NO-GAPS.</span><br><span class="line">    WRITE /gv_str.&quot;!ABAP</span><br><span class="line">    </span><br><span class="line">    &quot;!OVERLAY替换填充</span><br><span class="line">    gv_str = &#x27; B P&#x27;.</span><br><span class="line">    gv_chr = &#x27;AAAA&#x27;.</span><br><span class="line">    OVERLAY gv_str WITH gv_chr.</span><br><span class="line">    WRITE /gv_str.&quot;!ABAP</span><br><span class="line">    </span><br><span class="line">    &quot;!CONCATENATE字符串拼接</span><br><span class="line">    gv_str = &#x27;AB&#x27;.</span><br><span class="line">    gv_chr = &#x27;AP&#x27;.</span><br><span class="line">    CONCATENATE gv_str gv_chr INTO gv_str.</span><br><span class="line">    WRITE /gv_str.&quot;!ABAP</span><br><span class="line">    </span><br><span class="line">    &quot;!SPLIT分割</span><br><span class="line">    gv_str = &#x27;AB,AP&#x27;.</span><br><span class="line">    SPLIT gv_str AT &#x27;,&#x27; INTO gv_str gv_chr.</span><br><span class="line">    WRITE:/gv_str,&quot;!AB</span><br><span class="line">    	   /gv_chr.&quot;!AP</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -907,50 +907,50 @@
 <tbody><tr>
 <td align="center">+</td>
 <td align="center">加法</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; + &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; + &lt;m&gt;</td>
 <td align="center">ADD &lt;n&gt; TO &lt;m&gt;.</td>
 </tr>
 <tr>
 <td align="center">-</td>
 <td align="center">减法</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; - &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; - &lt;m&gt;</td>
 <td align="center">SUBTRACT &lt;n&gt; FROM &lt;m&gt;.</td>
 </tr>
 <tr>
 <td align="center">*</td>
 <td align="center">乘法</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; * &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; * &lt;m&gt;</td>
 <td align="center">MULTIPLY &lt;n&gt; BY &lt;m&gt;.</td>
 </tr>
 <tr>
-<td align="center">/</td>
+<td align="center">&#x2F;</td>
 <td align="center">除法</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; / &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; &#x2F; &lt;m&gt;</td>
 <td align="center">DIVIDE &lt;m&gt; BY &lt;n&gt;.</td>
 </tr>
 <tr>
 <td align="center">DIV</td>
 <td align="center">取整</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; DIV &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; DIV &lt;m&gt;</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">MOD</td>
 <td align="center">取余</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; MOD &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; MOD &lt;m&gt;</td>
 <td align="center"></td>
 </tr>
 <tr>
 <td align="center">**</td>
 <td align="center">乘幂</td>
-<td align="center">&lt;p&gt; = &lt;n&gt; ** &lt;m&gt;</td>
+<td align="center">&lt;p&gt; &#x3D; &lt;n&gt; ** &lt;m&gt;</td>
 <td align="center"></td>
 </tr>
 </tbody></table>
 <br>
 
 <p>部分运算符举例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">DATA: gv_int1 TYPE i VALUE 2,</span><br><span class="line">	  gv_int2 TYPE i VALUE 3,</span><br><span class="line">	  gv_iresult TYPE i.</span><br><span class="line">	  </span><br><span class="line">	  *加法</span><br><span class="line">	  gv_iresult &#x3D; gv_int1 + gv_int2.</span><br><span class="line">	  WRITE: &#x2F; gv_iresult.</span><br><span class="line">	  </span><br><span class="line">	  ADD 1 TO gv_result.</span><br><span class="line">	  WRITE: &#x2F; gv_iresult.&quot;!结果的存储变量为后一个变量</span><br><span class="line">	  </span><br><span class="line">	  *除法</span><br><span class="line">	  DATA: gv_pack1 TYPE p DECIMALS 2 VALUE &#39;2.17&#39;,</span><br><span class="line">	  		gv_pack2 TYPE p DECIMALS 2 VALUE &#39;5.43&#39;,</span><br><span class="line">	  		gv_presult TYPE p DECIMALS 2.</span><br><span class="line">	  		</span><br><span class="line">	  		gv_presult &#x3D; gv_pack2 &#x2F; gv_pack2.</span><br><span class="line">	  		WRITE: &#x2F; gv_presult.</span><br><span class="line">	  		</span><br><span class="line">	  		MULTIPLY gv_presult BY gv_pack2.</span><br><span class="line">	  		WRITE: &#x2F; gv_presult.&quot;!结果的存储对象为第一个变量</span><br><span class="line">	  		</span><br><span class="line">	  *乘法</span><br><span class="line">	  DATA: gv_float1 TYPE f VALUE &#39;1.337&#39;,</span><br><span class="line">	  		gv_float2 TYPE f VALUE &#39;2.7&#39;,</span><br><span class="line">	  		gv_fresult TYPE f,</span><br><span class="line">	  		gv_cresult TYPE c LENGTH 16.</span><br><span class="line">	  		</span><br><span class="line">	  gv_fresult &#x3D; gv_float2 * gv_float1.</span><br><span class="line">	  WRITE: &#x2F; gv_fresult.</span><br><span class="line">	  </span><br><span class="line">	 *将F类型的结果转化为C类型进行输出</span><br><span class="line">	 CALL FUNCTION &#39;FLTP_CHAR_CONVERSION&#39;</span><br><span class="line">		  EXPORTING</span><br><span class="line">		   DECIM &#x3D; 2</span><br><span class="line">		   INPUT &#x3D; gv_fresult</span><br><span class="line">		  IMPORTING</span><br><span class="line">		   FLSTR &#x3D; gv_cresult.</span><br><span class="line">		 </span><br><span class="line">		 WRITE: &#x2F; gv_cresult.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">DATA: gv_int1 TYPE i VALUE 2,</span><br><span class="line">	  gv_int2 TYPE i VALUE 3,</span><br><span class="line">	  gv_iresult TYPE i.</span><br><span class="line">	  </span><br><span class="line">	  *加法</span><br><span class="line">	  gv_iresult = gv_int1 + gv_int2.</span><br><span class="line">	  WRITE: / gv_iresult.</span><br><span class="line">	  </span><br><span class="line">	  ADD 1 TO gv_result.</span><br><span class="line">	  WRITE: / gv_iresult.&quot;!结果的存储变量为后一个变量</span><br><span class="line">	  </span><br><span class="line">	  *除法</span><br><span class="line">	  DATA: gv_pack1 TYPE p DECIMALS 2 VALUE &#x27;2.17&#x27;,</span><br><span class="line">	  		gv_pack2 TYPE p DECIMALS 2 VALUE &#x27;5.43&#x27;,</span><br><span class="line">	  		gv_presult TYPE p DECIMALS 2.</span><br><span class="line">	  		</span><br><span class="line">	  		gv_presult = gv_pack2 / gv_pack2.</span><br><span class="line">	  		WRITE: / gv_presult.</span><br><span class="line">	  		</span><br><span class="line">	  		MULTIPLY gv_presult BY gv_pack2.</span><br><span class="line">	  		WRITE: / gv_presult.&quot;!结果的存储对象为第一个变量</span><br><span class="line">	  		</span><br><span class="line">	  *乘法</span><br><span class="line">	  DATA: gv_float1 TYPE f VALUE &#x27;1.337&#x27;,</span><br><span class="line">	  		gv_float2 TYPE f VALUE &#x27;2.7&#x27;,</span><br><span class="line">	  		gv_fresult TYPE f,</span><br><span class="line">	  		gv_cresult TYPE c LENGTH 16.</span><br><span class="line">	  		</span><br><span class="line">	  gv_fresult = gv_float2 * gv_float1.</span><br><span class="line">	  WRITE: / gv_fresult.</span><br><span class="line">	  </span><br><span class="line">	 *将F类型的结果转化为C类型进行输出</span><br><span class="line">	 CALL FUNCTION &#x27;FLTP_CHAR_CONVERSION&#x27;</span><br><span class="line">		  EXPORTING</span><br><span class="line">		   DECIM = 2</span><br><span class="line">		   INPUT = gv_fresult</span><br><span class="line">		  IMPORTING</span><br><span class="line">		   FLSTR = gv_cresult.</span><br><span class="line">		 </span><br><span class="line">		 WRITE: / gv_cresult.</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -996,9 +996,9 @@
 <br>
 
 <p>部分运用函数举例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*ABS绝对值</span><br><span class="line">DATA: gv_abs(n) TYPE n VALUE &#39;-0079&#39;.</span><br><span class="line">gv_abs &#x3D; ABS(gv_abs).</span><br><span class="line">WRITE: &#x2F; g_abs.&quot;!使用ABS时数字会先转换成I类型，最后以I类型显示</span><br><span class="line"></span><br><span class="line">*SIGN返回符号</span><br><span class="line">DATA: gv_sign TYPE i VALUE 00.</span><br><span class="line">gv_sign &#x3D; SIGN(gv_sign).</span><br><span class="line">WRITE: &#x2F; gv_sign.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">*ABS绝对值</span><br><span class="line">DATA: gv_abs(n) TYPE n VALUE &#x27;-0079&#x27;.</span><br><span class="line">gv_abs = ABS(gv_abs).</span><br><span class="line">WRITE: / g_abs.&quot;!使用ABS时数字会先转换成I类型，最后以I类型显示</span><br><span class="line"></span><br><span class="line">*SIGN返回符号</span><br><span class="line">DATA: gv_sign TYPE i VALUE 00.</span><br><span class="line">gv_sign = SIGN(gv_sign).</span><br><span class="line">WRITE: / gv_sign.</span><br></pre></td></tr></table></figure>
 
-<p>参考链接：<a href="https://blog.csdn.net/liangziyisheng/article/details/6110302?utm_source=blogxgwz5" target="_blank" rel="noopener">abap 算术运算函数</a></p>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/liangziyisheng/article/details/6110302?utm_source=blogxgwz5">abap 算术运算函数</a></p>
 <br>
 
 <h3 id="3、Floating-Point-函数"><a href="#3、Floating-Point-函数" class="headerlink" title="3、Floating-Point 函数"></a>3、Floating-Point 函数</h3><table>
@@ -1018,7 +1018,7 @@
 </tr>
 <tr>
 <td align="center">EXP</td>
-<td align="center">指数函数（Exponential functions，e = 2.7182818285）</td>
+<td align="center">指数函数（Exponential functions，e &#x3D; 2.7182818285）</td>
 </tr>
 <tr>
 <td align="center">LOG</td>
@@ -1038,30 +1038,30 @@
 <br>
 
 <h2 id="4-0-局部数据类型"><a href="#4-0-局部数据类型" class="headerlink" title="4.0 局部数据类型"></a>4.0 局部数据类型</h2><h3 id="1、声明类型"><a href="#1、声明类型" class="headerlink" title="1、声明类型"></a>1、声明类型</h3><p>在程序中声明的数据类型视为局部数据类型，利用关键字TYPES声明。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPES dtype [TYPE type|LIKE dobj]...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPES dtype [TYPE type|LIKE dobj]...</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="2、定义结构体类型"><a href="#2、定义结构体类型" class="headerlink" title="2、定义结构体类型"></a>2、定义结构体类型</h3><p>利用如下语法结构，可以定义由多个字段组成的结构体类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TYPES BEGIN OF struc_type.</span><br><span class="line">		...</span><br><span class="line">		&#123;TYPES dtype&#125;|&#123;include &#123;TYPE|STRUCTURE&#125;&#125;.</span><br><span class="line">		...</span><br><span class="line">TYPES END OF struc_type.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TYPES BEGIN OF struc_type.</span><br><span class="line">		...</span><br><span class="line">		&#123;TYPES dtype&#125;|&#123;include &#123;TYPE|STRUCTURE&#125;&#125;.</span><br><span class="line">		...</span><br><span class="line">TYPES END OF struc_type.</span><br></pre></td></tr></table></figure>
 
 <p>以员工信息的结构体举例如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*声明结构体类型</span><br><span class="line">TYPES: BEGIN OF t_ren,</span><br><span class="line">		name TYPE c LENGTH 20,</span><br><span class="line">		country TYPE c LENGTH 15,</span><br><span class="line">		city TYPE c LENGTH 10,</span><br><span class="line">END OF t_ten.</span><br><span class="line"></span><br><span class="line">*定义结构体变量</span><br><span class="line">DATA gs_people TYPE t_ren.</span><br><span class="line"></span><br><span class="line">gs_people-name &#x3D; &#39;JANG JONG SUK&#39;.</span><br><span class="line">gs_people-country &#x3D; &#39;CHINA&#39;.</span><br><span class="line">gs_people-city &#x3D; &#39;Beijing&#39;.</span><br><span class="line"></span><br><span class="line">WRITE: &#x2F; gs_people-name,gs_people-country,gs_people-city.</span><br><span class="line">&quot;!输出结果</span><br><span class="line">&quot;!JANG JONG SUK		CHINA 	Beijing</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*声明结构体类型</span><br><span class="line">TYPES: BEGIN OF t_ren,</span><br><span class="line">		name TYPE c LENGTH 20,</span><br><span class="line">		country TYPE c LENGTH 15,</span><br><span class="line">		city TYPE c LENGTH 10,</span><br><span class="line">END OF t_ten.</span><br><span class="line"></span><br><span class="line">*定义结构体变量</span><br><span class="line">DATA gs_people TYPE t_ren.</span><br><span class="line"></span><br><span class="line">gs_people-name = &#x27;JANG JONG SUK&#x27;.</span><br><span class="line">gs_people-country = &#x27;CHINA&#x27;.</span><br><span class="line">gs_people-city = &#x27;Beijing&#x27;.</span><br><span class="line"></span><br><span class="line">WRITE: / gs_people-name,gs_people-country,gs_people-city.</span><br><span class="line">&quot;!输出结果</span><br><span class="line">&quot;!JANG JONG SUK		CHINA 	Beijing</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <p><strong>INCLUDE 关键字</strong></p>
 <p>利用 INCLUDE TYPE 语句可以定义嵌套结构体类型（可以理解成JAVA中的继承的概念）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">*声明结构体类型</span><br><span class="line">TYPES: BEGIN OF t_ren,</span><br><span class="line">	name TYPE c LENGTH 20,</span><br><span class="line">	country TYPE c LENGTH 10,</span><br><span class="line">END OF t_ten.</span><br><span class="line"></span><br><span class="line">*定义嵌套结构体类型</span><br><span class="line">TYPES: BEGIN OF t_info.</span><br><span class="line">	INCLUDE TYPE t_ren AS ren.&quot;!此处的AS同数据库的别名，方便区分是继承的结构体字段还是自身定义的结构体字段</span><br><span class="line">TYPES: phone TYPE c LENGTH 10,</span><br><span class="line">END OF t_info.</span><br><span class="line"></span><br><span class="line">*下面的定义方式与上面的定义方式意义相同</span><br><span class="line">TYPES: BEGIN OF t_info,</span><br><span class="line">	phone TYPE c LENGTH 10,</span><br><span class="line">	INCLUDE TYPE t_ren AS ren,</span><br><span class="line">END OF t_info.</span><br><span class="line"></span><br><span class="line">*定义结构体对象</span><br><span class="line">DATA gs_people TYPE t_info.</span><br><span class="line"></span><br><span class="line">gs_people-ren-name &#x3D; &#39;JANG JONG SUK&#39;.</span><br><span class="line">gs_people-ren-country &#x3D; &#39;CHINA&#39;.</span><br><span class="line">gs_people-ren-cite &#x3D; &#39;Beijing&#39;.</span><br><span class="line">gs_people-phone &#x3D; &#39;123456789&#39;.</span><br><span class="line"></span><br><span class="line">WRITE: &#x2F; gs_people-ren-name,gs_people-ren-country,gs_people-ren-cite,gs_people-phone.</span><br><span class="line">&quot;!输出结果为：</span><br><span class="line">&quot;!JANG JONG SUK 	CHINA 	Beijing 	123456789</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">*声明结构体类型</span><br><span class="line">TYPES: BEGIN OF t_ren,</span><br><span class="line">	name TYPE c LENGTH 20,</span><br><span class="line">	country TYPE c LENGTH 10,</span><br><span class="line">END OF t_ten.</span><br><span class="line"></span><br><span class="line">*定义嵌套结构体类型</span><br><span class="line">TYPES: BEGIN OF t_info.</span><br><span class="line">	INCLUDE TYPE t_ren AS ren.&quot;!此处的AS同数据库的别名，方便区分是继承的结构体字段还是自身定义的结构体字段</span><br><span class="line">TYPES: phone TYPE c LENGTH 10,</span><br><span class="line">END OF t_info.</span><br><span class="line"></span><br><span class="line">*下面的定义方式与上面的定义方式意义相同</span><br><span class="line">TYPES: BEGIN OF t_info,</span><br><span class="line">	phone TYPE c LENGTH 10,</span><br><span class="line">	INCLUDE TYPE t_ren AS ren,</span><br><span class="line">END OF t_info.</span><br><span class="line"></span><br><span class="line">*定义结构体对象</span><br><span class="line">DATA gs_people TYPE t_info.</span><br><span class="line"></span><br><span class="line">gs_people-ren-name = &#x27;JANG JONG SUK&#x27;.</span><br><span class="line">gs_people-ren-country = &#x27;CHINA&#x27;.</span><br><span class="line">gs_people-ren-cite = &#x27;Beijing&#x27;.</span><br><span class="line">gs_people-phone = &#x27;123456789&#x27;.</span><br><span class="line"></span><br><span class="line">WRITE: / gs_people-ren-name,gs_people-ren-country,gs_people-ren-cite,gs_people-phone.</span><br><span class="line">&quot;!输出结果为：</span><br><span class="line">&quot;!JANG JONG SUK 	CHINA 	Beijing 	123456789</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意事项：</strong>使用嵌套结构体中的变量时以结构体-结构体-字段名的形式显示。</p>
 <br>
 
 <p>利用 INCLUDE STRUCTRER 语句，可以把DATA语句定义的结构体或者ABAP数据字典存在的结构体包含到嵌套结构体中。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">DATA: BEGIN OF gs_ren,</span><br><span class="line">	name TYPE c LENGTH 20,</span><br><span class="line">	country TYPE c LENGTH 15,</span><br><span class="line">	city TYPE c LENGTH 10,</span><br><span class="line">END OF gs_ren.</span><br><span class="line">	</span><br><span class="line">DATA: BEGIN OF gs_people.</span><br><span class="line">   	INCLUDE STRUCTURE gs_ren AS ren.</span><br><span class="line">   DATA: phone TYPE c LENGTH 10,</span><br><span class="line">   END OF gs_people.</span><br><span class="line">   </span><br><span class="line">   gs_people-ren-name &#x3D; &#39;JANG JONG SUK&#39;.</span><br><span class="line">   gs_people-ren-country &#x3D; &#39;CHINA&#39;.</span><br><span class="line">   gs_people-ren-city &#x3D; &#39;Beijing&#39;.</span><br><span class="line">   gs_people-phone &#x3D; &#39;123456879&#39;.</span><br><span class="line">   </span><br><span class="line">   WRITE: &#x2F; gs_people-ren-name,gs_people-ren-country,gs_people-ren-cite,gs_people-phone.</span><br><span class="line">&quot;!输出结果为：</span><br><span class="line">&quot;!JANG JONG SUK 	CHINA 	Beijing 	123456789</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">DATA: BEGIN OF gs_ren,</span><br><span class="line">	name TYPE c LENGTH 20,</span><br><span class="line">	country TYPE c LENGTH 15,</span><br><span class="line">	city TYPE c LENGTH 10,</span><br><span class="line">END OF gs_ren.</span><br><span class="line">	</span><br><span class="line">DATA: BEGIN OF gs_people.</span><br><span class="line">   	INCLUDE STRUCTURE gs_ren AS ren.</span><br><span class="line">   DATA: phone TYPE c LENGTH 10,</span><br><span class="line">   END OF gs_people.</span><br><span class="line">   </span><br><span class="line">   gs_people-ren-name = &#x27;JANG JONG SUK&#x27;.</span><br><span class="line">   gs_people-ren-country = &#x27;CHINA&#x27;.</span><br><span class="line">   gs_people-ren-city = &#x27;Beijing&#x27;.</span><br><span class="line">   gs_people-phone = &#x27;123456879&#x27;.</span><br><span class="line">   </span><br><span class="line">   WRITE: / gs_people-ren-name,gs_people-ren-country,gs_people-ren-cite,gs_people-phone.</span><br><span class="line">&quot;!输出结果为：</span><br><span class="line">&quot;!JANG JONG SUK 	CHINA 	Beijing 	123456789</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意事项：</strong>使用嵌套结构时，如果不适用AS起别名则在上面的例子中赋值语句与输出语句如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gs_people-name &#x3D; &#39;JANG JONG SUK&#39;.</span><br><span class="line">   gs_people-country &#x3D; &#39;CHINA&#39;.</span><br><span class="line">   gs_people-city &#x3D; &#39;Beijing&#39;.</span><br><span class="line">   gs_people-phone &#x3D; &#39;123456879&#39;.</span><br><span class="line">   </span><br><span class="line">   WRITE: &#x2F; gs_people-name,gs_people-country,gs_people-cite,gs_people-phone.</span><br><span class="line">&quot;!输出结果为：</span><br><span class="line">&quot;!JANG JONG SUK 	CHINA 	Beijing 	123456789</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gs_people-name = &#x27;JANG JONG SUK&#x27;.</span><br><span class="line">   gs_people-country = &#x27;CHINA&#x27;.</span><br><span class="line">   gs_people-city = &#x27;Beijing&#x27;.</span><br><span class="line">   gs_people-phone = &#x27;123456879&#x27;.</span><br><span class="line">   </span><br><span class="line">   WRITE: / gs_people-name,gs_people-country,gs_people-cite,gs_people-phone.</span><br><span class="line">&quot;!输出结果为：</span><br><span class="line">&quot;!JANG JONG SUK 	CHINA 	Beijing 	123456789	</span><br></pre></td></tr></table></figure>
 
 <p>同样可以输出并使用，但在代码规范上并不规范。</p>
 <br>
@@ -1079,32 +1079,32 @@
 <br>
 
 <h3 id="1、参照表、试图声明数据类型"><a href="#1、参照表、试图声明数据类型" class="headerlink" title="1、参照表、试图声明数据类型"></a>1、参照表、试图声明数据类型</h3><p>可以参照数据库表和视图定义结构体及内表。另外，还可以直接参照表里的字段定义变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA: gs_sflight TYPE sflight.</span><br><span class="line"></span><br><span class="line">SELECT SINGLE * FROM sflight INTO gs_sflight WHERE CARRID &#x3D; &#39;AA&#39;.&quot;!从数据库表SFLIGHT中取得编号为AA的数据</span><br><span class="line"></span><br><span class="line">WRITE: &#x2F; gs_sflight-CARRID,gs_sflight-CONNID,gs_sflight-FLDATE,gs_sflight-PRICE,gs_sflight-CURRENCY,gs_sflight-PLANETYPE.</span><br><span class="line">*输出结果</span><br><span class="line">*AA		0017 2011.05.15 		1.00 USD America</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DATA: gs_sflight TYPE sflight.</span><br><span class="line"></span><br><span class="line">SELECT SINGLE * FROM sflight INTO gs_sflight WHERE CARRID = &#x27;AA&#x27;.&quot;!从数据库表SFLIGHT中取得编号为AA的数据</span><br><span class="line"></span><br><span class="line">WRITE: / gs_sflight-CARRID,gs_sflight-CONNID,gs_sflight-FLDATE,gs_sflight-PRICE,gs_sflight-CURRENCY,gs_sflight-PLANETYPE.</span><br><span class="line">*输出结果</span><br><span class="line">*AA		0017 2011.05.15 		1.00 USD America</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <p>参照数据库表及视图定义个别字段。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATA: GV_CARRID TYPE SFLIGHT-CARRID,</span><br><span class="line">	  GV_CONNID TYPE SFLIGHT-CONNID,</span><br><span class="line">	  GV_FLDATE TYPE SFLIGHT-FLDATE.</span><br><span class="line">	  </span><br><span class="line">GV_CARRID &#x3D; &#39;AA&#39;.</span><br><span class="line">GV_CONNID &#x3D; &#39;0017&#39;.</span><br><span class="line">GV_FLDATE &#x3D; SY-DATUM.&quot;!当前系统日期</span><br><span class="line"></span><br><span class="line">WRITE: &#x2F; GV_CARRID,GV_CONNID,GV_FLDATE.</span><br><span class="line">&quot;!输出结果：AA 0017 2011.05.09</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATA: GV_CARRID TYPE SFLIGHT-CARRID,</span><br><span class="line">	  GV_CONNID TYPE SFLIGHT-CONNID,</span><br><span class="line">	  GV_FLDATE TYPE SFLIGHT-FLDATE.</span><br><span class="line">	  </span><br><span class="line">GV_CARRID = &#x27;AA&#x27;.</span><br><span class="line">GV_CONNID = &#x27;0017&#x27;.</span><br><span class="line">GV_FLDATE = SY-DATUM.&quot;!当前系统日期</span><br><span class="line"></span><br><span class="line">WRITE: / GV_CARRID,GV_CONNID,GV_FLDATE.</span><br><span class="line">&quot;!输出结果：AA 0017 2011.05.09</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="2、参照基本数据类型定义变量"><a href="#2、参照基本数据类型定义变量" class="headerlink" title="2、参照基本数据类型定义变量"></a>2、参照基本数据类型定义变量</h3><h4 id="（1）数据元素（Data-Element）"><a href="#（1）数据元素（Data-Element）" class="headerlink" title="（1）数据元素（Data Element）"></a>（1）数据元素（Data Element）</h4><p>ABAP数据字典中用数据元素（Data Element）定义个别字段。数据元素类型是参照域二定义的（可以在数据元素级别上直接定义类型）。一个域可以在多个数据元素中使用，且一个数据元素可以在多个数据表中使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*利用数据元素定义变量</span><br><span class="line">DATA gs_carrid TYPE s_carr_id.</span><br><span class="line"></span><br><span class="line">gs_carrid &#x3D; &#39;AA&#39;.</span><br><span class="line">WRITE: &#39;Carrid:&#39;,gs_carrid.&quot;!Carrid:AA</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*利用数据元素定义变量</span><br><span class="line">DATA gs_carrid TYPE s_carr_id.</span><br><span class="line"></span><br><span class="line">gs_carrid = &#x27;AA&#x27;.</span><br><span class="line">WRITE: &#x27;Carrid:&#x27;,gs_carrid.&quot;!Carrid:AA</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h4 id="（2）利用结构体的TYPE定义"><a href="#（2）利用结构体的TYPE定义" class="headerlink" title="（2）利用结构体的TYPE定义"></a>（2）利用结构体的TYPE定义</h4><p>需要结合多个表里的字段一并使用时，用结构体定义变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPE &lt;dtyoe&gt; TYPE &lt;structure&gt;.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPE &lt;dtyoe&gt; TYPE &lt;structure&gt;.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h4 id="（3）利用类型组的TYPE定义"><a href="#（3）利用类型组的TYPE定义" class="headerlink" title="（3）利用类型组的TYPE定义"></a>（3）利用类型组的TYPE定义</h4><p>类型组是以 INCLUDE 技术为基础的，因此在SAP 4.5A版本以后才开始使用此概念。组合多种数据类型进行声明时使用类型组，它可以在所有程序中使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPE-POOLS name.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TYPE-POOLS name.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h4 id="（4）ABAP数据字典类型与ABAP基本数据类型"><a href="#（4）ABAP数据字典类型与ABAP基本数据类型" class="headerlink" title="（4）ABAP数据字典类型与ABAP基本数据类型"></a>（4）ABAP数据字典类型与ABAP基本数据类型</h4><p>ABAP语言中除了基本数据类型，还存在ABAP数据字典类型。所谓ABAP数据字典类型是指在ABAP数据字典中将经常使用的数据类型事先定义的实例。从开发者角度而言此类型与基本数据类型没有区别。因为在程序执行过程中ABAP解释程序会自动解析。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*以下两句话都是定义长度为10的字符类型的代码</span><br><span class="line">DATA gv_f1(10) TYPE c.</span><br><span class="line">DATA gv_f2 TYPE char10.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*以下两句话都是定义长度为10的字符类型的代码</span><br><span class="line">DATA gv_f1(10) TYPE c.</span><br><span class="line">DATA gv_f2 TYPE char10.</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -1115,11 +1115,11 @@
 <br>
 
 <h2 id="6-0-赋值"><a href="#6-0-赋值" class="headerlink" title="6.0 赋值"></a>6.0 赋值</h2><h3 id="1、给变量赋值"><a href="#1、给变量赋值" class="headerlink" title="1、给变量赋值"></a>1、给变量赋值</h3><p>在ABAP中定义变量时可以通过VALUE语句赋值初始值，实际处理数据的程序中使用MOVE或WRITE TO 语句给变量赋值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">*定义变量时赋初始值</span><br><span class="line">DATA gv_f1 TYPE i VALUE 10.</span><br><span class="line">DATA gv_f2 TYPE i.</span><br><span class="line"></span><br><span class="line">*使用“&#x3D;”号赋值</span><br><span class="line">gv_f2 &#x3D; gv_f1.</span><br><span class="line"></span><br><span class="line">*使用MOVE TO语句赋值</span><br><span class="line">MOVE gv_f1 TO gv_f2.</span><br><span class="line"></span><br><span class="line">*使用MOVE-CORRESPONDING TO 赋值，这种方式可以给结构体变量、内表以及字符串字段值之间赋值</span><br><span class="line">MOVE-CORRESPONDING &lt;STRING1&gt; TO &lt;STRING2&gt;.</span><br><span class="line"></span><br><span class="line">*使用WRITE TO 语句赋值</span><br><span class="line">WRITE gv_f1 TO gv_f2[&lt;option&gt;].</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">*定义变量时赋初始值</span><br><span class="line">DATA gv_f1 TYPE i VALUE 10.</span><br><span class="line">DATA gv_f2 TYPE i.</span><br><span class="line"></span><br><span class="line">*使用“=”号赋值</span><br><span class="line">gv_f2 = gv_f1.</span><br><span class="line"></span><br><span class="line">*使用MOVE TO语句赋值</span><br><span class="line">MOVE gv_f1 TO gv_f2.</span><br><span class="line"></span><br><span class="line">*使用MOVE-CORRESPONDING TO 赋值，这种方式可以给结构体变量、内表以及字符串字段值之间赋值</span><br><span class="line">MOVE-CORRESPONDING &lt;STRING1&gt; TO &lt;STRING2&gt;.</span><br><span class="line"></span><br><span class="line">*使用WRITE TO 语句赋值</span><br><span class="line">WRITE gv_f1 TO gv_f2[&lt;option&gt;].</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h4 id="（1）MOVE语句"><a href="#（1）MOVE语句" class="headerlink" title="（1）MOVE语句"></a><strong>（1）MOVE语句</strong></h4><p>① MOVE TO 语句与&lt;f2&gt; = &lt;f1&gt;中的Equal（=）语句相同。</p>
+<h4 id="（1）MOVE语句"><a href="#（1）MOVE语句" class="headerlink" title="（1）MOVE语句"></a><strong>（1）MOVE语句</strong></h4><p>① MOVE TO 语句与&lt;f2&gt; &#x3D; &lt;f1&gt;中的Equal（&#x3D;）语句相同。</p>
 <p>② MOVE语句还可以用于类型转换，即&lt;f1&gt;的数据类型会转换成&lt;f2&gt;类型。</p>
 <p>③ 当字段名及顺序不同的结构体之间相互赋值时，如果用MOVE语句，则会按顺序进行赋值。</p>
 <p>④ 在ABAP语言中除了类型D（Date）与类型T（Time）外都可以相互转换类型，一共由64种形态的类型可以相互转换。</p>
@@ -1127,7 +1127,7 @@
 
 <h4 id="（2）MOVE-CORRESPONDING语句"><a href="#（2）MOVE-CORRESPONDING语句" class="headerlink" title="（2）MOVE-CORRESPONDING语句"></a><strong>（2）MOVE-CORRESPONDING语句</strong></h4><p>① 赋值字符串字段值时可以使用MOVE-CORRESPONDING语句。这时&lt;string1&gt;和&lt;string2&gt;的字段名可以不相同。</p>
 <p>② MOVE-CORRESPONDING语句还经常用于不同结构体之间的赋值，其特点是找到相同的字段名进行赋值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">DATA: BEGIN OF gs_ren,</span><br><span class="line">	name(20) VALUE &#39;Kim Sung Joon&#39;,</span><br><span class="line">	country(10) VALUE &#39;CHINA&#39;,</span><br><span class="line">	city(20) VALUE &#39;Beijing&#39;,</span><br><span class="line">END OF gs_ren.</span><br><span class="line"></span><br><span class="line">DATA: BEGIN OF gs_info,</span><br><span class="line">	name(20),</span><br><span class="line">	city(20),</span><br><span class="line">	phone(10) VALUE &#39;1521001234&#39;,</span><br><span class="line">END OF gs_info.</span><br><span class="line"></span><br><span class="line">MOVE-CORRESPONDING gs_ren TO gs_info.</span><br><span class="line">WRITE: &#x2F; gs_info-name,gs_info-city,gs_info-phone.</span><br><span class="line">&quot;!Kim Sung Joon		Beijing 	1521001234</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">DATA: BEGIN OF gs_ren,</span><br><span class="line">	name(20) VALUE &#x27;Kim Sung Joon&#x27;,</span><br><span class="line">	country(10) VALUE &#x27;CHINA&#x27;,</span><br><span class="line">	city(20) VALUE &#x27;Beijing&#x27;,</span><br><span class="line">END OF gs_ren.</span><br><span class="line"></span><br><span class="line">DATA: BEGIN OF gs_info,</span><br><span class="line">	name(20),</span><br><span class="line">	city(20),</span><br><span class="line">	phone(10) VALUE &#x27;1521001234&#x27;,</span><br><span class="line">END OF gs_info.</span><br><span class="line"></span><br><span class="line">MOVE-CORRESPONDING gs_ren TO gs_info.</span><br><span class="line">WRITE: / gs_info-name,gs_info-city,gs_info-phone.</span><br><span class="line">&quot;!Kim Sung Joon		Beijing 	1521001234</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -1141,15 +1141,15 @@
 <br>
 
 <h3 id="2、offset-赋值"><a href="#2、offset-赋值" class="headerlink" title="2、offset 赋值"></a>2、offset 赋值</h3><p>语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOVE &lt;f1&gt;[+&lt;p1&gt;][&lt;l1&gt;] TO &lt;f2&gt;[+&lt;p2&gt;][&lt;l2&gt;].</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOVE &lt;f1&gt;[+&lt;p1&gt;][&lt;l1&gt;] TO &lt;f2&gt;[+&lt;p2&gt;][&lt;l2&gt;].</span><br></pre></td></tr></table></figure>
 
 <p>该句式是指从f1字段的p1 + 1位开始截取长度为l1的字符串赋给f2的字段从p2 + 1位开始截取长度为l2的字符串写法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">DATA: f1(8) VALUE &#39;ABCDEFGH&#39;,</span><br><span class="line">	  f2(8).</span><br><span class="line"></span><br><span class="line">MOVE f1+2(3) TO f2.</span><br><span class="line">*下面这种语法结构的作用同上</span><br><span class="line">f2 &#x3D; f1+2(3).</span><br><span class="line">DATA(f2) &#x3D; f1+2(3).&quot;!变量声明时使用</span><br><span class="line">&quot;!输出结果为：CDE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">DATA: gv_f1(8) VALUE &#39;ABCDEFGH&#39;,</span><br><span class="line">   	  gv_f2.</span><br><span class="line">DATA: gv_start TYPE i VALUE 2,</span><br><span class="line">	  gv_length TYPE i VALUE 4.</span><br><span class="line"></span><br><span class="line">CLEAR:gv_f2.&quot;!初始化变量</span><br><span class="line">MOVE gv_f1+gv_start(gv_length) TO gv_f2.</span><br><span class="line">WRITE: &#x2F; gv_f2.&quot;!结果为CDEF</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">DATA: f1(8) VALUE &#x27;ABCDEFGH&#x27;,</span><br><span class="line">	  f2(8).</span><br><span class="line"></span><br><span class="line">MOVE f1+2(3) TO f2.</span><br><span class="line">*下面这种语法结构的作用同上</span><br><span class="line">f2 = f1+2(3).</span><br><span class="line">DATA(f2) = f1+2(3).&quot;!变量声明时使用</span><br><span class="line">&quot;!输出结果为：CDE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">DATA: gv_f1(8) VALUE &#x27;ABCDEFGH&#x27;,</span><br><span class="line">   	  gv_f2.</span><br><span class="line">DATA: gv_start TYPE i VALUE 2,</span><br><span class="line">	  gv_length TYPE i VALUE 4.</span><br><span class="line"></span><br><span class="line">CLEAR:gv_f2.&quot;!初始化变量</span><br><span class="line">MOVE gv_f1+gv_start(gv_length) TO gv_f2.</span><br><span class="line">WRITE: / gv_f2.&quot;!结果为CDEF</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="3、结构体之间的计算操作"><a href="#3、结构体之间的计算操作" class="headerlink" title="3、结构体之间的计算操作"></a>3、结构体之间的计算操作</h3><p>结构体之间赋值用MOVE-CORRESPONDING语句，利用下面所示语句可以进行结构体之间的计算操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ADD-CORRESPONDING &quot;!结构体之间相同字段名的字段进行加法运算</span><br><span class="line">SUBTRACT-CORRESPONDING &quot;!结构体之间相同字段名的字段进行减法运算</span><br><span class="line">MULTIPLY-CORRESPONDING &quot;!结构体之间相同字段名的字段进行乘法运算</span><br><span class="line">DIVIDE-CORRESPONDING &quot;!结构体之间相同字段名的字段进行除法运算</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ADD-CORRESPONDING &quot;!结构体之间相同字段名的字段进行加法运算</span><br><span class="line">SUBTRACT-CORRESPONDING &quot;!结构体之间相同字段名的字段进行减法运算</span><br><span class="line">MULTIPLY-CORRESPONDING &quot;!结构体之间相同字段名的字段进行乘法运算</span><br><span class="line">DIVIDE-CORRESPONDING &quot;!结构体之间相同字段名的字段进行除法运算</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -1157,35 +1157,35 @@
 
 <h2 id="7-0-定义其他变量"><a href="#7-0-定义其他变量" class="headerlink" title="7.0 定义其他变量"></a>7.0 定义其他变量</h2><h3 id="1、常量"><a href="#1、常量" class="headerlink" title="1、常量"></a>1、常量</h3><p>程序中经常会使用的值可以定义为常量（constant）。定义常量后在程序内不可以进行修改。</p>
 <p>常量一般分为一般常量与结构体常量两种类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;! 1.一般常量</span><br><span class="line">CONSTANTS c ... VALUE [val|IS INITIAL].</span><br><span class="line"></span><br><span class="line">&quot;! 2.结构体常量</span><br><span class="line">CONSTANTS: BEGIN OF crec,</span><br><span class="line">	...</span><br><span class="line">END OF crec.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;! 1.一般常量</span><br><span class="line">CONSTANTS c ... VALUE [val|IS INITIAL].</span><br><span class="line"></span><br><span class="line">&quot;! 2.结构体常量</span><br><span class="line">CONSTANTS: BEGIN OF crec,</span><br><span class="line">	...</span><br><span class="line">END OF crec.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <p>实际代码演示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CONSTANTS: c_company(10) VALUE &#39;LG CNS&#39;.</span><br><span class="line">CONSTANTS: BEGIN OF c_people,</span><br><span class="line">	name(20) VALUE &#39;Zhou Wen Woo&#39;,</span><br><span class="line">	country VALUE &#39;China&#39;,</span><br><span class="line">END OF c_people.</span><br><span class="line">WRITE: c_company,c_people-name,c_people-country.</span><br><span class="line">&quot;!LG CNS 	Zhou Wen Woo 	China</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CONSTANTS: c_company(10) VALUE &#x27;LG CNS&#x27;.</span><br><span class="line">CONSTANTS: BEGIN OF c_people,</span><br><span class="line">	name(20) VALUE &#x27;Zhou Wen Woo&#x27;,</span><br><span class="line">	country VALUE &#x27;China&#x27;,</span><br><span class="line">END OF c_people.</span><br><span class="line">WRITE: c_company,c_people-name,c_people-country.</span><br><span class="line">&quot;!LG CNS 	Zhou Wen Woo 	China</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="2、静态常量"><a href="#2、静态常量" class="headerlink" title="2、静态常量"></a>2、静态常量</h3><p>在子程序块（ FORM,FUNCTION）中要持续保存局部变量值时定义为静态常量（STATICS）。即在FROM语句中内用STATICS定义的局部变量值可以保持到程序结束。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;!静态变量</span><br><span class="line">STATICS f.</span><br><span class="line"></span><br><span class="line">&quot;!静态结构体变量</span><br><span class="line">STATICS: BEGIN OF struc,</span><br><span class="line">	...</span><br><span class="line">END OF struc.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;!静态变量</span><br><span class="line">STATICS f.</span><br><span class="line"></span><br><span class="line">&quot;!静态结构体变量</span><br><span class="line">STATICS: BEGIN OF struc,</span><br><span class="line">	...</span><br><span class="line">END OF struc.</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <p>接下来用代码来演示静态常量关键字STATICS与普通变量的区别</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*静态常量由于可以将值保存到程序结束，所以每次调用函数结束后不会被内存销毁</span><br><span class="line"></span><br><span class="line">DO 3 TIMES.&quot;!循环</span><br><span class="line">	PERFORM call_subr.&quot;!调用函数</span><br><span class="line">ENDDO.</span><br><span class="line"></span><br><span class="line">FORM call_subr.</span><br><span class="line">	STATICS lv_val TYPE i.</span><br><span class="line">	lv_val &#x3D; lv_val + 1.</span><br><span class="line">	WRITE: &#x2F; &#39;STATICS Variable:&#39;,lv_val.</span><br><span class="line"></span><br><span class="line">ENDFORM.</span><br><span class="line"></span><br><span class="line">&quot;!运行结果如下：</span><br><span class="line">&quot;!STATICS Variable:		1</span><br><span class="line">&quot;!STATICS Variable:		2</span><br><span class="line">&quot;!STATICS Variable:		3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*静态常量由于可以将值保存到程序结束，所以每次调用函数结束后不会被内存销毁</span><br><span class="line"></span><br><span class="line">DO 3 TIMES.&quot;!循环</span><br><span class="line">	PERFORM call_subr.&quot;!调用函数</span><br><span class="line">ENDDO.</span><br><span class="line"></span><br><span class="line">FORM call_subr.</span><br><span class="line">	STATICS lv_val TYPE i.</span><br><span class="line">	lv_val = lv_val + 1.</span><br><span class="line">	WRITE: / &#x27;STATICS Variable:&#x27;,lv_val.</span><br><span class="line"></span><br><span class="line">ENDFORM.</span><br><span class="line"></span><br><span class="line">&quot;!运行结果如下：</span><br><span class="line">&quot;!STATICS Variable:		1</span><br><span class="line">&quot;!STATICS Variable:		2</span><br><span class="line">&quot;!STATICS Variable:		3</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">*普通常量，每次函数调用结束后都会被消灭初始化</span><br><span class="line"></span><br><span class="line">DATA: gv_result TYPE i.</span><br><span class="line"></span><br><span class="line">DO 3 TIMES.</span><br><span class="line">	PERFORM call_subr.</span><br><span class="line">ENDDO.</span><br><span class="line"></span><br><span class="line">FORM call_subr.</span><br><span class="line">	DATA lv_val TYPE i .</span><br><span class="line">	lv_val &#x3D; lv_val + 1.</span><br><span class="line">	WRITE: &#x2F; &#39;Local Variable:&#39;,lv_val.</span><br><span class="line">ENDFORM.</span><br><span class="line"></span><br><span class="line">&quot;!运行结果如下：</span><br><span class="line">&quot;!Local Variable:		1</span><br><span class="line">&quot;!Local Variable:		1</span><br><span class="line">&quot;!Local Variable:		1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">*普通常量，每次函数调用结束后都会被消灭初始化</span><br><span class="line"></span><br><span class="line">DATA: gv_result TYPE i.</span><br><span class="line"></span><br><span class="line">DO 3 TIMES.</span><br><span class="line">	PERFORM call_subr.</span><br><span class="line">ENDDO.</span><br><span class="line"></span><br><span class="line">FORM call_subr.</span><br><span class="line">	DATA lv_val TYPE i .</span><br><span class="line">	lv_val = lv_val + 1.</span><br><span class="line">	WRITE: / &#x27;Local Variable:&#x27;,lv_val.</span><br><span class="line">ENDFORM.</span><br><span class="line"></span><br><span class="line">&quot;!运行结果如下：</span><br><span class="line">&quot;!Local Variable:		1</span><br><span class="line">&quot;!Local Variable:		1</span><br><span class="line">&quot;!Local Variable:		1</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="3、TABLES"><a href="#3、TABLES" class="headerlink" title="3、TABLES"></a>3、TABLES</h3><p>使用TABLES语句定义ABAP数据字典中的数据表、视图、结构体，会生成与ABAP数据字典具有相同结构的数据对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TABLES &lt;dbtab&gt;.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TABLES &lt;dbtab&gt;.</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">TABLES: scarr.</span><br><span class="line"></span><br><span class="line">SELECT * FROM scarr.</span><br><span class="line">	WRITE: &#x2F; scarr-carrid,scarr-carrname.</span><br><span class="line">ENDSELECT.</span><br><span class="line"></span><br><span class="line">&quot;!运行结果如下：</span><br><span class="line">&quot;!AA American Airlines</span><br><span class="line">&quot;!AB Air Berlin</span><br><span class="line">&quot;!AC Air Canada</span><br><span class="line">&quot;!AF Air France</span><br><span class="line">&quot;!AZ Alitalia</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">TABLES: scarr.</span><br><span class="line"></span><br><span class="line">SELECT * FROM scarr.</span><br><span class="line">	WRITE: / scarr-carrid,scarr-carrname.</span><br><span class="line">ENDSELECT.</span><br><span class="line"></span><br><span class="line">&quot;!运行结果如下：</span><br><span class="line">&quot;!AA American Airlines</span><br><span class="line">&quot;!AB Air Berlin</span><br><span class="line">&quot;!AC Air Canada</span><br><span class="line">&quot;!AF Air France</span><br><span class="line">&quot;!AZ Alitalia</span><br></pre></td></tr></table></figure>
 
 <p>本代码实例中查询语句SELECT * FROM SCARR INTO SCARR中表与结构体名称相同，因此可以省略INTO SCARR语句。</p>
 
@@ -1193,27 +1193,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -1347,7 +1326,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">第二章 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-概要"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 概要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1数据类型"><span class="toc-number">1.1.1.</span> <span class="toc-text">2.1.1数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2数据变量"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.1.2数据变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3数据类型的种类"><span class="toc-number">1.1.3.</span> <span class="toc-text">2.1.3数据类型的种类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-数据类型的声明代码实例"><span class="toc-number">1.2.</span> <span class="toc-text">2.2 数据类型的声明代码实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-DATA语句"><span class="toc-number">1.3.</span> <span class="toc-text">2.3 DATA语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、TYPE-type"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、TYPE type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、LIKE-num"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、LIKE num</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、VALUE-int"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、VALUE int</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、LENGTH-n"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、LENGTH n</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、DECIMALS-n"><span class="toc-number">1.3.5.</span> <span class="toc-text">5、DECIMALS n</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-ABAP基本语法（注释）"><span class="toc-number">1.4.</span> <span class="toc-text">2.4 ABAP基本语法（注释）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-ABAP命名规则"><span class="toc-number">1.5.</span> <span class="toc-text">2.5 ABAP命名规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-ABAP基本数据类型"><span class="toc-number">1.6.</span> <span class="toc-text">2.6 ABAP基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、固定长度的ABAP基本数据类型"><span class="toc-number">1.6.1.</span> <span class="toc-text">1、固定长度的ABAP基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、数字型"><span class="toc-number">1.6.2.</span> <span class="toc-text">2、数字型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、字符类型"><span class="toc-number">1.6.3.</span> <span class="toc-text">3、字符类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7数学运算符"><span class="toc-number">1.7.</span> <span class="toc-text">2.7数学运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8不定长ABAP基本数据类型"><span class="toc-number">1.8.</span> <span class="toc-text">2.8不定长ABAP基本数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-Hexadecimal类型"><span class="toc-number">1.9.</span> <span class="toc-text">2.9 Hexadecimal类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-0-数字运算符"><span class="toc-number">1.10.</span> <span class="toc-text">3.0 数字运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、基本运算法则"><span class="toc-number">1.10.1.</span> <span class="toc-text">1、基本运算法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、数字运算用函数"><span class="toc-number">1.10.2.</span> <span class="toc-text">2、数字运算用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Floating-Point-函数"><span class="toc-number">1.10.3.</span> <span class="toc-text">3、Floating-Point 函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-0-局部数据类型"><span class="toc-number">1.11.</span> <span class="toc-text">4.0 局部数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、声明类型"><span class="toc-number">1.11.1.</span> <span class="toc-text">1、声明类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、定义结构体类型"><span class="toc-number">1.11.2.</span> <span class="toc-text">2、定义结构体类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-0-ABAP数据字典数据类型"><span class="toc-number">1.12.</span> <span class="toc-text">5.0 ABAP数据字典数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、参照表、试图声明数据类型"><span class="toc-number">1.12.1.</span> <span class="toc-text">1、参照表、试图声明数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、参照基本数据类型定义变量"><span class="toc-number">1.12.2.</span> <span class="toc-text">2、参照基本数据类型定义变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）数据元素（Data-Element）"><span class="toc-number">1.12.2.1.</span> <span class="toc-text">（1）数据元素（Data Element）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）利用结构体的TYPE定义"><span class="toc-number">1.12.2.2.</span> <span class="toc-text">（2）利用结构体的TYPE定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）利用类型组的TYPE定义"><span class="toc-number">1.12.2.3.</span> <span class="toc-text">（3）利用类型组的TYPE定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）ABAP数据字典类型与ABAP基本数据类型"><span class="toc-number">1.12.2.4.</span> <span class="toc-text">（4）ABAP数据字典类型与ABAP基本数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-0-赋值"><span class="toc-number">1.13.</span> <span class="toc-text">6.0 赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、给变量赋值"><span class="toc-number">1.13.1.</span> <span class="toc-text">1、给变量赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）MOVE语句"><span class="toc-number">1.13.1.1.</span> <span class="toc-text">（1）MOVE语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）MOVE-CORRESPONDING语句"><span class="toc-number">1.13.1.2.</span> <span class="toc-text">（2）MOVE-CORRESPONDING语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）WRITE-TO-语句"><span class="toc-number">1.13.1.3.</span> <span class="toc-text">（3）WRITE TO 语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、offset-赋值"><span class="toc-number">1.13.2.</span> <span class="toc-text">2、offset 赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、结构体之间的计算操作"><span class="toc-number">1.13.3.</span> <span class="toc-text">3、结构体之间的计算操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-0-定义其他变量"><span class="toc-number">1.14.</span> <span class="toc-text">7.0 定义其他变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、常量"><span class="toc-number">1.14.1.</span> <span class="toc-text">1、常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、静态常量"><span class="toc-number">1.14.2.</span> <span class="toc-text">2、静态常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、TABLES"><span class="toc-number">1.14.3.</span> <span class="toc-text">3、TABLES</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">第二章 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%A6%82%E8%A6%81"><span class="toc-number">1.1.</span> <span class="toc-text">2.1 概要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">2.1.1数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2%E6%95%B0%E6%8D%AE%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.1.2数据变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">1.1.3.</span> <span class="toc-text">2.1.3数据类型的种类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A3%B0%E6%98%8E%E4%BB%A3%E7%A0%81%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2.2 数据类型的声明代码实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-DATA%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">2.3 DATA语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81TYPE-type"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、TYPE type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81LIKE-num"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、LIKE num</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81VALUE-int"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、VALUE int</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81LENGTH-n"><span class="toc-number">1.3.4.</span> <span class="toc-text">4、LENGTH n</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81DECIMALS-n"><span class="toc-number">1.3.5.</span> <span class="toc-text">5、DECIMALS n</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-ABAP%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%EF%BC%88%E6%B3%A8%E9%87%8A%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">2.4 ABAP基本语法（注释）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-ABAP%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">1.5.</span> <span class="toc-text">2.5 ABAP命名规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-ABAP%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">2.6 ABAP基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9B%BA%E5%AE%9A%E9%95%BF%E5%BA%A6%E7%9A%84ABAP%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.1.</span> <span class="toc-text">1、固定长度的ABAP基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%95%B0%E5%AD%97%E5%9E%8B"><span class="toc-number">1.6.2.</span> <span class="toc-text">2、数字型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.3.</span> <span class="toc-text">3、字符类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.7.</span> <span class="toc-text">2.7数学运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8%E4%B8%8D%E5%AE%9A%E9%95%BFABAP%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.8.</span> <span class="toc-text">2.8不定长ABAP基本数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-Hexadecimal%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.9.</span> <span class="toc-text">2.9 Hexadecimal类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-0-%E6%95%B0%E5%AD%97%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.10.</span> <span class="toc-text">3.0 数字运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E6%B3%95%E5%88%99"><span class="toc-number">1.10.1.</span> <span class="toc-text">1、基本运算法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%95%B0%E5%AD%97%E8%BF%90%E7%AE%97%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.10.2.</span> <span class="toc-text">2、数字运算用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Floating-Point-%E5%87%BD%E6%95%B0"><span class="toc-number">1.10.3.</span> <span class="toc-text">3、Floating-Point 函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-0-%E5%B1%80%E9%83%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.11.</span> <span class="toc-text">4.0 局部数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%A3%B0%E6%98%8E%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.11.1.</span> <span class="toc-text">1、声明类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.11.2.</span> <span class="toc-text">2、定义结构体类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-0-ABAP%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.</span> <span class="toc-text">5.0 ABAP数据字典数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8F%82%E7%85%A7%E8%A1%A8%E3%80%81%E8%AF%95%E5%9B%BE%E5%A3%B0%E6%98%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.1.</span> <span class="toc-text">1、参照表、试图声明数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8F%82%E7%85%A7%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="toc-number">1.12.2.</span> <span class="toc-text">2、参照基本数据类型定义变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%95%B0%E6%8D%AE%E5%85%83%E7%B4%A0%EF%BC%88Data-Element%EF%BC%89"><span class="toc-number">1.12.2.1.</span> <span class="toc-text">（1）数据元素（Data Element）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%88%A9%E7%94%A8%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84TYPE%E5%AE%9A%E4%B9%89"><span class="toc-number">1.12.2.2.</span> <span class="toc-text">（2）利用结构体的TYPE定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%88%A9%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%BB%84%E7%9A%84TYPE%E5%AE%9A%E4%B9%89"><span class="toc-number">1.12.2.3.</span> <span class="toc-text">（3）利用类型组的TYPE定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89ABAP%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E7%B1%BB%E5%9E%8B%E4%B8%8EABAP%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.12.2.4.</span> <span class="toc-text">（4）ABAP数据字典类型与ABAP基本数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-0-%E8%B5%8B%E5%80%BC"><span class="toc-number">1.13.</span> <span class="toc-text">6.0 赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BB%99%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC"><span class="toc-number">1.13.1.</span> <span class="toc-text">1、给变量赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89MOVE%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.13.1.1.</span> <span class="toc-text">（1）MOVE语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89MOVE-CORRESPONDING%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.13.1.2.</span> <span class="toc-text">（2）MOVE-CORRESPONDING语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89WRITE-TO-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.13.1.3.</span> <span class="toc-text">（3）WRITE TO 语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81offset-%E8%B5%8B%E5%80%BC"><span class="toc-number">1.13.2.</span> <span class="toc-text">2、offset 赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E4%B9%8B%E9%97%B4%E7%9A%84%E8%AE%A1%E7%AE%97%E6%93%8D%E4%BD%9C"><span class="toc-number">1.13.3.</span> <span class="toc-text">3、结构体之间的计算操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-0-%E5%AE%9A%E4%B9%89%E5%85%B6%E4%BB%96%E5%8F%98%E9%87%8F"><span class="toc-number">1.14.</span> <span class="toc-text">7.0 定义其他变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%B8%B8%E9%87%8F"><span class="toc-number">1.14.1.</span> <span class="toc-text">1、常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%9D%99%E6%80%81%E5%B8%B8%E9%87%8F"><span class="toc-number">1.14.2.</span> <span class="toc-text">2、静态常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81TABLES"><span class="toc-number">1.14.3.</span> <span class="toc-text">3、TABLES</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -1378,6 +1357,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -1530,7 +1510,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

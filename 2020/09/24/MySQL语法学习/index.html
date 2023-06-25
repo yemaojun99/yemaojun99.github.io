@@ -36,7 +36,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -47,10 +47,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -110,10 +110,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -187,7 +187,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本章复习MySQL与其基本概念</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>SQL基础</h1></center>
 
@@ -196,37 +196,37 @@
 <p>2、可使用空格和缩进来增强语句的可读性；</p>
 <p>3、MySQL数据库的SQL语句不区分大小写，关键字建议使用大写。</p>
 <p>4、3中注释</p>
-<p>​    （1）单行注释： – 注释内容或#注释内容</p>
-<p>​    （2）多行注释： /* 注释 */</p>
-<h2 id="三、SQL分类"><a href="#三、SQL分类" class="headerlink" title="三、SQL分类"></a>三、SQL分类</h2><p>1、<strong>DDL（Data Definition Language）：</strong>数据库定义语言        用来定义数据库、表和列等。<strong>关键字：</strong>create drop alter</p>
-<p>2、<strong>DML（Data Manipulation Language）：</strong>数据库操作语言        用来对数据库中表的数据进行增删改。<strong>关键字：</strong>insert updata delete</p>
-<p>3、<strong>DQL（Data Query Language）：</strong>数据库查询语言        用来对数据库表中的数据进行查询。<strong>关键字：</strong>select where</p>
-<p>4、<strong>DCL（Data Control Language）：</strong>数据库控制语言        用来定义数据库的访问权限和安全级别及创建用户。<strong>关键字：</strong>GRANT REVOKE等。</p>
+<p>​	（1）单行注释： – 注释内容或#注释内容</p>
+<p>​	（2）多行注释： &#x2F;* 注释 *&#x2F;</p>
+<h2 id="三、SQL分类"><a href="#三、SQL分类" class="headerlink" title="三、SQL分类"></a>三、SQL分类</h2><p>1、<strong>DDL（Data Definition Language）：</strong>数据库定义语言		用来定义数据库、表和列等。<strong>关键字：</strong>create drop alter</p>
+<p>2、<strong>DML（Data Manipulation Language）：</strong>数据库操作语言		用来对数据库中表的数据进行增删改。<strong>关键字：</strong>insert updata delete</p>
+<p>3、<strong>DQL（Data Query Language）：</strong>数据库查询语言		用来对数据库表中的数据进行查询。<strong>关键字：</strong>select where</p>
+<p>4、<strong>DCL（Data Control Language）：</strong>数据库控制语言		用来定义数据库的访问权限和安全级别及创建用户。<strong>关键字：</strong>GRANT REVOKE等。</p>
 <center><h1>DDL（操作数据库、表和列）</h1></center>
 
 
 
-<h2 id="四、DDL（操作数据库、表和列）"><a href="#四、DDL（操作数据库、表和列）" class="headerlink" title="四、DDL（操作数据库、表和列）"></a>四、DDL（操作数据库、表和列）</h2><p>1、C（create）：创建    create database if not exists 数据库；character set 编码格式（utf-8）；</p>
-<p>2、R（Retrieve）：查询    show database：查询所有的数据库    show create database 数据库名称：查询具体数据库；</p>
-<p>3、U（Updata）：修改    alter database 数据库名称 character set 字符集名称：修改字符集；</p>
-<p>4、D（Delete）：删除    drop database if exists 数据库名称：如果存在就删除数据库；</p>
+<h2 id="四、DDL（操作数据库、表和列）"><a href="#四、DDL（操作数据库、表和列）" class="headerlink" title="四、DDL（操作数据库、表和列）"></a>四、DDL（操作数据库、表和列）</h2><p>1、C（create）：创建	create database if not exists 数据库；character set 编码格式（utf-8）；</p>
+<p>2、R（Retrieve）：查询	show database：查询所有的数据库	show create database 数据库名称：查询具体数据库；</p>
+<p>3、U（Updata）：修改	alter database 数据库名称 character set 字符集名称：修改字符集；</p>
+<p>4、D（Delete）：删除	drop database if exists 数据库名称：如果存在就删除数据库；</p>
 <p>5、使用数据库：select database()：查询当前正在使用的数据库名称     use 数据库名称：使用指定的数据库。</p>
 <h2 id="五、操作表"><a href="#五、操作表" class="headerlink" title="五、操作表"></a>五、操作表</h2><h3 id="1、查询表"><a href="#1、查询表" class="headerlink" title="1、查询表"></a>1、查询表</h3><p>（1）查询某个数据库中所有表的数据：show tables：需要提前使用一个数据库。</p>
 <p>（2）查询表结构：desc 表名；</p>
 <h3 id="2、创建表"><a href="#2、创建表" class="headerlink" title="2、创建表"></a>2、创建表</h3><p>（1）语法：</p>
-<p>​                    create table 表名（</p>
-<p>​                        列名1    数据结构1，</p>
-<p>​                        列名2    数据结构2，</p>
-<p>​                        列名3    数据结构3</p>
-<p>​                        ………</p>
-<p>​                        列名n    数据结构n</p>
-<p>​                        ）</p>
+<p>​					create table 表名（</p>
+<p>​						列名1	数据结构1，</p>
+<p>​						列名2	数据结构2，</p>
+<p>​						列名3	数据结构3</p>
+<p>​						………</p>
+<p>​						列名n	数据结构n</p>
+<p>​						）</p>
 <h3 id="3、数据类型"><a href="#3、数据类型" class="headerlink" title="3、数据类型"></a>3、数据类型</h3><p>① 整数类型：int </p>
 <p>② 小数类型：double</p>
 <p>③ 日期，只包含年月日（yyyy-MM-dd）：date</p>
 <p>④ 日期包含年月日时分秒（yyyy-MM-dd HH:mm:ss）：datetime</p>
-<p>⑤ 时间戳类型，包含内容与④一致：timestamp        （若将来不给该字段赋值或赋值为null，则默认使用当前系统时间来自动赋值）</p>
-<p>⑥ 字符串：varchar        姓名最大20个字符            zhangsan  8个字符            张三  2个字符</p>
+<p>⑤ 时间戳类型，包含内容与④一致：timestamp		（若将来不给该字段赋值或赋值为null，则默认使用当前系统时间来自动赋值）</p>
+<p>⑥ 字符串：varchar		姓名最大20个字符			zhangsan  8个字符			张三  2个字符</p>
 <p><strong>三种事件类型的区别：</strong></p>
 <ul>
 <li><strong>data：</strong>正如字面意思，只标识日期</li>
@@ -239,7 +239,7 @@
 <p>（2）修改表的字符集：alter table 表名 character set 字符集名称；</p>
 <p>（3）添加一列：alter table 表名 add 列名 数据结构；</p>
 <p>（4）修改列名称 类型：alter table 表名 change 列名 新列名 新数据类型；</p>
-<p>​                                            alter table 表名 modify 列名 新数据类型；</p>
+<p>​											alter table 表名 modify 列名 新数据类型；</p>
 <h3 id="6、删除列"><a href="#6、删除列" class="headerlink" title="6、删除列"></a>6、删除列</h3><p>alter table 表名 drop 列名；</p>
 <center><h1>DML（增删改表中的数据）</h1></center>
 
@@ -249,13 +249,13 @@
 <p>（2）如果表名后，不定义列名，则默认给所有列添加值；</p>
 <p>（3）除了数字类型（整数、小数）其它类型需要使用引号（单双都可以）引起来。</p>
 <h2 id="二、删除数据"><a href="#二、删除数据" class="headerlink" title="二、删除数据"></a>二、删除数据</h2><p>1、语法：delete from 表名 [where条件]  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> xuexi <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">1</span>;<span class="comment">--删除xuexi表中id为1的行。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> xuexi <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">1</span>;<span class="comment">--删除xuexi表中id为1的行。</span></span><br></pre></td></tr></table></figure>
 
 
 
 <p>注：若不添加条件则默认删除掉所有记录</p>
 <h2 id="三、三种删除表的方式比较（drop、truncate、delete）"><a href="#三、三种删除表的方式比较（drop、truncate、delete）" class="headerlink" title="三、三种删除表的方式比较（drop、truncate、delete）"></a>三、三种删除表的方式比较（drop、truncate、delete）</h2><p>1、drop（删除表）：删除内容和定义，释放空间。将整个表完全删除，想要再添加数据是不可能的，除非新添加一个表。</p>
-<p>drop语句将会删除该表的结构被依赖的约束（constrain）、触发器（trigger）、索引（index）；依赖于该表的存储过程/函数将被保留，但其状态会变为invalid（无效的）。</p>
+<p>drop语句将会删除该表的结构被依赖的约束（constrain）、触发器（trigger）、索引（index）；依赖于该表的存储过程&#x2F;函数将被保留，但其状态会变为invalid（无效的）。</p>
 <p>2、truncate（清空表中的数据）：删除内容、释放空间但不删除定义（保留表的数据结构）。该语句知识清除表中的<strong>所有数据</strong>。</p>
 <p>truncate table 表名；</p>
 <p>3、delete（删除表中的数据）：delete用于删除表中的行。delete语句执行删除的过程是每次从表中删除一行，并且将该行的删除操作作为事务记录在日志中保存，以便进行回滚操作。</p>
@@ -268,21 +268,21 @@
 <p>2、主要目的：</p>
 <p>（1）如果因为某种原因或其他用户想要通过ROLLCACK来取消一个人的数据操作，数据就会复原到改变时的值。这种情况只在transaction（交易）的过程中有效，如果用户执行了COMMIT（事务提交）命令，那么ROLLBACK SEGMENT里面的值就会标识为失效的，数据改变就将永久化。</p>
 <p>（2）另一个目的是当有并发的session访问了一个数据值改变但事务还没有提交的表。如果一个SELECT语句开始读取一个表同时一个事务也在修改这个表的值，那么修改前的值就会保存到ROLLBACK SERMENT里面，SELETC也是从ROLLBACK SEGMENT里面读取表的值。</p>
-<h2 id="五、修改数据"><a href="#五、修改数据" class="headerlink" title="五、修改数据"></a>五、修改数据</h2><p>1、语法：uodate 表名 set 列名1 = 值1，列名2 = 值2 ，…，[where条件]</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> xuexi <span class="keyword">set</span> age = <span class="number">19</span> <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">3</span>;<span class="comment">--修改xuexi表中id为3的age为19.</span></span><br></pre></td></tr></table></figure>
+<h2 id="五、修改数据"><a href="#五、修改数据" class="headerlink" title="五、修改数据"></a>五、修改数据</h2><p>1、语法：uodate 表名 set 列名1 &#x3D; 值1，列名2 &#x3D; 值2 ，…，[where条件]</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> xuexi <span class="keyword">set</span> age <span class="operator">=</span> <span class="number">19</span> <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">3</span>;<span class="comment">--修改xuexi表中id为3的age为19.</span></span><br></pre></td></tr></table></figure>
 
 
 
 <p>2、注意事项：若不添加任何where条件则修改表中所有age的值为19。</p>
 <center><h1>DQL（数据库查询语言）</h1></center>
 
-<h2 id="一、基础查询"><a href="#一、基础查询" class="headerlink" title="一、基础查询"></a>一、基础查询</h2><h3 id="1、基础语法："><a href="#1、基础语法：" class="headerlink" title="1、基础语法："></a>1、基础语法：</h3><p>​                        SELECT  字段列表（聚合函数、列名）</p>
-<p>​                        FROM  表名列表</p>
-<p>​                        WHERE  条件列表</p>
-<p>​                        GROUP BY  分组字段</p>
-<p>​                        HAVING  分组之后的条件</p>
-<p>​                        ORDER BY  排序</p>
-<p>​                        LIMIT  分页限定</p>
+<h2 id="一、基础查询"><a href="#一、基础查询" class="headerlink" title="一、基础查询"></a>一、基础查询</h2><h3 id="1、基础语法："><a href="#1、基础语法：" class="headerlink" title="1、基础语法："></a>1、基础语法：</h3><p>​						SELECT  字段列表（聚合函数、列名）</p>
+<p>​						FROM  表名列表</p>
+<p>​						WHERE  条件列表</p>
+<p>​						GROUP BY  分组字段</p>
+<p>​						HAVING  分组之后的条件</p>
+<p>​						ORDER BY  排序</p>
+<p>​						LIMIT  分页限定</p>
 <h3 id="2、基础查询"><a href="#2、基础查询" class="headerlink" title="2、基础查询"></a>2、基础查询</h3><p>（1）多个字段的查询</p>
 <p>① 语法：select 字段1，字段2…..  from 表名</p>
 <p>② 注意：若要查询所有字段，则可以使用*来替代字段列表</p>
@@ -292,40 +292,40 @@
 <p>（3）计算列</p>
 <p>① 一般可以使用四则运算计算一些列的值。（一般只会进行数值型计算，且null参与的计算，计算结果为null）</p>
 <p>② ifnull（表达式1，表达式2）：</p>
-<p>​            表达式1：那个字段需要判断是否为null</p>
-<p>​            表达式2：如果该字段为null后的替换值</p>
+<p>​			表达式1：那个字段需要判断是否为null</p>
+<p>​			表达式2：如果该字段为null后的替换值</p>
 <p>（4）起别名</p>
 <p>① 关键字：as 也可以由空格代替</p>
 <p>② 例：select 列名1 as 别名，列名2 + 列名3  （我是空格） 别名 from 表名;</p>
 <h3 id="3、条件查询（where）"><a href="#3、条件查询（where）" class="headerlink" title="3、条件查询（where）"></a>3、条件查询（where）</h3><p>（1）where字句后跟条件</p>
 <p>（2）运算符</p>
-<p>​        ① <strong>&gt;，&lt;，&lt;=，&gt;=，=，&lt;&gt;（不等于）</strong>            例：select * from 表名 where age &lt;&gt; 20;查询表中所有年龄不等于20的行</p>
-<p>​        ② <strong>BETWEEN …… AND ……</strong>    表示某个条件在某个范围内            例：select * from 表名 where age between 20 and 30;查询年龄在20到30之间的行</p>
-<p>​        ③ <strong>IN（集合）</strong>：表示多个值，使用逗号分隔        例：select * from 表名 where age in(22,18,25);查询年龄为22，18，25的数据</p>
-<p>​        ④ <strong>LIKE‘ ‘</strong>：模糊查询</p>
-<p>​        ⑤ <strong>is null</strong>：查询某一列为null的值        例：select * from 表名 where 列名 is null；</p>
-<p>​        ⑥ <strong>is not null</strong>：查询某一列不为null的值。</p>
-<p>​        ⑦ <strong>逻辑运算符</strong></p>
+<p>​		① <strong>&gt;，&lt;，&lt;&#x3D;，&gt;&#x3D;，&#x3D;，&lt;&gt;（不等于）</strong>			例：select * from 表名 where age &lt;&gt; 20;查询表中所有年龄不等于20的行</p>
+<p>​		② <strong>BETWEEN …… AND ……</strong>	表示某个条件在某个范围内			例：select * from 表名 where age between 20 and 30;查询年龄在20到30之间的行</p>
+<p>​		③ <strong>IN（集合）</strong>：表示多个值，使用逗号分隔		例：select * from 表名 where age in(22,18,25);查询年龄为22，18，25的数据</p>
+<p>​		④ <strong>LIKE‘ ‘</strong>：模糊查询</p>
+<p>​		⑤ <strong>is null</strong>：查询某一列为null的值		例：select * from 表名 where 列名 is null；</p>
+<p>​		⑥ <strong>is not null</strong>：查询某一列不为null的值。</p>
+<p>​		⑦ <strong>逻辑运算符</strong></p>
 <ul>
-<li><strong>and或&amp;&amp;</strong>：与</li>
-<li><strong>or或||</strong>：或</li>
+<li>**and或&amp;&amp;**：与</li>
+<li>**or或||**：或</li>
 <li><strong>not或！</strong>：非</li>
 </ul>
 <p>（3）模糊查询</p>
 <p>① 占位符：</p>
-<p>​            <strong>_</strong>：单个任意字段</p>
-<p>​            <strong>%</strong>：任意多个字段</p>
+<p>​			**_**：单个任意字段</p>
+<p>​			**%**：任意多个字段</p>
 <p>② 例</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询姓马的人：		<span class="keyword">select</span> * <span class="keyword">from</span> 表名 <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span>’马%‘；</span><br><span class="line"></span><br><span class="line">查询姓名第二个字为化的人：		<span class="keyword">select</span> * <span class="keyword">from</span> 表名 <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span>’_马%‘;</span><br><span class="line"></span><br><span class="line">查询姓名为三个字的人：		<span class="keyword">select</span> * <span class="keyword">from</span> 列名 <span class="keyword">where</span> <span class="keyword">name</span> <span class="keyword">like</span>’_ _ _‘；</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询姓马的人：		<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 表名 <span class="keyword">where</span> name <span class="keyword">like</span>’马<span class="operator">%</span>‘；</span><br><span class="line"></span><br><span class="line">查询姓名第二个字为化的人：		<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 表名 <span class="keyword">where</span> name <span class="keyword">like</span>’_马<span class="operator">%</span>‘;</span><br><span class="line"></span><br><span class="line">查询姓名为三个字的人：		<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 列名 <span class="keyword">where</span> name <span class="keyword">like</span>’_ _ _‘；</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="二、排序查询"><a href="#二、排序查询" class="headerlink" title="二、排序查询"></a>二、排序查询</h2><h3 id="1、语法："><a href="#1、语法：" class="headerlink" title="1、语法："></a>1、语法：</h3><p>order by 排序字段1 排序方式1，排序字段2 排序方式2…            先按照字段1进行排序，若1结果相同则按照2进行排序</p>
+<h2 id="二、排序查询"><a href="#二、排序查询" class="headerlink" title="二、排序查询"></a>二、排序查询</h2><h3 id="1、语法："><a href="#1、语法：" class="headerlink" title="1、语法："></a>1、语法：</h3><p>order by 排序字段1 排序方式1，排序字段2 排序方式2…			先按照字段1进行排序，若1结果相同则按照2进行排序</p>
 <h3 id="2、排序方式"><a href="#2、排序方式" class="headerlink" title="2、排序方式"></a>2、排序方式</h3><p><strong>（1）升序：</strong>ASC（默认）</p>
 <p><strong>（2）降序：</strong>DESC</p>
 <h3 id="3、注意事项："><a href="#3、注意事项：" class="headerlink" title="3、注意事项："></a>3、注意事项：</h3><p>如果有多个排序条件，则当前边条件值一样时，才会判断第二条件</p>
 <h2 id="三、聚合函数"><a href="#三、聚合函数" class="headerlink" title="三、聚合函数"></a>三、聚合函数</h2><h3 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h3><p>将一列数据作为一个整体，进行纵向的计算</p>
-<h3 id="2、分类"><a href="#2、分类" class="headerlink" title="2、分类"></a>2、分类</h3><p>（1）<strong>count</strong>：计算个数            例：select conut(列名) from 表名;计算表中这列的总数</p>
+<h3 id="2、分类"><a href="#2、分类" class="headerlink" title="2、分类"></a>2、分类</h3><p>（1）<strong>count</strong>：计算个数			例：select conut(列名) from 表名;计算表中这列的总数</p>
 <p>（2）<strong>max</strong>：计算最大值</p>
 <p>（3）<strong>min</strong>：计算最小值</p>
 <p>（4）<strong>sum</strong>：计算和</p>
@@ -345,7 +345,7 @@
 <p>例：每页显示3条记录</p>
 <p>select * from student limit 0,3;–第一页</p>
 <p>select * from student limit 3,3;–第二页</p>
-<h3 id="2、公式"><a href="#2、公式" class="headerlink" title="2、公式"></a>2、公式</h3><p>开始的索引 = （当前页码 - 1） * 每页显示的条数</p>
+<h3 id="2、公式"><a href="#2、公式" class="headerlink" title="2、公式"></a>2、公式</h3><p>开始的索引 &#x3D; （当前页码 - 1） * 每页显示的条数</p>
 <p>limit是mysql的“方言”。</p>
 <center><h1>约束</h1></center>
 
@@ -354,11 +354,11 @@
 <p><strong>（2）非空约束：</strong>not null</p>
 <p><strong>（3）唯一约束：</strong>unique</p>
 <p><strong>（4）外键约束：</strong>forgin key</p>
-<h2 id="二、非空约束（not-null）"><a href="#二、非空约束（not-null）" class="headerlink" title="二、非空约束（not null）"></a>二、非空约束（not null）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、创建表时添加约束</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> abc(</span><br><span class="line">a1 <span class="built_in">int</span> <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建完表之后添加非空约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 数据类型 <span class="keyword">not</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除非空约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 数据类型</span><br></pre></td></tr></table></figure>
+<h2 id="二、非空约束（not-null）"><a href="#二、非空约束（not-null）" class="headerlink" title="二、非空约束（not null）"></a>二、非空约束（not null）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、创建表时添加约束</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> abc(</span><br><span class="line">a1 <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建完表之后添加非空约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 列名 数据类型 <span class="keyword">not</span> <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除非空约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 列名 数据类型</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="三、唯一约束（unique）"><a href="#三、唯一约束（unique）" class="headerlink" title="三、唯一约束（unique）"></a>三、唯一约束（unique）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、创建表时添加约束</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> abc(</span><br><span class="line">a1 <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">unique</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建完表后，添加唯一约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 数据类型 <span class="keyword">unique</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除唯一约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">drop</span> <span class="keyword">index</span> 列名;</span><br></pre></td></tr></table></figure>
+<h2 id="三、唯一约束（unique）"><a href="#三、唯一约束（unique）" class="headerlink" title="三、唯一约束（unique）"></a>三、唯一约束（unique）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、创建表时添加约束</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> abc(</span><br><span class="line">a1 <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">unique</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建完表后，添加唯一约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 列名 数据类型 <span class="keyword">unique</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除唯一约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">drop</span> index 列名;</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意事项：</strong></p>
 <ul>
@@ -368,33 +368,33 @@
 <h2 id="四、主键约束（primary-key）"><a href="#四、主键约束（primary-key）" class="headerlink" title="四、主键约束（primary key）"></a>四、主键约束（primary key）</h2><h3 id="1、注意事项"><a href="#1、注意事项" class="headerlink" title="1、注意事项"></a>1、注意事项</h3><p>（1）<strong>含义：</strong>非空且唯一</p>
 <p>（2）一张表只能有一个字段为主键</p>
 <p>（3）主键就是该表中记录的唯一标识</p>
-<h3 id="2、约束添加方式"><a href="#2、约束添加方式" class="headerlink" title="2、约束添加方式"></a>2、约束添加方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、在创建表时添加</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> abc(</span><br><span class="line">a1 <span class="built_in">varchar</span>(<span class="number">20</span>) primary <span class="keyword">key</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建完表后设置主键</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 数据类型 primary <span class="keyword">key</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除主键</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">drop</span> primary <span class="keyword">key</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="2、约束添加方式"><a href="#2、约束添加方式" class="headerlink" title="2、约束添加方式"></a>2、约束添加方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、在创建表时添加</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> abc(</span><br><span class="line">a1 <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">primary</span> key</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建完表后设置主键</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 列名 数据类型 <span class="keyword">primary</span> key;</span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除主键</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">drop</span> <span class="keyword">primary</span> key;</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="3、自动增长"><a href="#3、自动增长" class="headerlink" title="3、自动增长"></a>3、自动增长</h3><p>（1）概念：如果某一列是数值类型的，使用auto_inrement可以来完成值的自动增长</p>
 <p>（2）添加方式：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、创建表的时候添加</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--2、添加自动增长</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 数据结构 auto_increment;</span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除自动增长</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">modify</span> 列名 数据结构;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、创建表的时候添加</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--2、添加自动增长</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 列名 数据结构 auto_increment;</span><br><span class="line"></span><br><span class="line"><span class="comment">--3、删除自动增长</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 modify 列名 数据结构;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="五、外键约束（foreign-key）"><a href="#五、外键约束（foreign-key）" class="headerlink" title="五、外键约束（foreign key）"></a>五、外键约束（foreign key）</h2><h3 id="1、约束添加方式"><a href="#1、约束添加方式" class="headerlink" title="1、约束添加方式"></a>1、约束添加方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、建表时添加</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名(</span><br><span class="line">	外键列 <span class="keyword">constraint</span> 外键名称 <span class="keyword">foreign</span> <span class="keyword">key</span> 外键列名称 <span class="keyword">references</span> 主键名称（主键名称）</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建表后添加外键约束</span></span><br><span class="line"><span class="keyword">table</span> 表名 <span class="keyword">add</span> <span class="keyword">constraint</span> 外键名称 <span class="keyword">foreign</span> <span class="keyword">key</span> 外键列名称 <span class="keyword">references</span> 主键名称(主键名称)</span><br></pre></td></tr></table></figure>
+<h2 id="五、外键约束（foreign-key）"><a href="#五、外键约束（foreign-key）" class="headerlink" title="五、外键约束（foreign key）"></a>五、外键约束（foreign key）</h2><h3 id="1、约束添加方式"><a href="#1、约束添加方式" class="headerlink" title="1、约束添加方式"></a>1、约束添加方式</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--1、建表时添加</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名(</span><br><span class="line">	外键列 <span class="keyword">constraint</span> 外键名称 <span class="keyword">foreign</span> key 外键列名称 <span class="keyword">references</span> 主键名称（主键名称）</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">--2、创建表后添加外键约束</span></span><br><span class="line"><span class="keyword">table</span> 表名 <span class="keyword">add</span> <span class="keyword">constraint</span> 外键名称 <span class="keyword">foreign</span> key 外键列名称 <span class="keyword">references</span> 主键名称(主键名称)</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="2、级联操作"><a href="#2、级联操作" class="headerlink" title="2、级联操作"></a>2、级联操作</h3><p>（1）当对一个外键的主表中的数据进行修改时，关联的外键的值也会相应的修改</p>
 <p>（2）添加级联操作</p>
 <p>① 语法：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">add</span> <span class="keyword">constraint</span> 外键名称</span><br><span class="line"><span class="keyword">foreign</span> <span class="keyword">key</span>(外键字段名称) <span class="keyword">references</span> 主表名称（主表列名称）</span><br><span class="line"><span class="keyword">on</span> <span class="keyword">update</span> <span class="keyword">cascade</span> <span class="keyword">on</span> <span class="keyword">delete</span> <span class="keyword">cascade</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名 <span class="keyword">add</span> <span class="keyword">constraint</span> 外键名称</span><br><span class="line"><span class="keyword">foreign</span> key(外键字段名称) <span class="keyword">references</span> 主表名称（主表列名称）</span><br><span class="line"><span class="keyword">on</span> <span class="keyword">update</span> cascade <span class="keyword">on</span> <span class="keyword">delete</span> cascade;</span><br></pre></td></tr></table></figure>
 
 
 
 <p>（3）分类</p>
 <p>① 级联更新：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">on <span class="keyword">update</span> <span class="keyword">cascade</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="keyword">update</span> cascade</span><br></pre></td></tr></table></figure>
 
 <p>② 级联删除</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">on <span class="keyword">delete</span> <span class="keyword">cascade</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="keyword">delete</span> cascade</span><br></pre></td></tr></table></figure>
 
 
 
@@ -405,27 +405,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -544,7 +523,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">SQL基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、SQL基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">一、SQL基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、SQL通用语法"><span class="toc-number">1.2.</span> <span class="toc-text">二、SQL通用语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、SQL分类"><span class="toc-number">1.3.</span> <span class="toc-text">三、SQL分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">DDL（操作数据库、表和列）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#四、DDL（操作数据库、表和列）"><span class="toc-number">2.1.</span> <span class="toc-text">四、DDL（操作数据库、表和列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、操作表"><span class="toc-number">2.2.</span> <span class="toc-text">五、操作表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、查询表"><span class="toc-number">2.2.1.</span> <span class="toc-text">1、查询表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、创建表"><span class="toc-number">2.2.2.</span> <span class="toc-text">2、创建表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、数据类型"><span class="toc-number">2.2.3.</span> <span class="toc-text">3、数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、删除表"><span class="toc-number">2.2.4.</span> <span class="toc-text">4、删除表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改表"><span class="toc-number">2.2.5.</span> <span class="toc-text">5、修改表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、删除列"><span class="toc-number">2.2.6.</span> <span class="toc-text">6、删除列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">DML（增删改表中的数据）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、添加数据"><span class="toc-number">3.1.</span> <span class="toc-text">一、添加数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、删除数据"><span class="toc-number">3.2.</span> <span class="toc-text">二、删除数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、三种删除表的方式比较（drop、truncate、delete）"><span class="toc-number">3.3.</span> <span class="toc-text">三、三种删除表的方式比较（drop、truncate、delete）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、rollback-segment"><span class="toc-number">3.4.</span> <span class="toc-text">四、rollback segment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、修改数据"><span class="toc-number">3.5.</span> <span class="toc-text">五、修改数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">DQL（数据库查询语言）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基础查询"><span class="toc-number">4.1.</span> <span class="toc-text">一、基础查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、基础语法："><span class="toc-number">4.1.1.</span> <span class="toc-text">1、基础语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、基础查询"><span class="toc-number">4.1.2.</span> <span class="toc-text">2、基础查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、条件查询（where）"><span class="toc-number">4.1.3.</span> <span class="toc-text">3、条件查询（where）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、排序查询"><span class="toc-number">4.2.</span> <span class="toc-text">二、排序查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、语法："><span class="toc-number">4.2.1.</span> <span class="toc-text">1、语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、排序方式"><span class="toc-number">4.2.2.</span> <span class="toc-text">2、排序方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、注意事项："><span class="toc-number">4.2.3.</span> <span class="toc-text">3、注意事项：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、聚合函数"><span class="toc-number">4.3.</span> <span class="toc-text">三、聚合函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、定义"><span class="toc-number">4.3.1.</span> <span class="toc-text">1、定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、分类"><span class="toc-number">4.3.2.</span> <span class="toc-text">2、分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、注意事项"><span class="toc-number">4.3.3.</span> <span class="toc-text">3、注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、分组查询"><span class="toc-number">4.4.</span> <span class="toc-text">四、分组查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、语法"><span class="toc-number">4.4.1.</span> <span class="toc-text">1、语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、注意事项"><span class="toc-number">4.4.2.</span> <span class="toc-text">2、注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、where和having的区别"><span class="toc-number">4.4.3.</span> <span class="toc-text">3、where和having的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、分页查询"><span class="toc-number">4.5.</span> <span class="toc-text">三、分页查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、语法-1"><span class="toc-number">4.5.1.</span> <span class="toc-text">1、语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、公式"><span class="toc-number">4.5.2.</span> <span class="toc-text">2、公式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">约束</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、约束（概念）"><span class="toc-number">5.1.</span> <span class="toc-text">一、约束（概念）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、定义："><span class="toc-number">5.1.1.</span> <span class="toc-text">1、定义：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、分类-1"><span class="toc-number">5.1.2.</span> <span class="toc-text">2、分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、非空约束（not-null）"><span class="toc-number">5.2.</span> <span class="toc-text">二、非空约束（not null）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、唯一约束（unique）"><span class="toc-number">5.3.</span> <span class="toc-text">三、唯一约束（unique）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、主键约束（primary-key）"><span class="toc-number">5.4.</span> <span class="toc-text">四、主键约束（primary key）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、注意事项"><span class="toc-number">5.4.1.</span> <span class="toc-text">1、注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、约束添加方式"><span class="toc-number">5.4.2.</span> <span class="toc-text">2、约束添加方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、自动增长"><span class="toc-number">5.4.3.</span> <span class="toc-text">3、自动增长</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、外键约束（foreign-key）"><span class="toc-number">5.5.</span> <span class="toc-text">五、外键约束（foreign key）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、约束添加方式"><span class="toc-number">5.5.1.</span> <span class="toc-text">1、约束添加方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、级联操作"><span class="toc-number">5.5.2.</span> <span class="toc-text">2、级联操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">数据库的设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、多表之间的关系"><span class="toc-number">6.1.</span> <span class="toc-text">二、多表之间的关系</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">SQL基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81SQL%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">一、SQL基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81SQL%E9%80%9A%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">二、SQL通用语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81SQL%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">三、SQL分类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">DDL（操作数据库、表和列）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81DDL%EF%BC%88%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E8%A1%A8%E5%92%8C%E5%88%97%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">四、DDL（操作数据库、表和列）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%93%8D%E4%BD%9C%E8%A1%A8"><span class="toc-number">2.2.</span> <span class="toc-text">五、操作表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%9F%A5%E8%AF%A2%E8%A1%A8"><span class="toc-number">2.2.1.</span> <span class="toc-text">1、查询表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-number">2.2.2.</span> <span class="toc-text">2、创建表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.3.</span> <span class="toc-text">3、数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%88%A0%E9%99%A4%E8%A1%A8"><span class="toc-number">2.2.4.</span> <span class="toc-text">4、删除表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E4%BF%AE%E6%94%B9%E8%A1%A8"><span class="toc-number">2.2.5.</span> <span class="toc-text">5、修改表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%88%A0%E9%99%A4%E5%88%97"><span class="toc-number">2.2.6.</span> <span class="toc-text">6、删除列</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">DML（增删改表中的数据）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-number">3.1.</span> <span class="toc-text">一、添加数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-number">3.2.</span> <span class="toc-text">二、删除数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%89%E7%A7%8D%E5%88%A0%E9%99%A4%E8%A1%A8%E7%9A%84%E6%96%B9%E5%BC%8F%E6%AF%94%E8%BE%83%EF%BC%88drop%E3%80%81truncate%E3%80%81delete%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">三、三种删除表的方式比较（drop、truncate、delete）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81rollback-segment"><span class="toc-number">3.4.</span> <span class="toc-text">四、rollback segment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="toc-number">3.5.</span> <span class="toc-text">五、修改数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">DQL（数据库查询语言）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.1.</span> <span class="toc-text">一、基础查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">4.1.1.</span> <span class="toc-text">1、基础语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.1.2.</span> <span class="toc-text">2、基础查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%EF%BC%88where%EF%BC%89"><span class="toc-number">4.1.3.</span> <span class="toc-text">3、条件查询（where）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.2.</span> <span class="toc-text">二、排序查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">4.2.1.</span> <span class="toc-text">1、语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F"><span class="toc-number">4.2.2.</span> <span class="toc-text">2、排序方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%9A"><span class="toc-number">4.2.3.</span> <span class="toc-text">3、注意事项：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">4.3.</span> <span class="toc-text">三、聚合函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%9A%E4%B9%89"><span class="toc-number">4.3.1.</span> <span class="toc-text">1、定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%86%E7%B1%BB"><span class="toc-number">4.3.2.</span> <span class="toc-text">2、分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">4.3.3.</span> <span class="toc-text">3、注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.4.</span> <span class="toc-text">四、分组查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E6%B3%95"><span class="toc-number">4.4.1.</span> <span class="toc-text">1、语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">4.4.2.</span> <span class="toc-text">2、注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81where%E5%92%8Chaving%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.4.3.</span> <span class="toc-text">3、where和having的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.5.</span> <span class="toc-text">三、分页查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E6%B3%95-1"><span class="toc-number">4.5.1.</span> <span class="toc-text">1、语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%85%AC%E5%BC%8F"><span class="toc-number">4.5.2.</span> <span class="toc-text">2、公式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">约束</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BA%A6%E6%9D%9F%EF%BC%88%E6%A6%82%E5%BF%B5%EF%BC%89"><span class="toc-number">5.1.</span> <span class="toc-text">一、约束（概念）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">5.1.1.</span> <span class="toc-text">1、定义：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%86%E7%B1%BB-1"><span class="toc-number">5.1.2.</span> <span class="toc-text">2、分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9D%9E%E7%A9%BA%E7%BA%A6%E6%9D%9F%EF%BC%88not-null%EF%BC%89"><span class="toc-number">5.2.</span> <span class="toc-text">二、非空约束（not null）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%94%AF%E4%B8%80%E7%BA%A6%E6%9D%9F%EF%BC%88unique%EF%BC%89"><span class="toc-number">5.3.</span> <span class="toc-text">三、唯一约束（unique）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%EF%BC%88primary-key%EF%BC%89"><span class="toc-number">5.4.</span> <span class="toc-text">四、主键约束（primary key）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.4.1.</span> <span class="toc-text">1、注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%BA%A6%E6%9D%9F%E6%B7%BB%E5%8A%A0%E6%96%B9%E5%BC%8F"><span class="toc-number">5.4.2.</span> <span class="toc-text">2、约束添加方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%87%AA%E5%8A%A8%E5%A2%9E%E9%95%BF"><span class="toc-number">5.4.3.</span> <span class="toc-text">3、自动增长</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F%EF%BC%88foreign-key%EF%BC%89"><span class="toc-number">5.5.</span> <span class="toc-text">五、外键约束（foreign key）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BA%A6%E6%9D%9F%E6%B7%BB%E5%8A%A0%E6%96%B9%E5%BC%8F"><span class="toc-number">5.5.1.</span> <span class="toc-text">1、约束添加方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%BA%A7%E8%81%94%E6%93%8D%E4%BD%9C"><span class="toc-number">5.5.2.</span> <span class="toc-text">2、级联操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">数据库的设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A4%9A%E8%A1%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">6.1.</span> <span class="toc-text">二、多表之间的关系</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -575,6 +554,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -727,7 +707,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

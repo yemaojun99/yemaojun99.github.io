@@ -62,7 +62,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -73,10 +73,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -136,10 +136,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -213,7 +213,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>全双工、DNS、Ping与ICMP、香农定理、Qos服务质量、PPP信息帧格式、集合框架、java线程状态转换、垃圾回收标准、HashMap与HashTable的区别、布尔类型在if语句中的赋值使用、优化Hibernate所鼓励的7大措施、类加载器、处理流与节点流。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h1 id="一、单工模式、半双工模式、全双工模式"><a href="#一、单工模式、半双工模式、全双工模式" class="headerlink" title="一、单工模式、半双工模式、全双工模式"></a>一、单工模式、半双工模式、全双工模式</h1><h3 id="1、单工模式"><a href="#1、单工模式" class="headerlink" title="1、单工模式"></a>1、单工模式</h3><p>A发送请求，B接收请求，但B并不能发送请求。</p>
 <br>
@@ -258,8 +258,8 @@
 
 <br>
 
-<h1 id="四、香农定理"><a href="#四、香农定理" class="headerlink" title="四、香农定理"></a>四、香农定理</h1><p>C = Blb（1 + S / N）</p>
-<p>其中：C是信道支持的最大速度或者叫信道容量；B是信道的带宽；S是平均信号功率；N是平均噪声功率；S/N即信噪比。</p>
+<h1 id="四、香农定理"><a href="#四、香农定理" class="headerlink" title="四、香农定理"></a>四、香农定理</h1><p>C &#x3D; Blb（1 + S &#x2F; N）</p>
+<p>其中：C是信道支持的最大速度或者叫信道容量；B是信道的带宽；S是平均信号功率；N是平均噪声功率；S&#x2F;N即信噪比。</p>
 <p>信噪比越高，数据传输率也越高。</p>
 <img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/05.JPG" alt="05" style="zoom:80%;">
 
@@ -347,8 +347,8 @@
 <li><p>HashTable 和 ConcurrentHashMap 都是线程安全的。区别在于他们对加锁的范围不同，HashTable 对整张Hash表进行加锁，而ConcurrentHashMap将Hash表分为16桶(segment)，每次只对需要的桶进行加锁。</p>
 </li>
 <li><p>Collections 类提供了synchronizedXxx()方法，可以将指定的集合包装成线程同步的集合。比如，</p>
-<p>List  list = Collections.synchronizedList(new ArrayList());</p>
-<p>Set  set = Collections.synchronizedSet(new HashSet());</p>
+<p>List  list &#x3D; Collections.synchronizedList(new ArrayList());</p>
+<p>Set  set &#x3D; Collections.synchronizedSet(new HashSet());</p>
 </li>
 </ol>
 <br>
@@ -362,7 +362,7 @@
 
 <br>
 
-<h1 id="十五、HashTable和HashMap区别"><a href="#十五、HashTable和HashMap区别" class="headerlink" title="十五、HashTable和HashMap区别"></a>十五、HashTable和HashMap区别</h1><h3 id="1、继承不同"><a href="#1、继承不同" class="headerlink" title="1、继承不同"></a>1、继承不同</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hashtable</span> <span class="keyword">extends</span> <span class="title">Dictionary</span> <span class="keyword">implements</span> <span class="title">Map</span> </span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">HashMap</span> <span class="keyword">extends</span> <span class="title">AbstractMap</span> <span class="keyword">implements</span> <span class="title">Map</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="十五、HashTable和HashMap区别"><a href="#十五、HashTable和HashMap区别" class="headerlink" title="十五、HashTable和HashMap区别"></a>十五、HashTable和HashMap区别</h1><h3 id="1、继承不同"><a href="#1、继承不同" class="headerlink" title="1、继承不同"></a>1、继承不同</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Hashtable</span> <span class="keyword">extends</span> <span class="title class_">Dictionary</span> <span class="keyword">implements</span> <span class="title class_">Map</span> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HashMap</span> <span class="keyword">extends</span> <span class="title class_">AbstractMap</span> <span class="keyword">implements</span> <span class="title class_">Map</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -389,7 +389,7 @@
 
 <p>接口，比抽象类还要抽象的类。</p>
 <ol>
-<li>接口中每一个方法也是隐式抽象的,接口中的方<strong><em>被隐式的指定为 *</em>public abstract</strong> （只能是 public abstract，其他修饰符都会报错）。</li>
+<li>接口中每一个方法也是隐式抽象的,接口中的方***被隐式的指定为 <strong>public abstract</strong> （只能是 public abstract，其他修饰符都会报错）。</li>
 <li>接口中可以含有变量，但是接口中的变量会被隐式的指定为 <strong>public static final</strong>  变量（并且只能是 public，用 private 修饰会报编译错误。）</li>
 <li>接口中的方法是不能在接口中实现的，只能由实现接口的类来实现接口中的方法。</li>
 </ol>
@@ -406,7 +406,7 @@
 <p>3、不用一对一，使用多对一代替一对一；</p>
 <p>4、配置对象缓存，不使用集合缓存；</p>
 <p>5、一对多使用Bag，多对一使用Set；</p>
-<p>6、继承使用显示多态 HQL:from object polymorphism=”exlicit” 避免查处所有对象；</p>
+<p>6、继承使用显示多态 HQL:from object polymorphism&#x3D;”exlicit” 避免查处所有对象；</p>
 <p>7、消除大表，使用二级缓存。</p>
 <img src="/2020/08/28/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E7%AC%94%E8%AF%95%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/18.JPG" alt="18" style="zoom:80%;">
 
@@ -487,27 +487,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -626,7 +605,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、单工模式、半双工模式、全双工模式"><span class="toc-number">1.</span> <span class="toc-text">一、单工模式、半双工模式、全双工模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单工模式"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、单工模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、半双工模式"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、半双工模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、全双工模式"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、全双工模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、DNS的作用"><span class="toc-number">2.</span> <span class="toc-text">二、DNS的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、作用"><span class="toc-number">2.0.1.</span> <span class="toc-text">1、作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、补充知识"><span class="toc-number">2.0.2.</span> <span class="toc-text">2、补充知识</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、Ping与ICMP"><span class="toc-number">3.</span> <span class="toc-text">三、Ping与ICMP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、香农定理"><span class="toc-number">4.</span> <span class="toc-text">四、香农定理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、QoS服务质量"><span class="toc-number">5.</span> <span class="toc-text">五、QoS服务质量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、PPP信息帧格式"><span class="toc-number">6.</span> <span class="toc-text">六、PPP信息帧格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、集合框架"><span class="toc-number">7.</span> <span class="toc-text">七、集合框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、java线程状态的转换"><span class="toc-number">8.</span> <span class="toc-text">八、java线程状态的转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、垃圾回收器收集的标准"><span class="toc-number">9.</span> <span class="toc-text">九、垃圾回收器收集的标准</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、类、接口与-class文件的关系"><span class="toc-number">10.</span> <span class="toc-text">十、类、接口与.class文件的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、字符串创建对象"><span class="toc-number">11.</span> <span class="toc-text">十一、字符串创建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十二、布尔类型在if语句中的赋值运算"><span class="toc-number">12.</span> <span class="toc-text">十二、布尔类型在if语句中的赋值运算</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十三、线程安全的map集合讲解"><span class="toc-number">13.</span> <span class="toc-text">十三、线程安全的map集合讲解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十四、java中的数组"><span class="toc-number">14.</span> <span class="toc-text">十四、java中的数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十五、HashTable和HashMap区别"><span class="toc-number">15.</span> <span class="toc-text">十五、HashTable和HashMap区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、继承不同"><span class="toc-number">15.0.1.</span> <span class="toc-text">1、继承不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、线程安全性不同"><span class="toc-number">15.0.2.</span> <span class="toc-text">2、线程安全性不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Hashtable中，key和value都不允许出现null值"><span class="toc-number">15.0.3.</span> <span class="toc-text">3、Hashtable中，key和value都不允许出现null值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、两个遍历方式的内部实现上不同"><span class="toc-number">15.0.4.</span> <span class="toc-text">4、两个遍历方式的内部实现上不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、哈希值的使用不同"><span class="toc-number">15.0.5.</span> <span class="toc-text">5、哈希值的使用不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式"><span class="toc-number">15.0.6.</span> <span class="toc-text">6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十六、接口中的成员"><span class="toc-number">16.</span> <span class="toc-text">十六、接口中的成员</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十七、优化Hibernate所鼓励的7大措施"><span class="toc-number">17.</span> <span class="toc-text">十七、优化Hibernate所鼓励的7大措施</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十八、io流"><span class="toc-number">18.</span> <span class="toc-text">十八、io流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十九、类加载器"><span class="toc-number">19.</span> <span class="toc-text">十九、类加载器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二十、处理流与节点流"><span class="toc-number">20.</span> <span class="toc-text">二十、处理流与节点流</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%8D%95%E5%B7%A5%E6%A8%A1%E5%BC%8F%E3%80%81%E5%8D%8A%E5%8F%8C%E5%B7%A5%E6%A8%A1%E5%BC%8F%E3%80%81%E5%85%A8%E5%8F%8C%E5%B7%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">一、单工模式、半双工模式、全双工模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8D%95%E5%B7%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、单工模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8D%8A%E5%8F%8C%E5%B7%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、半双工模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%85%A8%E5%8F%8C%E5%B7%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、全双工模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81DNS%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">二、DNS的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BD%9C%E7%94%A8"><span class="toc-number">2.0.1.</span> <span class="toc-text">1、作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86"><span class="toc-number">2.0.2.</span> <span class="toc-text">2、补充知识</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81Ping%E4%B8%8EICMP"><span class="toc-number">3.</span> <span class="toc-text">三、Ping与ICMP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">四、香农定理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81QoS%E6%9C%8D%E5%8A%A1%E8%B4%A8%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">五、QoS服务质量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81PPP%E4%BF%A1%E6%81%AF%E5%B8%A7%E6%A0%BC%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">六、PPP信息帧格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6"><span class="toc-number">7.</span> <span class="toc-text">七、集合框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81java%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">8.</span> <span class="toc-text">八、java线程状态的转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8%E6%94%B6%E9%9B%86%E7%9A%84%E6%A0%87%E5%87%86"><span class="toc-number">9.</span> <span class="toc-text">九、垃圾回收器收集的标准</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%8E-class%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">10.</span> <span class="toc-text">十、类、接口与.class文件的关系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">11.</span> <span class="toc-text">十一、字符串创建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B%E5%9C%A8if%E8%AF%AD%E5%8F%A5%E4%B8%AD%E7%9A%84%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-number">12.</span> <span class="toc-text">十二、布尔类型在if语句中的赋值运算</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84map%E9%9B%86%E5%90%88%E8%AE%B2%E8%A7%A3"><span class="toc-number">13.</span> <span class="toc-text">十三、线程安全的map集合讲解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81java%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84"><span class="toc-number">14.</span> <span class="toc-text">十四、java中的数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%BA%94%E3%80%81HashTable%E5%92%8CHashMap%E5%8C%BA%E5%88%AB"><span class="toc-number">15.</span> <span class="toc-text">十五、HashTable和HashMap区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8D%E5%90%8C"><span class="toc-number">15.0.1.</span> <span class="toc-text">1、继承不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E6%80%A7%E4%B8%8D%E5%90%8C"><span class="toc-number">15.0.2.</span> <span class="toc-text">2、线程安全性不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Hashtable%E4%B8%AD%EF%BC%8Ckey%E5%92%8Cvalue%E9%83%BD%E4%B8%8D%E5%85%81%E8%AE%B8%E5%87%BA%E7%8E%B0null%E5%80%BC"><span class="toc-number">15.0.3.</span> <span class="toc-text">3、Hashtable中，key和value都不允许出现null值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E4%B8%A4%E4%B8%AA%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F%E7%9A%84%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E4%B8%8A%E4%B8%8D%E5%90%8C"><span class="toc-number">15.0.4.</span> <span class="toc-text">4、两个遍历方式的内部实现上不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%93%88%E5%B8%8C%E5%80%BC%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C"><span class="toc-number">15.0.5.</span> <span class="toc-text">5、哈希值的使用不同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81Hashtable%E5%92%8CHashMap%E5%AE%83%E4%BB%AC%E4%B8%A4%E4%B8%AA%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E7%9A%84%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%9D%E5%A7%8B%E5%A4%A7%E5%B0%8F%E5%92%8C%E6%89%A9%E5%AE%B9%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">15.0.6.</span> <span class="toc-text">6、Hashtable和HashMap它们两个内部实现方式的数组的初始大小和扩容的方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E6%88%90%E5%91%98"><span class="toc-number">16.</span> <span class="toc-text">十六、接口中的成员</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%83%E3%80%81%E4%BC%98%E5%8C%96Hibernate%E6%89%80%E9%BC%93%E5%8A%B1%E7%9A%847%E5%A4%A7%E6%8E%AA%E6%96%BD"><span class="toc-number">17.</span> <span class="toc-text">十七、优化Hibernate所鼓励的7大措施</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E5%85%AB%E3%80%81io%E6%B5%81"><span class="toc-number">18.</span> <span class="toc-text">十八、io流</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B9%9D%E3%80%81%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="toc-number">19.</span> <span class="toc-text">十九、类加载器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E3%80%81%E5%A4%84%E7%90%86%E6%B5%81%E4%B8%8E%E8%8A%82%E7%82%B9%E6%B5%81"><span class="toc-number">20.</span> <span class="toc-text">二十、处理流与节点流</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -657,6 +636,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -809,7 +789,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

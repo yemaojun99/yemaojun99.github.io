@@ -86,7 +86,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -97,10 +97,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -160,10 +160,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -237,7 +237,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>OOALV 基础知识</h1></center>
 
@@ -377,7 +377,7 @@
 <img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建Module.png" alt="创建程序_创建Module" style="zoom:60%;">
 
 <p>在程序中填写下面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MODULE INITIAL_0100 OUTPUT.</span><br><span class="line">	PERFORE INITIAL_0100.</span><br><span class="line">ENDMODULE.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MODULE INITIAL_0100 OUTPUT.</span><br><span class="line">	PERFORE INITIAL_0100.</span><br><span class="line">ENDMODULE.</span><br></pre></td></tr></table></figure>
 
 <p>注：之所以要在此处编写一个PERFORE，是因为在MODULE中定义的所有的变量全部都是全局变量，但是将这些变量放在PERFORE中则会变为局部变量。并且在开发规范中也是要求不允许在MODULE中去定义变量的。</p>
 <p>双击该PERFORE的方法名称，创建该PERFORE的FORE到名字带有F01的Include中。然后编写下面的代码。</p>
@@ -476,27 +476,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -630,7 +609,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">OOALV 基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、概要"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、概要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-ALV的功能"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.ALV的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-ALV的类型"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">2.ALV的类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-ALV程序的执行顺序"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">3.ALV程序的执行顺序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、SAP-容器"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、SAP 容器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建SAP容器及容器对象"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">1.创建SAP容器及容器对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-容器类型"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.容器类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、使用Docking控件创建OOALV示例"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、使用Docking控件创建OOALV示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建Report程序"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">1.创建Report程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-编写程序履历、主界面和对应Include"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">2.编写程序履历、主界面和对应Include</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-设置展示的结构"><span class="toc-number">1.0.3.3.</span> <span class="toc-text">3.设置展示的结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-设置选择屏幕"><span class="toc-number">1.0.3.4.</span> <span class="toc-text">4.设置选择屏幕</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-创建屏幕和设置屏幕属性"><span class="toc-number">1.0.3.5.</span> <span class="toc-text">5.创建屏幕和设置屏幕属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-创建容器和ALV-Grid对象"><span class="toc-number">1.0.3.6.</span> <span class="toc-text">6.创建容器和ALV Grid对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-设置ALV-Grid对象的属性"><span class="toc-number">1.0.3.7.</span> <span class="toc-text">7.设置ALV Grid对象的属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-设置GUI-Status和GUI-Title"><span class="toc-number">1.0.3.8.</span> <span class="toc-text">8.设置GUI Status和GUI Title</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-设置屏幕初始化内容"><span class="toc-number">1.0.3.9.</span> <span class="toc-text">9.设置屏幕初始化内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-设置退出屏幕的逻辑"><span class="toc-number">1.0.3.10.</span> <span class="toc-text">10.设置退出屏幕的逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-展示屏幕效果"><span class="toc-number">1.0.3.11.</span> <span class="toc-text">11.展示屏幕效果</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">OOALV 基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%A6%82%E8%A6%81"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、概要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-ALV%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">1.ALV的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-ALV%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">2.ALV的类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-ALV%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">3.ALV程序的执行顺序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81SAP-%E5%AE%B9%E5%99%A8"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、SAP 容器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BASAP%E5%AE%B9%E5%99%A8%E5%8F%8A%E5%AE%B9%E5%99%A8%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">1.创建SAP容器及容器对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.容器类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8Docking%E6%8E%A7%E4%BB%B6%E5%88%9B%E5%BB%BAOOALV%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、使用Docking控件创建OOALV示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BAReport%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.0.3.1.</span> <span class="toc-text">1.创建Report程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%E5%B1%A5%E5%8E%86%E3%80%81%E4%B8%BB%E7%95%8C%E9%9D%A2%E5%92%8C%E5%AF%B9%E5%BA%94Include"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">2.编写程序履历、主界面和对应Include</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AE%E5%B1%95%E7%A4%BA%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.0.3.3.</span> <span class="toc-text">3.设置展示的结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE%E9%80%89%E6%8B%A9%E5%B1%8F%E5%B9%95"><span class="toc-number">1.0.3.4.</span> <span class="toc-text">4.设置选择屏幕</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95%E5%92%8C%E8%AE%BE%E7%BD%AE%E5%B1%8F%E5%B9%95%E5%B1%9E%E6%80%A7"><span class="toc-number">1.0.3.5.</span> <span class="toc-text">5.创建屏幕和设置屏幕属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8%E5%92%8CALV-Grid%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.0.3.6.</span> <span class="toc-text">6.创建容器和ALV Grid对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E8%AE%BE%E7%BD%AEALV-Grid%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.0.3.7.</span> <span class="toc-text">7.设置ALV Grid对象的属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E8%AE%BE%E7%BD%AEGUI-Status%E5%92%8CGUI-Title"><span class="toc-number">1.0.3.8.</span> <span class="toc-text">8.设置GUI Status和GUI Title</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E8%AE%BE%E7%BD%AE%E5%B1%8F%E5%B9%95%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9"><span class="toc-number">1.0.3.9.</span> <span class="toc-text">9.设置屏幕初始化内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E8%AE%BE%E7%BD%AE%E9%80%80%E5%87%BA%E5%B1%8F%E5%B9%95%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-number">1.0.3.10.</span> <span class="toc-text">10.设置退出屏幕的逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E5%B1%95%E7%A4%BA%E5%B1%8F%E5%B9%95%E6%95%88%E6%9E%9C"><span class="toc-number">1.0.3.11.</span> <span class="toc-text">11.展示屏幕效果</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -661,6 +640,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -813,7 +793,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

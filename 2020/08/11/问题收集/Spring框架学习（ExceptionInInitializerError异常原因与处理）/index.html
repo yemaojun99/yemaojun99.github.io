@@ -39,7 +39,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -50,10 +50,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -113,10 +113,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -190,7 +190,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在学习Spring的过程中，为了方便后面的测试，所以在尝试集成junit。结果在此过程中报了一个ExceptionInInitializerError异常。现将该异常的出现原因与解决办法记录如下。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>ExceptionInInitializerError异常</h1></center>
 
@@ -199,7 +199,7 @@
 <br>
 
 <p>异常的意思是<strong>异常初始化错误</strong>（ExceptionInInitializerError）。而后我在网上浏览了一些对该错误的描述信息，现摘要如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当在静态初始化块中出现异常的时候,JVM会抛出java.lang.ExceptionInInitializerError异常;且任何异常都能引发这种情况,有时候在没有静态块的情况下也会抛出这种异常,因为java默认会将静态变量的初始化房子啊一个默认的静态初始化块中,然后按他们在源文件中的生命进行初始化;</span><br><span class="line">   在初始化失败之后,抛出此异常,dev会得到一个java.lang.NoClassDefFoundError异常,而且是在使用这个类,类加载失败的时候才会出现.</span><br><span class="line">   需要记住以下几点： </span><br><span class="line">　　1. "Exception in thread "main" java.lang.ExceptionInInitializerError"意味着异常出现在主线程，并且是LinkageError的一个子类java.lang.ExceptionInInitializerError，这是JVM类加载失败时才抛出的，原因是静态初始化代码中出现了诸如IndexOutOfBoundsException或者NullPointerException这样的RuntimeException。 </span><br><span class="line">　　2. 记住JVM会将所有的静态变量的初始化按它们在源文件中的出现顺序放到一个静态初始化块中。因此，不要觉得没有看到静态初始块就认为不会出现这个异常。事实上，你得确保静态变量的正确顺序，比如说，如果 一个变量初始化的时候用到了另一个变量，你得确保这个变量在前面已经初始化过了。 </span><br><span class="line">　　3. 如果别的代码想要使用这个类，则会抛出ExceptionInInitializerError异常，而它又会导致ClassNotFoundException或者NoClassDefFoundError。为什么？因为这个类加载失败了，并没有加载到JVM的内存中。因此如果你在解决类不存在之类的异常时，先看看你的日志文件中有没有这个异常。 </span><br><span class="line">　　4. 记住静态初始化代码块会抛出RuntimeException而不是已检查异常，而后者需要有对应的catch块来进行处理。 </span><br><span class="line">　　需要谨记的是这个异常的一个副作用是NoClassDefFoundError，而Java程序抛出这个异常的位置可能会离java.lang.ExceptionInInitializerError很远，这取决于你的客户端代码何时引用到这个类。因此，在查看类路径解决NoClassDefFoundError异常之前，最好先看看日志有没有出现ExceptionInInitializerError。</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当在静态初始化块中出现异常的时候,JVM会抛出java.lang.ExceptionInInitializerError异常;且任何异常都能引发这种情况,有时候在没有静态块的情况下也会抛出这种异常,因为java默认会将静态变量的初始化房子啊一个默认的静态初始化块中,然后按他们在源文件中的生命进行初始化;</span><br><span class="line">   在初始化失败之后,抛出此异常,dev会得到一个java.lang.NoClassDefFoundError异常,而且是在使用这个类,类加载失败的时候才会出现.</span><br><span class="line">   需要记住以下几点： </span><br><span class="line">　　1. &quot;Exception in thread &quot;main&quot; java.lang.ExceptionInInitializerError&quot;意味着异常出现在主线程，并且是LinkageError的一个子类java.lang.ExceptionInInitializerError，这是JVM类加载失败时才抛出的，原因是静态初始化代码中出现了诸如IndexOutOfBoundsException或者NullPointerException这样的RuntimeException。 </span><br><span class="line">　　2. 记住JVM会将所有的静态变量的初始化按它们在源文件中的出现顺序放到一个静态初始化块中。因此，不要觉得没有看到静态初始块就认为不会出现这个异常。事实上，你得确保静态变量的正确顺序，比如说，如果 一个变量初始化的时候用到了另一个变量，你得确保这个变量在前面已经初始化过了。 </span><br><span class="line">　　3. 如果别的代码想要使用这个类，则会抛出ExceptionInInitializerError异常，而它又会导致ClassNotFoundException或者NoClassDefFoundError。为什么？因为这个类加载失败了，并没有加载到JVM的内存中。因此如果你在解决类不存在之类的异常时，先看看你的日志文件中有没有这个异常。 </span><br><span class="line">　　4. 记住静态初始化代码块会抛出RuntimeException而不是已检查异常，而后者需要有对应的catch块来进行处理。 </span><br><span class="line">　　需要谨记的是这个异常的一个副作用是NoClassDefFoundError，而Java程序抛出这个异常的位置可能会离java.lang.ExceptionInInitializerError很远，这取决于你的客户端代码何时引用到这个类。因此，在查看类路径解决NoClassDefFoundError异常之前，最好先看看日志有没有出现ExceptionInInitializerError。</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -222,33 +222,12 @@
 <br>
 
 <p>参考资料;</p>
-<p><a href="https://blog.csdn.net/m0_38120325/article/details/89363407" target="_blank" rel="noopener">Java中的ExceptionInInitializerError异常及解决方法</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_38120325/article/details/89363407">Java中的ExceptionInInitializerError异常及解决方法</a></p>
 
       
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -367,7 +346,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">ExceptionInInitializerError异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、异常的详情"><span class="toc-number">1.1.</span> <span class="toc-text">一、异常的详情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、该异常的出现原因"><span class="toc-number">1.2.</span> <span class="toc-text">二、该异常的出现原因</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">ExceptionInInitializerError异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E8%AF%A6%E6%83%85"><span class="toc-number">1.1.</span> <span class="toc-text">一、异常的详情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%A5%E5%BC%82%E5%B8%B8%E7%9A%84%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.2.</span> <span class="toc-text">二、该异常的出现原因</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -398,6 +377,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -550,7 +530,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

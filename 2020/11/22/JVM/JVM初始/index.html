@@ -38,7 +38,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -49,10 +49,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -112,10 +112,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -189,7 +189,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本章是学JVM基本概念所记笔记。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="一、JVM初始"><a href="#一、JVM初始" class="headerlink" title="一、JVM初始"></a>一、JVM初始</h2><h3 id="1、基本概念"><a href="#1、基本概念" class="headerlink" title="1、基本概念"></a>1、基本概念</h3><p>JVM（java虚拟机）是可运行java代码的虚拟计算机，包括一套字节码指令集，一组寄存器、一个栈、一个垃圾回收、堆和一个存储方法域。JVM是运行在操作系统之上的，它与硬件没有直接的交互。所以java代码在执行时的速度相较于C语言要慢一些。</p>
 <br>
@@ -248,10 +248,10 @@
 </ul>
 <br>
 
-<h3 id="2、线程私有区域"><a href="#2、线程私有区域" class="headerlink" title="2、线程私有区域"></a>2、线程私有区域</h3><p>线程私有数据区域生命周期与线程相同，依赖用户线程的启动/结束而创建/销毁在Hotspot VM（虚拟机栈）内，每个线程都与操作系统的本地线程直接映射，因此这部分内存区域的存/否跟随本地线程的生/死对应。</p>
+<h3 id="2、线程私有区域"><a href="#2、线程私有区域" class="headerlink" title="2、线程私有区域"></a>2、线程私有区域</h3><p>线程私有数据区域生命周期与线程相同，依赖用户线程的启动&#x2F;结束而创建&#x2F;销毁在Hotspot VM（虚拟机栈）内，每个线程都与操作系统的本地线程直接映射，因此这部分内存区域的存&#x2F;否跟随本地线程的生&#x2F;死对应。</p>
 <br>
 
-<h3 id="3、线程共享区域"><a href="#3、线程共享区域" class="headerlink" title="3、线程共享区域"></a>3、线程共享区域</h3><p>线程共享区域随虚拟机的启动/关闭而创建/销毁。</p>
+<h3 id="3、线程共享区域"><a href="#3、线程共享区域" class="headerlink" title="3、线程共享区域"></a>3、线程共享区域</h3><p>线程共享区域随虚拟机的启动&#x2F;关闭而创建&#x2F;销毁。</p>
 <br>
 
 <h3 id="4、直接内存"><a href="#4、直接内存" class="headerlink" title="4、直接内存"></a>4、直接内存</h3><p>直接内存并不是JVM运行时数据区的一部分，但也会被频繁的使用。在JDK1.4引入的NIO提供了基于Channel与Buffer的 IO方式，它可以使用Native函数库直接分配堆外内存，然后使用DierctByteBuffer对象作为这块内存的引用进行操作，这样可以避免在java堆和Native堆中来回复制数据，因此在一些场景中可以显著提高性能。</p>
@@ -260,27 +260,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -399,7 +378,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、JVM初始"><span class="toc-number">1.</span> <span class="toc-text">一、JVM初始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">1、基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、运行过程"><span class="toc-number">1.2.</span> <span class="toc-text">2、运行过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、java跨平台的原因"><span class="toc-number">1.3.</span> <span class="toc-text">3、java跨平台的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、线程"><span class="toc-number">1.4.</span> <span class="toc-text">4、线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、JVM内存区域"><span class="toc-number">2.</span> <span class="toc-text">二、JVM内存区域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、分类"><span class="toc-number">2.1.</span> <span class="toc-text">1、分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、线程私有区域"><span class="toc-number">2.2.</span> <span class="toc-text">2、线程私有区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、线程共享区域"><span class="toc-number">2.3.</span> <span class="toc-text">3、线程共享区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、直接内存"><span class="toc-number">2.4.</span> <span class="toc-text">4、直接内存</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81JVM%E5%88%9D%E5%A7%8B"><span class="toc-number">1.</span> <span class="toc-text">一、JVM初始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">1、基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2、运行过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81java%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.3.</span> <span class="toc-text">3、java跨平台的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">4、线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81JVM%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F"><span class="toc-number">2.</span> <span class="toc-text">二、JVM内存区域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%88%86%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">1、分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%BA%BF%E7%A8%8B%E7%A7%81%E6%9C%89%E5%8C%BA%E5%9F%9F"><span class="toc-number">2.2.</span> <span class="toc-text">2、线程私有区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%BA%BF%E7%A8%8B%E5%85%B1%E4%BA%AB%E5%8C%BA%E5%9F%9F"><span class="toc-number">2.3.</span> <span class="toc-text">3、线程共享区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%9B%B4%E6%8E%A5%E5%86%85%E5%AD%98"><span class="toc-number">2.4.</span> <span class="toc-text">4、直接内存</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -430,6 +409,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -582,7 +562,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

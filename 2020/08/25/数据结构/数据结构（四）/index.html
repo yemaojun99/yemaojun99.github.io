@@ -36,7 +36,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -47,10 +47,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -110,10 +110,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -187,7 +187,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>前缀、中缀、后缀表达式（逆波兰表达式）</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>前缀表达式（波兰表达式）</h1></center>
 
@@ -197,12 +197,12 @@
 
 <br>
 
-<h2 id="二、前缀表达式的计算机求值"><a href="#二、前缀表达式的计算机求值" class="headerlink" title="二、前缀表达式的计算机求值"></a>二、前缀表达式的计算机求值</h2><p>​    从右向左扫描表达式，遇到数字时，将数字压入堆栈，遇到运算符时没弹出栈顶的两个数，用运算符对它们做相应的计算（栈顶元素和次顶元素），并将结果入栈；重复上述过程直到表达式最左端，最后运算得出的值即为表达式的结果。</p>
+<h2 id="二、前缀表达式的计算机求值"><a href="#二、前缀表达式的计算机求值" class="headerlink" title="二、前缀表达式的计算机求值"></a>二、前缀表达式的计算机求值</h2><p>​	从右向左扫描表达式，遇到数字时，将数字压入堆栈，遇到运算符时没弹出栈顶的两个数，用运算符对它们做相应的计算（栈顶元素和次顶元素），并将结果入栈；重复上述过程直到表达式最左端，最后运算得出的值即为表达式的结果。</p>
 <p>例如：（3+4）*5-6对应的前缀表达式就是 - * + 3 4 5 6，针对前缀表达式求值步骤如下：</p>
 <p>（1）从右至左扫描，将6、5、4、3压入堆栈；</p>
 <p>（2）遇到+运算符，因此弹出3和4，计算得到结果7，将结果压入栈；</p>
 <p>（3）接下来是*运算符，因此弹出7和5，计算得到35，将结果入栈；</p>
-<p>（4）最后是-运算符，计算35 - 6 = 29的结果，此时29就是表达式的最后结果。</p>
+<p>（4）最后是-运算符，计算35 - 6 &#x3D; 29的结果，此时29就是表达式的最后结果。</p>
 <br>
 
 <hr>
@@ -270,8 +270,8 @@
 <td align="center">a d b c - * +</td>
 </tr>
 <tr>
-<td align="center">a = 1 + 3</td>
-<td align="center">a 1 3 + =</td>
+<td align="center">a &#x3D; 1 + 3</td>
+<td align="center">a 1 3 + &#x3D;</td>
 </tr>
 </tbody></table>
 <br>
@@ -298,34 +298,13 @@
 
 <br>
 
-
-
-
-      
-
+ 
 
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
+
+
+
       
     </div>
     <div class="article-info article-info-index">
@@ -444,7 +423,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">前缀表达式（波兰表达式）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、前缀表达式的计算机求值"><span class="toc-number">1.2.</span> <span class="toc-text">二、前缀表达式的计算机求值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">中缀表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基本概念-1"><span class="toc-number">2.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、中缀表达式转后缀表达式思路"><span class="toc-number">2.2.</span> <span class="toc-text">二、中缀表达式转后缀表达式思路</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">后缀表达式（逆波兰表达式）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基本概念-2"><span class="toc-number">3.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、后缀表达式的计算机求值"><span class="toc-number">3.2.</span> <span class="toc-text">二、后缀表达式的计算机求值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、逆波兰计算器"><span class="toc-number">3.3.</span> <span class="toc-text">三、逆波兰计算器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、需求"><span class="toc-number">3.3.1.</span> <span class="toc-text">1、需求</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前缀表达式（波兰表达式）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%89%8D%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%B1%82%E5%80%BC"><span class="toc-number">1.2.</span> <span class="toc-text">二、前缀表达式的计算机求值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">中缀表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-1"><span class="toc-number">2.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%80%9D%E8%B7%AF"><span class="toc-number">2.2.</span> <span class="toc-text">二、中缀表达式转后缀表达式思路</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">后缀表达式（逆波兰表达式）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-2"><span class="toc-number">3.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%B1%82%E5%80%BC"><span class="toc-number">3.2.</span> <span class="toc-text">二、后缀表达式的计算机求值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%80%86%E6%B3%A2%E5%85%B0%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="toc-number">3.3.</span> <span class="toc-text">三、逆波兰计算器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%9C%80%E6%B1%82"><span class="toc-number">3.3.1.</span> <span class="toc-text">1、需求</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -475,6 +454,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -627,7 +607,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

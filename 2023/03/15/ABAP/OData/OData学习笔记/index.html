@@ -86,7 +86,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -97,10 +97,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -160,10 +160,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -237,20 +237,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本篇笔记主要用于记录学习OData时的学习总结，不定期更新。这一片主要介绍了OData的创建与CTS之间的绑定、测试等相关内容。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h1><center>OData 学习笔记</center></h1>
 
 <h3 id="一、创建Gateway的五个步骤"><a href="#一、创建Gateway的五个步骤" class="headerlink" title="一、创建Gateway的五个步骤"></a>一、创建Gateway的五个步骤</h3><h5 id="1-OData-Service-Definition"><a href="#1-OData-Service-Definition" class="headerlink" title="1.OData Service Definition"></a>1.OData Service Definition</h5><p>OData服务定义。</p>
-<h5 id="2-Data-Model-Definition（MPC）"><a href="#2-Data-Model-Definition（MPC）" class="headerlink" title="2.Data Model Definition（MPC）"></a>2.Data Model Definition（MPC）</h5><p>OData模型定义。Model Import、RFC/BOR、DDIC、File、Search Help。</p>
+<h5 id="2-Data-Model-Definition（MPC）"><a href="#2-Data-Model-Definition（MPC）" class="headerlink" title="2.Data Model Definition（MPC）"></a>2.Data Model Definition（MPC）</h5><p>OData模型定义。Model Import、RFC&#x2F;BOR、DDIC、File、Search Help。</p>
 <h5 id="3-Service-Generation"><a href="#3-Service-Generation" class="headerlink" title="3.Service Generation"></a>3.Service Generation</h5><p>服务生成。SRV Class自动生成。</p>
 <h5 id="4-Service-Implementation（DPC）"><a href="#4-Service-Implementation（DPC）" class="headerlink" title="4.Service Implementation（DPC）"></a>4.Service Implementation（DPC）</h5><p>服务实施。Read、Create、Delete和Update等。</p>
 <h5 id="5-Service-Registration-and-Activation"><a href="#5-Service-Registration-and-Activation" class="headerlink" title="5.Service Registration and Activation"></a>5.Service Registration and Activation</h5><p>服务注册和启用。</p>
 <h3 id="二、OData创建"><a href="#二、OData创建" class="headerlink" title="二、OData创建"></a>二、OData创建</h3><p><img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%9B%E5%BB%BAOData.PNG" alt="创建OData"></p>
 <h5 id="1-TCODE"><a href="#1-TCODE" class="headerlink" title="1.TCODE"></a>1.TCODE</h5><p>SEGW</p>
 <h5 id="2-输入必输项"><a href="#2-输入必输项" class="headerlink" title="2.输入必输项"></a>2.输入必输项</h5><ul>
-<li><strong>Project:</strong>项目名称</li>
-<li><strong>Description:</strong>项目描述</li>
+<li>**Project:**项目名称</li>
+<li>**Description:**项目描述</li>
 <li><strong>Package：</strong>项目存放的包</li>
 </ul>
 <h5 id="3-默认项"><a href="#3-默认项" class="headerlink" title="3.默认项"></a>3.默认项</h5><ul>
@@ -261,7 +261,7 @@
 <p><strong>导入数据模型的四种方式：</strong></p>
 <h5 id="1-Data-Model-From-File（文件数据模型）"><a href="#1-Data-Model-From-File（文件数据模型）" class="headerlink" title="1.Data Model From File（文件数据模型）"></a>1.Data Model From File（文件数据模型）</h5><p>通过上传一个文件（.edmx或.xml包含可在服务生成器项目中重用的预定义数据）。</p>
 <h5 id="2-DDIC-Structure（DDIC结构）"><a href="#2-DDIC-Structure（DDIC结构）" class="headerlink" title="2.DDIC Structure（DDIC结构）"></a>2.DDIC Structure（DDIC结构）</h5><p>将现有的ABAP结构作为复杂类型或实体类型重用。包括Views、Database Tables、Structure。</p>
-<h5 id="3-RFC-BOR-Interface（RFC-BOR接口）"><a href="#3-RFC-BOR-Interface（RFC-BOR接口）" class="headerlink" title="3.RFC/BOR Interface（RFC/BOR接口）"></a>3.RFC/BOR Interface（RFC/BOR接口）</h5><p>实现RFC或BOR生成器。</p>
+<h5 id="3-RFC-x2F-BOR-Interface（RFC-x2F-BOR接口）"><a href="#3-RFC-x2F-BOR-Interface（RFC-x2F-BOR接口）" class="headerlink" title="3.RFC&#x2F;BOR Interface（RFC&#x2F;BOR接口）"></a>3.RFC&#x2F;BOR Interface（RFC&#x2F;BOR接口）</h5><p>实现RFC或BOR生成器。</p>
 <h5 id="4-Search-Help（搜索帮助）"><a href="#4-Search-Help（搜索帮助）" class="headerlink" title="4.Search Help（搜索帮助）"></a>4.Search Help（搜索帮助）</h5><p>导入与模型关联的搜索帮助并在项目中重用。</p>
 <h3 id="四、DDIC-Structure创建数据模型"><a href="#四、DDIC-Structure创建数据模型" class="headerlink" title="四、DDIC Structure创建数据模型"></a>四、DDIC Structure创建数据模型</h3><p>DDIC形式是通过将现有的ABAP结构作为复杂类型或实体类型重用。即是用SE11中存在的Views、Database Tables、Structure等作为数据模型使用。这种方式也是OData创建数据模型的最常用的形式之一。</p>
 <h5 id="1-选择DDIC创建数据模型"><a href="#1-选择DDIC创建数据模型" class="headerlink" title="1.选择DDIC创建数据模型"></a>1.选择DDIC创建数据模型</h5><img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1.选择DDIC创建数据模型.png" alt="1.选择DDIC创建数据模型" style="zoom:60%;">
@@ -341,51 +341,51 @@
 <tr>
 <td align="center">Updateable</td>
 <td align="center">sap:updateable</td>
-<td align="left">对应Entity Type Field值修改设定。勾选该属性，在执行更新的时候可以由前台录入数据来填充（比如手机号）；若不勾选，则在前台执行更新时，由后台指定数据来填充（比如时间戳/日期等）</td>
+<td align="left">对应Entity Type Field值修改设定。勾选该属性，在执行更新的时候可以由前台录入数据来填充（比如手机号）；若不勾选，则在前台执行更新时，由后台指定数据来填充（比如时间戳&#x2F;日期等）</td>
 </tr>
 <tr>
 <td align="center">Deleteable</td>
-<td align="center">N/A</td>
+<td align="center">N&#x2F;A</td>
 <td align="left">是否勾选并不影响</td>
 </tr>
 <tr>
 <td align="center">Sortable</td>
 <td align="center">sap:sortable</td>
-<td align="left">对应Entity Type Field值排序设定，勾选后，则可以使用Sorderby查询（比如Sorderby = CustomerName）</td>
+<td align="left">对应Entity Type Field值排序设定，勾选后，则可以使用Sorderby查询（比如Sorderby &#x3D; CustomerName）</td>
 </tr>
 <tr>
 <td align="center">Nullable</td>
 <td align="center">Nullable</td>
-<td align="left">对应Entity Type Field值排序设定，勾选后，则可以使用Sorderby查询（比如Sorderby = CustomerName）</td>
+<td align="left">对应Entity Type Field值排序设定，勾选后，则可以使用Sorderby查询（比如Sorderby &#x3D; CustomerName）</td>
 </tr>
 <tr>
 <td align="center">Filterable</td>
 <td align="center">sap:filterable</td>
-<td align="left">对应Entity Type Field值Filter许可。勾选后则可以使用Sfilter查询（比如Sfilter = orderNumber eq ‘1234’）</td>
+<td align="left">对应Entity Type Field值Filter许可。勾选后则可以使用Sfilter查询（比如Sfilter &#x3D; orderNumber eq ‘1234’）</td>
 </tr>
 <tr>
 <td align="center">Name</td>
-<td align="center">N/A</td>
+<td align="center">N&#x2F;A</td>
 <td align="left">property的名字</td>
 </tr>
 <tr>
 <td align="center">Key</td>
-<td align="center">N/A</td>
+<td align="center">N&#x2F;A</td>
 <td align="left">是否是对应property的Key</td>
 </tr>
 <tr>
 <td align="center">Edm Core Type</td>
-<td align="center">N/A</td>
+<td align="center">N&#x2F;A</td>
 <td align="left">property的类型经常使用的类型：Edm.String（字符串）Edm.DateTime(日期)Edm.Decimal（数字）Edm.Time(时间)</td>
 </tr>
 <tr>
 <td align="center">Label</td>
-<td align="center">N/A</td>
+<td align="center">N&#x2F;A</td>
 <td align="left">UI上要显示的Label Text</td>
 </tr>
 <tr>
 <td align="center">ABAP Field</td>
-<td align="center">N/A</td>
+<td align="center">N&#x2F;A</td>
 <td align="left">生成property时参考的ABAP Field名。生成Entity Type时参考ABAP Object生成的话，可以使用对应字段及字段所参照的Date Element属性进行modeling（ex.Alpha conversion等）-&gt;设计时需要明示要参考的ABAP字段</td>
 </tr>
 </tbody></table>
@@ -421,7 +421,7 @@
 <tr>
 <td align="center">Pageable</td>
 <td align="center">sap:pageable</td>
-<td align="left">勾选后可以支持分页查询，比如指定页面数据的条目数和大小，跳过指定条目数等（top/skip）</td>
+<td align="left">勾选后可以支持分页查询，比如指定页面数据的条目数和大小，跳过指定条目数等（top&#x2F;skip）</td>
 </tr>
 <tr>
 <td align="center">Addressable</td>
@@ -431,12 +431,12 @@
 <tr>
 <td align="center">Searchable</td>
 <td align="center">sap:searchable</td>
-<td align="left">是否勾选表示,可以支持search语句的使用（比如productSet?search=’box’）</td>
+<td align="left">是否勾选表示,可以支持search语句的使用（比如productSet?search&#x3D;’box’）</td>
 </tr>
 <tr>
 <td align="center">Subrchable</td>
-<td align="center">N/A</td>
-<td align="left">是否勾选表示在修改的时候是否同时支持对其下属关联属性的修改，一般用于RFC/BOR等</td>
+<td align="center">N&#x2F;A</td>
+<td align="left">是否勾选表示在修改的时候是否同时支持对其下属关联属性的修改，一般用于RFC&#x2F;BOR等</td>
 </tr>
 <tr>
 <td align="center">RequiresFilter</td>
@@ -444,7 +444,7 @@
 <td align="left">是否勾选表示是否支持Filter语句</td>
 </tr>
 </tbody></table>
-<p>![Entity Set属性说明](OData学习笔记/Entity Set属性说明.PNG)</p>
+<p>![Entity Set属性说明](OData学习笔记&#x2F;Entity Set属性说明.PNG)</p>
 <img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Entity Set属性说明（2）.PNG" alt="Entity Set属性说明（2）">
 
 
@@ -516,18 +516,18 @@
 <p>这时为了在UI上方便读取Header Entity Set和Item Entity Ser，通过Navigation进行Modeling操作。</p>
 <h3 id="十、Gateway-Service生成"><a href="#十、Gateway-Service生成" class="headerlink" title="十、Gateway Service生成"></a>十、Gateway Service生成</h3><h5 id="1-登记Gateway-Service"><a href="#1-登记Gateway-Service" class="headerlink" title="1.登记Gateway Service"></a>1.登记Gateway Service</h5><p>登记Gateway Service后，系统会自动生成以下各类，建议不要修改Class Name</p>
 <ul>
-<li><strong>DPC:</strong>数据提供程序类</li>
-<li><strong>DPC_EXT:</strong>数据提供程序类扩展</li>
-<li><strong>MPC:</strong>模型提供程序类</li>
-<li><strong>MPC_EXT:</strong>模型提供程序类扩展</li>
-<li><strong>SRV:</strong>OData服务识别</li>
+<li>**DPC:**数据提供程序类</li>
+<li>**DPC_EXT:**数据提供程序类扩展</li>
+<li>**MPC:**模型提供程序类</li>
+<li>**MPC_EXT:**模型提供程序类扩展</li>
+<li>**SRV:**OData服务识别</li>
 </ul>
 <img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Gateway Service生成.PNG" alt="Gateway Service生成">
 
 
 
 <h5 id="2-生成类介绍"><a href="#2-生成类介绍" class="headerlink" title="2.生成类介绍"></a>2.生成类介绍</h5><p><strong>MPC和MPC_EXT：</strong>当用户访问该服务的metadata（元数据）时，他们负责把通过ABAP DDIC Structure描述的metadata信息转化为odata协议规范的格式并返回。当对odata进行修改后，点击“generate”图标，MPC的代码会重新生成。如果开发者需要在model上添加一些额外信息时，那么需要在MPC_EXT里通过ABAP代码实现。MPC_EXT是MPC的子类，在重新生成odata时，此部分代码不会被覆盖。</p>
-<p><strong>DPC和DPC_EXT:</strong>包含了odata服务的实现，实际上就是基于OData的CRUD操作。我们通过重新定义DPC_EXT类方法，来实现CRUD。</p>
+<p>**DPC和DPC_EXT:**包含了odata服务的实现，实际上就是基于OData的CRUD操作。我们通过重新定义DPC_EXT类方法，来实现CRUD。</p>
 <h3 id="十一、Gateway-Service测试"><a href="#十一、Gateway-Service测试" class="headerlink" title="十一、Gateway Service测试"></a>十一、Gateway Service测试</h3><h5 id="1-测试路径"><a href="#1-测试路径" class="headerlink" title="1.测试路径"></a>1.测试路径</h5><p>打开OData文件目录下的<strong>Service Maintenance</strong> 文件，双击<strong>GW_HUB</strong>点击右侧画面中的<strong>SAP Gateway Client</strong>按钮。</p>
 <img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/15.Gateway测试.png" alt="15.Gateway测试">
 
@@ -535,7 +535,7 @@
 
 <h5 id="2-注册Service"><a href="#2-注册Service" class="headerlink" title="2.注册Service"></a>2.注册Service</h5><img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/16.Gateway测试未注册服务.png" alt="16.Gateway测试未注册服务">
 
-<p>在测试时可能会遇到报错说该服务没有注册系统。此时按照图中红框标记的点击<strong>Register</strong>按钮或使用TCODE <strong>/IWFND/MAINT_SERVICE</strong>。</p>
+<p>在测试时可能会遇到报错说该服务没有注册系统。此时按照图中红框标记的点击<strong>Register</strong>按钮或使用TCODE <strong>&#x2F;IWFND&#x2F;MAINT_SERVICE</strong>。</p>
 <h6 id="（1）Register-按钮"><a href="#（1）Register-按钮" class="headerlink" title="（1）Register 按钮"></a>（1）Register 按钮</h6><img src="/2023/03/15/ABAP/OData/OData%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/17.点击Register按钮.png" alt="17.点击Register按钮">
 
 <p>点击对勾后需要绑定存放Service的包，该界面和下面的绑定包的界面一致。</p>
@@ -608,27 +608,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -762,7 +741,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">OData 学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、创建Gateway的五个步骤"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、创建Gateway的五个步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-OData-Service-Definition"><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">1.OData Service Definition</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Data-Model-Definition（MPC）"><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">2.Data Model Definition（MPC）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Service-Generation"><span class="toc-number">1.0.1.0.3.</span> <span class="toc-text">3.Service Generation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-Service-Implementation（DPC）"><span class="toc-number">1.0.1.0.4.</span> <span class="toc-text">4.Service Implementation（DPC）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-Service-Registration-and-Activation"><span class="toc-number">1.0.1.0.5.</span> <span class="toc-text">5.Service Registration and Activation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、OData创建"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、OData创建</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-TCODE"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">1.TCODE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-输入必输项"><span class="toc-number">1.0.2.0.2.</span> <span class="toc-text">2.输入必输项</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-默认项"><span class="toc-number">1.0.2.0.3.</span> <span class="toc-text">3.默认项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、导入数据模型"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、导入数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Data-Model-From-File（文件数据模型）"><span class="toc-number">1.0.3.0.1.</span> <span class="toc-text">1.Data Model From File（文件数据模型）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-DDIC-Structure（DDIC结构）"><span class="toc-number">1.0.3.0.2.</span> <span class="toc-text">2.DDIC Structure（DDIC结构）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-RFC-BOR-Interface（RFC-BOR接口）"><span class="toc-number">1.0.3.0.3.</span> <span class="toc-text">3.RFC&#x2F;BOR Interface（RFC&#x2F;BOR接口）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-Search-Help（搜索帮助）"><span class="toc-number">1.0.3.0.4.</span> <span class="toc-text">4.Search Help（搜索帮助）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、DDIC-Structure创建数据模型"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、DDIC Structure创建数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-选择DDIC创建数据模型"><span class="toc-number">1.0.4.0.1.</span> <span class="toc-text">1.选择DDIC创建数据模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-选择数据模型表"><span class="toc-number">1.0.4.0.2.</span> <span class="toc-text">2.选择数据模型表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-选择需要操作的字段"><span class="toc-number">1.0.4.0.3.</span> <span class="toc-text">3.选择需要操作的字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-设置主键字段"><span class="toc-number">1.0.4.0.4.</span> <span class="toc-text">4.设置主键字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-设置各个Property字段的属性"><span class="toc-number">1.0.4.0.5.</span> <span class="toc-text">5.设置各个Property字段的属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、设置OData的增删改查方法"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、设置OData的增删改查方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-打开Runtime-Artifacts文件夹"><span class="toc-number">1.0.5.0.1.</span> <span class="toc-text">1.打开Runtime Artifacts文件夹</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-在左侧的工具栏中按照下图的内容选择需要重定义的方法"><span class="toc-number">1.0.5.0.2.</span> <span class="toc-text">2.在左侧的工具栏中按照下图的内容选择需要重定义的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#（1）重写创建方法"><span class="toc-number">1.0.5.0.2.1.</span> <span class="toc-text">（1）重写创建方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（2）重写修改方法"><span class="toc-number">1.0.5.0.2.2.</span> <span class="toc-text">（2）重写修改方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（3）重写删除方法"><span class="toc-number">1.0.5.0.2.3.</span> <span class="toc-text">（3）重写删除方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（4）编写查询数据用CDS"><span class="toc-number">1.0.5.0.2.4.</span> <span class="toc-text">（4）编写查询数据用CDS</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（5）将OData与CDS相关联"><span class="toc-number">1.0.5.0.2.5.</span> <span class="toc-text">（5）将OData与CDS相关联</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（6）CDS与查询数据的关系"><span class="toc-number">1.0.5.0.2.6.</span> <span class="toc-text">（6）CDS与查询数据的关系</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、Entity-Types-amp-Entity-Set"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、Entity Types &amp; Entity Set</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Entities"><span class="toc-number">1.0.6.0.1.</span> <span class="toc-text">1.Entities</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Associations"><span class="toc-number">1.0.6.0.2.</span> <span class="toc-text">2.Associations</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、读取数据模型的属性（Entity-Types）"><span class="toc-number">1.0.7.</span> <span class="toc-text">七、读取数据模型的属性（Entity Types）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、Entity-Set的属性设置"><span class="toc-number">1.0.8.</span> <span class="toc-text">八、Entity Set的属性设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九、关联关系Association"><span class="toc-number">1.0.9.</span> <span class="toc-text">九、关联关系Association</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-关联关系介绍"><span class="toc-number">1.0.9.0.1.</span> <span class="toc-text">1.关联关系介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-关联关系的创建"><span class="toc-number">1.0.9.0.2.</span> <span class="toc-text">2.关联关系的创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Navigation导航"><span class="toc-number">1.0.9.0.3.</span> <span class="toc-text">3.Navigation导航</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-使用Association的理由"><span class="toc-number">1.0.9.0.4.</span> <span class="toc-text">4.使用Association的理由</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十、Gateway-Service生成"><span class="toc-number">1.0.10.</span> <span class="toc-text">十、Gateway Service生成</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-登记Gateway-Service"><span class="toc-number">1.0.10.0.1.</span> <span class="toc-text">1.登记Gateway Service</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-生成类介绍"><span class="toc-number">1.0.10.0.2.</span> <span class="toc-text">2.生成类介绍</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一、Gateway-Service测试"><span class="toc-number">1.0.11.</span> <span class="toc-text">十一、Gateway Service测试</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-测试路径"><span class="toc-number">1.0.11.0.1.</span> <span class="toc-text">1.测试路径</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-注册Service"><span class="toc-number">1.0.11.0.2.</span> <span class="toc-text">2.注册Service</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#（1）Register-按钮"><span class="toc-number">1.0.11.0.2.1.</span> <span class="toc-text">（1）Register 按钮</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（2）TOCDE"><span class="toc-number">1.0.11.0.2.2.</span> <span class="toc-text">（2）TOCDE</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-测试"><span class="toc-number">1.0.11.0.3.</span> <span class="toc-text">3.测试</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#（1）查询数据"><span class="toc-number">1.0.11.0.3.1.</span> <span class="toc-text">（1）查询数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（2）新增数据"><span class="toc-number">1.0.11.0.3.2.</span> <span class="toc-text">（2）新增数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（3）修改数据"><span class="toc-number">1.0.11.0.3.3.</span> <span class="toc-text">（3）修改数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#（4）删除数据"><span class="toc-number">1.0.11.0.3.4.</span> <span class="toc-text">（4）删除数据</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">OData 学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%88%9B%E5%BB%BAGateway%E7%9A%84%E4%BA%94%E4%B8%AA%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、创建Gateway的五个步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-OData-Service-Definition"><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">1.OData Service Definition</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Data-Model-Definition%EF%BC%88MPC%EF%BC%89"><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">2.Data Model Definition（MPC）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Service-Generation"><span class="toc-number">1.0.1.0.3.</span> <span class="toc-text">3.Service Generation</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-Service-Implementation%EF%BC%88DPC%EF%BC%89"><span class="toc-number">1.0.1.0.4.</span> <span class="toc-text">4.Service Implementation（DPC）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-Service-Registration-and-Activation"><span class="toc-number">1.0.1.0.5.</span> <span class="toc-text">5.Service Registration and Activation</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81OData%E5%88%9B%E5%BB%BA"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、OData创建</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-TCODE"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">1.TCODE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%BE%93%E5%85%A5%E5%BF%85%E8%BE%93%E9%A1%B9"><span class="toc-number">1.0.2.0.2.</span> <span class="toc-text">2.输入必输项</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E9%BB%98%E8%AE%A4%E9%A1%B9"><span class="toc-number">1.0.2.0.3.</span> <span class="toc-text">3.默认项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、导入数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Data-Model-From-File%EF%BC%88%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%EF%BC%89"><span class="toc-number">1.0.3.0.1.</span> <span class="toc-text">1.Data Model From File（文件数据模型）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-DDIC-Structure%EF%BC%88DDIC%E7%BB%93%E6%9E%84%EF%BC%89"><span class="toc-number">1.0.3.0.2.</span> <span class="toc-text">2.DDIC Structure（DDIC结构）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-RFC-x2F-BOR-Interface%EF%BC%88RFC-x2F-BOR%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="toc-number">1.0.3.0.3.</span> <span class="toc-text">3.RFC&#x2F;BOR Interface（RFC&#x2F;BOR接口）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-Search-Help%EF%BC%88%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%EF%BC%89"><span class="toc-number">1.0.3.0.4.</span> <span class="toc-text">4.Search Help（搜索帮助）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81DDIC-Structure%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、DDIC Structure创建数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%80%89%E6%8B%A9DDIC%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.0.4.0.1.</span> <span class="toc-text">1.选择DDIC创建数据模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%80%89%E6%8B%A9%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E8%A1%A8"><span class="toc-number">1.0.4.0.2.</span> <span class="toc-text">2.选择数据模型表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E9%80%89%E6%8B%A9%E9%9C%80%E8%A6%81%E6%93%8D%E4%BD%9C%E7%9A%84%E5%AD%97%E6%AE%B5"><span class="toc-number">1.0.4.0.3.</span> <span class="toc-text">3.选择需要操作的字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%94%AE%E5%AD%97%E6%AE%B5"><span class="toc-number">1.0.4.0.4.</span> <span class="toc-text">4.设置主键字段</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E8%AE%BE%E7%BD%AE%E5%90%84%E4%B8%AAProperty%E5%AD%97%E6%AE%B5%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.0.4.0.5.</span> <span class="toc-text">5.设置各个Property字段的属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AE%BE%E7%BD%AEOData%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、设置OData的增删改查方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%89%93%E5%BC%80Runtime-Artifacts%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.0.5.0.1.</span> <span class="toc-text">1.打开Runtime Artifacts文件夹</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%9C%A8%E5%B7%A6%E4%BE%A7%E7%9A%84%E5%B7%A5%E5%85%B7%E6%A0%8F%E4%B8%AD%E6%8C%89%E7%85%A7%E4%B8%8B%E5%9B%BE%E7%9A%84%E5%86%85%E5%AE%B9%E9%80%89%E6%8B%A9%E9%9C%80%E8%A6%81%E9%87%8D%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.5.0.2.</span> <span class="toc-text">2.在左侧的工具栏中按照下图的内容选择需要重定义的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E9%87%8D%E5%86%99%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.5.0.2.1.</span> <span class="toc-text">（1）重写创建方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%87%8D%E5%86%99%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.5.0.2.2.</span> <span class="toc-text">（2）重写修改方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E9%87%8D%E5%86%99%E5%88%A0%E9%99%A4%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.5.0.2.3.</span> <span class="toc-text">（3）重写删除方法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%BC%96%E5%86%99%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E7%94%A8CDS"><span class="toc-number">1.0.5.0.2.4.</span> <span class="toc-text">（4）编写查询数据用CDS</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%B0%86OData%E4%B8%8ECDS%E7%9B%B8%E5%85%B3%E8%81%94"><span class="toc-number">1.0.5.0.2.5.</span> <span class="toc-text">（5）将OData与CDS相关联</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%886%EF%BC%89CDS%E4%B8%8E%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.0.5.0.2.6.</span> <span class="toc-text">（6）CDS与查询数据的关系</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81Entity-Types-amp-Entity-Set"><span class="toc-number">1.0.6.</span> <span class="toc-text">六、Entity Types &amp; Entity Set</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Entities"><span class="toc-number">1.0.6.0.1.</span> <span class="toc-text">1.Entities</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Associations"><span class="toc-number">1.0.6.0.2.</span> <span class="toc-text">2.Associations</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%B1%9E%E6%80%A7%EF%BC%88Entity-Types%EF%BC%89"><span class="toc-number">1.0.7.</span> <span class="toc-text">七、读取数据模型的属性（Entity Types）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81Entity-Set%E7%9A%84%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.8.</span> <span class="toc-text">八、Entity Set的属性设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BBAssociation"><span class="toc-number">1.0.9.</span> <span class="toc-text">九、关联关系Association</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.0.9.0.1.</span> <span class="toc-text">1.关联关系介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.0.9.0.2.</span> <span class="toc-text">2.关联关系的创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Navigation%E5%AF%BC%E8%88%AA"><span class="toc-number">1.0.9.0.3.</span> <span class="toc-text">3.Navigation导航</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E4%BD%BF%E7%94%A8Association%E7%9A%84%E7%90%86%E7%94%B1"><span class="toc-number">1.0.9.0.4.</span> <span class="toc-text">4.使用Association的理由</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81Gateway-Service%E7%94%9F%E6%88%90"><span class="toc-number">1.0.10.</span> <span class="toc-text">十、Gateway Service生成</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%99%BB%E8%AE%B0Gateway-Service"><span class="toc-number">1.0.10.0.1.</span> <span class="toc-text">1.登记Gateway Service</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%94%9F%E6%88%90%E7%B1%BB%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.0.10.0.2.</span> <span class="toc-text">2.生成类介绍</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81Gateway-Service%E6%B5%8B%E8%AF%95"><span class="toc-number">1.0.11.</span> <span class="toc-text">十一、Gateway Service测试</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%B5%8B%E8%AF%95%E8%B7%AF%E5%BE%84"><span class="toc-number">1.0.11.0.1.</span> <span class="toc-text">1.测试路径</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%B3%A8%E5%86%8CService"><span class="toc-number">1.0.11.0.2.</span> <span class="toc-text">2.注册Service</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89Register-%E6%8C%89%E9%92%AE"><span class="toc-number">1.0.11.0.2.1.</span> <span class="toc-text">（1）Register 按钮</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%882%EF%BC%89TOCDE"><span class="toc-number">1.0.11.0.2.2.</span> <span class="toc-text">（2）TOCDE</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%B5%8B%E8%AF%95"><span class="toc-number">1.0.11.0.3.</span> <span class="toc-text">3.测试</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="toc-number">1.0.11.0.3.1.</span> <span class="toc-text">（1）查询数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE"><span class="toc-number">1.0.11.0.3.2.</span> <span class="toc-text">（2）新增数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="toc-number">1.0.11.0.3.3.</span> <span class="toc-text">（3）修改数据</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-number">1.0.11.0.3.4.</span> <span class="toc-text">（4）删除数据</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -793,6 +772,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -945,7 +925,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

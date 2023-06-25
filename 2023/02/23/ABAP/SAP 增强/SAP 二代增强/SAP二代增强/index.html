@@ -54,7 +54,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -65,10 +65,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -128,10 +128,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -205,7 +205,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>之前面试被人问到了增强相关的内容，后面了解了其中的一种二代增强。其余的几代等后面有空了补齐吧。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>SAP 二代增强</h1></center>
 
@@ -225,7 +225,7 @@
 
 
 
-<h5 id="（2）执行需要检查的T-C"><a href="#（2）执行需要检查的T-C" class="headerlink" title="（2）执行需要检查的T/C"></a>（2）执行需要检查的T/C</h5><p>以CV12为例</p>
+<h5 id="（2）执行需要检查的T-x2F-C"><a href="#（2）执行需要检查的T-x2F-C" class="headerlink" title="（2）执行需要检查的T&#x2F;C"></a>（2）执行需要检查的T&#x2F;C</h5><p>以CV12为例</p>
 <img src="/2023/02/23/ABAP/SAP%20%E5%A2%9E%E5%BC%BA/SAP%20%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/SAP%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/2.获取增强Function名称.png" alt="2.获取增强Function名称">
 
 
@@ -242,7 +242,7 @@
 
 
 
-<h5 id="（5）SMOD（查看增强）-CMOD（实施增强）"><a href="#（5）SMOD（查看增强）-CMOD（实施增强）" class="headerlink" title="（5）SMOD（查看增强）/ CMOD（实施增强）"></a>（5）SMOD（查看增强）/ CMOD（实施增强）</h5><p>通过事务代码SMOD可以查看并修改该出口对象。</p>
+<h5 id="（5）SMOD（查看增强）-x2F-CMOD（实施增强）"><a href="#（5）SMOD（查看增强）-x2F-CMOD（实施增强）" class="headerlink" title="（5）SMOD（查看增强）&#x2F; CMOD（实施增强）"></a>（5）SMOD（查看增强）&#x2F; CMOD（实施增强）</h5><p>通过事务代码SMOD可以查看并修改该出口对象。</p>
 <img src="/2023/02/23/ABAP/SAP%20%E5%A2%9E%E5%BC%BA/SAP%20%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/SAP%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/6.查看增强.png" alt="6.查看增强">
 
 
@@ -263,7 +263,7 @@
 <li>第二部分为程序名</li>
 <li>第三个部分为3位数字的序列号</li>
 </ul>
-<p>基于函数的出口在程序中通过引用代码“<strong>CALL CUSTOMER-FUNCTION &lt;3位数字&gt;</strong>”来调用，以VA01的主程序SAPMV45A为例，在程序中查找包含“<strong>CALL CUSTOMER-FUNCTION</strong>”的字符串，可以找到例如代码“call customer-function ‘003’”，如下图所示：</p>
+<p>基于函数的出口在程序中通过引用代码“<strong>CALL CUSTOMER-FUNCTION &lt;3位数字&gt;<strong>”来调用，以VA01的主程序SAPMV45A为例，在程序中查找包含“</strong>CALL CUSTOMER-FUNCTION</strong>”的字符串，可以找到例如代码“call customer-function ‘003’”，如下图所示：</p>
 <img src="/2023/02/23/ABAP/SAP%20%E5%A2%9E%E5%BC%BA/SAP%20%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/SAP%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/9.逆向查找增强方法.png" alt="9.逆向查找增强方法">
 
 <p>根据以上命名原则可以判断出该增强出口函数名称为“EXIT_SAPMV45A_003”，通过SE37查询该Function，可以看到该函数中指定了一个预留的程序，名称为“ZXVVAU05”。</p>
@@ -307,41 +307,20 @@
 <li><strong>XVBUP</strong>：保存行项目的状态信息。</li>
 </ul>
 <p>编写增强逻辑：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DATA LS_XVBKD LIKE LINE OF XVBKD.</span><br><span class="line">IF XVBAK-AUART &#x3D; &#39;AA&#39;.</span><br><span class="line">  LOOP AT XVBKD INTO LS_XVBKD.</span><br><span class="line">    IF LS_XVBKD-BSTKD IS INITIAL.</span><br><span class="line">      MESSAGE E000(ZHQ) WITH &#39;必须输入采购订单编号&#39;.</span><br><span class="line">      LVF_SUBRC &#x3D; &#39;2&#39;.</span><br><span class="line">    ENDIF.</span><br><span class="line">  ENDLOOP.</span><br><span class="line">ENDIF.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DATA LS_XVBKD LIKE LINE OF XVBKD.</span><br><span class="line">IF XVBAK-AUART = &#x27;AA&#x27;.</span><br><span class="line">  LOOP AT XVBKD INTO LS_XVBKD.</span><br><span class="line">    IF LS_XVBKD-BSTKD IS INITIAL.</span><br><span class="line">      MESSAGE E000(ZHQ) WITH &#x27;必须输入采购订单编号&#x27;.</span><br><span class="line">      LVF_SUBRC = &#x27;2&#x27;.</span><br><span class="line">    ENDIF.</span><br><span class="line">  ENDLOOP.</span><br><span class="line">ENDIF.</span><br></pre></td></tr></table></figure>
 
 <p>变更完成之后需要激活新建的CMOD项目，不然增强内容无法识别。测试结果如下：</p>
 <img src="/2023/02/23/ABAP/SAP%20%E5%A2%9E%E5%BC%BA/SAP%20%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/SAP%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/15.创建项目管理_测试截图.png" alt="15.创建项目管理_测试截图">
 
 
 
-<h3 id="五、参考资料"><a href="#五、参考资料" class="headerlink" title="五、参考资料"></a>五、参考资料</h3><p><a href="https://blog.csdn.net/SAPmatinal/article/details/108996501" target="_blank" rel="noopener">SAP ABAP 基于函数的出口CMOD</a></p>
-<p><a href="https://blog.csdn.net/qq_40370362/article/details/125990553" target="_blank" rel="noopener">SAP增强的查找方法</a></p>
+<h3 id="五、参考资料"><a href="#五、参考资料" class="headerlink" title="五、参考资料"></a>五、参考资料</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/SAPmatinal/article/details/108996501">SAP ABAP 基于函数的出口CMOD</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40370362/article/details/125990553">SAP增强的查找方法</a></p>
 
       
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -475,7 +454,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">SAP 二代增强</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、二代增强类型"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、二代增强类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、查找增强的方法"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、查找增强的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-SAP增强出口检查函数"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">1.SAP增强出口检查函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-查找增强步骤"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.查找增强步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#（1）在检查函数打断点"><span class="toc-number">1.0.2.2.1.</span> <span class="toc-text">（1）在检查函数打断点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#（2）执行需要检查的T-C"><span class="toc-number">1.0.2.2.2.</span> <span class="toc-text">（2）执行需要检查的T&#x2F;C</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#（3）取得函数名"><span class="toc-number">1.0.2.2.3.</span> <span class="toc-text">（3）取得函数名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#（4）查询MODSAP表"><span class="toc-number">1.0.2.2.4.</span> <span class="toc-text">（4）查询MODSAP表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#（5）SMOD（查看增强）-CMOD（实施增强）"><span class="toc-number">1.0.2.2.5.</span> <span class="toc-text">（5）SMOD（查看增强）&#x2F; CMOD（实施增强）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、逆向查找函数"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、逆向查找函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、二代增强实施案例"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、二代增强实施案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建项目对象"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">1.创建项目对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-增强分配"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">2.增强分配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-组件列表界面"><span class="toc-number">1.0.4.3.</span> <span class="toc-text">3.组件列表界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-维护函数"><span class="toc-number">1.0.4.4.</span> <span class="toc-text">4.维护函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-编写增强代码"><span class="toc-number">1.0.4.5.</span> <span class="toc-text">5.编写增强代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#（1）Importing参数："><span class="toc-number">1.0.4.5.1.</span> <span class="toc-text">（1）Importing参数：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#（2）Tables参数"><span class="toc-number">1.0.4.5.2.</span> <span class="toc-text">（2）Tables参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、参考资料"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、参考资料</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">SAP 二代增强</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、二代增强类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9F%A5%E6%89%BE%E5%A2%9E%E5%BC%BA%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、查找增强的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-SAP%E5%A2%9E%E5%BC%BA%E5%87%BA%E5%8F%A3%E6%A3%80%E6%9F%A5%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">1.SAP增强出口检查函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%9F%A5%E6%89%BE%E5%A2%9E%E5%BC%BA%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.查找增强步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%9C%A8%E6%A3%80%E6%9F%A5%E5%87%BD%E6%95%B0%E6%89%93%E6%96%AD%E7%82%B9"><span class="toc-number">1.0.2.2.1.</span> <span class="toc-text">（1）在检查函数打断点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%89%A7%E8%A1%8C%E9%9C%80%E8%A6%81%E6%A3%80%E6%9F%A5%E7%9A%84T-x2F-C"><span class="toc-number">1.0.2.2.2.</span> <span class="toc-text">（2）执行需要检查的T&#x2F;C</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%8F%96%E5%BE%97%E5%87%BD%E6%95%B0%E5%90%8D"><span class="toc-number">1.0.2.2.3.</span> <span class="toc-text">（3）取得函数名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E6%9F%A5%E8%AF%A2MODSAP%E8%A1%A8"><span class="toc-number">1.0.2.2.4.</span> <span class="toc-text">（4）查询MODSAP表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%885%EF%BC%89SMOD%EF%BC%88%E6%9F%A5%E7%9C%8B%E5%A2%9E%E5%BC%BA%EF%BC%89-x2F-CMOD%EF%BC%88%E5%AE%9E%E6%96%BD%E5%A2%9E%E5%BC%BA%EF%BC%89"><span class="toc-number">1.0.2.2.5.</span> <span class="toc-text">（5）SMOD（查看增强）&#x2F; CMOD（实施增强）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%80%86%E5%90%91%E6%9F%A5%E6%89%BE%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、逆向查找函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA%E5%AE%9E%E6%96%BD%E6%A1%88%E4%BE%8B"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、二代增强实施案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">1.创建项目对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A2%9E%E5%BC%BA%E5%88%86%E9%85%8D"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">2.增强分配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8%E7%95%8C%E9%9D%A2"><span class="toc-number">1.0.4.3.</span> <span class="toc-text">3.组件列表界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%BB%B4%E6%8A%A4%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.4.4.</span> <span class="toc-text">4.维护函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E7%BC%96%E5%86%99%E5%A2%9E%E5%BC%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">1.0.4.5.</span> <span class="toc-text">5.编写增强代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89Importing%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-number">1.0.4.5.1.</span> <span class="toc-text">（1）Importing参数：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89Tables%E5%8F%82%E6%95%B0"><span class="toc-number">1.0.4.5.2.</span> <span class="toc-text">（2）Tables参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、参考资料</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -506,6 +485,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -658,7 +638,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     

@@ -84,7 +84,7 @@
 
   
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -95,10 +95,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">夜猫君</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -158,10 +158,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/8eccb6c4c39582b1f67918bbadb3fa.JPEG&amp;access=215967.jpg" class="js-avatar">
+				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">夜猫君</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -235,13 +235,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近要做一个以SAP为数据中心的项目，涉及到大量的外部系统交互。所以在这里记录一下SAP Web Services 相关的技术点。方便后续回顾和使用。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <center><h1>SAP Web Services 发布</h1></center>
 
 <h2 id="一、Web-Service介绍"><a href="#一、Web-Service介绍" class="headerlink" title="一、Web Service介绍"></a>一、Web Service介绍</h2><p>Web Service就是一个应用程序，它向外界暴露出一个能够通过Web调用的API。Web Service是一种基于Web的中间件技术。用户通过把应用程序的一部分包装成Web服务的形式，将自己的应用程序功能提供给别人，实现应用程序之间的接口。webservice可用于多个系统和SAP系统之间的传输，比较灵活。</p>
 <p>根据外部系统提供的webservice的wsdl地址，在SAP系统创建webservice consumer时候输入该URL。使用SOAMANAGER创建逻辑端口，封装函数，在函数里指定端口，并调用类的方法，反之，创建webservice provider，生成wsdl供外部调用。</p>
-<p>以上内容摘自<a href="https://www.sapcenter.cn/archive/post/365627044630597.html#:~:text=ABAP%E6%8E%A5%E5%8F%A3%E5%88%9B%E5%BB%BA%201%201%E3%80%81WebService%20Web%20Service%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%AE%83%E5%90%91%E5%A4%96%E7%95%8C%E6%9A%B4%E9%9C%B2%E5%87%BA%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E9%80%9A%E8%BF%87Web%E8%B0%83%E7%94%A8%E7%9A%84API%E3%80%82%20Web%20Service%E6%98%AF%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EWeb%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF%E3%80%82%20...,%E5%9C%A8%E7%A0%94%E7%A9%B6BAPI%E4%B9%8B%E5%89%8D%EF%BC%8C%E9%A6%96%E5%85%88%E8%A6%81%E4%BA%86%E8%A7%A3%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%28Business%20Object%EF%BC%8C%E7%AE%80%E7%A7%B0BO%29%E5%92%8C%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%E4%BB%93%E5%BA%93%28Business%20Object%20Repository%EF%BC%8C%E7%AE%80%E7%A7%B0BOR%29%20%E3%80%82%20...%205%205%E3%80%81%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%88MiddleWare%EF%BC%89" target="_blank" rel="noopener">ABAP接口创建</a>。</p>
+<p>以上内容摘自<a target="_blank" rel="noopener" href="https://www.sapcenter.cn/archive/post/365627044630597.html#:~:text=ABAP%E6%8E%A5%E5%8F%A3%E5%88%9B%E5%BB%BA%201%201%E3%80%81WebService%20Web%20Service%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%AE%83%E5%90%91%E5%A4%96%E7%95%8C%E6%9A%B4%E9%9C%B2%E5%87%BA%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E9%80%9A%E8%BF%87Web%E8%B0%83%E7%94%A8%E7%9A%84API%E3%80%82%20Web%20Service%E6%98%AF%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EWeb%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF%E3%80%82%20...,%E5%9C%A8%E7%A0%94%E7%A9%B6BAPI%E4%B9%8B%E5%89%8D%EF%BC%8C%E9%A6%96%E5%85%88%E8%A6%81%E4%BA%86%E8%A7%A3%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%28Business%20Object%EF%BC%8C%E7%AE%80%E7%A7%B0BO%29%E5%92%8C%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%E4%BB%93%E5%BA%93%28Business%20Object%20Repository%EF%BC%8C%E7%AE%80%E7%A7%B0BOR%29%20%E3%80%82%20...%205%205%E3%80%81%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%88MiddleWare%EF%BC%89">ABAP接口创建</a>。</p>
 <h2 id="二、创建外部调用的RFC"><a href="#二、创建外部调用的RFC" class="headerlink" title="二、创建外部调用的RFC"></a>二、创建外部调用的RFC</h2><h3 id="1-创建Function-Group"><a href="#1-创建Function-Group" class="headerlink" title="1.创建Function Group"></a>1.创建Function Group</h3><p>如果你有可以使用的Function Group则可以跳过。</p>
 <h4 id="（1）使用TCODE-SE80"><a href="#（1）使用TCODE-SE80" class="headerlink" title="（1）使用TCODE SE80"></a>（1）使用TCODE SE80</h4><img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/1.创建Function Group.png" alt="1.创建Function Group">
 
@@ -263,7 +263,7 @@
 <h4 id="（2）输出参数"><a href="#（2）输出参数" class="headerlink" title="（2）输出参数"></a>（2）输出参数</h4><p>需要勾选Pass By Value按钮。</p>
 <img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/7.RFC 输出参数设置.png" alt="7.RFC 输出参数设置">
 
-<h4 id="（3）Source-Code"><a href="#（3）Source-Code" class="headerlink" title="（3）Source Code"></a>（3）Source Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">FUNCTION YFM_SERVICE_TEST.</span><br><span class="line">*&quot;----------------------------------------------------------------------</span><br><span class="line">*&quot;*&quot;Local Interface:</span><br><span class="line">*&quot;  IMPORTING</span><br><span class="line">*&quot;     VALUE(I_MESGTXT) TYPE  STRING OPTIONAL</span><br><span class="line">*&quot;  EXPORTING</span><br><span class="line">*&quot;     VALUE(E_MESGTXT) TYPE  STRING</span><br><span class="line">*&quot;----------------------------------------------------------------------</span><br><span class="line">  IF I_MESGTXT IS INITIAL.</span><br><span class="line">    E_MESGTXT &#x3D; &#39;I_MESGTXT Is Null!&#39;.</span><br><span class="line">  ELSE.</span><br><span class="line">    E_MESGTXT &#x3D; &#96;Message Value is &#96; &amp;&amp; I_MESGTXT.</span><br><span class="line">  ENDIF.</span><br><span class="line">ENDFUNCTION.</span><br></pre></td></tr></table></figure>
+<h4 id="（3）Source-Code"><a href="#（3）Source-Code" class="headerlink" title="（3）Source Code"></a>（3）Source Code</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">FUNCTION YFM_SERVICE_TEST.</span><br><span class="line">*&quot;----------------------------------------------------------------------</span><br><span class="line">*&quot;*&quot;Local Interface:</span><br><span class="line">*&quot;  IMPORTING</span><br><span class="line">*&quot;     VALUE(I_MESGTXT) TYPE  STRING OPTIONAL</span><br><span class="line">*&quot;  EXPORTING</span><br><span class="line">*&quot;     VALUE(E_MESGTXT) TYPE  STRING</span><br><span class="line">*&quot;----------------------------------------------------------------------</span><br><span class="line">  IF I_MESGTXT IS INITIAL.</span><br><span class="line">    E_MESGTXT = &#x27;I_MESGTXT Is Null!&#x27;.</span><br><span class="line">  ELSE.</span><br><span class="line">    E_MESGTXT = `Message Value is ` &amp;&amp; I_MESGTXT.</span><br><span class="line">  ENDIF.</span><br><span class="line">ENDFUNCTION.</span><br></pre></td></tr></table></figure>
 
 
 
@@ -296,7 +296,7 @@
 <li><strong>Consumer Mapping</strong>：使用者映射</li>
 <li><strong>Operation Mapping</strong>：业务映射</li>
 <li><strong>Processing Type Domain</strong>：处理类型域</li>
-<li><strong>Integration Scenario Def.</strong>：集成场景描述</li>
+<li>**Integration Scenario Def.**：集成场景描述</li>
 <li><strong>Semantic Contract</strong>：</li>
 <li><strong>Contract</strong>：合同</li>
 <li><strong>Contract Implementation</strong>：合同执行</li>
@@ -309,8 +309,8 @@
 <ul>
 <li><strong>Backend</strong>：后端</li>
 <li><strong>Enterprise Service Repository</strong>：企业服务存储库</li>
-<li><strong>Existing ABAP Object(Inside Out)</strong>：现有ABAP对象（由内而外）</li>
-<li><strong>External WSDL/Schema</strong>：外部WSDL/架构</li>
+<li>**Existing ABAP Object(Inside Out)**：现有ABAP对象（由内而外）</li>
+<li><strong>External WSDL&#x2F;Schema</strong>：外部WSDL&#x2F;架构</li>
 </ul>
 <h4 id="（4）填写服务名称与描述"><a href="#（4）填写服务名称与描述" class="headerlink" title="（4）填写服务名称与描述"></a>（4）填写服务名称与描述</h4><img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/13.服务名称与描述.png" alt="13.服务名称与描述">
 
@@ -353,7 +353,7 @@
 <p>输入完服务与绑定名称之后点击上方的<strong>next按钮</strong>进行下一步。</p>
 <h4 id="（2）设置访问安全性"><a href="#（2）设置访问安全性" class="headerlink" title="（2）设置访问安全性"></a>（2）设置访问安全性</h4><img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/24.设置访问权限.png" alt="24.设置访问权限">
 
-<p>根据上所选择的方式进行设置，本次勾选的下方User ID/Password是通过用户账号密码的形式访问的。如果在上面创建Web Service的配置服务时选择不同的内容，此处部分内容或许会变成不可编辑状态。</p>
+<p>根据上所选择的方式进行设置，本次勾选的下方User ID&#x2F;Password是通过用户账号密码的形式访问的。如果在上面创建Web Service的配置服务时选择不同的内容，此处部分内容或许会变成不可编辑状态。</p>
 <p>设置完成后点击<strong>Next按钮</strong>进入下一步。</p>
 <h4 id="（3）完成发布内容"><a href="#（3）完成发布内容" class="headerlink" title="（3）完成发布内容"></a>（3）完成发布内容</h4><img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/25.SOAP 界面.png" alt="25.SOAP 界面">
 
@@ -364,7 +364,7 @@
 <h3 id="6-WSDL-URL"><a href="#6-WSDL-URL" class="headerlink" title="6.WSDL URL"></a>6.WSDL URL</h3><img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/27.获取WSDL URL.png" alt="27.获取WSDL URL">
 
 <p>记录好下方的WSDL URL将其提供给外部调用SAP系统的开发人员或系统。外部系统就可以通过WSDL URL对SAP系统进行访问。</p>
-<h2 id="五、Web-Service的测试"><a href="#五、Web-Service的测试" class="headerlink" title="五、Web Service的测试"></a>五、Web Service的测试</h2><h3 id="1-测试软件的安装"><a href="#1-测试软件的安装" class="headerlink" title="1.测试软件的安装"></a>1.测试软件的安装</h3><p>本次测试Web Service主要使用的是<strong>SoapUI</strong>。<a href="https://www.soapui.org/downloads/soapui/" target="_blank" rel="noopener">下载链接</a>：<a href="https://www.soapui.org/downloads/soapui/" target="_blank" rel="noopener">https://www.soapui.org/downloads/soapui/</a></p>
+<h2 id="五、Web-Service的测试"><a href="#五、Web-Service的测试" class="headerlink" title="五、Web Service的测试"></a>五、Web Service的测试</h2><h3 id="1-测试软件的安装"><a href="#1-测试软件的安装" class="headerlink" title="1.测试软件的安装"></a>1.测试软件的安装</h3><p>本次测试Web Service主要使用的是<strong>SoapUI</strong>。<a target="_blank" rel="noopener" href="https://www.soapui.org/downloads/soapui/">下载链接</a>：<a target="_blank" rel="noopener" href="https://www.soapui.org/downloads/soapui/">https://www.soapui.org/downloads/soapui/</a></p>
 <img src="/2023/06/19/ABAP/SAP%20Web%20Services/SAP%20Web%20Service%E7%9A%84%E5%8F%91%E5%B8%83/SAP-Web-Services/28.下载SOAP UI.png" alt="28.下载SOAP UI">
 
 
@@ -426,13 +426,13 @@
 
 
 <h2 id="七、参考资料"><a href="#七、参考资料" class="headerlink" title="七、参考资料"></a>七、参考资料</h2><ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/382494344" target="_blank" rel="noopener">SAP之发布WebService</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/382494344">SAP之发布WebService</a></p>
 </li>
-<li><p><a href="https://www.sapcenter.cn/archive/post/365627044630597.html#:~:text=ABAP%E6%8E%A5%E5%8F%A3%E5%88%9B%E5%BB%BA%201%201%E3%80%81WebService%20Web%20Service%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%AE%83%E5%90%91%E5%A4%96%E7%95%8C%E6%9A%B4%E9%9C%B2%E5%87%BA%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E9%80%9A%E8%BF%87Web%E8%B0%83%E7%94%A8%E7%9A%84API%E3%80%82%20Web%20Service%E6%98%AF%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EWeb%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF%E3%80%82%20...,%E5%9C%A8%E7%A0%94%E7%A9%B6BAPI%E4%B9%8B%E5%89%8D%EF%BC%8C%E9%A6%96%E5%85%88%E8%A6%81%E4%BA%86%E8%A7%A3%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%28Business%20Object%EF%BC%8C%E7%AE%80%E7%A7%B0BO%29%E5%92%8C%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%E4%BB%93%E5%BA%93%28Business%20Object%20Repository%EF%BC%8C%E7%AE%80%E7%A7%B0BOR%29%20%E3%80%82%20...%205%205%E3%80%81%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%88MiddleWare%EF%BC%89" target="_blank" rel="noopener">ABAP接口创建</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://www.sapcenter.cn/archive/post/365627044630597.html#:~:text=ABAP%E6%8E%A5%E5%8F%A3%E5%88%9B%E5%BB%BA%201%201%E3%80%81WebService%20Web%20Service%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%AE%83%E5%90%91%E5%A4%96%E7%95%8C%E6%9A%B4%E9%9C%B2%E5%87%BA%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E9%80%9A%E8%BF%87Web%E8%B0%83%E7%94%A8%E7%9A%84API%E3%80%82%20Web%20Service%E6%98%AF%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EWeb%E7%9A%84%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF%E3%80%82%20...,%E5%9C%A8%E7%A0%94%E7%A9%B6BAPI%E4%B9%8B%E5%89%8D%EF%BC%8C%E9%A6%96%E5%85%88%E8%A6%81%E4%BA%86%E8%A7%A3%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%28Business%20Object%EF%BC%8C%E7%AE%80%E7%A7%B0BO%29%E5%92%8C%E4%B8%9A%E5%8A%A1%E5%AF%B9%E8%B1%A1%E4%BB%93%E5%BA%93%28Business%20Object%20Repository%EF%BC%8C%E7%AE%80%E7%A7%B0BOR%29%20%E3%80%82%20...%205%205%E3%80%81%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%88MiddleWare%EF%BC%89">ABAP接口创建</a></p>
 </li>
-<li><p><a href="https://zhuanlan.zhihu.com/p/374385629" target="_blank" rel="noopener">最详细的 SAP ABAP Web Service 创建和消费步骤讲解</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/374385629">最详细的 SAP ABAP Web Service 创建和消费步骤讲解</a></p>
 </li>
-<li><p><a href="https://www.cnblogs.com/zohoo/p/7295920.html" target="_blank" rel="noopener">SAP Web Service简介与配置方法</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zohoo/p/7295920.html">SAP Web Service简介与配置方法</a></p>
 </li>
 </ul>
 
@@ -440,27 +440,6 @@
 
 
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -560,6 +539,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2023/06/25/ABAP/SAP%20Web%20Services/Web%20Service%20%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E6%8E%A5%E5%8F%A3/Web-Service-%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E6%8E%A5%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Web Service 调用外部接口
+        
+      </div>
+    </a>
+  
   
     <a href="/2023/06/12/ABAP/SAP%20%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/SAP-%E5%BC%B9%E6%A1%86Function%E6%B1%87%E6%80%BB/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">SAP 弹框Function汇总</div>
@@ -589,7 +577,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">SAP Web Services 发布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Web-Service介绍"><span class="toc-number">1.1.</span> <span class="toc-text">一、Web Service介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、创建外部调用的RFC"><span class="toc-number">1.2.</span> <span class="toc-text">二、创建外部调用的RFC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建Function-Group"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.创建Function Group</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）使用TCODE-SE80"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">（1）使用TCODE SE80</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）填写Function-Group的属性"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">（2）填写Function Group的属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-使用TCODE-SE37-创建RFC"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.使用TCODE SE37 创建RFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置参数并编写Source-Code"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.设置参数并编写Source Code</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）输入参数"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">（1）输入参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）输出参数"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">（2）输出参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）Source-Code"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">（3）Source Code</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-设置远程RFC属性"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.设置远程RFC属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、创建Web-Service"><span class="toc-number">1.3.</span> <span class="toc-text">三、创建Web Service</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-使用创建好的RFC创建"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.使用创建好的RFC创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-通过Package创建"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.通过Package创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）通过TCODE-SE80-打开Package"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">（1）通过TCODE SE80 打开Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）选择Service-Type"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">（2）选择Service Type</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）服务提供类型"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">（3）服务提供类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（4）填写服务名称与描述"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">（4）填写服务名称与描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（5）选择端点类型"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">（5）选择端点类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（6）填写Function-Module名称"><span class="toc-number">1.3.2.6.</span> <span class="toc-text">（6）填写Function Module名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（7）配置服务"><span class="toc-number">1.3.2.7.</span> <span class="toc-text">（7）配置服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（8）选择Package"><span class="toc-number">1.3.2.8.</span> <span class="toc-text">（8）选择Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（9）完成创建"><span class="toc-number">1.3.2.9.</span> <span class="toc-text">（9）完成创建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（10）激活Web-Service"><span class="toc-number">1.3.2.10.</span> <span class="toc-text">（10）激活Web Service</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、发布Web-Service"><span class="toc-number">1.4.</span> <span class="toc-text">四、发布Web Service</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-事务码-SOAMANAGER"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.事务码 SOAMANAGER</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-查找Web-Service"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.查找Web Service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-发布管理界面"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.发布管理界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-创建Service"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.创建Service</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）服务与绑定名称"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">（1）服务与绑定名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）设置访问安全性"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">（2）设置访问安全性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）完成发布内容"><span class="toc-number">1.4.4.3.</span> <span class="toc-text">（3）完成发布内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-完成发布"><span class="toc-number">1.4.5.</span> <span class="toc-text">5.完成发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-WSDL-URL"><span class="toc-number">1.4.6.</span> <span class="toc-text">6.WSDL URL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、Web-Service的测试"><span class="toc-number">1.5.</span> <span class="toc-text">五、Web Service的测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-测试软件的安装"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.测试软件的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-打开测试软件填入WSDL-URL"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.打开测试软件填入WSDL URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-测试项目创建完成界面"><span class="toc-number">1.5.3.</span> <span class="toc-text">3.测试项目创建完成界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-设置访问账号与密码"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.设置访问账号与密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-测试空值与有值两种情况"><span class="toc-number">1.5.5.</span> <span class="toc-text">5.测试空值与有值两种情况</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）空值测试"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">（1）空值测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）有值测试"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">（3）有值测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、接口一致性检查"><span class="toc-number">1.6.</span> <span class="toc-text">六、接口一致性检查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Function-新增两个参数"><span class="toc-number">1.6.1.</span> <span class="toc-text">1.Function 新增两个参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-打开依照该Function-Module创建的Web-Service"><span class="toc-number">1.6.2.</span> <span class="toc-text">2.打开依照该Function Module创建的Web Service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-重新发布Web-Service"><span class="toc-number">1.6.3.</span> <span class="toc-text">3.重新发布Web Service</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、参考资料"><span class="toc-number">1.7.</span> <span class="toc-text">七、参考资料</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">SAP Web Services 发布</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Web-Service%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">一、Web Service介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BA%E5%A4%96%E9%83%A8%E8%B0%83%E7%94%A8%E7%9A%84RFC"><span class="toc-number">1.2.</span> <span class="toc-text">二、创建外部调用的RFC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BAFunction-Group"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.创建Function Group</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BD%BF%E7%94%A8TCODE-SE80"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">（1）使用TCODE SE80</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%A1%AB%E5%86%99Function-Group%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">（2）填写Function Group的属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8TCODE-SE37-%E5%88%9B%E5%BB%BARFC"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.使用TCODE SE37 创建RFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%E5%B9%B6%E7%BC%96%E5%86%99Source-Code"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.设置参数并编写Source Code</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%BE%93%E5%85%A5%E5%8F%82%E6%95%B0"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">（1）输入参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%BE%93%E5%87%BA%E5%8F%82%E6%95%B0"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">（2）输出参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89Source-Code"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">（3）Source Code</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8BRFC%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.设置远程RFC属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%9B%E5%BB%BAWeb-Service"><span class="toc-number">1.3.</span> <span class="toc-text">三、创建Web Service</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%88%9B%E5%BB%BA%E5%A5%BD%E7%9A%84RFC%E5%88%9B%E5%BB%BA"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.使用创建好的RFC创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%9A%E8%BF%87Package%E5%88%9B%E5%BB%BA"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.通过Package创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E9%80%9A%E8%BF%87TCODE-SE80-%E6%89%93%E5%BC%80Package"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">（1）通过TCODE SE80 打开Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%80%89%E6%8B%A9Service-Type"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">（2）选择Service Type</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">（3）服务提供类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%A1%AB%E5%86%99%E6%9C%8D%E5%8A%A1%E5%90%8D%E7%A7%B0%E4%B8%8E%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">（4）填写服务名称与描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E9%80%89%E6%8B%A9%E7%AB%AF%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">（5）选择端点类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E5%A1%AB%E5%86%99Function-Module%E5%90%8D%E7%A7%B0"><span class="toc-number">1.3.2.6.</span> <span class="toc-text">（6）填写Function Module名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.2.7.</span> <span class="toc-text">（7）配置服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%888%EF%BC%89%E9%80%89%E6%8B%A9Package"><span class="toc-number">1.3.2.8.</span> <span class="toc-text">（8）选择Package</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%889%EF%BC%89%E5%AE%8C%E6%88%90%E5%88%9B%E5%BB%BA"><span class="toc-number">1.3.2.9.</span> <span class="toc-text">（9）完成创建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%8810%EF%BC%89%E6%BF%80%E6%B4%BBWeb-Service"><span class="toc-number">1.3.2.10.</span> <span class="toc-text">（10）激活Web Service</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%91%E5%B8%83Web-Service"><span class="toc-number">1.4.</span> <span class="toc-text">四、发布Web Service</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%8B%E5%8A%A1%E7%A0%81-SOAMANAGER"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.事务码 SOAMANAGER</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9F%A5%E6%89%BEWeb-Service"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.查找Web Service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8F%91%E5%B8%83%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.发布管理界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%88%9B%E5%BB%BAService"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.创建Service</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%9C%8D%E5%8A%A1%E4%B8%8E%E7%BB%91%E5%AE%9A%E5%90%8D%E7%A7%B0"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">（1）服务与绑定名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E8%AE%BE%E7%BD%AE%E8%AE%BF%E9%97%AE%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">（2）设置访问安全性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%AE%8C%E6%88%90%E5%8F%91%E5%B8%83%E5%86%85%E5%AE%B9"><span class="toc-number">1.4.4.3.</span> <span class="toc-text">（3）完成发布内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%AE%8C%E6%88%90%E5%8F%91%E5%B8%83"><span class="toc-number">1.4.5.</span> <span class="toc-text">5.完成发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-WSDL-URL"><span class="toc-number">1.4.6.</span> <span class="toc-text">6.WSDL URL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Web-Service%E7%9A%84%E6%B5%8B%E8%AF%95"><span class="toc-number">1.5.</span> <span class="toc-text">五、Web Service的测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%B5%8B%E8%AF%95%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.测试软件的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%93%E5%BC%80%E6%B5%8B%E8%AF%95%E8%BD%AF%E4%BB%B6%E5%A1%AB%E5%85%A5WSDL-URL"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.打开测试软件填入WSDL URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA%E5%AE%8C%E6%88%90%E7%95%8C%E9%9D%A2"><span class="toc-number">1.5.3.</span> <span class="toc-text">3.测试项目创建完成界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE%E8%AE%BF%E9%97%AE%E8%B4%A6%E5%8F%B7%E4%B8%8E%E5%AF%86%E7%A0%81"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.设置访问账号与密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B5%8B%E8%AF%95%E7%A9%BA%E5%80%BC%E4%B8%8E%E6%9C%89%E5%80%BC%E4%B8%A4%E7%A7%8D%E6%83%85%E5%86%B5"><span class="toc-number">1.5.5.</span> <span class="toc-text">5.测试空值与有值两种情况</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%A9%BA%E5%80%BC%E6%B5%8B%E8%AF%95"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">（1）空值测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%9C%89%E5%80%BC%E6%B5%8B%E8%AF%95"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">（3）有值测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%8E%A5%E5%8F%A3%E4%B8%80%E8%87%B4%E6%80%A7%E6%A3%80%E6%9F%A5"><span class="toc-number">1.6.</span> <span class="toc-text">六、接口一致性检查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Function-%E6%96%B0%E5%A2%9E%E4%B8%A4%E4%B8%AA%E5%8F%82%E6%95%B0"><span class="toc-number">1.6.1.</span> <span class="toc-text">1.Function 新增两个参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%93%E5%BC%80%E4%BE%9D%E7%85%A7%E8%AF%A5Function-Module%E5%88%9B%E5%BB%BA%E7%9A%84Web-Service"><span class="toc-number">1.6.2.</span> <span class="toc-text">2.打开依照该Function Module创建的Web Service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%87%8D%E6%96%B0%E5%8F%91%E5%B8%83Web-Service"><span class="toc-number">1.6.3.</span> <span class="toc-text">3.重新发布Web Service</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">1.7.</span> <span class="toc-text">七、参考资料</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -620,6 +608,7 @@
     	<div class="footer-left">
     		&copy; 2023 夜猫君
     	</div>
+	
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
@@ -772,7 +761,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2021年入行的 SAP 开发程序员&lt;br&gt;&lt;br&gt;个人博客主要记录SAP开发相关的内容&lt;br&gt;后续有机会也会更新业务相关的文章</div>
   	  	
     	</section>
     
