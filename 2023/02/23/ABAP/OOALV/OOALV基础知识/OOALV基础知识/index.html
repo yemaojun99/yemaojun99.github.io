@@ -13,7 +13,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://www.yemaojun.top/2023/02/23/abap/ooalv/ooalv基础知识/"/>
+  <link rel="canonical" href="https://www.yemaojun.top/2023/02/23/abap/ooalv/ooalv基础知识/ooalv基础知识/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -52,7 +52,7 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="OOALV 基础知识">
-<meta property="og:url" content="https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:url" content="https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="夜猫君">
 <meta property="og:description" content="最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。">
 <meta property="og:locale" content="zh_CN">
@@ -1738,7 +1738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1702339698080),
+    lastupdate: new Date(1705036275900),
     sidebar: {
       for_page: ["blogger","repos","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2499,7 +2499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV基础知识/">
+  <link itemprop="mainEntityOfPage" href="https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV基础知识/OOALV基础知识/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="夜猫君">
   </span>
@@ -2619,7 +2619,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>输出内表中的数据</li>
 </ul>
 <h3 id="二、SAP-容器"><a href="#二、SAP-容器" class="headerlink" title="二、SAP 容器"></a>二、SAP 容器</h3><h4 id="1-创建SAP容器及容器对象"><a href="#1-创建SAP容器及容器对象" class="headerlink" title="1.创建SAP容器及容器对象"></a>1.创建SAP容器及容器对象</h4><p>若要显示ALV页面，有三样元素作为支撑。分别是承载容器和组件的<strong>屏幕</strong>、划分组件区域的<strong>容器</strong>和用于展示功能的<strong>组件</strong>。所以要使一个组件完整的运行下来，需要<strong>屏幕</strong>、<strong>容器</strong>和<strong>组件</strong>三样元素。</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%AE%B9%E5%99%A8%E6%8E%A7%E4%BB%B6%E5%9B%BE%E7%89%87.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%AE%B9%E5%99%A8%E6%8E%A7%E4%BB%B6%E5%9B%BE%E7%89%87.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="容器控件图片"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%AE%B9%E5%99%A8%E6%8E%A7%E4%BB%B6%E5%9B%BE%E7%89%87.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%AE%B9%E5%99%A8%E6%8E%A7%E4%BB%B6%E5%9B%BE%E7%89%87.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="容器控件图片"></p>
 <h4 id="2-容器类型"><a href="#2-容器类型" class="headerlink" title="2.容器类型"></a>2.容器类型</h4><table>
 <thead>
 <tr>
@@ -2655,27 +2655,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <h3 id="三、使用Docking控件创建OOALV示例"><a href="#三、使用Docking控件创建OOALV示例" class="headerlink" title="三、使用Docking控件创建OOALV示例"></a>三、使用Docking控件创建OOALV示例</h3><h4 id="1-创建Report程序"><a href="#1-创建Report程序" class="headerlink" title="1.创建Report程序"></a>1.创建Report程序</h4><p>（1）通过SE38，输入程序名，点击Create按钮创建程序</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序" style="zoom:67%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序" style="zoom:67%;">
 
 <p>（2）输入程序描述，和设置程序类型 1</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_程序类型与描述.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_程序类型与描述.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_程序类型与描述" style="zoom:67%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_程序类型与描述.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_程序类型与描述.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_程序类型与描述" style="zoom:67%;">
 
 <p>（3）因为是练习程序，所以一般选择的Package都是本地</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_选择包.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_选择包.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_选择包" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_选择包.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_选择包.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_选择包" style="zoom:60%;">
 
 <h4 id="2-编写程序履历、主界面和对应Include"><a href="#2-编写程序履历、主界面和对应Include" class="headerlink" title="2.编写程序履历、主界面和对应Include"></a>2.编写程序履历、主界面和对应Include</h4><p>（1）创建好程序第一件事是编写程序履历，各个模块的程序履历不一样，所以我的程序履历仅供参考</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/编写程序履历.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/编写程序履历.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="编写程序履历" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/编写程序履历.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/编写程序履历.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="编写程序履历" style="zoom:60%;">
 
 <p>（2）编写程序主界面、各Include和选择屏幕事件</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/主界面.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/主界面.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="主界面" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/主界面.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/主界面.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="主界面" style="zoom:60%;">
 
 <h4 id="3-设置展示的结构"><a href="#3-设置展示的结构" class="headerlink" title="3.设置展示的结构"></a>3.设置展示的结构</h4><p>（1）本次我们使用 SE11中的 YSFLIGHT表作为展示结构，该表的原型是SE11 中的 SFLIGHT</p>
 <p>（2）在名字为YTEST_0614_CYH_TOP的Include中创建如下结构</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP1.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP1.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TOP1" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP1.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP1.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TOP1" style="zoom:60%;">
 
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP2.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP2.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TOP2" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP2.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP2.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TOP2" style="zoom:60%;">
 
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP3.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP3.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TOP3" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP3.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TOP3.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TOP3" style="zoom:60%;">
 
 <p>对该结构说明如下：</p>
 <ul>
@@ -2688,57 +2688,57 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h4 id="4-设置选择屏幕"><a href="#4-设置选择屏幕" class="headerlink" title="4.设置选择屏幕"></a>4.设置选择屏幕</h4><p>（1）根据需求定义，一般情况下都是涉及的表的主键</p>
 <p>以本例为例子，在表YSFLIGHT中的主键有三个，分别是CARRID、CONNID和FLDATE，所以本次就是用这三个字段作为选择屏幕的字段。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_主键.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_主键.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_主键" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_主键.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_主键.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_主键" style="zoom:60%;">
 
 <p>（2）选择屏幕的代码一般放在名字带有SCR的Include中</p>
 <p>一般为了保持选择屏幕的整洁、可读性一般会使用SELECTION-SCREEN BEGIN OF BLOCK …等语句，将选择屏幕中相关的字段包在一起。</p>
 <p>详细的选择屏幕设置详见报表程序篇。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_代码.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_代码.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_代码" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_代码.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_代码.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_代码" style="zoom:60%;">
 
 <p>注：此处变量的名字（S_CARRID）不可以超过8个字符，否则会报错。</p>
 <p>设置好选择屏幕字段后还需要设置其在选择屏幕上的显示的名字选择GUI 窗口上方的 Goto –&gt;  Text Elements –&gt; Selecyion Texts</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置名称方式.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置名称方式.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_设置名称方式" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置名称方式.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置名称方式.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_设置名称方式" style="zoom:60%;">
 
 <p>注：若是进入后没有能设置的字段，有可能是你的程序没有激活，激活后可见</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置字段名称.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置字段名称.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_设置字段名称" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置字段名称.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_设置字段名称.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_设置字段名称" style="zoom:60%;">
 
 <p>运行后，选择屏幕的展示效果如下</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_展示.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_展示.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_展示" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_展示.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/选择屏幕_展示.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="选择屏幕_展示" style="zoom:60%;">
 
 
 
 <h4 id="5-创建屏幕和设置屏幕属性"><a href="#5-创建屏幕和设置屏幕属性" class="headerlink" title="5.创建屏幕和设置屏幕属性"></a>5.创建屏幕和设置屏幕属性</h4><p>（1）点击Display Object List按钮，或按快捷键C +S +  F5</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_准备工作"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_准备工作"></p>
 <p>（2）之后左边会出现一个工具栏，整体结构和SE80的结构是一致的，之后再程序名称处右键，选择Create –&gt; Screen</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_创建屏幕.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_创建屏幕.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_创建屏幕" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_创建屏幕.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_创建屏幕.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_创建屏幕" style="zoom:60%;">
 
 <p>（3）选择好按钮之后，会有一个弹框要求你输入屏幕号</p>
 <p>注：此处不能使用屏幕号1000，因为该屏幕号有特殊含义，指的是选择屏幕。</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%BE%93%E5%85%A5%E5%B1%8F%E5%B9%95%E5%8F%B7.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%BE%93%E5%85%A5%E5%B1%8F%E5%B9%95%E5%8F%B7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_输入屏幕号"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%BE%93%E5%85%A5%E5%B1%8F%E5%B9%95%E5%8F%B7.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%BE%93%E5%85%A5%E5%B1%8F%E5%B9%95%E5%8F%B7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_输入屏幕号"></p>
 <p>（4）设置屏幕的描述和Element List列表中的内容</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置描述.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置描述.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_设置描述" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置描述.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置描述.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_设置描述" style="zoom:60%;">
 
 <p>设置OK_CODE，有关OK_CODE的相关概念请参考上方的 <strong>设置展示的结构</strong> 中的内容</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置屏幕元素.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置屏幕元素.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_设置屏幕元素" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置屏幕元素.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_设置屏幕元素.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_设置屏幕元素" style="zoom:60%;">
 
 
 
 <h4 id="6-创建容器和ALV-Grid对象"><a href="#6-创建容器和ALV-Grid对象" class="headerlink" title="6.创建容器和ALV Grid对象"></a>6.创建容器和ALV Grid对象</h4><p>（1）在主程序界面的End-Of-Selection.事件下方调用我们创建好的屏幕<strong>0100</strong></p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%B0%83%E7%94%A8%E5%B1%8F%E5%B9%95.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%B0%83%E7%94%A8%E5%B1%8F%E5%B9%95.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_调用屏幕"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%B0%83%E7%94%A8%E5%B1%8F%E5%B9%95.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E5%B1%8F%E5%B9%95_%E8%B0%83%E7%94%A8%E5%B1%8F%E5%B9%95.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_调用屏幕"></p>
 <p>（2）双击上方代码中的屏幕号0100，或在左侧的工具栏中点开Screen文件夹，选择0100屏幕。进入屏幕逻辑流界面</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_屏幕逻辑流界面.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_屏幕逻辑流界面.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_屏幕逻辑流界面" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_屏幕逻辑流界面.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建屏幕_屏幕逻辑流界面.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建屏幕_屏幕逻辑流界面" style="zoom:60%;">
 
 <p>（3）在Process Before Output（后简称为PBO）事件下方新建一个MODULE</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建初始化Module.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建初始化Module.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_创建初始化Module" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建初始化Module.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建初始化Module.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_创建初始化Module" style="zoom:60%;">
 
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建Module.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建Module.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_创建Module" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建Module.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建Module.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_创建Module" style="zoom:60%;">
 
 <p>在程序中填写下面的代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MODULE INITIAL_0100 OUTPUT.</span><br><span class="line">	PERFORE INITIAL_0100.</span><br><span class="line">ENDMODULE.</span><br></pre></td></tr></table></figure>
 
 <p>注：之所以要在此处编写一个PERFORE，是因为在MODULE中定义的所有的变量全部都是全局变量，但是将这些变量放在PERFORE中则会变为局部变量。并且在开发规范中也是要求不允许在MODULE中去定义变量的。</p>
 <p>双击该PERFORE的方法名称，创建该PERFORE的FORE到名字带有F01的Include中。然后编写下面的代码。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_编写初始化代码.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_编写初始化代码.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_编写初始化代码" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_编写初始化代码.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_编写初始化代码.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_编写初始化代码" style="zoom:60%;">
 
 <ul>
 <li><strong>CREATE_CONTAINER_ALV：</strong>用来创建屏幕容器和ALV GRID对象的Perform；</li>
@@ -2749,86 +2749,86 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><strong>REFRESH_ALV：</strong>刷新ALV Grid的Perform，当每次有变更时，则需要刷新ALV Grid，使变更的内容更新到界面上。</li>
 </ul>
 <p>（4）PERFORM CREATE_CONTAINER_ALV</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建容器和ALV GRID对象.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建容器和ALV GRID对象.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_创建容器和ALV GRID对象">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建容器和ALV GRID对象.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/创建程序_创建容器和ALV GRID对象.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_创建容器和ALV GRID对象">
 
 
 
 <h4 id="7-设置ALV-Grid对象的属性"><a href="#7-设置ALV-Grid对象的属性" class="headerlink" title="7.设置ALV Grid对象的属性"></a>7.设置ALV Grid对象的属性</h4><p>（1）获取字段目录——GET_FIELDCAT</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_Get_Fieldcat"></p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat1.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_Get_Fieldcat1"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_Get_Fieldcat"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat1.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_Get_Fieldcat1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_Get_Fieldcat1"></p>
 <p>（2）自定义字段目录，用来设置列名、列宽和布局样式（居左、居中和居右）——SET_FIELDCAT</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_SET_FIELDCAT"></p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT1.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_SET_FIELDCAT1"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_SET_FIELDCAT"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT1.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_SET_FIELDCAT1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_SET_FIELDCAT1"></p>
 <p>（3）注册事件类中的事件，本次因为暂不涉及事件类，所以跳过改内容——REGISTRATION_EVENTS</p>
 <p>（4）设置ALV GRID对象的布局、变式、默认按钮和调用——CALL_ALV_GRID</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_CALL_ALV_GRID.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_CALL_ALV_GRID.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_CALL_ALV_GRID"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_CALL_ALV_GRID.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_CALL_ALV_GRID.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_CALL_ALV_GRID"></p>
 <p>设置布局和变式——SET_VARIANT_LAYOUT</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_LAYOUT_VARIANT.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_LAYOUT_VARIANT.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_LAYOUT_VARIANT"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_LAYOUT_VARIANT.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_LAYOUT_VARIANT.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_LAYOUT_VARIANT"></p>
 <p>设置ALV Grid默认按钮</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_HIDDEN_BUTTON.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_HIDDEN_BUTTON.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_HIDDEN_BUTTON"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_HIDDEN_BUTTON.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%9B%E5%BB%BA%E7%A8%8B%E5%BA%8F_HIDDEN_BUTTON.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="创建程序_HIDDEN_BUTTON"></p>
 <h4 id="8-设置GUI-Status和GUI-Title"><a href="#8-设置GUI-Status和GUI-Title" class="headerlink" title="8.设置GUI Status和GUI Title"></a>8.设置GUI Status和GUI Title</h4><p>（1）和创建屏幕的操作类似，创建<strong>GUI Status</strong>实际就是创建屏幕的功能按钮</p>
 <p>在左侧的工具栏出右键程序名，按照 Create –&gt; GUI Status，创建GUI Status</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status" style="zoom:60%;">
 
 <p>然后会弹出一个框，设置该GUI Status的名称、描述和类型。名称一般建议以G开头，后跟使用该GUI Status的屏幕号</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status1.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status1" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status1.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status1" style="zoom:60%;">
 
 
 
 <p>点击完对勾后，或弹出设置GUI Status的页面，设置GUI Status其实就是设置页面上的按钮，详见下图</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 功能讲解.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 功能讲解.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status 功能讲解" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 功能讲解.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 功能讲解.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status 功能讲解" style="zoom:60%;">
 
 
 
 <p>固定的按钮设置是最下面的设置退出按钮的一栏，可参考下面的图片内容进行设置</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 退出按钮设置.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 退出按钮设置.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status 退出按钮设置">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 退出按钮设置.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Status 退出按钮设置.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Status 退出按钮设置">
 
 <p>注：三个按钮都需要设置为“<strong>E</strong>”类型，代表是退出按钮。设置成该类型是因为当我们在屏幕中设置了必输字段后，必输字段的校验不会影响E类型退出屏幕的按钮逻辑。若不设置为“<strong>E</strong>”类型按钮，则这三个按钮与普通的逻辑按钮为同一优先级，当存在必输字段时，屏幕会要求先输入完必输字段和其他的校验逻辑后，参允许点击其他的按钮。这样一来与退出按钮的实际应用不相符，所以需要将这三个退出按钮设置为“<strong>E</strong>”类型。</p>
 <p>设置完成后激活，可以在左侧的工具栏中看到新增了一个GUI Status的文件夹。</p>
 <p>（2）同上，创建好的<strong>GUI Title</strong>其实就是在该页面开头展示的标题内容</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title One.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title One.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Title One" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title One.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title One.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Title One" style="zoom:60%;">
 
 <p>点击GUI Title按钮后，会弹出设置GUI Title名称和显示的Title内容的弹框，如下所示</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title 内容和名称.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title 内容和名称.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Title 内容和名称" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title 内容和名称.png" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置GUI Title 内容和名称.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置GUI Title 内容和名称" style="zoom:60%;">
 
 
 
 <p>点击绿色的对勾按钮，可以在左侧的工具栏中看到多了一个GUI Title的文件夹</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/GUI Title 设置完成.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/GUI Title 设置完成.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GUI Title 设置完成" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/GUI Title 设置完成.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/GUI Title 设置完成.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="GUI Title 设置完成" style="zoom:60%;">
 
 
 
 <p>（3）将GUI Status和GUI Title与屏幕绑定</p>
 <p>打开“100”屏幕的逻辑流界面，在左侧工具栏展开Screen的文件夹，双击0100屏幕号。将该Module前面的“*”号删除，然后双击该Module的名称，创建该Module到PBO Include中。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status 和 Title、.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status 和 Title、.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="绑定Status 和 Title、" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status 和 Title、.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status 和 Title、.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="绑定Status 和 Title、" style="zoom:60%;">
 
 <p>该Module创建好后，会有系统生成好两行设置GUI Status和GUI Title的代码。将我们刚刚设置好的GUI Status和GUI Title的名字填充在这，完成绑定。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status和Title 代码部分.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status和Title 代码部分.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="绑定Status和Title 代码部分" style="zoom:60%;">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status和Title 代码部分.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/绑定Status和Title 代码部分.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="绑定Status和Title 代码部分" style="zoom:60%;">
 
 
 
 <h4 id="9-设置屏幕初始化内容"><a href="#9-设置屏幕初始化内容" class="headerlink" title="9.设置屏幕初始化内容"></a>9.设置屏幕初始化内容</h4><p>详细的初始化内容在上面的第6和7项已经讲过了，此处补充以下，当屏幕的容器和ALV Grid对象创建好后，调用的REFRESH_ALV Perform的内容在此处展示。这段刷新方法也是固定的写法，可以用作模板。</p>
 <p>（1）REFRESH_ALV </p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%B7%E6%96%B0%E6%96%B9%E6%B3%95.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%B7%E6%96%B0%E6%96%B9%E6%B3%95.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="刷新方法"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%B7%E6%96%B0%E6%96%B9%E6%B3%95.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%B7%E6%96%B0%E6%96%B9%E6%B3%95.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="刷新方法"></p>
 <h4 id="10-设置退出屏幕的逻辑"><a href="#10-设置退出屏幕的逻辑" class="headerlink" title="10.设置退出屏幕的逻辑"></a>10.设置退出屏幕的逻辑</h4><p>同上面开始操作一样，打开0100屏幕的逻辑流界面，在 <strong>PROCESS AFTER INPUT.</strong> 下面创建一个Module。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置屏幕退出逻辑">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置屏幕退出逻辑">
 
 <p>双击该Module 的名字 EXIT。将该Module 创建在PAI中。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Perform.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Perform.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置屏幕退出逻辑 Perform">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Perform.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Perform.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置屏幕退出逻辑 Perform">
 
 <p>Perfrom中的内容如下。该Perfrom也是固定写法，可用作模板。</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Form.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Form.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置屏幕退出逻辑 Form">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Form.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/设置屏幕退出逻辑 Form.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="设置屏幕退出逻辑 Form">
 
 
 
 <h4 id="11-展示屏幕效果"><a href="#11-展示屏幕效果" class="headerlink" title="11.展示屏幕效果"></a>11.展示屏幕效果</h4><p> 在主程序界面（左侧工具栏双击程序名）的START-OF-SELECTION 事件下编写获取数据的逻辑。</p>
-<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="保存数据逻辑"></p>
+<p><img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE%E9%80%BB%E8%BE%91.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="保存数据逻辑"></p>
 <p>展示效果如下：</p>
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 选择屏幕.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 选择屏幕.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="界面展示 选择屏幕">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 选择屏幕.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 选择屏幕.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="界面展示 选择屏幕">
 
 
 
-<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 OOAVL.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 OOAVL.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="界面展示 OOAVL">
+<img src="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 OOAVL.PNG" class="lazyload" data-srcset="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/界面展示 OOAVL.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="界面展示 OOAVL">
   </div>
   
   
@@ -2878,7 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=OOALV 基础知识 - 夜猫君&summary=最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=OOALV 基础知识 - 夜猫君&summary=最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。"
           
           >
           
@@ -2890,7 +2890,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=OOALV 基础知识 - 夜猫君&summary=最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=OOALV 基础知识 - 夜猫君&summary=最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。"
           
           >
           
@@ -2902,7 +2902,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=OOALV 基础知识 - 夜猫君&summary=最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=OOALV 基础知识 - 夜猫君&summary=最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。"
           
           >
           
@@ -2935,23 +2935,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/02/23/ABAP/OOALV/OOALV%E5%AE%B9%E5%99%A8/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>OOALV 容器</p>
-          <p class='content'>接着上一篇继续写容器相关的内容，主要介绍了五种容器类型（自定义容器、对话框容器、Docking容器、拆分容器和细拆分容器）与其相关的特性。
-
-
-OOALV 容器
-
-一、容器种类介绍
-
-
-类别
-类...</p>
-        </a>
-      
-      
-        <a class='next' href='/2023/02/23/ABAP/%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E5%A2%9E%E5%BC%BA/%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E5%A2%9E%E5%BC%BA/'>
-          <p class='title'>搜索帮助增强<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/2023/02/23/ABAP/%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E5%A2%9E%E5%BC%BA/%E6%90%9C%E7%B4%A2%E5%B8%AE%E5%8A%A9%E5%A2%9E%E5%BC%BA/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>搜索帮助增强</p>
           <p class='content'>前段时间在开发时涉及到了标准的搜索帮助出口方面的开发，后面研究了一下，现在将笔记记录如下。
 
 
@@ -2959,6 +2944,18 @@ OOALV 容器
 
 一、搜索帮助基本参数的介绍
 1.选择方法指定列表的数据来源，可以是数据库表、视图、...</p>
+        </a>
+      
+      
+        <a class='next' href='/2023/02/23/ABAP/SAP%20%E5%A2%9E%E5%BC%BA/SAP%20%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/SAP%E4%BA%8C%E4%BB%A3%E5%A2%9E%E5%BC%BA/'>
+          <p class='title'>SAP 二代增强<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>之前面试被人问到了增强相关的内容，后面了解了其中的一种二代增强。其余的几代等后面有空了补齐吧。
+
+
+SAP 二代增强
+
+一、二代增强类型
+Ehancement exits：出口增强以Exit_打...</p>
         </a>
       
     </div>
@@ -2974,7 +2971,7 @@ OOALV 容器
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3757,7 +3754,7 @@ OOALV 容器
 
 
   <script>
-  let imgs = ["/imag/Background Image/wallhaven-gp2w6e_2560x1600.png","/imag/Background Image/wallhaven-1pxowv_1650x1308.png","/imag/Background Image/wallhaven-9d8wrk_1920x1080.png","/imag/Background Image/wallhaven-rrozyw_1920x1080.png","/imag/Background Image/wallhaven-rrow61_1920x1080.png","/imag/Background Image/wallhaven-m322vm_1920x1080.png","/imag/Background Image/wallhaven-gp9ll7_1920x1080.png","/imag/Background Image/wallhaven-m3wke1_1920x1080.png","/imag/Background Image/wallhaven-welxvp_3741x2203.png","/imag/Background Image/wallhaven-l8k6vl_1920x1080.png","/imag/Background Image/wallhaven-l3gq1q_3840x2160.png","/imag/Background Image/wallhaven-o52jv7_3072x2271.png","/imag/Background Image/wallhaven-o5lwdp_1920x1080.png","/imag/Background Image/wallhaven-p9jxl3_1920x1080.png","/imag/Background Image/wallhaven-9d28vd_4096x1954.png","/imag/Background Image/wallhaven-y8267k_2400x1600.png","/imag/Background Image/wallhaven-yxgldx_1920x1080.png","/imag/Background Image/wallhaven-zyxvqy_1920x1080.png","/imag/Background Image/wallhaven-rrj36q_1920x1080.png","/imag/Background Image/wallhaven-zxzr9v_1920x1080.png","/imag/Background Image/wallhaven-l82jzq_3000x1833.png"];
+  let imgs = ["/imag/Background Image/wallhaven-zxzr9v_1920x1080.png","/imag/Background Image/wallhaven-rrj36q_1920x1080.png","/imag/Background Image/wallhaven-l3gq1q_3840x2160.png","/imag/Background Image/wallhaven-p9jxl3_1920x1080.png","/imag/Background Image/wallhaven-l8k6vl_1920x1080.png","/imag/Background Image/wallhaven-y8267k_2400x1600.png","/imag/Background Image/wallhaven-o52jv7_3072x2271.png","/imag/Background Image/wallhaven-rrow61_1920x1080.png","/imag/Background Image/wallhaven-1pxowv_1650x1308.png","/imag/Background Image/wallhaven-9d8wrk_1920x1080.png","/imag/Background Image/wallhaven-gp2w6e_2560x1600.png","/imag/Background Image/wallhaven-rrozyw_1920x1080.png","/imag/Background Image/wallhaven-l82jzq_3000x1833.png","/imag/Background Image/wallhaven-m3wke1_1920x1080.png","/imag/Background Image/wallhaven-m322vm_1920x1080.png","/imag/Background Image/wallhaven-zyxvqy_1920x1080.png","/imag/Background Image/wallhaven-welxvp_3741x2203.png","/imag/Background Image/wallhaven-yxgldx_1920x1080.png","/imag/Background Image/wallhaven-9d28vd_4096x1954.png","/imag/Background Image/wallhaven-gp9ll7_1920x1080.png","/imag/Background Image/wallhaven-o5lwdp_1920x1080.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3984,7 +3981,7 @@ OOALV 容器
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"夜猫君","url":"https://www.yemaojun.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"夜猫君","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yemaojun.top/","sameAs":["https://github.com/volantis-x"],"description":"夜猫君"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.yemaojun.top/","name":"夜猫君"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.yemaojun.top/categories/ABAP/","name":"ABAP"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.yemaojun.top/categories/OOALV/","name":"OOALV"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV基础知识/","name":"OOALV 基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"夜猫君","url":"https://www.yemaojun.top/","keywords":null,"description":"夜猫君","author":{"@type":"Person","name":"夜猫君","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yemaojun.top/","description":"夜猫君"},"publisher":{"@type":"Organization","name":"夜猫君","url":"https://www.yemaojun.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.yemaojun.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"OOALV 基础知识","description":"最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"},"author":{"@type":"Person","name":"夜猫君","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yemaojun.top/"},"publisher":{"@type":"Organization","name":"夜猫君","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/","wordCount":86,"datePublished":"2023-02-23T13:15:18.000Z","dateModified":"2023-06-15T10:38:40.980Z","articleSection":"ABAP","keywords":"ABAP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"夜猫君","url":"https://www.yemaojun.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"夜猫君","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yemaojun.top/","sameAs":["https://github.com/volantis-x"],"description":"夜猫君"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.yemaojun.top/","name":"夜猫君"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.yemaojun.top/categories/ABAP/","name":"ABAP"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.yemaojun.top/categories/OOALV/","name":"OOALV"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV基础知识/OOALV基础知识/","name":"OOALV 基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"夜猫君","url":"https://www.yemaojun.top/","keywords":null,"description":"夜猫君","author":{"@type":"Person","name":"夜猫君","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yemaojun.top/","description":"夜猫君"},"publisher":{"@type":"Organization","name":"夜猫君","url":"https://www.yemaojun.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.yemaojun.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"OOALV 基础知识","description":"最近经常开发OOALV相关的报表程序，所以为了自己能够记住和帮助新手能够更快的掌握OOALV的开发写了这篇笔记。如果能帮到你就好了，后续还有容器和事件相关的内容，敬请期待。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"},"author":{"@type":"Person","name":"夜猫君","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.yemaojun.top/"},"publisher":{"@type":"Organization","name":"夜猫君","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.yemaojun.top/2023/02/23/ABAP/OOALV/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/OOALV%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/","wordCount":86,"datePublished":"2023-02-23T13:15:18.000Z","dateModified":"2023-06-15T10:38:40.980Z","articleSection":"ABAP","keywords":"ABAP","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
